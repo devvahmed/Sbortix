@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Solutions | Sbortix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#777584",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface-variant": "#464553",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#544fc0",
+                        "on-background": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e0dfe2",
+                        "error": "#ba1a1a",
+                        "tertiary": "#511c00",
+                        "surface": "#f9f9f9",
+                        "on-secondary-container": "#626265",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#5e5e61",
+                        "secondary-fixed": "#e3e2e4",
+                        "background": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "primary": "#1f108e",
+                        "on-secondary-fixed": "#1b1c1e",
+                        "on-primary-container": "#a9a7ff",
+                        "on-secondary-fixed-variant": "#464749",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#3b35a7",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#3730a3",
+                        "secondary-fixed-dim": "#c7c6c9",
+                        "on-error": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "tertiary-container": "#752c00",
+                        "on-tertiary-container": "#fe9562",
+                        "primary-fixed": "#e2dfff",
+                        "inverse-primary": "#c3c0ff",
+                        "on-tertiary-fixed": "#351000",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#7a3003",
+                        "surface-container-low": "#f3f3f3",
+                        "outline-variant": "#c8c4d5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "sm": "16px",
+                        "base": "4px",
+                        "xl": "64px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "lg": "40px",
+                        "xs": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-xl-mobile": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .visible .stagger-item {
+            animation: staggerReveal 0.6s forwards cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes staggerReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Custom hairline border logic from Style Guidance */
+        .hairline-card {
+            border: 1px solid #E5E7EB;
+            background-color: #ffffff;
+            transition: border-color 0.3s ease;
+        }
+        .hairline-card:hover {
+            border-color: #3730A3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-primary">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 right-0 z-50">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="text-headline-md font-headline-md font-bold text-primary">Sbortix</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="#">Work</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="#">About</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="#">Blog</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-md py-xs rounded-lg hover:opacity-90 transition-opacity">
+                Book a call
+            </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative py-xl px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center min-h-[60vh]">
+<div class="lg:col-span-8 animate-on-scroll" id="hero-content">
+<span class="font-mono text-label-sm text-primary uppercase tracking-[0.2em] mb-sm block">AI SOLUTIONS</span>
+<h1 class="font-headline-xl text-headline-xl lg:text-[64px] leading-tight text-on-surface mb-md">
+                    Systems that <br/><span class="text-primary-container">don't sleep.</span>
+</h1>
+<div class="h-1 w-24 bg-primary-container mb-lg"></div>
+</div>
+<!-- Quick Contact Panel (Sticky/Float style for desktop) -->
+<div class="lg:col-span-4 lg:sticky lg:top-32 animate-on-scroll delay-200">
+<div class="hairline-card p-md rounded-xl shadow-sm">
+<h3 class="font-headline-md text-headline-md mb-md">How can we help you?</h3>
+<form class="space-y-base">
+<div class="space-y-1">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all font-body-md" placeholder="Name" type="text"/>
+</div>
+<div class="space-y-1">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all font-body-md" placeholder="Email" type="email"/>
+</div>
+<div class="grid grid-cols-2 gap-base">
+<input class="bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all font-body-md" placeholder="Phone" type="tel"/>
+<input class="bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all font-body-md" placeholder="Company" type="text"/>
+</div>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all font-body-md resize-none" placeholder="Message" rows="3"></textarea>
+<button class="w-full bg-primary-container text-on-primary font-headline-md py-sm rounded-lg hover:bg-primary transition-colors mt-base" type="submit">
+                            Submit Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Overview Section -->
+<section class="py-xl bg-surface-container-lowest border-y border-outline-variant">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-lg items-center animate-on-scroll">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-md">Empowering Intelligence</h2>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                        Artificial Intelligence is no longer a luxury; it’s the backbone of modern enterprise. We build bespoke neural infrastructures that transform raw data into predictive power, enabling your business to anticipate market shifts and automate complexity at scale.
+                    </p>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-80 object-cover" data-alt="A sophisticated abstract visualization of flowing digital data streams in shades of deep indigo and electric blue. The image features intricate network nodes and crystalline geometric structures that represent neural processing and artificial intelligence. The aesthetic is highly professional and minimalist, set against a pristine white background that emphasizes clarity and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"/>
+</div>
+</div>
+</section>
+<!-- Our Offerings: Vertical List -->
+<section class="py-xl px-margin-desktop max-w-7xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-xl text-center">Our Offerings</h2>
+<div class="space-y-sm animate-on-scroll stagger-container">
+<div class="stagger-item group border-b border-outline-variant py-lg flex flex-col md:flex-row justify-between items-start md:items-center hover:px-sm transition-all duration-300">
+<div class="flex items-center gap-md">
+<span class="font-mono text-primary text-headline-md">01</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Conversational AI</h3>
+</div>
+<p class="md:w-1/2 text-secondary font-body-md">Advanced LLM implementations for customer success and internal knowledge management.</p>
+</div>
+<div class="stagger-item group border-b border-outline-variant py-lg flex flex-col md:flex-row justify-between items-start md:items-center hover:px-sm transition-all duration-300" style="animation-delay: 0.1s;">
+<div class="flex items-center gap-md">
+<span class="font-mono text-primary text-headline-md">02</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Predictive Analytics</h3>
+</div>
+<p class="md:w-1/2 text-secondary font-body-md">Forecasting models that identify trends before they manifest in your bottom line.</p>
+</div>
+<div class="stagger-item group border-b border-outline-variant py-lg flex flex-col md:flex-row justify-between items-start md:items-center hover:px-sm transition-all duration-300" style="animation-delay: 0.2s;">
+<div class="flex items-center gap-md">
+<span class="font-mono text-primary text-headline-md">03</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Business Process Automation</h3>
+</div>
+<p class="md:w-1/2 text-secondary font-body-md">Eliminating cognitive load through autonomous agent workflows and robotic process control.</p>
+</div>
+<div class="stagger-item group border-b border-outline-variant py-lg flex flex-col md:flex-row justify-between items-start md:items-center hover:px-sm transition-all duration-300" style="animation-delay: 0.3s;">
+<div class="flex items-center gap-md">
+<span class="font-mono text-primary text-headline-md">04</span>
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Custom ML Models</h3>
+</div>
+<p class="md:w-1/2 text-secondary font-body-md">Tailored machine learning architecture built on your proprietary data stacks.</p>
+</div>
+</div>
+</section>
+<!-- Key Components: 3-column Grid -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="mb-xl text-center">
+<span class="font-mono text-label-sm text-primary uppercase tracking-widest">ARCHITECTURE</span>
+<h2 class="font-headline-lg text-headline-lg">Key Components</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter animate-on-scroll">
+<div class="hairline-card p-md rounded-xl hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm" style="font-variation-settings: 'FILL' 1;">hub</span>
+<h4 class="font-headline-md text-label-md mb-xs">Neural Infrastructure</h4>
+<p class="text-label-sm text-secondary">High-availability compute clusters designed for intense training and inference workloads.</p>
+</div>
+<div class="hairline-card p-md rounded-xl hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+<h4 class="font-headline-md text-label-md mb-xs">AI Governance</h4>
+<p class="text-label-sm text-secondary">Compliance frameworks and ethical guardrails ensuring bias-free, secure deployment.</p>
+</div>
+<div class="hairline-card p-md rounded-xl hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm" style="font-variation-settings: 'FILL' 1;">memory</span>
+<h4 class="font-headline-md text-label-md mb-xs">Edge Computing</h4>
+<p class="text-label-sm text-secondary">Deployment on-device for ultra-low latency and localized data privacy.</p>
+</div>
+<div class="hairline-card p-md rounded-xl hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm" style="font-variation-settings: 'FILL' 1;">auto_mode</span>
+<h4 class="font-headline-md text-label-md mb-xs">Agentic Workflows</h4>
+<p class="text-label-sm text-secondary">Self-correcting AI agents that manage end-to-end tasks without human intervention.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Differentiating Factors -->
+<section class="py-xl px-margin-desktop max-w-7xl mx-auto animate-on-scroll">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-lg">
+<div class="text-center group">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-2xl">speed</span>
+</div>
+<h5 class="font-label-md text-label-md mb-xs">Faster decision-making</h5>
+<p class="text-label-sm text-secondary">Reduce latency in critical logic.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-2xl">savings</span>
+</div>
+<h5 class="font-label-md text-label-md mb-xs">Reduced operational cost</h5>
+<p class="text-label-sm text-secondary">Automate the expensive manual tasks.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-2xl">verified</span>
+</div>
+<h5 class="font-label-md text-label-md mb-xs">Improved accuracy</h5>
+<p class="text-label-sm text-secondary">Eliminate human error in big data.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-2xl">trending_up</span>
+</div>
+<h5 class="font-label-md text-label-md mb-xs">Scalable systems</h5>
+<p class="text-label-sm text-secondary">Growth without technical debt.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-xl px-margin-desktop bg-primary text-on-primary text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 to-transparent"></div>
+</div>
+<div class="max-w-3xl mx-auto relative z-10 animate-on-scroll">
+<h2 class="font-headline-xl text-headline-xl mb-md">How can we help you?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-lg opacity-90">Ready to integrate intelligence into your core operations? Let's build the future together.</p>
+<button class="bg-surface-container-lowest text-primary px-xl py-md rounded-lg font-headline-md hover:scale-105 transition-transform shadow-xl">
+                    Let's work together
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-primary mb-md">Sbortix</div>
+<p class="text-secondary label-sm text-label-sm leading-relaxed">
+                    Corporate intelligence and AI-driven automation for the modern enterprise.
+                </p>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-bold text-primary mb-xs">Solutions</span>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Conversational AI</a>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Predictive Analytics</a>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Cloud Infrastructure</a>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-bold text-primary mb-xs">Company</span>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Work</a>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">About</a>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-bold text-primary mb-xs">Legal</span>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Terms of Service</a>
+<a class="text-secondary hover:text-primary transition-all text-label-sm" href="#">Contact</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop mt-xl pt-md border-t border-outline-variant text-center">
+<p class="text-secondary text-label-sm">© 2024 Sbortix. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Stagger logic for children if any
+                    const staggerItems = entry.target.querySelectorAll('.stagger-item');
+                    staggerItems.forEach((item, index) => {
+                        item.style.animationDelay = `${index * 0.15}s`;
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form Submission visual feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Request Sent';
+            btn.classList.replace('bg-primary-container', 'bg-green-600');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-green-600', 'bg-primary-container');
+                form.reset();
+            }, 3000);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sbortix | Insights &amp; Technical Resources</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#544fc0",
+                    "secondary-fixed-dim": "#c7c6c9",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "surface-container": "#eeeeee",
+                    "background": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "secondary": "#5e5e61",
+                    "on-surface": "#1a1c1c",
+                    "on-primary-fixed": "#0f0069",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464553",
+                    "primary-container": "#3730a3",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-container": "#e0dfe2",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#752c00",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-fixed-variant": "#3b35a7",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e2e2e2",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#351000",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#a9a7ff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface": "#f9f9f9",
+                    "primary": "#1f108e",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "tertiary": "#511c00",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#7a3003",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-container": "#fe9562",
+                    "outline": "#777584",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-container": "#626265",
+                    "inverse-surface": "#2f3131",
+                    "secondary-fixed": "#e3e2e4",
+                    "outline-variant": "#c8c4d5",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed": "#1b1c1e",
+                    "on-secondary-fixed-variant": "#464749"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xl": "64px",
+                    "xs": "8px",
+                    "margin-desktop": "48px",
+                    "base": "4px",
+                    "sm": "16px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "mono": ["JetBrains Mono", "monospace"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        :root {
+            --scroll-offset: 0px;
+        }
+        body {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-position: center calc(center + var(--scroll-offset));
+            background-attachment: fixed;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .text-mono { font-family: 'JetBrains Mono', monospace; }
+        .transition-authoritative { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        
+        .animated-grid {
+            background-position: center var(--scroll-offset);
+        }
+    </style>
+</head>
+<body class="text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-primary">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest sticky top-0 z-50 border-b border-outline-variant">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="text-headline-md font-headline-md font-bold text-primary">Sbortix</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Services</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Work</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">About</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Blog</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-sm">
+<button class="bg-primary text-on-primary px-sm py-xs rounded-lg font-label-md text-label-md font-semibold hover:opacity-90 transition-authoritative">
+                    Book a call
+                </button>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Header Section -->
+<header class="mb-xl max-w-2xl">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-sm">Resources &amp; Insights</h1>
+<p class="font-body-lg text-body-lg text-secondary">Advanced engineering perspectives, data strategy frameworks, and architectural deep-dives for the enterprise sector.</p>
+</header>
+<!-- Featured Post Section -->
+<section class="mb-xl">
+<article class="group relative bg-white border border-outline-variant overflow-hidden rounded-xl transition-authoritative hover:shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="relative h-64 lg:h-auto overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-contrast architectural photograph of a modern data center with deep indigo lighting accents. The scene is shot from a low angle, emphasizing the monolithic structure of the servers and cooling pipes. The aesthetic is clean, technical, and corporate, with sharp lines and a sense of immense digital scale and security." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4in7duOatGC-Uk-t9pkml44QmYAfOQ7zTOxu7qKCllMhdcphl70DU8xAsddp7LEt0aBsEYZ38gJYDXWm7ex3jfnBnu8WZxIr7TxAtkyO3E0JPFiZfktzdpUx8yfprOJCQlbPs2axFhaASrFTJG-VPp98w_JcTR-k69nTQbQ9Z66vyhrdKXRpn0TeL2H0pWaubvBlnLmCzqnMxUiIiQGXeKqlkaCamhSUyLZ6WgQ3KZHRp0C3IO0kETyyz_G18AYFwaNXeVdqOX39N')"></div>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="p-md lg:p-xl flex flex-col justify-center bg-surface-container-lowest">
+<div class="flex items-center gap-sm mb-md">
+<span class="text-mono text-[10px] uppercase tracking-widest bg-primary-container text-on-primary-container px-2 py-1 font-bold">Featured Analysis</span>
+<span class="text-mono text-label-sm text-outline">v2.4.0</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-sm text-primary group-hover:underline underline-offset-4 decoration-primary-fixed-dim">The Modern Data Stack: Orchestration for Enterprise Scalability</h2>
+<p class="font-body-md text-body-md text-secondary mb-lg line-clamp-3">
+                            Navigating the transition from legacy ETL processes to modern, distributed orchestration. This whitepaper explores the technical trade-offs of serverless compute vs. managed clusters in high-availability environments.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a senior technology executive with a neutral expression, wearing a tailored charcoal suit against a clean, light grey studio background. The lighting is soft and corporate, conveying authority and technical expertise. The image is crisp, high-resolution, and fits a minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzROF6_8Lpq1psIVo6OINalSyHMD4uzagnzzpNl9Yq7WnhgVqpH7EwoUIvIV1Bg781iWuy10A5J9F5QqXlD5Th0Ii_92YgHY7au5VmYqiYBH_f9WlRvLpDh2O_Xvx-R56J35eebtuG4iaDsgcfsVkM_zcz-oh-viWeymoZyWeg22JfLafi0BUJKmwQyJKKdIi7fwiPMGNW6MhXro8Hu5A7zTcgKOPhz4EfHm5pTPNReVeNUIF5dKarCQntjswPHmC8rXpfFmmHA844"/>
+</div>
+<div class="text-label-sm font-label-sm">
+<p class="text-on-surface">Dr. Aris Thorne</p>
+<p class="text-secondary">Chief Architect</p>
+</div>
+</div>
+<div class="text-mono text-label-sm text-secondary">
+                                OCT 24, 2024 • 12 MIN READ
+                            </div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Filter / Search Row -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md border-b border-outline-variant pb-md mb-lg">
+<div class="flex gap-sm overflow-x-auto w-full md:w-auto no-scrollbar">
+<button class="bg-primary text-on-primary px-sm py-1.5 rounded-full text-label-sm font-label-sm transition-authoritative">All Resources</button>
+<button class="bg-surface-container-low text-secondary hover:bg-secondary-container px-sm py-1.5 rounded-full text-label-sm font-label-sm transition-authoritative">Engineering</button>
+<button class="bg-surface-container-low text-secondary hover:bg-secondary-container px-sm py-1.5 rounded-full text-label-sm font-label-sm transition-authoritative">Data Strategy</button>
+<button class="bg-surface-container-low text-secondary hover:bg-secondary-container px-sm py-1.5 rounded-full text-label-sm font-label-sm transition-authoritative">AI Ethics</button>
+</div>
+<div class="relative w-full md:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-label-md focus:ring-2 focus:ring-primary/10 focus:border-primary transition-authoritative outline-none" placeholder="Search archive..." type="text"/>
+</div>
+</div>
+<!-- Post List Layout -->
+<section class="space-y-gutter">
+<!-- Article 1 -->
+<article class="group flex flex-col md:flex-row gap-md p-sm md:p-md border-b border-outline-variant hover:bg-surface-container-low transition-authoritative">
+<div class="md:w-1/4">
+<span class="text-mono text-[11px] font-bold text-primary-container tracking-tighter uppercase mb-xs block">Engineering.sys</span>
+<time class="text-label-sm font-label-sm text-outline block">October 18, 2024</time>
+</div>
+<div class="md:w-2/4">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Vector Databases: Selecting for Latency and Throughput</h3>
+<p class="text-body-md text-secondary line-clamp-2">A comparative analysis of Qdrant, Pinecone, and Weaviate in high-frequency production environments.</p>
+</div>
+<div class="md:w-1/4 flex items-center md:justify-end">
+<span class="text-mono text-label-sm text-secondary mr-sm">8 MIN READ</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-authoritative">arrow_forward</span>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="group flex flex-col md:flex-row gap-md p-sm md:p-md border-b border-outline-variant hover:bg-surface-container-low transition-authoritative">
+<div class="md:w-1/4">
+<span class="text-mono text-[11px] font-bold text-primary-container tracking-tighter uppercase mb-xs block">Governance.log</span>
+<time class="text-label-sm font-label-sm text-outline block">October 12, 2024</time>
+</div>
+<div class="md:w-2/4">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Implementing Zero-Trust Architecture in Hybrid Cloud</h3>
+<p class="text-body-md text-secondary line-clamp-2">Strategies for securing microservices across disparate infrastructure providers without sacrificing developer velocity.</p>
+</div>
+<div class="md:w-1/4 flex items-center md:justify-end">
+<span class="text-mono text-label-sm text-secondary mr-sm">15 MIN READ</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-authoritative">arrow_forward</span>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="group flex flex-col md:flex-row gap-md p-sm md:p-md border-b border-outline-variant hover:bg-surface-container-low transition-authoritative">
+<div class="md:w-1/4">
+<span class="text-mono text-[11px] font-bold text-primary-container tracking-tighter uppercase mb-xs block">AI_Infrastructure.run</span>
+<time class="text-label-sm font-label-sm text-outline block">October 05, 2024</time>
+</div>
+<div class="md:w-2/4">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">The Cost of Intelligence: LLM Inference Optimization</h3>
+<p class="text-body-md text-secondary line-clamp-2">Practical techniques for reducing token consumption and improving response times in enterprise RAG systems.</p>
+</div>
+<div class="md:w-1/4 flex items-center md:justify-end">
+<span class="text-mono text-label-sm text-secondary mr-sm">10 MIN READ</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-authoritative">arrow_forward</span>
+</div>
+</article>
+<!-- Article 4 -->
+<article class="group flex flex-col md:flex-row gap-md p-sm md:p-md border-b border-outline-variant hover:bg-surface-container-low transition-authoritative">
+<div class="md:w-1/4">
+<span class="text-mono text-[11px] font-bold text-primary-container tracking-tighter uppercase mb-xs block">Product_Mgmt.sh</span>
+<time class="text-label-sm font-label-sm text-outline block">September 28, 2024</time>
+</div>
+<div class="md:w-2/4">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Bridging the Gap Between Engineering and C-Suite</h3>
+<p class="text-body-md text-secondary line-clamp-2">Translating technical debt and architectural improvements into business-aligned KPIs for executive buy-in.</p>
+</div>
+<div class="md:w-1/4 flex items-center md:justify-end">
+<span class="text-mono text-label-sm text-secondary mr-sm">6 MIN READ</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary group-hover:translate-x-1 transition-authoritative">arrow_forward</span>
+</div>
+</article>
+</section>
+<!-- Newsletter Subscription -->
+<section class="mt-xl p-lg bg-primary-container text-on-primary-container rounded-xl overflow-hidden relative">
+<!-- Background Decoration -->
+<div class="absolute inset-0 opacity-10 pointer-events-none animated-grid" style="background-image: linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(60deg, #ffffff 25%, transparent 25.5%, transparent 75%, #ffffff 75.5%, #ffffff), linear-gradient(60deg, #ffffff 25%, transparent 25.5%, transparent 75%, #ffffff 75.5%, #ffffff); background-size: 80px 140px;"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-lg">
+<div class="max-w-md">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-sm">Executive Briefing</h2>
+<p class="text-body-md opacity-90">Receive monthly technical insights directly to your inbox. No marketing fluff, just architecture and strategy.</p>
+</div>
+<form class="flex flex-col sm:flex-row w-full md:w-auto gap-base">
+<input class="bg-white/10 border border-white/20 text-white placeholder:text-white/40 px-md py-3 rounded-lg outline-none focus:ring-2 focus:ring-white/30 transition-authoritative min-w-[300px]" placeholder="professional@company.com" type="email"/>
+<button class="bg-white text-primary px-lg py-3 rounded-lg font-bold hover:bg-white-dim transition-authoritative" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto w-full">
+<div class="md:col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-primary mb-md">Sbortix</div>
+<p class="text-label-sm font-label-sm text-secondary">Advanced systems engineering for high-stakes enterprise environments.</p>
+</div>
+<div class="space-y-sm">
+<p class="text-label-sm font-bold text-primary uppercase tracking-widest">Platform</p>
+<ul class="space-y-xs">
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">Services</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">Work</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">About</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<p class="text-label-sm font-bold text-primary uppercase tracking-widest">Knowledge</p>
+<ul class="space-y-xs">
+<li><a class="text-primary font-bold underline transition-all text-label-sm" href="#">Blog</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">Case Studies</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">Documentation</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<p class="text-label-sm font-bold text-primary uppercase tracking-widest">Legal</p>
+<ul class="space-y-xs">
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">Terms of Service</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all text-label-sm" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant py-md">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
+<p class="text-label-sm font-label-sm text-secondary">© 2024 Sbortix. All rights reserved.</p>
+<div class="flex gap-md">
+<span class="text-mono text-[10px] text-outline">STX-PRD-01</span>
+<span class="text-mono text-[10px] text-outline">v4.2.0-stable</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll-triggered background parallax
+        const handleScroll = () => {
+            const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+            const offset = scrollPercent * 25; // 25px max travel for subtle feel
+            document.documentElement.style.setProperty('--scroll-offset', `${offset}px`);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Initial call
+
+        // Micro-interaction for list items
+        document.querySelectorAll('article').forEach(article => {
+            article.addEventListener('mouseenter', () => {
+                // Subtle lift or highlight could be added here via JS if needed
+            });
+        });
+
+        // Simple smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

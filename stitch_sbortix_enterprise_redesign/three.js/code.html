@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_56 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_56" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_56');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  (function() {
+  const container = document.getElementById('threejs-work-hero-accent');
+  if (!container) return;
+
+  const width = container.clientWidth || 150;
+  const height = container.clientHeight || 150;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(window.devicePixelRatio || 1);
+  container.appendChild(renderer.domElement);
+
+  const group = new THREE.Group();
+  scene.add(group);
+
+  const indigoColor = 0x3730a3;
+  const nodeGeom = new THREE.SphereGeometry(0.08, 12, 12);
+  const nodeMat = new THREE.MeshPhongMaterial({ color: indigoColor, emissive: 0x111111 });
+  const lineMat = new THREE.LineBasicMaterial({ color: indigoColor, transparent: true, opacity: 0.3 });
+
+  const nodes = [];
+  const nodeCount = 12;
+  for (let i = 0; i < nodeCount; i++) {
+    const node = new THREE.Mesh(nodeGeom, nodeMat);
+    node.position.set(
+      (Math.random() - 0.5) * 2.5,
+      (Math.random() - 0.5) * 2.5,
+      (Math.random() - 0.5) * 2.5
+    );
+    node.velocity = new THREE.Vector3(
+      (Math.random() - 0.5) * 0.005,
+      (Math.random() - 0.5) * 0.005,
+      (Math.random() - 0.5) * 0.005
+    );
+    group.add(node);
+    nodes.push(node);
+  }
+
+  const linesGeom = new THREE.BufferGeometry();
+  const line = new THREE.LineSegments(linesGeom, lineMat);
+  group.add(line);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+  const pointLight = new THREE.PointLight(0xffffff, 1);
+  pointLight.position.set(5, 5, 5);
+  scene.add(pointLight);
+
+  camera.position.z = 4;
+
+  let mouseX = 0, mouseY = 0;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX - window.innerWidth / 2) / 500;
+    mouseY = (e.clientY - window.innerHeight / 2) / 500;
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    
+    nodes.forEach(node => {
+      node.position.add(node.velocity);
+      if (Math.abs(node.position.x) > 1.5) node.velocity.x *= -1;
+      if (Math.abs(node.position.y) > 1.5) node.velocity.y *= -1;
+      if (Math.abs(node.position.z) > 1.5) node.velocity.z *= -1;
+    });
+
+    const positions = [];
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dist = nodes[i].position.distanceTo(nodes[j].position);
+        if (dist < 1.8) {
+          positions.push(nodes[i].position.x, nodes[i].position.y, nodes[i].position.z);
+          positions.push(nodes[j].position.x, nodes[j].position.y, nodes[j].position.z);
+        }
+      }
+    }
+    linesGeom.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    linesGeom.attributes.position.needsUpdate = true;
+
+    group.rotation.y += 0.002;
+    group.rotation.x += (mouseY - group.rotation.x) * 0.05;
+    group.rotation.y += (mouseX - group.rotation.y) * 0.05;
+
+    renderer.render(scene, camera);
+  }
+
+  window.addEventListener('resize', () => {
+    const w = container.clientWidth || 150;
+    const h = container.clientHeight || 150;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  });
+
+  animate();
+})();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_56 -->
+</body>
+</html>

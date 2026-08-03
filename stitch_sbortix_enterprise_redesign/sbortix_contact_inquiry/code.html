@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Sbortix - Enterprise AI Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#544fc0",
+                    "secondary-fixed-dim": "#c7c6c9",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "surface-container": "#eeeeee",
+                    "background": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "secondary": "#5e5e61",
+                    "on-surface": "#1a1c1c",
+                    "on-primary-fixed": "#0f0069",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464553",
+                    "primary-container": "#3730a3",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-container": "#e0dfe2",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#752c00",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-fixed-variant": "#3b35a7",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e2e2e2",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#351000",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#a9a7ff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface": "#f9f9f9",
+                    "primary": "#1f108e",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "tertiary": "#511c00",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#7a3003",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-container": "#fe9562",
+                    "outline": "#777584",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-container": "#626265",
+                    "inverse-surface": "#2f3131",
+                    "secondary-fixed": "#e3e2e4",
+                    "outline-variant": "#c8c4d5",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed": "#1b1c1e",
+                    "on-secondary-fixed-variant": "#464749"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xl": "64px",
+                    "xs": "8px",
+                    "margin-desktop": "48px",
+                    "base": "4px",
+                    "sm": "16px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "mono": ["JetBrains Mono", "monospace"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        :root {
+            --scroll-offset: 0px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-bg {
+            background-image: radial-gradient(circle, #c8c4d5 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-position: center calc(var(--scroll-offset) * 1);
+            transition: background-position 0.1s ease-out;
+        }
+        .mono-label {
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline sticky top-0 z-50">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+            Sbortix
+        </div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Services</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Work</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">About</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Blog</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-lg font-label-md transition-all hover:shadow-lg active:opacity-80">
+            Book a call
+        </button>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="mb-xl">
+<span class="mono-label text-primary font-bold">Contact Node 01</span>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl-mobile mt-base">Connect with Sbortix</h1>
+<p class="text-secondary body-lg mt-md max-w-2xl">High-fidelity collaboration for data-driven enterprises. Select your parameters below to initiate the communication protocol.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
+<!-- Left Side: Form Panel -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-md md:p-lg border border-outline-variant shadow-sm group">
+<div class="absolute inset-0 dotted-bg opacity-30 pointer-events-none"></div>
+<div class="absolute -top-12 -right-12 w-48 h-48 opacity-20 pointer-events-none">
+
+</div>
+<form class="relative z-10 space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-base">
+<label class="mono-label text-on-surface-variant">Ident_Name</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-secondary-fixed-dim" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-base">
+<label class="mono-label text-on-surface-variant">Ident_Email</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-secondary-fixed-dim" placeholder="john@enterprise.ai" type="email"/>
+</div>
+</div>
+<div class="space-y-base">
+<label class="mono-label text-on-surface-variant">Alloc_Budget</label>
+<select class="w-full bg-white border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all appearance-none cursor-pointer">
+<option value="">Select Resource Range</option>
+<option value="10-50">$10,000 - $50,000</option>
+<option value="50-150">$50,000 - $150,000</option>
+<option value="150+">$150,000+</option>
+</select>
+</div>
+<div class="space-y-base">
+<label class="mono-label text-on-surface-variant">Message_Payload</label>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg px-md py-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-secondary-fixed-dim" placeholder="Describe your operational challenges..." rows="5"></textarea>
+</div>
+<div class="pt-sm">
+<button class="w-full md:w-auto bg-primary text-on-primary px-xl py-md rounded-lg font-headline-md flex items-center justify-center gap-sm hover:bg-primary-container hover:text-on-primary-container transition-all" type="submit">
+                        Submit Protocol
+                        <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Side: Info & Hubs -->
+<div class="space-y-xl">
+<!-- Global Hubs -->
+<section>
+<h3 class="mono-label text-primary mb-md">Global_Deployment_Hubs</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-white border border-outline-variant p-md rounded-lg hover:border-primary transition-colors cursor-default">
+<div class="flex items-center gap-sm mb-xs">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-bold text-on-surface">San Francisco</span>
+</div>
+<p class="text-label-md text-secondary">303 High Tech Dr, Suite 200<br/>Silicon Valley, CA 94043</p>
+</div>
+<div class="bg-white border border-outline-variant p-md rounded-lg hover:border-primary transition-colors cursor-default">
+<div class="flex items-center gap-sm mb-xs">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-bold text-on-surface">London</span>
+</div>
+<p class="text-label-md text-secondary">25 Tech Walkway, Canary Wharf<br/>London, E14 5AB</p>
+</div>
+</div>
+</section>
+<!-- Digital Contact -->
+<section class="space-y-md">
+<h3 class="mono-label text-primary">Digital_Uplink</h3>
+<div class="space-y-sm">
+<a class="flex items-center gap-md p-md bg-surface-container rounded-lg group transition-all hover:bg-white border border-transparent hover:border-outline-variant" href="mailto:ops@sbortix.com">
+<div class="bg-primary-container p-sm rounded-lg text-on-primary-container">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<div class="text-label-sm text-secondary uppercase tracking-widest">Email Address</div>
+<div class="font-bold">ops@sbortix.com</div>
+</div>
+</a>
+<a class="flex items-center gap-md p-md bg-primary-container/10 rounded-lg group transition-all hover:bg-primary text-on-surface hover:text-on-primary border border-primary/20" href="#">
+<div class="bg-primary text-on-primary p-sm rounded-lg group-hover:bg-white group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<div>
+<div class="text-label-sm uppercase tracking-widest opacity-80">Direct Communication</div>
+<div class="font-bold">WhatsApp / Booking</div>
+</div>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Map Placeholder -->
+<div class="h-64 bg-surface-container-high rounded-xl overflow-hidden relative border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A clean, minimalist vector map of San Francisco and London highlighted with glowing indigo nodes on an off-white background, maintaining a corporate tech aesthetic. The map uses thin grey lines for streets and soft indigo circles to mark office locations, lit with bright, even studio lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFGoxLPQNWTFx-eWzd8z3RXJXmevX-52LFabQYwjfZguT_7-lPZ4Unl1mQZtZ_yj9CsvjBFnLzdg_qXOaAZTvokSl0OEKMsTOhi7PH1CbabhLqibA6t6lvS9cH4PNws8TXIZpsS71wKXdrudFMtM2F5u4MjLNDwHaK2YXylB96lRufjk81x8c79xa7j9MV1vfbUi7-kyvbuvWcaNKXL2k9cu7zCsgsaiGI_vi4CFfqBlTxMAmwXJOE9n1W6bOxKaOdI5OGvoSYcftn')"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-sm py-xs rounded border border-outline-variant text-label-sm font-bold flex items-center gap-xs">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    LIVE_NETWORK_STATUS: ACTIVE
+                </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto w-full">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-sm">
+                Sbortix
+            </div>
+<p class="text-label-sm text-secondary">
+                Engineering the future of enterprise intelligence through rigorous data integrity and architectural excellence.
+            </p>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-bold text-on-surface label-sm">Solutions</span>
+<a class="text-secondary label-sm hover:text-primary hover:underline transition-all" href="#">Services</a>
+<a class="text-secondary label-sm hover:text-primary hover:underline transition-all" href="#">Work</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-bold text-on-surface label-sm">Company</span>
+<a class="text-secondary label-sm hover:text-primary hover:underline transition-all" href="#">About</a>
+<a class="text-secondary label-sm hover:text-primary hover:underline transition-all" href="#">Blog</a>
+<a class="text-secondary label-sm hover:text-primary hover:underline transition-all" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-bold text-on-surface label-sm">Legal</span>
+<a class="text-secondary label-sm hover:text-primary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-secondary label-sm hover:text-primary hover:underline transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="px-margin-desktop py-md border-t border-outline-variant text-center max-w-7xl mx-auto w-full">
+<p class="text-label-sm text-secondary">© 2024 Sbortix. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    // Scroll-triggered background parallax
+    const updateScrollOffset = () => {
+        const scrolled = window.pageYOffset;
+        const speed = 0.05; // Adjust for subtlety
+        const offset = -(scrolled * speed);
+        document.documentElement.style.setProperty('--scroll-offset', `${offset}px`);
+    };
+
+    window.addEventListener('scroll', updateScrollOffset, { passive: true });
+    updateScrollOffset();
+
+    // Simple form interaction
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'Transmitting...';
+        btn.classList.add('opacity-50', 'pointer-events-none');
+        
+        setTimeout(() => {
+            btn.innerHTML = 'Transmission Complete';
+            btn.classList.remove('bg-primary');
+            btn.classList.add('bg-green-600');
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('opacity-50', 'pointer-events-none', 'bg-green-600');
+                btn.classList.add('bg-primary');
+                e.target.reset();
+            }, 3000);
+        }, 2000);
+    });
+</script>
+</body></html>

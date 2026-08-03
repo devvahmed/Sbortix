@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Sbortix - AI &amp; Marketing Systems</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "background": "#f9f9f9",
+                "error": "#ba1a1a",
+                "surface-variant": "#e2e2e2",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#e0dfe2",
+                "on-tertiary-fixed-variant": "#7a3003",
+                "tertiary-fixed-dim": "#ffb694",
+                "primary-container": "#3730a3",
+                "on-surface-variant": "#464553",
+                "on-primary-fixed-variant": "#3b35a7",
+                "on-error": "#ffffff",
+                "surface-dim": "#dadada",
+                "surface-container-high": "#e8e8e8",
+                "on-tertiary-container": "#fe9562",
+                "tertiary-fixed": "#ffdbcc",
+                "on-secondary-fixed-variant": "#464749",
+                "surface-bright": "#f9f9f9",
+                "primary": "#1f108e",
+                "tertiary-container": "#752c00",
+                "surface-container-highest": "#e2e2e2",
+                "primary-fixed": "#e2dfff",
+                "secondary-fixed-dim": "#c7c6c9",
+                "outline-variant": "#c8c4d5",
+                "on-primary-container": "#a9a7ff",
+                "on-primary": "#ffffff",
+                "inverse-on-surface": "#f0f1f1",
+                "secondary": "#5e5e61",
+                "secondary-fixed": "#e3e2e4",
+                "surface-container": "#eeeeee",
+                "primary-fixed-dim": "#c3c0ff",
+                "error-container": "#ffdad6",
+                "surface-container-low": "#f3f3f3",
+                "on-background": "#1a1c1c",
+                "inverse-primary": "#c3c0ff",
+                "surface": "#f9f9f9",
+                "on-secondary-container": "#626265",
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2f3131",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed": "#351000",
+                "on-secondary-fixed": "#1b1c1e",
+                "on-primary-fixed": "#0f0069",
+                "on-error-container": "#93000a",
+                "on-surface": "#1a1c1c",
+                "outline": "#777584",
+                "surface-tint": "#544fc0",
+                "tertiary": "#511c00"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "sm": "16px",
+                "margin-mobile": "16px",
+                "base": "4px",
+                "xl": "64px",
+                "md": "24px",
+                "margin-desktop": "48px",
+                "xs": "8px",
+                "lg": "40px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-xl-mobile": ["Inter"],
+                "body-md": ["Inter"],
+                "label-md": ["Inter"],
+                "headline-md": ["Inter"],
+                "label-sm": ["Inter"],
+                "headline-xl": ["Inter"]
+            },
+            "fontSize": {
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .reveal-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal-on-scroll.active { opacity: 1; transform: translateY(0); }
+        .dot-pattern { background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px); background-size: 24px 24px; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .checklist-item { transform: translateX(-10px); opacity: 0; transition: all 0.4s ease-out; }
+        .active .checklist-item { transform: translateX(0); opacity: 1; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .accordion-item.active .accordion-content { max-height: 500px; }
+        .accordion-item.active .rotate-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<span class="text-headline-md font-headline-md font-bold text-primary">Sbortix</span>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Work</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">About</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Blog</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-lg font-label-md text-label-md hover:opacity-80 transition-all">Book a call</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative py-xl overflow-hidden dot-pattern">
+<div class="max-w-7xl mx-auto px-margin-desktop text-center">
+<span class="text-primary font-label-sm text-label-sm tracking-widest block mb-xs reveal-on-scroll" style="transition-delay: 100ms;">[SERVICES // ENGINEERED FOR RESULTS]</span>
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary max-w-4xl mx-auto mb-md reveal-on-scroll" style="transition-delay: 200ms;">
+                    AI &amp; Marketing Systems — Built for Real Business Use
+                </h1>
+<p class="text-body-lg font-body-lg text-secondary max-w-2xl mx-auto reveal-on-scroll" style="transition-delay: 300ms;">
+                    We don't do fluff. We build high-performance data infrastructure and marketing automation designed for enterprise scalability and measurable ROI.
+                </p>
+</div>
+</section>
+<!-- Service Block 1: AI Chatbots -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-xl items-center reveal-on-scroll">
+<div class="rounded-xl overflow-hidden border border-outline-variant bg-surface shadow-sm">
+<img class="w-full aspect-square object-cover" data-alt="A professional high-tech workspace featuring a minimalist desk with a high-end laptop. On the screen, a sophisticated AI chatbot interface is displayed with clean typography and deep indigo accents. The room is brightly lit with natural light coming from a large window, reflecting a modern light-mode aesthetic. The style is crisp, clean, and corporate modernism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO1PqqZZxc6FpFZ05Z47Ygwe_Ckgi2aGBYD1MtMyTU86ch_W-lX-6OALOaum71J-S4JsLn_Lx2kdk342rolHvAqT6n7xkY_FKBpmjjr25s7_TS2kgXvh1GqjfHYYrUSscqfDj-AmgoIw-T4dRnkXrIrgeuWbkqIeBYdzEMKZWRH-KJ37lg_j9ta3R8ZKm9aEod7Af8NecEIonPKDGHNTqvpoaW2zXnKtQLFW-FpVjPdqyurEf7wAEwjQ"/>
+</div>
+<div class="space-y-md">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-xs py-1 rounded-sm text-label-sm font-label-sm">[DEPLOY_TIME: 2W]</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">AI Chatbots &amp; Conversational AI</h2>
+<p class="text-body-md font-body-md text-secondary">Convert visitors into customers — 24/7. Our custom-trained LLMs understand your documentation and brand voice perfectly.</p>
+<ul class="space-y-xs">
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 100ms;"><span class="material-symbols-outlined text-primary-container">check_circle</span> Custom RAG Knowledge Base Integration</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 200ms;"><span class="material-symbols-outlined text-primary-container">check_circle</span> Multi-Channel Deployment (Web, WhatsApp, Slack)</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 300ms;"><span class="material-symbols-outlined text-primary-container">check_circle</span> Seamless Human Handoff Protocol</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 400ms;"><span class="material-symbols-outlined text-primary-container">check_circle</span> Real-time Sentiment &amp; Intent Analytics</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-label-md text-label-md hover:scale-[1.02] transition-all flex items-center gap-2 group">
+                        Build My AI System <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Service Block 2: Automation (Alternating) -->
+<section class="py-xl bg-background">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-xl items-center reveal-on-scroll">
+<div class="order-2 md:order-1 space-y-md">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-xs py-1 rounded-sm text-label-sm font-label-sm">[DEPLOY_TIME: 1-2W]</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">AI-Powered Automation &amp; Workflow</h2>
+<p class="text-body-md font-body-md text-secondary">Save hours every week — automatically. We eliminate repetitive manual tasks with sophisticated logic and AI agents.</p>
+<ul class="space-y-xs">
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 100ms;"><span class="material-symbols-outlined text-primary-container">cloud_download</span> CRM &amp; Lead Management Automation</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 200ms;"><span class="material-symbols-outlined text-primary-container">cloud_download</span> Automated Content Generation Pipelines</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 300ms;"><span class="material-symbols-outlined text-primary-container">cloud_download</span> Financial Reporting &amp; Reconciliation Bots</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 400ms;"><span class="material-symbols-outlined text-primary-container">cloud_download</span> API Integrations across 1,000+ Tools</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-label-md text-label-md hover:scale-[1.02] transition-all flex items-center gap-2 group">
+                        Automate My Workflows <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="order-1 md:order-2 rounded-xl overflow-hidden border border-outline-variant bg-surface shadow-sm">
+<img class="w-full aspect-square object-cover" data-alt="A clean, abstract representation of digital workflows and automation logic. Visualized through minimalist glowing lines and nodes that connect in a precise grid formation. The background is a soft off-white, and the connecting lines are deep indigo. The lighting is soft and ambient, creating a sense of technical precision and effortless efficiency. Highly architectural and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi4BcxWMbR47xMC70tdjANsiBG8j_jw1RQvwT9Qy8jY8TPTnxjgHGeCDdDRe5ib0el5m8AgPPvenH-0KCnfgeYANGrT8EOkm_C_tai__AoYFY7D66BD_zzZcqn9C1s6wDfdjuI-ZYxHdy96J-KCX-Nt6-fUuTJjX3qGY83ij_ZX90Fwp2iThi5BqIarmX3u7BMSpRp6UM7CBbHbe9meEm4YDlohHxxHMbvPAucHp7FtibH5q1FQvXx8w"/>
+</div>
+</div>
+</section>
+<!-- Service Block 3: Analytics -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-xl items-center reveal-on-scroll">
+<div class="rounded-xl overflow-hidden border border-outline-variant bg-surface shadow-sm">
+<img class="w-full aspect-square object-cover" data-alt="A sophisticated data visualization dashboard displayed on a large screen in a minimalist corporate office. The charts use a refined palette of charcoal, indigo, and soft greys. The interface looks professional and complex but highly readable, featuring line graphs, heat maps, and predictive trend lines. The environment is quiet and focused, with high-key lighting that emphasizes clarity and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4auuxsrD8doF03u_2hG2uZVu7F5F7kxCa7Yu3h8Zmr1-yThmvhT5CW8HLGl5Keh6MlVQQKAqRtiNwm3Go2ezRP7xjiA5TyBq1tnF1c_CLaOnWSG7FEgfKFdNKpywVvYa9FjLho_WXXCVahHm10krPmrJxQdye02E9ZPBRgCl-7LuqR9O0psSaJ9mQSbjBoOS3dSgrKF3FJtEWORzvgSsUiFzhPjrA2A5ZRIq1FAPNpeyF297DGTbmyw"/>
+</div>
+<div class="space-y-md">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-xs py-1 rounded-sm text-label-sm font-label-sm">[DEPLOY_TIME: 2-3W]</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Predictive Analytics &amp; BI</h2>
+<p class="text-body-md font-body-md text-secondary">Know what's coming before it happens. Use your historical data to forecast trends and optimize resources.</p>
+<ul class="space-y-xs">
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 100ms;"><span class="material-symbols-outlined text-primary-container">insights</span> Customer Churn Prediction Models</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 200ms;"><span class="material-symbols-outlined text-primary-container">insights</span> Custom Looker &amp; Tableau Dashboarding</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 300ms;"><span class="material-symbols-outlined text-primary-container">insights</span> Marketing Attribution Modeling</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 400ms;"><span class="material-symbols-outlined text-primary-container">insights</span> Data Warehousing &amp; ETL Pipelines</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-label-md text-label-md hover:scale-[1.02] transition-all flex items-center gap-2 group">
+                        See My Data Potential <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Service Block 4: Marketing (Alternating) -->
+<section class="py-xl bg-background">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-xl items-center reveal-on-scroll">
+<div class="order-2 md:order-1 space-y-md">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-xs py-1 rounded-sm text-label-sm font-label-sm">[DEPLOY_TIME: 2-4W]</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Full-Funnel Digital Marketing</h2>
+<p class="text-body-md font-body-md text-secondary">Growth you can measure, not just feel. We combine creative strategy with rigorous performance data.</p>
+<ul class="space-y-xs">
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 100ms;"><span class="material-symbols-outlined text-primary-container">ads_click</span> Programmatic &amp; Search Advertising</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 200ms;"><span class="material-symbols-outlined text-primary-container">ads_click</span> AI-Optimized Landing Pages</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 300ms;"><span class="material-symbols-outlined text-primary-container">ads_click</span> Content Strategy &amp; SEO Engineering</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 400ms;"><span class="material-symbols-outlined text-primary-container">ads_click</span> CRM Lifecycle Email Marketing</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-label-md text-label-md hover:scale-[1.02] transition-all flex items-center gap-2 group">
+                        Scale My Growth <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="order-1 md:order-2 rounded-xl overflow-hidden border border-outline-variant bg-surface shadow-sm">
+<img class="w-full aspect-square object-cover" data-alt="A modern, high-contrast creative studio setting. On the wall, large digital displays show vibrant marketing campaign metrics and bold, minimalist brand creative. The lighting is sophisticated and directional, highlighting textures of premium office materials. The atmosphere is energetic yet professional, with a focus on measurable results and high-impact digital art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmean0CcHax30-wvGrMQuNbVp4JF1czfrwAVd9CmJhWE0G445YYQ9HnTN36PgPkedFSNd_ZsrTbHqqeLS0MUR4-tOr2ajXcxETFyB7mN78xXA9VcSCNqf_gJ8TpQPYx0BDF6go3S201GcEesqb4pTPQE3tPt-yTEWvXU9iVdUqgJwWzn7asLOhIlk8_wD8XpKFZwT3BHffmIkvr13_BlPsesAfq1G8QC-GX_6KMHh2mo4HamVWx8oDeg"/>
+</div>
+</div>
+</section>
+<!-- Service Block 5: Web & Brand -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-xl items-center reveal-on-scroll">
+<div class="rounded-xl overflow-hidden border border-outline-variant bg-surface shadow-sm">
+<img class="w-full aspect-square object-cover" data-alt="Close up of a high-resolution display showing a pixel-perfect, minimalist website layout. The design features bold, asymmetric typography and a restricted color palette of indigo and white. The background is a clean studio environment. The image emphasizes mathematical precision, grid-based layout, and the premium 'quiet luxury' aesthetic of elite enterprise software design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMj121FP9e7UGH9DyZZJsnoqJhJA4aBm3B78pyxIkDXaXFP57iNeFd4ZFPhuR61SfBVAwieQ7C-vsYZlZaE2VLbEEE-5HOE8ylz55tjTxgpcbKbuk-GZqE3a_xW59Rz-EApbN9vkKa6XqahSQLYqwIZfmWLzeyuBXFUSlff1ikRz9qFKt0cNDG9-94xI0V1lb0qVsju91oSdApwDWoIXkrOOD2DQScw0CDvF1hFj08g1q3SKkf6H9KIg"/>
+</div>
+<div class="space-y-md">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed px-xs py-1 rounded-sm text-label-sm font-label-sm">[DEPLOY_TIME: 2-3W]</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Website &amp; Brand Design</h2>
+<p class="text-body-md font-body-md text-secondary">Your first impression, engineered to convert. We build lightweight, blazing-fast sites that drive enterprise value.</p>
+<ul class="space-y-xs">
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 100ms;"><span class="material-symbols-outlined text-primary-container">web</span> High-Performance Headless Web Design</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 200ms;"><span class="material-symbols-outlined text-primary-container">web</span> Brand Identity &amp; Style Systems</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 300ms;"><span class="material-symbols-outlined text-primary-container">web</span> UX/UI for Data-Heavy Platforms</li>
+<li class="checklist-item flex items-center gap-xs text-on-surface" style="transition-delay: 400ms;"><span class="material-symbols-outlined text-primary-container">web</span> Mobile-First Responsive Frameworks</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-md py-sm rounded-lg font-label-md text-label-md hover:scale-[1.02] transition-all flex items-center gap-2 group">
+                        Engineer My Site <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Differentiators -->
+<section class="py-xl bg-background">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="p-md bg-surface-container-lowest border border-outline-variant rounded-xl reveal-on-scroll" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-sm">speed</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-xs">Speed to Value</h4>
+<p class="text-label-md text-secondary">Most systems deployed in 2-4 weeks, not months. We value efficiency.</p>
+</div>
+<div class="p-md bg-surface-container-lowest border border-outline-variant rounded-xl reveal-on-scroll" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-sm">verified_user</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-xs">Privacy First</h4>
+<p class="text-label-md text-secondary">Enterprise-grade security and GDPR/CCPA compliant data handling.</p>
+</div>
+<div class="p-md bg-surface-container-lowest border border-outline-variant rounded-xl reveal-on-scroll" style="transition-delay: 300ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-sm">architecture</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-xs">Custom Architecture</h4>
+<p class="text-label-md text-secondary">No cookie-cutter templates. Every system is built for your specific stack.</p>
+</div>
+<div class="p-md bg-surface-container-lowest border border-outline-variant rounded-xl reveal-on-scroll" style="transition-delay: 400ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-sm">bar_chart_4_bars</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-xs">Data Integrity</h4>
+<p class="text-label-md text-secondary">Decisions backed by rigorous data cleaning and attribution logic.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto px-margin-desktop">
+<h2 class="text-headline-lg font-headline-lg text-primary text-center mb-xl reveal-on-scroll">Frequently Asked Questions</h2>
+<div class="space-y-sm">
+<!-- FAQ 1 -->
+<div class="accordion-item border border-outline-variant rounded-lg bg-background reveal-on-scroll" style="transition-delay: 50ms;">
+<button class="w-full flex justify-between items-center p-md text-left group" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-md font-semibold text-primary">How long does a typical AI chatbot deployment take?</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-md pb-md text-secondary text-body-md">
+                                Standard deployments take approximately 2 weeks. This includes knowledge base curation, training, testing, and multi-channel integration.
+                            </div>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="accordion-item border border-outline-variant rounded-lg bg-background reveal-on-scroll" style="transition-delay: 100ms;">
+<button class="w-full flex justify-between items-center p-md text-left group" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-md font-semibold text-primary">Do you integrate with my existing CRM?</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-md pb-md text-secondary text-body-md">
+                                Yes. We specialize in custom API integrations with Salesforce, Hubspot, Pipedrive, and dozens of other enterprise platforms to ensure data flows seamlessly.
+                            </div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="accordion-item border border-outline-variant rounded-lg bg-background reveal-on-scroll" style="transition-delay: 150ms;">
+<button class="w-full flex justify-between items-center p-md text-left group" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-md font-semibold text-primary">How do you ensure AI responses are accurate?</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-md pb-md text-secondary text-body-md">
+                                We utilize RAG (Retrieval-Augmented Generation) architectures which restrict the AI to only using your verified company documents as its source of truth.
+                            </div>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="accordion-item border border-outline-variant rounded-lg bg-background reveal-on-scroll" style="transition-delay: 200ms;">
+<button class="w-full flex justify-between items-center p-md text-left group" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-md font-semibold text-primary">What is the maintenance like after deployment?</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-md pb-md text-secondary text-body-md">
+                                We offer ongoing management packages that include monthly performance audits, retraining on new data, and proactive feature updates.
+                            </div>
+</div>
+</div>
+<!-- FAQ 5 -->
+<div class="accordion-item border border-outline-variant rounded-lg bg-background reveal-on-scroll" style="transition-delay: 250ms;">
+<button class="w-full flex justify-between items-center p-md text-left group" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-body-md font-semibold text-primary">Do you work with non-technical teams?</span>
+<span class="material-symbols-outlined rotate-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-md pb-md text-secondary text-body-md">
+                                Absolutely. While our systems are sophisticated, we build them with user-friendly dashboards and clear reporting so your entire team can benefit without knowing code.
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xl bg-primary-container relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 dot-pattern"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop text-center relative z-10">
+<h2 class="text-headline-lg md:text-headline-xl font-headline-xl text-on-primary mb-md reveal-on-scroll">Ready to grow with AI and data-driven marketing?</h2>
+<button class="bg-surface-container-lowest text-primary px-xl py-md rounded-lg font-headline-md text-headline-md hover:scale-105 transition-all shadow-xl reveal-on-scroll">
+                    Book a Strategy Call
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto w-full">
+<div class="col-span-1 md:col-span-1">
+<span class="text-headline-md font-headline-md font-bold text-primary block mb-sm">Sbortix</span>
+<p class="text-secondary text-label-sm font-label-sm">Precision marketing and AI infrastructure for the modern enterprise.</p>
+</div>
+<div class="space-y-xs">
+<h5 class="text-primary font-bold text-label-md">Company</h5>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">About</a>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">Work</a>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">Blog</a>
+</div>
+<div class="space-y-xs">
+<h5 class="text-primary font-bold text-label-md">Legal</h5>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">Privacy Policy</a>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">Terms of Service</a>
+</div>
+<div class="space-y-xs">
+<h5 class="text-primary font-bold text-label-md">Connect</h5>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">LinkedIn</a>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">Twitter</a>
+<a class="block text-secondary hover:text-primary transition-all text-label-sm" href="#">Contact</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop py-md border-t border-outline-variant">
+<p class="text-secondary text-label-sm">© 2024 Sbortix. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Accordion Logic
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+            
+            // Open clicked
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('opacity-80'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('opacity-80'));
+        });
+    </script>
+</body></html>

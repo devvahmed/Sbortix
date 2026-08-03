@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sbortix | Enterprise-Grade AI &amp; Marketing Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js" type="module"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#464749",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#a9a7ff",
+                    "secondary-fixed-dim": "#c7c6c9",
+                    "on-primary-fixed-variant": "#3b35a7",
+                    "surface": "#f9f9f9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#e2dfff",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "surface-bright": "#f9f9f9",
+                    "surface-dim": "#dadada",
+                    "inverse-primary": "#c3c0ff",
+                    "error": "#ba1a1a",
+                    "outline": "#777584",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary-fixed": "#1b1c1e",
+                    "surface-container-low": "#f3f3f3",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#351000",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-container": "#fe9562",
+                    "secondary-container": "#e0dfe2",
+                    "tertiary-container": "#752c00",
+                    "primary-container": "#3730a3",
+                    "surface-tint": "#544fc0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#464553",
+                    "primary": "#1f108e",
+                    "secondary": "#5e5e61",
+                    "secondary-fixed": "#e3e2e4",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "inverse-surface": "#2f3131",
+                    "inverse-on-surface": "#f0f1f1",
+                    "outline-variant": "#c8c4d5",
+                    "on-primary-fixed": "#0f0069",
+                    "background": "#f9f9f9",
+                    "on-tertiary-fixed-variant": "#7a3003",
+                    "on-background": "#1a1c1c",
+                    "on-secondary-container": "#626265",
+                    "on-surface": "#1a1c1c",
+                    "tertiary": "#511c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "16px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "xs": "8px",
+                    "xl": "64px",
+                    "margin-mobile": "16px",
+                    "base": "4px",
+                    "lg": "40px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-xl-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "mono": ["JetBrains Mono", "monospace"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        :root {
+            --scroll-offset: 0px;
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #111214; }
+        .subtle-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); }
+        .hairline-border { border: 1px solid #E5E7EB; }
+        .transition-all-200 { transition: all 0.2s ease-in-out; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle, #E5E7EB 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-position: center calc(var(--scroll-offset) * 0.5);
+            transition: background-position 0.1s ease-out;
+        }
+        
+        .blueprint-pattern {
+            background-color: #f9f9f9;
+            background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center calc(var(--scroll-offset) * -0.3);
+            transition: background-position 0.1s ease-out;
+        }
+
+        .tech-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .corner-accent::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #3730a3;
+            border-left: 2px solid #3730a3;
+        }
+
+        .hero-glow {
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+
+        .line-art-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .line-art-svg {
+            stroke: #3730A3;
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-xs">
+<a class="text-headline-md font-headline-md font-bold text-primary" href="#">Sbortix</a>
+<span class="tech-label text-outline ml-xs hidden lg:block">[VER_2.4.0]</span>
+</div>
+<div class="hidden md:flex items-center space-x-md">
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#services">Services</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#work">Work</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#about">About</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#blog">Blog</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-sm">
+<span class="tech-label text-outline hidden xl:block">[S_STATUS: OK]</span>
+<button class="bg-primary-container text-white px-md py-xs rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity border-b-2 border-primary">Book a call</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative overflow-hidden bg-white py-xl lg:py-24 grid-pattern min-h-[700px] flex items-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.8),transparent)] z-[1] pointer-events-none"></div>
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-outline-variant to-transparent opacity-50 z-[2]"></div>
+<div class="relative z-10 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="text-left">
+<div class="inline-block px-xs py-1 border hairline-border rounded mb-md bg-white/90 backdrop-blur-sm">
+<span class="tech-label text-primary">[SYSTEM_STATUS: ACTIVE]</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-md leading-tight text-on-background drop-shadow-sm lg:text-left">
+        Precision Marketing <br class="hidden md:block"/> Engineered by AI
+      </h1>
+<p class="text-secondary font-body-lg text-body-lg max-w-2xl mb-lg">
+        We bridge the gap between complex data science and high-performance marketing. Sbortix delivers enterprise-grade intelligence to modern growth teams.
+      </p>
+<div class="flex flex-col sm:flex-row gap-sm">
+<a class="bg-primary-container text-white px-lg py-md rounded-lg font-label-md text-label-md hover:opacity-90 transition-all-200 shadow-lg text-center" href="#contact">Start Project</a>
+<a class="border hairline-border text-on-background px-lg py-md rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all-200 bg-white/80 backdrop-blur-sm text-center" href="#work">View Capabilities</a>
+</div>
+</div>
+<div class="h-[400px] lg:h-[600px] w-full relative" style="background: radial-gradient(circle, rgba(55, 48, 163, 0.05) 0%, transparent 70%);">
+<spline-viewer class="w-full h-full bg-transparent block min-h-[500px]" url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"></spline-viewer>
+<div class="absolute bottom-4 right-6 bg-white/80 backdrop-blur-sm border hairline-border px-xs py-1 rounded flex items-center gap-xs z-20 pointer-events-none"><span class="material-symbols-outlined text-primary text-sm">3d_rotation</span><span class="tech-label text-primary text-[9px]">Interactive 3D Node</span></div></div>
+</div>
+</div>
+</header>
+<!-- Trust Strip -->
+<section class="bg-surface-container-low py-md border-y border-outline-variant relative">
+<div class="absolute inset-0 grid-pattern opacity-30"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center text-center gap-md relative z-10">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="database">database</span>
+<span class="font-mono text-label-sm text-secondary uppercase tracking-tight">Data Science Engineered</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="smart_toy">smart_toy</span>
+<span class="font-mono text-label-sm text-secondary uppercase tracking-tight">AI + Marketing Systems</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="public">public</span>
+<span class="font-mono text-label-sm text-secondary uppercase tracking-tight">Global Service Node: KHI-PAK</span>
+</div>
+</div>
+</section>
+<!-- Our Services Section: Redesigned to Systemsltd Pattern -->
+<section class="bg-white py-24 reveal" id="services">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<!-- Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-md">
+<div>
+<span class="tech-label text-primary mb-xs block">[SYSTEM_CORE_SERVICES]</span>
+<h2 class="text-5xl lg:text-6xl font-bold text-on-background">Our Services</h2>
+</div>
+<a class="flex items-center gap-xs text-primary font-bold hover:underline group" href="#work">
+            Discover our full capabilities
+            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Cards Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: AI Solutions -->
+<a class="group bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" href="#ai-solutions">
+<div class="p-8 pb-4">
+<div class="tech-label text-outline mb-4">SERVICE_MODULE // 01</div>
+<h3 class="text-2xl font-bold text-on-background mb-4 leading-tight">AI &amp; Enterprise <br/>Intelligence</h3>
+<p class="text-secondary text-body-md mb-6 line-clamp-3">Custom AI systems, predictive analytics, and autonomous agents designed for scale and high precision.</p>
+<div class="flex items-center gap-xs text-primary font-bold">
+                    Learn More
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</div>
+</div>
+<div class="flex-grow mt-auto relative h-48 overflow-hidden">
+<img alt="AI Solutions Visual" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
+</div>
+</a>
+<!-- Card 2: Digital Marketing -->
+<a class="group bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" href="#digital-marketing">
+<div class="p-8 pb-4">
+<div class="tech-label text-outline mb-4">SERVICE_MODULE // 02</div>
+<h3 class="text-2xl font-bold text-on-background mb-4 leading-tight">Digital Growth &amp; <br/>Performance</h3>
+<p class="text-secondary text-body-md mb-6 line-clamp-3">Full-funnel SEO, paid advertising, and automated lifecycle marketing driven by algorithmic precision.</p>
+<div class="flex items-center gap-xs text-primary font-bold">
+                    Learn More
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</div>
+</div>
+<div class="flex-grow mt-auto relative h-48 overflow-hidden">
+<img alt="Digital Marketing Visual" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5uZqHR25WX0MiqIh1ecZxGsGqooewURqLdOrPrlWgYMYCtCmOJGGhSPvFTKH92HrRvsPUkztTA1LXadCeOoeLIvH20MFCohsp-NgrouFNVTvZS7fgjJ9KGSKcB2uEp1jKUDxhxsoJFOhFYb1G2_Mjk8pnOFTco0vHg5Ce0odHePY9FzkO0stVJ6pWJ7IEx7vdEH1sPywVEN9Nwzc4m_vYJ2FqVQR7xzQNaeWjVr_ihaKMeqgvfbpAlQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
+</div>
+</a>
+<!-- Card 3: Web & Branding -->
+<a class="group bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" href="#web-branding">
+<div class="p-8 pb-4">
+<div class="tech-label text-outline mb-4">SERVICE_MODULE // 03</div>
+<h3 class="text-2xl font-bold text-on-background mb-4 leading-tight">Web Engineering <br/>&amp; Branding</h3>
+<p class="text-secondary text-body-md mb-6 line-clamp-3">High-performance React/Next.js interfaces and brand identities engineered for technical authority.</p>
+<div class="flex items-center gap-xs text-primary font-bold">
+                    Learn More
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</div>
+</div>
+<div class="flex-grow mt-auto relative h-48 overflow-hidden">
+<img alt="Web and Branding Visual" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXc_rjgB_rTCs0GIqAOSiaOf9kMlc5tLlOeIuaIy60dZM4BRkDBvt44KaL5v4b7_QJP4bdeq-FTovychXRF926keyWiFEDfXleN8XXQGrUD114BLsN7foXCgSEYDhp0-iZBHIPlaOIky0uhhOyenmdjtRflMBYgfx4O_6oDPC13IDhMj6KlqgVFj1NAIYnjyHkOL7URqo_ozsoFjk-dLgni-lcgUXrykptRjJYARQ1wAwAG43BFE-J-w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-xl bg-surface-container-low overflow-hidden relative">
+<div class="absolute inset-0 grid-pattern opacity-20"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-xl">
+<span class="tech-label text-primary">[SEQUENTIAL_LOGIC_V4]</span>
+<h2 class="font-headline-lg text-headline-lg mt-base">The Sbortix Framework</h2>
+</div>
+<div class="relative flex flex-col md:flex-row justify-between items-start gap-lg">
+<div class="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-outline-variant z-0 border-t border-b border-white"></div>
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/4">
+<div class="w-16 h-16 rounded-full bg-white border-2 border-primary flex items-center justify-center mb-md subtle-shadow">
+<span class="font-mono font-bold text-primary">01</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Discover</h4>
+<p class="text-secondary tech-label text-[10px] uppercase mb-xs">PHASE_INITIATION</p>
+<p class="text-secondary text-label-md px-base">Deep audit of existing data infrastructure and marketing silos.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/4">
+<div class="w-16 h-16 rounded-full bg-white border-2 border-primary flex items-center justify-center mb-md subtle-shadow">
+<span class="font-mono font-bold text-primary">02</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Build</h4>
+<p class="text-secondary tech-label text-[10px] uppercase mb-xs">ENGINEERING_DEV</p>
+<p class="text-secondary text-label-md px-base">Engineering custom AI tools and strategic campaign assets.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/4">
+<div class="w-16 h-16 rounded-full bg-white border-2 border-primary flex items-center justify-center mb-md subtle-shadow">
+<span class="font-mono font-bold text-primary">03</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Launch</h4>
+<p class="text-secondary tech-label text-[10px] uppercase mb-xs">NODE_DEPLOYMENT</p>
+<p class="text-secondary text-label-md px-base">Controlled deployment with real-time performance monitoring.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/4">
+<div class="w-16 h-16 rounded-full bg-white border-2 border-primary flex items-center justify-center mb-md subtle-shadow">
+<span class="font-mono font-bold text-primary">04</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-xs">Scale</h4>
+<p class="text-secondary tech-label text-[10px] uppercase mb-xs">VERTICAL_EXPANSION</p>
+<p class="text-secondary text-label-md px-base">Aggressive expansion based on validated data outcomes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities / Bento Section -->
+<section class="py-xl bg-white" id="work">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="flex items-end justify-between mb-lg">
+<div>
+<span class="tech-label text-primary">[SYSTEM_CAPABILITIES_READOUT]</span>
+<h2 class="font-headline-lg text-headline-lg mt-base">Technical Capabilities</h2>
+</div>
+<div class="hidden md:block tech-label text-outline-variant">TOTAL_MODELS: 14 // ACTIVE_PROXIES: 03</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 bg-surface-container rounded-xl overflow-hidden hairline-border min-h-[400px] flex flex-col group relative">
+<div class="flex-grow p-md relative bg-white line-art-container">
+<svg class="w-full h-full max-h-64 line-art-svg opacity-60 group-hover:opacity-100 transition-opacity" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100">
+<path d="M10 80 Q 25 20, 40 70 T 70 30 T 90 50" stroke-dasharray="2,2"></path>
+<circle cx="10" cy="80" r="1.5"></circle><circle cx="40" cy="70" r="1.5"></circle><circle cx="70" cy="30" r="1.5"></circle><circle cx="90" cy="50" r="1.5"></circle>
+<rect height="40" rx="4" width="60" x="20" y="20"></rect>
+<path d="M20 30h60M40 45h20M40 50h10"></path>
+</svg>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="p-md bg-white border-t border-outline-variant relative">
+<div class="absolute -top-3 left-6 px-xs py-0.5 bg-primary text-white tech-label text-[9px]">AGENT_NODE</div>
+<h4 class="font-headline-md text-headline-md">Agentic Sales Assistant</h4>
+<p class="text-secondary font-body-md text-body-md">An autonomous AI agent that qualifies inbound leads in real time, updates the CRM automatically, and drafts follow-up emails — running without human intervention.</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-low rounded-xl overflow-hidden hairline-border flex flex-col group">
+<div class="p-md bg-white flex-grow border-b border-outline-variant relative">
+<div class="absolute top-2 right-2 tech-label text-outline-variant">[ML_V2]</div>
+<h4 class="font-headline-md text-headline-md">Predictive Lead Scoring Engine</h4>
+<p class="text-secondary font-body-md text-body-md">A self-hosted machine learning pipeline that learns from historical conversion data and scores every new lead from 0-100.</p>
+</div>
+<div class="h-48 bg-white line-art-container p-lg">
+<svg class="w-full h-full line-art-svg opacity-50 group-hover:opacity-100 transition-opacity" viewbox="0 0 60 60">
+<path d="M10 10h40v40h-40zM10 20h40M20 10v40"></path>
+<circle cx="30" cy="30" r="10"></circle>
+<path d="M30 20v20M20 30h20"></path>
+</svg>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-low rounded-xl overflow-hidden hairline-border flex flex-col group">
+<div class="p-md bg-white flex-grow border-b border-outline-variant relative">
+<div class="absolute top-2 right-2 tech-label text-outline-variant">[SYS_0]</div>
+<h4 class="font-headline-md text-headline-md">Full-Funnel Growth System</h4>
+<p class="text-secondary font-body-md text-body-md">A data-driven marketing system connecting SEO, paid ads, and email into one analytics loop, tracking ROI per channel live.</p>
+</div>
+<div class="h-48 bg-white line-art-container p-lg">
+<svg class="w-full h-full line-art-svg opacity-50 group-hover:opacity-100 transition-opacity" viewbox="0 0 60 60">
+<path d="M30 5L5 20v20l25 15 25-15V20z"></path>
+<path d="M30 5v45M5 20l25 15 25-15"></path>
+</svg>
+</div>
+</div>
+<div class="md:col-span-8 bg-primary-container p-lg rounded-xl flex flex-col justify-end text-white relative overflow-hidden group">
+<div class="absolute inset-0 grid-pattern opacity-10"></div>
+<div class="absolute top-4 right-6 tech-label opacity-40">[NLP_VISION: ACTIVE]</div>
+<div class="mb-auto relative z-10"><span class="material-symbols-outlined text-on-primary-container text-4xl">description</span></div>
+<div class="relative z-10"><h4 class="font-headline-lg text-headline-lg mb-xs">AI Document Intelligence Platform</h4>
+<p class="opacity-80 font-body-lg text-body-lg">A system that extracts, classifies, and processes unstructured documents like invoices and contracts automatically using computer vision and NLP.</p></div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-700"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Work With Us Section -->
+<section class="py-xl bg-surface-container-lowest border-y border-outline-variant relative">
+<div class="absolute inset-0 blueprint-pattern opacity-20"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-lg">
+<span class="tech-label text-primary">[BENCHMARK_STABILITY]</span>
+<h2 class="font-headline-lg text-headline-lg mt-base">Engineered for Performance</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<div class="p-md bg-white hairline-border rounded-lg subtle-shadow text-center relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+<span class="material-symbols-outlined text-primary text-3xl mb-xs" data-icon="groups">groups</span>
+<h5 class="font-headline-md text-headline-md mb-xs">In-house expertise</h5>
+<p class="text-secondary text-label-md">No outsourcing. Your projects are handled by our full-time senior engineers and strategists.</p>
+</div>
+<div class="p-md bg-white hairline-border rounded-lg subtle-shadow text-center relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+<span class="material-symbols-outlined text-primary text-3xl mb-xs" data-icon="visibility">visibility</span>
+<h5 class="font-headline-md text-headline-md mb-xs">Transparent process</h5>
+<p class="text-secondary text-label-md">Live dashboards for every project phase. You see what we see, in real-time.</p>
+</div>
+<div class="p-md bg-white hairline-border rounded-lg subtle-shadow text-center relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+<span class="material-symbols-outlined text-primary text-3xl mb-xs" data-icon="query_stats">query_stats</span>
+<h5 class="font-headline-md text-headline-md mb-xs">Data-driven decisions</h5>
+<p class="text-secondary text-label-md">Zero guesswork. Every strategic pivot is backed by a statistical significance test.</p>
+</div>
+<div class="p-md bg-white hairline-border rounded-lg subtle-shadow text-center relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform"></div>
+<span class="material-symbols-outlined text-primary text-3xl mb-xs" data-icon="support_agent">support_agent</span>
+<h5 class="font-headline-md text-headline-md mb-xs">Direct founder access</h5>
+<p class="text-secondary text-label-md">We limit our client roster to ensure every project gets direct oversight from our founders.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision & Founders Section -->
+<section class="py-xl bg-white" id="about">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="absolute -top-8 left-0 tech-label text-primary-container bg-primary-container/10 px-xs py-1 rounded">SYSTEM_ORIGIN_PROTOCOL</div>
+<h2 class="font-headline-xl text-headline-xl mb-md">Building the future of marketing intelligence from the ground up.</h2>
+<p class="text-secondary font-body-lg text-body-lg mb-lg">
+                    Sbortix was born out of frustration with the "black box" nature of typical marketing agencies. We believe that marketing is a science, and AI is its most powerful toolset. Our mission is to democratize enterprise-grade data engineering for companies ready to dominate their vertical.
+                </p>
+<div class="flex gap-md border-t border-outline-variant pt-md">
+<div class="flex flex-col">
+<span class="tech-label text-outline text-[9px]">MISSION_OBJECTIVE</span>
+<span class="font-bold">INTELLIGENCE_DEMOCRATIZATION</span>
+</div>
+<div class="flex flex-col">
+<span class="tech-label text-outline text-[9px]">OPERATIONAL_SCOPE</span>
+<span class="font-bold">GLOBAL_SCALE</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-md">
+<div class="flex items-center gap-md p-md bg-white hairline-border rounded-xl">
+<div class="w-20 h-20 bg-surface-container flex-shrink-0 rounded-lg flex items-center justify-center line-art-container border hairline-border">
+<svg class="w-12 h-12 line-art-svg" viewbox="0 0 40 40"><circle cx="20" cy="14" r="6"></circle><path d="M8 34c0-6 5-10 12-10s12 4 12 10"></path></svg>
+</div>
+<div>
+<h6 class="font-label-md text-label-md font-bold">Muhammad Ahmed</h6>
+<p class="tech-label text-primary text-[10px] mb-xs"> DATA SCIENCE &amp; WEB DEVELOPMENT</p>
+<p class="text-secondary text-label-sm leading-relaxed">"Leads the data engineering and builds the web systems behind every product Sbortix ships."</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-md bg-white hairline-border rounded-xl">
+<div class="w-20 h-20 bg-surface-container flex-shrink-0 rounded-lg flex items-center justify-center line-art-container border hairline-border">
+<svg class="w-12 h-12 line-art-svg" viewbox="0 0 40 40"><circle cx="20" cy="14" r="6"></circle><path d="M8 34c0-6 5-10 12-10s12 4 12 10"></path><rect height="4" stroke-dasharray="1 1" width="8" x="16" y="10"></rect></svg>
+</div>
+<div>
+<h6 class="font-label-md text-label-md font-bold">Salman (Salman Tauheed)</h6>
+<p class="tech-label text-primary text-[10px] mb-xs"> AI ENGINEERING</p>
+<p class="text-secondary text-label-sm leading-relaxed">"Owns every AI system Sbortix builds — from chatbots to automation pipelines to custom models."</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-md bg-white hairline-border rounded-xl">
+<div class="w-20 h-20 bg-surface-container flex-shrink-0 rounded-lg flex items-center justify-center line-art-container border hairline-border">
+<svg class="w-12 h-12 line-art-svg" viewbox="0 0 40 40"><circle cx="20" cy="14" r="6"></circle><path d="M8 34c0-6 5-10 12-10s12 4 12 10"></path><path d="M10 10l5 5m5-5l-5 5" stroke-dasharray="2 2"></path></svg>
+</div>
+<div>
+<h6 class="font-label-md text-label-md font-bold">Bilal</h6>
+<p class="tech-label text-primary text-[10px] mb-xs"> DIGITAL MARKETING</p>
+<p class="text-secondary text-label-sm leading-relaxed">"Runs SEO, paid campaigns, and content strategy for every client engagement."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Strip -->
+<div class="py-lg bg-surface-container-low border-y border-outline-variant relative overflow-hidden">
+<div class="absolute inset-0 grid-pattern opacity-10"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop flex flex-wrap justify-center items-center gap-xl opacity-60 relative z-10">
+<div class="flex flex-col items-center">
+<span class="font-mono text-xl font-bold tracking-tighter">NEXT.js</span>
+<span class="tech-label text-[8px]">CORE_FRAMEWORK</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-xl font-bold tracking-tighter">OPENAI</span>
+<span class="tech-label text-[8px]">LLM_NODE</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-xl font-bold tracking-tighter">AWS</span>
+<span class="tech-label text-[8px]">CLOUD_INFRA</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-xl font-bold tracking-tighter">TENSORFLOW</span>
+<span class="tech-label text-[8px]">ML_PIPELINE</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-xl font-bold tracking-tighter">SNOWFLAKE</span>
+<span class="tech-label text-[8px]">DATA_WAREHOUSE</span>
+</div>
+</div>
+</div>
+<!-- Contact Section -->
+<section class="py-xl bg-white blueprint-pattern" id="contact">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div>
+<span class="tech-label text-primary">[OPEN_COMMS_CHANNEL]</span>
+<h2 class="font-headline-lg text-headline-lg mb-md mt-base">Let's build your data engine.</h2>
+<p class="text-secondary font-body-md text-body-md mb-lg">Ready to move beyond basic automation? Contact us to schedule a technical audit and discover where AI can drive the most growth for your enterprise.</p>
+<div class="space-y-md">
+<div class="flex items-start gap-md group">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="mail">mail</span>
+</div>
+<div>
+<h6 class="font-label-md text-label-md font-bold">Email Us</h6>
+<p class="text-secondary font-mono text-sm uppercase">hello@sbortix.com</p>
+</div>
+</div>
+<div class="flex items-start gap-md group">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h6 class="font-label-md text-label-md font-bold">Global Hub</h6>
+<p class="text-secondary font-mono text-sm uppercase">NODE_KHI: DHA PHASE 6</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white hairline-border p-md rounded-xl shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-xs tech-label text-outline-variant text-[8px]">INPUT_FORM_V1</div>
+<form class="space-y-md relative z-10">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div>
+<label class="block tech-label text-secondary mb-xs">USER_IDENTITY</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block tech-label text-secondary mb-xs">SMTP_CONTACT</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block tech-label text-secondary mb-xs">MODULE_INTEREST</label>
+<select class="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200">
+<option>AI Solutions [SRVC_01]</option>
+<option>Digital Marketing [SRVC_02]</option>
+<option>Web &amp; Branding [SRVC_03]</option>
+<option>Full Technical Audit [SRVC_00]</option>
+</select>
+</div>
+<div>
+<label class="block tech-label text-secondary mb-xs">TRANSMISSION_PAYLOAD</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200" placeholder="Describe your data requirements..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-white py-md rounded-lg font-label-md text-label-md hover:opacity-90 transition-all-200 border-b-2 border-primary" type="submit">Execute Inquiry Submission</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant relative">
+<div class="absolute inset-0 grid-pattern opacity-10 pointer-events-none"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto w-full relative z-10">
+<div class="md:col-span-1">
+<div class="flex items-center gap-xs">
+<a class="text-headline-md font-headline-md font-bold text-primary" href="#">Sbortix</a>
+</div>
+<p class="text-secondary text-label-sm mt-md leading-relaxed uppercase tech-label opacity-70">Enterprise-grade AI, data science, and marketing engineering nodes.</p>
+</div>
+<div>
+<h6 class="tech-label text-secondary font-bold mb-md">SYSTEM_CAPABILITIES</h6>
+<ul class="space-y-xs font-mono text-[11px]">
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">AI_INTEGRATION</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">PREDICTIVE_MODELS</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">GROWTH_ALGORITHMS</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">FULL_STACK_DEV</a></li>
+</ul>
+</div>
+<div>
+<h6 class="tech-label text-secondary font-bold mb-md">CORP_STRUCTURE</h6>
+<ul class="space-y-xs font-mono text-[11px]">
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">ABOUT_SYS</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">OP_PROCESS</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">LOG_BLOG</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">CONTACT_LINK</a></li>
+</ul>
+</div>
+<div>
+<h6 class="tech-label text-secondary font-bold mb-md">PROTOCOL_LEGAL</h6>
+<ul class="space-y-xs font-mono text-[11px]">
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">PRIVACY_POL</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">TERMS_SEC</a></li>
+<li class=""><a class="text-secondary hover:text-primary transition-all" href="#">COOKIE_LOG</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop pb-lg flex flex-col md:flex-row justify-between items-center border-t border-outline-variant pt-md relative z-10">
+<p class="text-secondary tech-label text-[10px]">© 2024 SBORTIX_CORE. ALL_RIGHTS_RESERVED.</p>
+<div class="flex gap-md mt-md md:mt-0">
+<a class="text-secondary hover:text-primary transition-colors" href="#"><span class="sr-only">LinkedIn</span><svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+<a class="text-secondary hover:text-primary transition-colors" href="#"><span class="sr-only">Twitter</span><svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.599 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+</div>
+</div>
+</footer>
+<script>
+    // Scroll Parallax and Reveal Logic
+    const handleScrollEffects = () => {
+        const scrollY = window.scrollY;
+        
+        // Grid pattern parallax
+        const maxOffset = 30;
+        const normalizedOffset = Math.min(scrollY * 0.05, maxOffset); 
+        document.documentElement.style.setProperty('--scroll-offset', `${normalizedOffset}px`);
+
+        // Reveal animations on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(reveal => {
+            const windowHeight = window.innerHeight;
+            const revealTop = reveal.getBoundingClientRect().top;
+            const revealPoint = 150;
+            if (revealTop < windowHeight - revealPoint) {
+                reveal.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScrollEffects, { passive: true });
+    handleScrollEffects(); // Initial call
+
+    // Simple smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Form submission micro-interaction
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'TRANSMITTING...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                btn.innerText = 'SUCCESS: DATA_RECEIVED';
+                btn.classList.remove('bg-primary-container');
+                btn.classList.add('bg-green-600');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-600', 'opacity-50');
+                    btn.classList.add('bg-primary-container');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    }
+</script>
+</body></html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Marketing - Sbortix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#777584",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-surface-variant": "#464553",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#544fc0",
+                    "on-background": "#1a1c1c",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1a1c1c",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e0dfe2",
+                    "error": "#ba1a1a",
+                    "tertiary": "#511c00",
+                    "surface": "#f9f9f9",
+                    "on-secondary-container": "#626265",
+                    "on-primary-fixed": "#0f0069",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#5e5e61",
+                    "secondary-fixed": "#e3e2e4",
+                    "background": "#f9f9f9",
+                    "inverse-surface": "#2f3131",
+                    "primary": "#1f108e",
+                    "on-secondary-fixed": "#1b1c1e",
+                    "on-primary-container": "#a9a7ff",
+                    "on-secondary-fixed-variant": "#464749",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#3b35a7",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface-bright": "#f9f9f9",
+                    "primary-container": "#3730a3",
+                    "secondary-fixed-dim": "#c7c6c9",
+                    "on-error": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "tertiary-container": "#752c00",
+                    "on-tertiary-container": "#fe9562",
+                    "primary-fixed": "#e2dfff",
+                    "inverse-primary": "#c3c0ff",
+                    "on-tertiary-fixed": "#351000",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-fixed-variant": "#7a3003",
+                    "surface-container-low": "#f3f3f3",
+                    "outline-variant": "#c8c4d5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "sm": "16px",
+                    "base": "4px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "margin-mobile": "16px",
+                    "lg": "40px",
+                    "xs": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-xl-mobile": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "mono": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mono-label {
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .hairline-border {
+            border: 1px solid #E5E7EB;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">Sbortix</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Work</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">About</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Blog</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a>
+<button class="bg-primary-container text-white px-md py-xs rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">Book a call</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-margin-desktop py-xl overflow-hidden">
+<!-- Hero Section -->
+<header class="grid lg:grid-cols-2 gap-xl items-end mb-xl reveal">
+<div>
+<span class="mono-label text-primary font-mono text-label-sm mb-base block">DIGITAL MARKETING</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-md">Growth you can measure.</h1>
+<p class="text-body-lg text-secondary max-w-lg">We engineer data-driven growth strategies that bridge the gap between creative vision and technical execution.</p>
+</div>
+<!-- Quick Contact Panel -->
+<div class="bg-surface-container-low p-md rounded-xl hairline-border">
+<h3 class="font-headline-md text-headline-md mb-md">How can we help you?</h3>
+<form class="space-y-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<input class="w-full bg-white border border-outline-variant rounded-lg p-xs focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" placeholder="Full Name" type="text"/>
+<input class="w-full bg-white border border-outline-variant rounded-lg p-xs focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" placeholder="Work Email" type="email"/>
+</div>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg p-xs focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" placeholder="Tell us about your goals" rows="3"></textarea>
+<button class="w-full bg-primary-container text-on-primary font-label-md text-label-md py-sm rounded-lg hover:opacity-90 transition-opacity">Request Strategy Session</button>
+</form>
+</div>
+</header>
+<!-- Overview Section with Image -->
+<section class="grid lg:grid-cols-12 gap-xl items-center mb-xl reveal">
+<div class="lg:col-span-7">
+<div class="aspect-[16/9] bg-surface-container-highest rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5uZqHR25WX0MiqIh1ecZxGsGqooewURqLdOrPrlWgYMYCtCmOJGGhSPvFTKH92HrRvsPUkztTA1LXadCeOoeLIvH20MFCohsp-NgrouFNVTvZS7fgjJ9KGSKcB2uEp1jKUDxhxsoJFOhFYb1G2_Mjk8pnOFTco0vHg5Ce0odHePY9FzkO0stVJ6pWJ7IEx7vdEH1sPywVEN9Nwzc4m_vYJ2FqVQR7xzQNaeWjVr_ihaKMeqgvfbpAlQ"/>
+</div>
+</div>
+<div class="lg:col-span-5">
+<h2 class="font-headline-lg text-headline-lg mb-md">Data-Driven Performance</h2>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                    Our marketing ecosystem integrates advanced analytics with high-intent creative strategies. We don't just chase clicks; we optimize for lifetime value and sustainable market dominance through rigorous testing and mathematical precision.
+                </p>
+<div class="mt-lg grid grid-cols-2 gap-md">
+<div>
+<div class="text-headline-md font-bold text-primary">140%</div>
+<div class="text-label-sm text-secondary uppercase font-mono tracking-wider">Avg ROI Increase</div>
+</div>
+<div>
+<div class="text-headline-md font-bold text-primary">2.4M+</div>
+<div class="text-label-sm text-secondary uppercase font-mono tracking-wider">Leads Generated</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Offerings: Bento Grid -->
+<section class="mb-xl reveal">
+<div class="flex justify-between items-end mb-lg">
+<h2 class="font-headline-lg text-headline-lg">Our Offerings</h2>
+<span class="text-label-md font-mono text-secondary">01 / CAPABILITIES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter">
+<!-- SEO -->
+<div class="md:col-span-3 lg:col-span-4 bg-white hairline-border p-lg rounded-xl hover:bg-surface-container-low transition-colors group">
+<div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-md group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">search_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">SEO</h3>
+<p class="text-on-surface-variant mb-md">The path to page one. Technical optimization meets high-authority content strategy.</p>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+<!-- Paid Ads -->
+<div class="md:col-span-3 lg:col-span-8 bg-primary-container text-white p-lg rounded-xl flex flex-col justify-between group">
+<div>
+<h3 class="font-headline-md text-headline-md mb-xs">Paid Advertising</h3>
+<p class="text-on-primary-container opacity-80 max-w-md">Every rupee tracked. Laser-focused targeting across Search, Display, and Programmatic networks with real-time attribution.</p>
+</div>
+<div class="mt-lg flex gap-sm overflow-x-auto pb-base">
+<span class="px-sm py-xs border border-white/20 rounded-full text-label-sm font-mono whitespace-nowrap">GOOGLE ADS</span>
+<span class="px-sm py-xs border border-white/20 rounded-full text-label-sm font-mono whitespace-nowrap">META ADS</span>
+<span class="px-sm py-xs border border-white/20 rounded-full text-label-sm font-mono whitespace-nowrap">LINKEDIN</span>
+</div>
+</div>
+<!-- Email & Social -->
+<div class="md:col-span-3 lg:col-span-6 bg-white hairline-border p-lg rounded-xl flex items-center gap-lg">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md mb-xs">Email Marketing</h3>
+<p class="text-on-surface-variant text-label-md">Automated lifecycle flows that convert subscribers into loyal brand advocates.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">mail</span>
+</div>
+<div class="md:col-span-3 lg:col-span-6 bg-white hairline-border p-lg rounded-xl flex items-center gap-lg">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md mb-xs">Social Media</h3>
+<p class="text-on-surface-variant text-label-md">Strategic engagement and viral content loops designed for specific platform algorithms.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">share</span>
+</div>
+</div>
+</section>
+<!-- Key Components: Horizontal Scroll-like view -->
+<section class="py-xl reveal">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-lg md:p-xl">
+<div class="grid lg:grid-cols-2 gap-xl items-center">
+<div>
+<span class="mono-label text-primary-fixed-dim text-label-sm mb-base block">CORE TECHNOLOGY</span>
+<h2 class="font-headline-lg text-headline-lg text-white mb-md">Key Components</h2>
+<ul class="space-y-md mt-lg">
+<li class="flex items-start gap-md">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<div>
+<h4 class="font-headline-md text-body-lg font-bold">Performance Analytics</h4>
+<p class="text-surface-variant text-label-md">Real-time dashboards providing deep insights into every touchpoint of your customer journey.</p>
+</div>
+</li>
+<li class="flex items-start gap-md">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">palette</span>
+<div>
+<h4 class="font-headline-md text-body-lg font-bold">Creative Strategy</h4>
+<p class="text-surface-variant text-label-md">Visual storytelling backed by A/B testing to ensure maximum emotional resonance.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="bg-white/5 p-md rounded-xl border border-white/10">
+<h4 class="text-primary-fixed-dim font-mono text-label-sm mb-xs">03</h4>
+<h5 class="text-white font-bold mb-xs">Lead Generation</h5>
+<p class="text-surface-variant text-label-sm">High-intent funnel architecture designed for scale.</p>
+</div>
+<div class="bg-white/5 p-md rounded-xl border border-white/10">
+<h4 class="text-primary-fixed-dim font-mono text-label-sm mb-xs">04</h4>
+<h5 class="text-white font-bold mb-xs">Marketing Automation</h5>
+<p class="text-surface-variant text-label-sm">Eliminate friction with intelligent workflow orchestration.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Differentiating Factors -->
+<section class="py-xl reveal">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg">Why partner with Sbortix?</h2>
+<p class="text-secondary max-w-2xl mx-auto mt-xs">The technical advantage in a crowded marketplace.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
+<div class="text-center">
+<div class="text-primary mb-md">
+<span class="material-symbols-outlined text-[40px]">trending_up</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-xs">Higher ROI</h4>
+<p class="text-on-surface-variant text-label-md">Efficiency first. We trim the waste and scale the winners.</p>
+</div>
+<div class="text-center">
+<div class="text-primary mb-md">
+<span class="material-symbols-outlined text-[40px]">database</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-xs">Data-backed decisions</h4>
+<p class="text-on-surface-variant text-label-md">No guesswork. Every move is justified by objective metrics.</p>
+</div>
+<div class="text-center">
+<div class="text-primary mb-md">
+<span class="material-symbols-outlined text-[40px]">visibility</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-xs">Transparent reporting</h4>
+<p class="text-on-surface-variant text-label-md">Live access to your campaign performance, 24/7.</p>
+</div>
+<div class="text-center">
+<div class="text-primary mb-md">
+<span class="material-symbols-outlined text-[40px]">language</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold mb-xs">Global reach</h4>
+<p class="text-on-surface-variant text-label-md">Localized strategies for international market expansion.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xl mb-xl reveal">
+<div class="bg-surface-container rounded-2xl p-xl text-center border border-outline-variant">
+<h2 class="font-headline-xl text-headline-xl mb-md">How can we help you?</h2>
+<p class="text-body-lg text-secondary mb-lg max-w-xl mx-auto">Let's discuss how our digital marketing framework can drive measurable growth for your enterprise.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center">
+<button class="bg-primary-container text-on-primary px-xl py-md rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">Let's work together</button>
+<button class="bg-white border border-outline-variant px-xl py-md rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">View Case Studies</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto w-full">
+<div class="md:col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-md">Sbortix</div>
+<p class="text-secondary text-label-sm max-w-xs">High-performance digital solutions for the modern enterprise.</p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md font-label-md">Services</h4>
+<ul class="space-y-xs text-label-sm text-secondary">
+<li><a class="hover:text-primary underline transition-all" href="#">Digital Marketing</a></li>
+<li><a class="hover:text-primary underline transition-all" href="#">Web Development</a></li>
+<li><a class="hover:text-primary underline transition-all" href="#">Data Analytics</a></li>
+<li><a class="hover:text-primary underline transition-all" href="#">Cloud Solutions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md font-label-md">Company</h4>
+<ul class="space-y-xs text-label-sm text-secondary">
+<li><a class="hover:text-primary underline transition-all" href="#">About</a></li>
+<li><a class="hover:text-primary underline transition-all" href="#">Blog</a></li>
+<li><a class="hover:text-primary underline transition-all" href="#">Careers</a></li>
+<li><a class="hover:text-primary underline transition-all" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md font-label-md">Legal</h4>
+<ul class="space-y-xs text-label-sm text-secondary">
+<li><a class="hover:text-primary underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary underline transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-md max-w-7xl mx-auto w-full border-t border-outline-variant text-center md:text-left">
+<p class="text-label-sm text-secondary">© 2024 Sbortix. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll for nav links (if applicable)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

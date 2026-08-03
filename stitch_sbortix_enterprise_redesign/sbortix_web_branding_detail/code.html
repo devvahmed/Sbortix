@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Web &amp; Branding | Sbortix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#777584",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-surface-variant": "#464553",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#544fc0",
+                        "on-background": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e0dfe2",
+                        "error": "#ba1a1a",
+                        "tertiary": "#511c00",
+                        "surface": "#f9f9f9",
+                        "on-secondary-container": "#626265",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#5e5e61",
+                        "secondary-fixed": "#e3e2e4",
+                        "background": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "primary": "#1f108e",
+                        "on-secondary-fixed": "#1b1c1e",
+                        "on-primary-container": "#a9a7ff",
+                        "on-secondary-fixed-variant": "#464749",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#3b35a7",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#3730a3",
+                        "secondary-fixed-dim": "#c7c6c9",
+                        "on-error": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "tertiary-container": "#752c00",
+                        "on-tertiary-container": "#fe9562",
+                        "primary-fixed": "#e2dfff",
+                        "inverse-primary": "#c3c0ff",
+                        "on-tertiary-fixed": "#351000",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#7a3003",
+                        "surface-container-low": "#f3f3f3",
+                        "outline-variant": "#c8c4d5"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "48px",
+                        "sm": "16px",
+                        "base": "4px",
+                        "xl": "64px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "lg": "40px",
+                        "xs": "8px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-xl-mobile": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .mono-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .grid-pattern { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 24px 24px; }
+        .hero-gradient { background: radial-gradient(circle at 70% 30%, #e2dfff 0%, transparent 50%); }
+    </style>
+</head>
+<body class="text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="text-headline-md font-headline-md font-bold text-primary">Sbortix</div>
+<div class="hidden md:flex items-center space-x-lg">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Work</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">About</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Blog</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary px-md py-xs rounded hover:opacity-90 transition-opacity font-label-md text-label-md">
+                Book a call
+            </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-xl pb-24 grid-pattern">
+<div class="hero-gradient absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter relative z-10">
+<div class="lg:col-span-8 reveal">
+<span class="mono-label text-primary font-mono mb-base block">WEB &amp; BRANDING</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background mt-sm mb-md max-w-2xl">
+                        Your first impression, <span class="text-primary italic">engineered</span>.
+                    </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+                        We blend mathematical precision with creative intuition to build digital identities that command authority and drive measurable growth.
+                    </p>
+</div>
+<!-- Quick Contact Panel -->
+<div class="lg:col-span-4 reveal" style="transition-delay: 200ms;">
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg shadow-sm">
+<h3 class="font-headline-md text-headline-md mb-md">How can we help you?</h3>
+<form class="space-y-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-base">Name</label>
+<input class="w-full border border-outline-variant rounded p-xs focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-base">Email</label>
+<input class="w-full border border-outline-variant rounded p-xs focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-secondary mb-base">Message</label>
+<textarea class="w-full border border-outline-variant rounded p-xs focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-white py-sm rounded font-label-md text-label-md hover:bg-primary-container transition-colors">
+                                Send Inquiry
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Overview Section -->
+<section class="py-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="reveal">
+<span class="mono-label text-primary font-mono mb-base block">DIGITAL IDENTITY</span>
+<h2 class="font-headline-lg text-headline-lg mb-md">Beyond Aesthetics</h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-sm">
+                            In a saturated digital landscape, a website is more than just a gallery—it's a high-performance engine for your brand's credibility. We engineer every pixel to reflect your core values while optimizing for conversion and user engagement.
+                        </p>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                            Our approach treats brand guidelines as a living system, ensuring that every touchpoint from mobile apps to physical collateral speaks with a singular, authoritative voice.
+                        </p>
+</div>
+<div class="reveal relative h-[400px]" style="transition-delay: 300ms;">
+<div class="absolute inset-0 bg-primary-fixed-dim rounded-xl overflow-hidden border border-outline-variant shadow-inner">
+<img class="w-full h-full object-cover grayscale mix-blend-multiply opacity-80" data-alt="A highly detailed 3D abstract render of flowing, architectural glass waves in shades of deep indigo and crisp white. The composition is minimalist and structural, suggesting professional engineering and precision. The lighting is bright and clean, characteristic of a high-end corporate modernism aesthetic. Small technical annotations and thin hairlines are overlaid to emphasize the data-driven design philosophy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXc_rjgB_rTCs0GIqAOSiaOf9kMlc5tLlOeIuaIy60dZM4BRkDBvt44KaL5v4b7_QJP4bdeq-FTovychXRF926keyWiFEDfXleN8XXQGrUD114BLsN7foXCgSEYDhp0-iZBHIPlaOIky0uhhOyenmdjtRflMBYgfx4O_6oDPC13IDhMj6KlqgVFj1NAIYnjyHkOL7URqo_ozsoFjk-dLgni-lcgUXrykptRjJYARQ1wAwAG43BFE-J-w"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Offerings Grid -->
+<section class="py-xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="mb-lg reveal">
+<span class="mono-label text-primary font-mono mb-base block">CAPABILITIES</span>
+<h2 class="font-headline-lg text-headline-lg">Our Offerings</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Offering 1 -->
+<div class="reveal p-md border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors group" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">web</span>
+<h4 class="font-headline-md text-headline-md text-body-lg mb-xs">Website &amp; Landing Pages</h4>
+<p class="font-body-md text-body-md text-secondary">High-conversion gateways built for performance and narrative flow.</p>
+</div>
+<!-- Offering 2 -->
+<div class="reveal p-md border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors group" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">branding_watermark</span>
+<h4 class="font-headline-md text-headline-md text-body-lg mb-xs">Logo &amp; Brand Identity</h4>
+<p class="font-body-md text-body-md text-secondary">Timeless visual symbols and systems that define market presence.</p>
+</div>
+<!-- Offering 3 -->
+<div class="reveal p-md border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors group" style="transition-delay: 300ms;">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">grid_view</span>
+<h4 class="font-headline-md text-headline-md text-body-lg mb-xs">UI/UX Design</h4>
+<p class="font-body-md text-body-md text-secondary">Interface architectures that prioritize user focus and cognitive ease.</p>
+</div>
+<!-- Offering 4 -->
+<div class="reveal p-md border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors group" style="transition-delay: 400ms;">
+<span class="material-symbols-outlined text-primary text-3xl mb-md">architecture</span>
+<h4 class="font-headline-md text-headline-md text-body-lg mb-xs">Design Systems</h4>
+<p class="font-body-md text-body-md text-secondary">Scalable visual frameworks that maintain consistency across all products.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Components & Differentiators (Bento Style) -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Differentiation Panel -->
+<div class="lg:col-span-5 reveal bg-primary-container p-lg rounded-xl text-white">
+<span class="mono-label text-on-primary-container font-mono mb-md block">THE SBORTIX EDGE</span>
+<h2 class="font-headline-lg text-headline-lg mb-lg">What Sets Us Apart</h2>
+<ul class="space-y-md">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-primary-container">verified</span>
+<div>
+<strong class="block text-body-lg font-semibold">Professional Authority</strong>
+<p class="text-on-primary-container opacity-80 text-body-md">We design for leaders, avoiding trends in favor of timeless credibility.</p>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-primary-container">groups</span>
+<div>
+<strong class="block text-body-lg font-semibold">User-centric Design</strong>
+<p class="text-on-primary-container opacity-80 text-body-md">Decisions backed by data and user behavior patterns, not guesswork.</p>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-primary-container">bolt</span>
+<div>
+<strong class="block text-body-lg font-semibold">Faster Load Times</strong>
+<p class="text-on-primary-container opacity-80 text-body-md">Optimized assets and clean code for superior speed performance.</p>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-primary-container">layers</span>
+<div>
+<strong class="block text-body-lg font-semibold">Modern Aesthetic</strong>
+<p class="text-on-primary-container opacity-80 text-body-md">Refined minimalism that stays relevant across market shifts.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Key Components Panel -->
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="reveal bg-white p-md border border-outline-variant flex flex-col justify-between" style="transition-delay: 200ms;">
+<h4 class="font-label-md text-label-md text-primary mb-xs">01</h4>
+<h3 class="font-headline-md text-headline-md mb-xs">Responsive Architecture</h3>
+<p class="font-body-md text-body-md text-secondary">Fluid layouts that maintain integrity from 4K displays to mobile screens.</p>
+</div>
+<div class="reveal bg-white p-md border border-outline-variant flex flex-col justify-between" style="transition-delay: 300ms;">
+<h4 class="font-label-md text-label-md text-primary mb-xs">02</h4>
+<h3 class="font-headline-md text-headline-md mb-xs">Brand Guidelines</h3>
+<p class="font-body-md text-body-md text-secondary">Rigid standards for typography, color, and spacing to prevent brand dilution.</p>
+</div>
+<div class="reveal bg-white p-md border border-outline-variant flex flex-col justify-between" style="transition-delay: 400ms;">
+<h4 class="font-label-md text-label-md text-primary mb-xs">03</h4>
+<h3 class="font-headline-md text-headline-md mb-xs">Interaction Design</h3>
+<p class="font-body-md text-body-md text-secondary">Subtle animations and micro-interactions that guide user intent.</p>
+</div>
+<div class="reveal bg-white p-md border border-outline-variant flex flex-col justify-between" style="transition-delay: 500ms;">
+<h4 class="font-label-md text-label-md text-primary mb-xs">04</h4>
+<h3 class="font-headline-md text-headline-md mb-xs">Visual Consistency</h3>
+<p class="font-body-md text-body-md text-secondary">A unified visual language across all digital and printed assets.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xl relative">
+<div class="max-w-3xl mx-auto px-margin-desktop text-center reveal">
+<h2 class="font-headline-xl text-headline-xl mb-md">How can we help you?</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-lg">
+                    Ready to transform your digital presence? Let's engineer a solution that works for you.
+                </p>
+<button class="bg-primary text-white px-xl py-md rounded-full font-label-md text-label-md hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                    Let's work together
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto w-full">
+<div class="space-y-sm">
+<div class="text-headline-md font-headline-md font-bold text-primary">Sbortix</div>
+<p class="text-secondary label-sm text-label-sm">Precision branding for the enterprise future.</p>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-sm">Links</h5>
+<ul class="space-y-xs">
+<li><a class="text-secondary hover:text-primary underline transition-all label-sm text-label-sm" href="#">Services</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all label-sm text-label-sm" href="#">Work</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all label-sm text-label-sm" href="#">About</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all label-sm text-label-sm" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-sm">Contact</h5>
+<ul class="space-y-xs">
+<li><a class="text-secondary hover:text-primary underline transition-all label-sm text-label-sm" href="#">Contact</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all label-sm text-label-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-secondary hover:text-primary underline transition-all label-sm text-label-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-end items-start md:items-end">
+<p class="text-secondary label-sm text-label-sm">© 2024 Sbortix. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Implementation
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(reveal => {
+                const revealTop = reveal.getBoundingClientRect().top;
+                const revealPoint = 150;
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Initial check
+        revealOnScroll();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

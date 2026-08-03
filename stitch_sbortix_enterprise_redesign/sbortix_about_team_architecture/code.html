@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Sbortix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#544fc0",
+                    "secondary-fixed-dim": "#c7c6c9",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "surface-container": "#eeeeee",
+                    "background": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "secondary": "#5e5e61",
+                    "on-surface": "#1a1c1c",
+                    "on-primary-fixed": "#0f0069",
+                    "inverse-primary": "#c3c0ff",
+                    "on-surface-variant": "#464553",
+                    "primary-container": "#3730a3",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-container": "#e0dfe2",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#752c00",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-fixed-variant": "#3b35a7",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e2e2e2",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "primary-fixed": "#e2dfff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#351000",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#a9a7ff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface": "#f9f9f9",
+                    "primary": "#1f108e",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "tertiary": "#511c00",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#7a3003",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-container": "#fe9562",
+                    "outline": "#777584",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-container": "#626265",
+                    "inverse-surface": "#2f3131",
+                    "secondary-fixed": "#e3e2e4",
+                    "outline-variant": "#c8c4d5",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed": "#1b1c1e",
+                    "on-secondary-fixed-variant": "#464749"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xl": "64px",
+                    "xs": "8px",
+                    "margin-desktop": "48px",
+                    "base": "4px",
+                    "sm": "16px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        :root {
+            --scroll-offset: 0px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ghost-text {
+            user-select: none;
+            pointer-events: none;
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.05);
+            color: transparent;
+            line-height: 0.8;
+            transition: transform 0.1s ease-out;
+        }
+        .vertical-line {
+            width: 1px;
+            background: repeating-linear-gradient(to bottom, #c8c4d5 0, #c8c4d5 4px, transparent 4px, transparent 8px);
+        }
+        /* Grid Pattern Style */
+        .technical-grid {
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: calc(50% + var(--scroll-offset) * 0.2) calc(50% + var(--scroll-offset) * 0.2);
+            will-change: background-position;
+        }
+        .dark .technical-grid {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline sticky top-0 z-50">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">Sbortix</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Services</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Work</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-label-md text-label-md" href="#">About</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Blog</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a>
+<button class="bg-primary text-on-primary px-md py-xs rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">Book a call</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Vision Statement -->
+<section class="relative technical-grid px-margin-desktop py-xl md:py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center overflow-hidden">
+<div class="md:col-span-8 z-10">
+<h1 class="font-headline-xl text-headline-xl md:text-[64px] md:leading-[72px] text-on-surface mb-md">
+                    Architecting the future through <span class="text-primary">mathematical precision</span> and data integrity.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    We transcend the noise of modern AI marketing to deliver tools that prioritize clarity, professional credibility, and enterprise-grade stability.
+                </p>
+</div>
+<div class="md:col-span-4 relative h-64 md:h-[400px]">
+
+</div>
+</section>
+<!-- Team Section -->
+<section class="w-full">
+<!-- Member 1: Muhammad Ahmed -->
+<div class="relative min-h-[614px] flex items-center overflow-hidden border-t border-outline-variant bg-surface-container-low technical-grid">
+<div class="absolute left-0 bottom-0 ghost-text text-[120px] md:text-[240px] font-bold uppercase translate-y-1/4 -translate-x-10" style="transform: translate(calc(-2.5rem + var(--scroll-offset) * -0.05), calc(25% + var(--scroll-offset) * 0.05));">MUHAMMAD</div>
+<div class="px-margin-desktop py-xl max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-xl relative z-10">
+<div class="aspect-[4/5] overflow-hidden rounded-xl border border-outline-variant grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="A high-end professional studio portrait of a technology lead with a focused, authoritative expression. The lighting is dramatic and cinematic, utilizing a cool blue and sharp white corporate palette. The setting is a minimalist, modern office environment with blurred data visualizations in the background. The visual style is clean, sharp, and evokes high-stakes professional trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4OAMapSKE2QsYqAwHa8bJtr_yADcJlN4NW_CenQXn52ytDOHxHKOuLfBGCfJa0H4MikOnaOL6WoS0Nzr9RWDrhZLZRb_Uu6yqkyP4iaux3bqO5wzwlrKkSAxpm7o1I8MVETVEvFRs4ZyrTlek0nKwG1H64rUiPoVm9a6JgzUVPXTxP_S9ThyMIekFK-I0sDZM1gV7qMQr6uFuPdTZ9I_O7xR_wSLh-cnYVbTs-uCFiL2WHELyt6YOkByHUxgD8RFJQPP1G9xeCS3m"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-xs">Expertise</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">MUHAMMAD AHMED</h2>
+<h3 class="font-body-lg text-body-lg text-secondary mb-md">Data Science &amp; Web Systems</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-lg">
+                            Architecting robust data pipelines and scalable web infrastructures that serve as the backbone for complex analytical tools. Muhammad bridges the gap between raw algorithmic power and seamless user accessibility, ensuring that every interaction is backed by rigorous data integrity and high-performance engineering.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Member 2: Salman Tauheed -->
+<div class="relative min-h-[614px] flex items-center overflow-hidden border-t border-outline-variant bg-surface-container-lowest technical-grid">
+<div class="absolute right-0 top-0 ghost-text text-[120px] md:text-[240px] font-bold uppercase -translate-y-1/4 translate-x-10" style="transform: translate(calc(2.5rem + var(--scroll-offset) * 0.05), calc(-25% + var(--scroll-offset) * -0.05));">SALMAN</div>
+<div class="px-margin-desktop py-xl max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-xl relative z-10">
+<div class="flex flex-col justify-center order-2 md:order-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-xs">Expertise</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">SALMAN TAUHEED</h2>
+<h3 class="font-body-lg text-body-lg text-secondary mb-md">AI Engineering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-lg">
+                            Leading the development of proprietary artificial intelligence models designed for precision and predictability. Salman focuses on 'tools-not-toys', creating AI solutions that empower senior analysts and executives to make informed decisions without the risk of hallucination or visual noise, adhering to a strict corporate modernist philosophy.
+                        </p>
+</div>
+<div class="aspect-[4/5] overflow-hidden rounded-xl border border-outline-variant grayscale hover:grayscale-0 transition-all duration-700 order-1 md:order-2">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of an AI engineer in a futuristic, sleek technology lab. The lighting uses soft secondary shadows and high-contrast deep indigo accents. The atmosphere is intellectual and calm, emphasizing stability and focus. The background features complex architectural glass and subtle metallic surfaces, reflecting a quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAawTUC6PRxasZhO_KRN0ktWcWe6p3xt47ZlloEuVkSVcvovMNNXyHXKXJeDutceXFGUumPm0R633i1pt6eG5Co1UKoCcNHk2yLWuw70YVTLD3RMzvQAwlvpa6kJdk7tGw5dNslCUcUtPFrsP9xRuCRVb1kknu9MmGbljoO3pO9Yw6sPZGX6froGhhCSRjx4XgAtLlkv78KdPgelPAYj7HOtU9iWhqlLVAxOXv6UmiEVCk7GbrihqKvaBgfRt1pmhDl_BlDdjKWXbzX"/>
+</div>
+</div>
+</div>
+<!-- Member 3: Bilal -->
+<div class="relative min-h-[614px] flex items-center overflow-hidden border-y border-outline-variant bg-surface-container-low technical-grid">
+<div class="absolute left-1/2 top-1/2 ghost-text text-[120px] md:text-[240px] font-bold uppercase -translate-x-1/2 -translate-y-1/2 opacity-40" style="transform: translate(calc(-50% + var(--scroll-offset) * -0.02), calc(-50% + var(--scroll-offset) * 0.02));">BILAL</div>
+<div class="px-margin-desktop py-xl max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-xl relative z-10">
+<div class="aspect-[4/5] overflow-hidden rounded-xl border border-outline-variant grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="A portrait of a digital marketing director in a bright, airy executive lounge. The scene is illuminated by soft, natural high-key lighting, maintaining a pristine white and charcoal color palette. The subject exudes professional credibility and understated authority. The background is a sophisticated urban landscape visible through floor-to-ceiling glass windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ROBlToYRBCLXRkKzdk7bhYdp0KajEaceJbC01zofMfmRaCA-tb1k1QyuthaJ4M08F_uQWi690zMBFCnNsSFtgXJeW1jLS0w1fSeFFQ1yFHwN7r_Z7XvDIKKxIALL7cPAD6gGu4n-t1BSnrQZJN9aVugng53WhlOCQnUTkWEA_cE0MMqrEPZ1mC42t5PxYLwk1jE_3trJVc4fFYq-uYZ-x0oiF1FklxyUySKahjkld2PPtdLDT_QKi53oxG6WruBy4ivC_zt9h-yi"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-xs">Expertise</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">BILAL</h2>
+<h3 class="font-body-lg text-body-lg text-secondary mb-md">Digital Marketing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-lg">
+                            Translating technical excellence into market-leading brand presence. Bilal ensures the Sbortix identity remains authoritative and understated, reaching C-suite executives through strategic narratives that value efficiency over hype. He manages the global communication channels, maintaining a rigid adherence to the grid and the brand's aesthetic pillars.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- How We Work Section -->
+<section class="px-margin-desktop py-xl max-w-5xl mx-auto relative technical-grid">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">How We Work</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A disciplined approach to architectural problem solving.</p>
+</div>
+<div class="relative">
+<!-- Timeline Line -->
+<div class="absolute left-1/2 top-0 bottom-0 vertical-line -translate-x-1/2 hidden md:block"></div>
+<div class="space-y-xl relative">
+<!-- Step 1 -->
+<div class="flex flex-col md:flex-row items-center gap-md md:gap-0">
+<div class="md:w-1/2 md:pr-xl text-center md:text-right">
+<h4 class="font-label-md text-label-md text-primary mb-xs">PHASE 01</h4>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Discovery &amp; Audit</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Identifying technical debt and data silos within the existing infrastructure.</p>
+</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary-fixed z-10 hidden md:block"></div>
+<div class="md:w-1/2 md:pl-xl">
+<div class="p-sm bg-surface-container rounded-lg border border-outline-variant font-label-sm text-label-sm text-secondary inline-block">SYSTEM_ANALYSIS</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col md:flex-row items-center gap-md md:gap-0">
+<div class="md:w-1/2 md:pr-xl md:order-1 order-2">
+<div class="p-sm bg-surface-container rounded-lg border border-outline-variant font-label-sm text-label-sm text-secondary inline-block md:float-right">STRUCTURAL_MODELING</div>
+</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary-fixed z-10 hidden md:block md:order-2"></div>
+<div class="md:w-1/2 md:pl-xl md:order-3 order-1 text-center md:text-left">
+<h4 class="font-label-md text-label-md text-primary mb-xs">PHASE 02</h4>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Strategy Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Developing mathematical frameworks for customized AI and data delivery.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col md:flex-row items-center gap-md md:gap-0">
+<div class="md:w-1/2 md:pr-xl text-center md:text-right">
+<h4 class="font-label-md text-label-md text-primary mb-xs">PHASE 03</h4>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Engineering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Execution through rigid development sprints and rigorous testing protocols.</p>
+</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary-fixed z-10 hidden md:block"></div>
+<div class="md:w-1/2 md:pl-xl">
+<div class="p-sm bg-surface-container rounded-lg border border-outline-variant font-label-sm text-label-sm text-secondary inline-block">AGILE_DEPLOYMENT</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col md:flex-row items-center gap-md md:gap-0">
+<div class="md:w-1/2 md:pr-xl md:order-1 order-2">
+<div class="p-sm bg-surface-container rounded-lg border border-outline-variant font-label-sm text-label-sm text-secondary inline-block md:float-right">CONTINUOUS_INTEGRITY</div>
+</div>
+<div class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary-fixed z-10 hidden md:block md:order-2"></div>
+<div class="md:w-1/2 md:pl-xl md:order-3 order-1 text-center md:text-left">
+<h4 class="font-label-md text-label-md text-primary mb-xs">PHASE 04</h4>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Support &amp; Scale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Maintenance of integrity levels while scaling the system's capabilities.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline mt-xl relative technical-grid">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto w-full relative z-10">
+<div class="md:col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim mb-md">Sbortix</div>
+<p class="font-label-sm text-label-sm text-secondary-fixed-variant">Expertise in high-stakes enterprise data and AI systems.</p>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold mb-xs">Company</span>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all font-label-sm text-label-sm" href="#">Services</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all font-label-sm text-label-sm" href="#">Work</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold font-label-sm text-label-sm" href="#">About</a>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold mb-xs">Resources</span>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all font-label-sm text-label-sm" href="#">Blog</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all font-label-sm text-label-sm" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold mb-xs">Legal</span>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all font-label-sm text-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="px-margin-desktop py-md border-t border-outline-variant dark:border-outline max-w-7xl mx-auto w-full text-center relative z-10">
+<p class="font-label-sm text-label-sm text-secondary">© 2024 Sbortix. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Scroll listener to update CSS variable for parallax effects
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            // Limit the total travel range to maintain subtlety (approx 20-30px)
+            // Using a small multiplier for a smooth feel
+            document.documentElement.style.setProperty('--scroll-offset', `${scrollY * 0.1}px`);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Initial call
+
+        // Simple intersection observer for subtle fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .grid > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'ease-out');
+        });
+    </script>
+</body></html>
