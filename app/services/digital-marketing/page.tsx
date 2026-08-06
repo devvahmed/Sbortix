@@ -2,282 +2,547 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Search, Megaphone, Share2, Mail, ArrowRight, CheckCircle2, TrendingUp, Target, BarChart3 } from 'lucide-react';
+import {
+  Search,
+  Megaphone,
+  Share2,
+  Mail,
+  ArrowRight,
+  CheckCircle2,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Users,
+  Repeat,
+  Send,
+} from 'lucide-react';
 
 export default function DigitalMarketingPage() {
-  const [selectedCategory, setSelectedCategory] = useState<'seo' | 'ppc' | 'social'>('seo');
+  const [activeTab, setActiveTab] = useState<'seo' | 'social' | 'paid' | 'email'>('seo');
 
   return (
-    <div className="w-full bg-[#FAFAFD] py-xl">
-      {/* Hero Header */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-16">
-        <div className="flex items-center gap-xs mb-sm text-xs">
-          <Link href="/services" className="tech-label text-secondary hover:text-primary transition-colors">
-            SERVICES
-          </Link>
-          <span className="text-outline">/</span>
-          <span className="tech-label text-primary font-bold">SEO & DIGITAL MARKETING</span>
-        </div>
+    <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
+      
+      {/* ── HERO HEADER SECTION ── */}
+      <section
+        className="relative py-16 lg:py-24 border-b border-[#2D2D82]/15"
+        style={{
+          background: 'linear-gradient(180deg, #FFFFFF 0%, #ECEBF5 100%)',
+        }}
+      >
+        {/* Ambient Grid Pattern */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle, rgba(45, 45, 130, 0.18) 1.2px, transparent 1.2px),
+              linear-gradient(to right, rgba(45, 45, 130, 0.04) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(45, 45, 130, 0.04) 1px, transparent 1px)
+            `,
+            backgroundSize: '24px 24px, 72px 72px, 72px 72px',
+          }}
+        />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
-          <div className="lg:col-span-7">
-            <div className="inline-block px-xs py-1 border border-primary/20 rounded-md mb-md bg-white shadow-xs">
-              <span className="tech-label text-primary font-semibold flex items-center gap-1.5 text-xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                SEO, Paid Ads & Growth Marketing
-              </span>
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+          <div className="flex items-center gap-2 mb-6 text-xs">
+            <Link href="/services" className="font-mono text-[#6B7280] hover:text-[#2D2D82] transition-colors font-semibold uppercase tracking-wider">
+              SERVICES
+            </Link>
+            <span className="text-[#2D2D82]/30">/</span>
+            <span className="font-mono text-[#2D2D82] font-bold uppercase tracking-wider">
+              DIGITAL MARKETING & PERFORMANCE GROWTH
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/25 bg-white shadow-sm mb-6">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-wider">
+                  ALGORITHMIC GROWTH MARKETING
+                </span>
+              </div>
+
+              <h1
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  letterSpacing: '-0.03em',
+                }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] leading-[1.08] mb-6"
+              >
+                Precision Technical SEO, High-ROAS Ads & Lifecycle Automation
+              </h1>
+
+              <p className="text-gray-600 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
+                We combine deep technical search optimization, multi-channel paid acquisition algorithms (Google, Meta, LinkedIn, TikTok), and lifecycle email automation to capture high-intent enterprise buyers.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm text-white transition-all duration-300 shadow-md group"
+                  style={{
+                    backgroundColor: '#2D2D82',
+                    background: 'linear-gradient(135deg, #2D2D82 0%, #2C2A78 100%)',
+                    boxShadow: '0 4px 18px rgba(45, 45, 130, 0.32)',
+                  }}
+                >
+                  Schedule Growth Strategy Audit
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <a
+                  href="#pillars"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm text-[#151137] bg-white border border-[#2D2D82]/25 shadow-xs hover:border-[#2D2D82]/60 transition-all"
+                >
+                  View Marketing Pillars
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-on-background mb-md leading-tight">
-              Search Engine Optimization (SEO) & Paid Growth
-            </h1>
-            <p className="text-secondary text-base sm:text-lg max-w-2xl mb-lg leading-relaxed">
-              Generate consistent qualified leads with high-ranking Search Engine Optimization (SEO), targeted Google & Meta paid ads, social media management, and automated email marketing.
+
+            {/* Performance Live Widget */}
+            <div className="lg:col-span-5">
+              <div className="bg-[#151137] text-white rounded-2xl p-6 border border-[#2D2D82]/40 shadow-2xl relative overflow-hidden">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-[#2D2D82] flex items-center justify-center text-white">
+                      <TrendingUp className="w-4 h-4 text-emerald-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-mono text-xs font-bold text-white">GROWTH_ENGINE v3.8</h4>
+                      <p className="text-[10px] text-indigo-200/70 font-mono">ATTRIBUTION: OMNI_CHANNEL</p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                    SCALING
+                  </span>
+                </div>
+
+                <div className="space-y-3 font-mono text-xs">
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 flex justify-between items-center">
+                    <span className="text-indigo-200">Organic SEO Growth:</span>
+                    <span className="text-emerald-400 font-bold">+214% YoY</span>
+                  </div>
+                  <div className="p-3 rounded-lg bg-[#2D2D82]/40 border border-[#2D2D82]/60 flex justify-between items-center">
+                    <span className="text-indigo-200">Paid Ad Return (ROAS):</span>
+                    <span className="text-emerald-400 font-bold">3.4x - 4.2x</span>
+                  </div>
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 flex justify-between items-center">
+                    <span className="text-indigo-200">Email CTR Rate:</span>
+                    <span className="text-indigo-100 font-bold">18.6% Conversion</span>
+                  </div>
+                  <div className="flex justify-between items-center pt-2 border-t border-white/10 text-[10px] text-indigo-300">
+                    <span>ATTRIBUTION: REAL-TIME</span>
+                    <span>CAC REDUCTION: -38%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── METRICS STRIP ── */}
+      <section className="bg-[#151137] text-white py-8 border-y border-[#2D2D82]/40 shadow-inner">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">#1 Page</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">SEO Organic Rankings</div>
+          </div>
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">3.4x - 4.2x</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">Average Campaign ROAS</div>
+          </div>
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">-38%</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">Cost Per Acquisition (CAC)</div>
+          </div>
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">100%</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">Transparent Revenue Sync</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DETAILED MARKETING PILLARS (4 GROUPS) ── */}
+      <section id="pillars" className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 space-y-24">
+        
+        {/* ── GROUP 1: SEARCH ENGINE OPTIMIZATION (SEO) ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 01]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Search Engine Optimization (SEO)
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Dominate high-intent organic search queries with a rigorous technical foundation. We optimize site architecture, Core Web Vitals, schema markup, and authoritative backlink profiles to earn sustainable #1 rankings.
             </p>
-            <div className="flex flex-col sm:flex-row gap-sm">
-              <Link
-                href="/contact"
-                className="brand-button-gradient text-white px-lg py-md rounded-xl font-bold text-base hover:opacity-95 transition-all shadow-md hover:shadow-indigo-500/25 text-center flex items-center justify-center gap-2"
-              >
-                Start Marketing Campaign
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a
-                href="#pillars"
-                className="border border-indigo-200 text-on-background px-lg py-md rounded-xl font-bold text-base hover:bg-indigo-50/60 transition-all bg-white text-center shadow-xs"
-              >
-                View Marketing Services
-              </a>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                COMPLETE SEO BREAKDOWN:
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { title: 'Keyword Research', desc: 'Commercial intent mapping & high-value keyword opportunity discovery.' },
+                  { title: 'On-Page SEO', desc: 'Heading structure, semantic content optimization, internal linking, and meta tags.' },
+                  { title: 'Off-Page SEO', desc: 'High-authority digital PR, link building, and brand authority signals.' },
+                  { title: 'Technical SEO', desc: 'Crawl budget optimization, schema markup, rendering performance, & XML sitemaps.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs space-y-1">
+                    <div className="flex items-center gap-2 text-[#151137] font-bold text-sm">
+                      <Search className="w-4 h-4 text-[#2D2D82]" />
+                      <span>{item.title}</span>
+                    </div>
+                    <p className="text-xs text-gray-600">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Performance Widget */}
-          <div className="lg:col-span-5">
-            <div className="bg-[#0C0830] text-white rounded-2xl p-md border border-indigo-900/60 shadow-2xl relative overflow-hidden text-xs">
-              <div className="flex items-center justify-between border-b border-indigo-900/50 pb-xs mb-sm">
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-emerald-400" />
-                  <span className="text-indigo-200 text-xs font-semibold">Growth Tracking Engine</span>
-                </div>
-                <span className="text-emerald-400 text-[10px] bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-bold">LIVE CAMPAIGN</span>
-              </div>
+          {/* Abstract SVG Illustration: Search Index Crawl Graph */}
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                <rect x="30" y="40" width="340" height="220" rx="16" fill="#151137" />
+                {/* Search Bar Graphic */}
+                <rect x="60" y="70" width="280" height="36" rx="8" fill="#2D2D82" stroke="rgba(255,255,255,0.2)" />
+                <text x="80" y="92" fill="#FFFFFF" fontSize="11" fontFamily="monospace">sbortix.com/enterprise-ai</text>
+                <circle cx="315" cy="88" r="8" fill="#10B981" />
+                
+                {/* Ranking Position Bars */}
+                <rect x="60" y="130" width="280" height="24" rx="4" fill="rgba(255,255,255,0.08)" />
+                <rect x="60" y="130" width="240" height="24" rx="4" fill="#10B981" opacity="0.8" />
+                <text x="70" y="146" fill="#FFFFFF" fontSize="9" fontWeight="bold" fontFamily="monospace">#1 RANKING: HIGH-INTENT KEYWORD</text>
 
-              <div className="space-y-sm my-xs">
-                <div className="flex justify-between items-center bg-indigo-950/80 p-xs rounded border border-indigo-800/40">
-                  <span className="text-indigo-300">Organic Traffic (SEO):</span>
-                  <span className="text-emerald-400 font-bold text-sm">+214% YoY</span>
-                </div>
-                <div className="flex justify-between items-center bg-indigo-950/80 p-xs rounded border border-indigo-800/40">
-                  <span className="text-indigo-300">Google & Meta Ads ROAS:</span>
-                  <span className="text-emerald-400 font-bold text-sm">4.2x Average</span>
-                </div>
-                <div className="flex justify-between items-center bg-indigo-950/80 p-xs rounded border border-indigo-800/40">
-                  <span className="text-indigo-300">Email Lead Conversion:</span>
-                  <span className="text-indigo-100 font-bold text-sm">18.6% Open-to-Click</span>
-                </div>
-              </div>
+                <rect x="60" y="166" width="280" height="24" rx="4" fill="rgba(255,255,255,0.08)" />
+                <rect x="60" y="166" width="210" height="24" rx="4" fill="#2D2D82" opacity="0.9" />
+                <text x="70" y="182" fill="#FFFFFF" fontSize="9" fontWeight="bold" fontFamily="monospace">#2 RANKING: ENTERPRISE SEARCH</text>
 
-              <div className="flex justify-between items-center pt-xs text-[10px] text-indigo-400 border-t border-indigo-900/40 font-mono">
-                <span>SEO + PPC + EMAIL</span>
-                <span>DATA-DRIVEN</span>
+                <rect x="60" y="202" width="280" height="24" rx="4" fill="rgba(255,255,255,0.08)" />
+                <rect x="60" y="202" width="180" height="24" rx="4" fill="#2D2D82" opacity="0.7" />
+                <text x="70" y="218" fill="#FFFFFF" fontSize="9" fontWeight="bold" fontFamily="monospace">#3 RANKING: B2B AUDIT TERMS</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* ── BOLD PULL-QUOTE PANEL 1 ── */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#ECEBF5] border border-[#2D2D82]/20 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block">
+              // ORGANIC GROWTH PHILOSOPHY
+            </span>
+            <blockquote
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
+            >
+              "Technical SEO is not about tricks; it is about building clean web infrastructure that search algorithms trust and high-value decision makers love to read."
+            </blockquote>
+          </div>
+        </div>
+
+        {/* ── GROUP 2: SOCIAL MEDIA MARKETING ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Abstract SVG Illustration: Social Engagement Orbit */}
+          <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                <circle cx="200" cy="150" r="100" fill="none" stroke="#2D2D82" strokeWidth="1.5" strokeDasharray="4 4" />
+                <circle cx="200" cy="150" r="60" fill="none" stroke="#151137" strokeWidth="2" />
+                <circle cx="200" cy="150" r="30" fill="#2D2D82" />
+                <text x="200" y="154" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">BRAND</text>
+
+                {/* Orbit Nodes */}
+                <circle cx="200" cy="50" r="16" fill="#151137" />
+                <text x="200" y="54" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold">STRATEGY</text>
+
+                <circle cx="300" cy="150" r="16" fill="#10B981" />
+                <text x="300" y="154" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold">CONTENT</text>
+
+                <circle cx="200" cy="250" r="16" fill="#151137" />
+                <text x="200" y="254" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold">GROWTH</text>
+
+                <circle cx="100" cy="150" r="16" fill="#2D2D82" />
+                <text x="100" y="154" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold">REPORTS</text>
+              </svg>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 02]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Social Media Marketing
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Build a commanding brand voice across professional social platforms. We handle end-to-end social operations — strategic positioning, high-converting visual design, automated scheduling, and active audience engagement.
+            </p>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                ALL 7 SOCIAL MEDIA SERVICES:
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-[#151137]">
+                {[
+                  '1. Strategy & Positioning',
+                  '2. Account Setup & Optimization',
+                  '3. High-Quality Content Creation',
+                  '4. Automated Scheduling',
+                  '5. Active Community Management',
+                  '6. Algorithmic Organic Growth',
+                  '7. Monthly Performance Reporting',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-white border border-[#2D2D82]/15">
+                    <Share2 className="w-3.5 h-3.5 text-[#2D2D82] shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── GROUP 3: PAID ADVERTISING ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 03]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Paid Advertising & Performance Marketing
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Scale revenue with high-ROAS paid campaigns across Google Search, Meta, LinkedIn B2B, YouTube, and TikTok. We continuously optimize ad copy, bidding strategies, and retargeting funnels for maximum return on ad spend.
+            </p>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                PAID AD CHANNELS & OPTIMIZATION:
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { title: 'Google Ads & Search PPC', desc: 'Capture active buying intent with precision keyword bidding and responsive search ads.' },
+                  { title: 'Meta Ads (Facebook & Instagram)', desc: 'High-converting visual image & video campaigns with custom lookalike audiences.' },
+                  { title: 'LinkedIn Ads (B2B Lead Gen)', desc: 'Target key enterprise C-level executives by industry, company size, and job title.' },
+                  { title: 'YouTube & TikTok Video Ads', desc: 'Engaging short-form and in-stream video ads built to capture audience attention.' },
+                  { title: 'Campaign Optimization & Retargeting', desc: 'Algorithmic bid adjustments, dynamic product retargeting, and landing page alignment.' },
+                ].map((st, i) => (
+                  <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
+                    <Target className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
+                    <div>
+                      <h5 className="font-bold text-sm text-[#151137]">{st.title}</h5>
+                      <p className="text-xs text-gray-600">{st.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Abstract SVG Illustration: Multi-Channel Bidding Funnel */}
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                {/* Funnel Layers */}
+                <polygon points="50,40 350,40 300,110 100,110" fill="#151137" />
+                <text x="200" y="80" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold" fontFamily="monospace">GOOGLE + META + LINKEDIN ADS</text>
+
+                <polygon points="105,115 295,115 255,185 145,185" fill="#2D2D82" />
+                <text x="200" y="155" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold" fontFamily="monospace">RETARGETING & OPTIMIZATION</text>
+
+                <polygon points="150,190 250,190 220,260 180,260" fill="#10B981" />
+                <text x="200" y="230" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold" fontFamily="monospace">3.4x ROAS CONVERSION</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* ── BOLD PULL-QUOTE PANEL 2 ── */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#E8E8F2] border border-[#2D2D82]/20 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block">
+              // REVENUE ATTRIBUTION GUARANTEE
+            </span>
+            <blockquote
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
+            >
+              "We track every ad dollar directly to CRM pipeline revenue — zero vanity metrics, zero hidden fees, and complete attribution transparency."
+            </blockquote>
+          </div>
+        </div>
+
+        {/* ── GROUP 4: EMAIL MARKETING & AUTOMATION ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Abstract SVG Illustration: Automated Email Lifecycle Sequence */}
+          <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                <rect x="40" y="50" width="100" height="60" rx="8" fill="#151137" />
+                <text x="90" y="85" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">WELCOME FLOW</text>
+
+                <rect x="150" y="120" width="100" height="60" rx="8" fill="#2D2D82" />
+                <text x="200" y="155" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">SEGMENTATION</text>
+
+                <rect x="260" y="190" width="100" height="60" rx="8" fill="#10B981" />
+                <text x="310" y="225" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">NURTURE & SALE</text>
+
+                <path d="M 140,80 H 150 V 120" fill="none" stroke="#2D2D82" strokeWidth="2" strokeDasharray="3 3" />
+                <path d="M 250,150 H 260 V 190" fill="none" stroke="#10B981" strokeWidth="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 04]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Email Marketing & Lifecycle Automation
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Turn subscriber lists into predictable repeat revenue. We design high-converting email newsletters, build automated customer onboarding sequences, and implement behavioral segmentation.
+            </p>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                EMAIL AUTOMATION SERVICES:
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { title: 'Campaign Setup & Automation', desc: 'Automated welcome series, abandoned cart recovery, and re-engagement workflows.' },
+                  { title: 'Newsletter Design', desc: 'Custom responsive HTML email templates aligned with your corporate brand guidelines.' },
+                  { title: 'Marketing Automation', desc: 'Behavioral triggers based on user website actions, purchase history, and engagement.' },
+                  { title: 'Customer Segmentation', desc: 'Dynamic lead scoring & audience tagging for hyper-personalized messaging.' },
+                ].map((st, i) => (
+                  <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
+                    <div>
+                      <h5 className="font-bold text-sm text-[#151137]">{st.title}</h5>
+                      <p className="text-xs text-gray-600">{st.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Growth Key Performance Stats */}
-      <section className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white py-lg border-y border-indigo-900/60 mb-20 shadow-md">
-        <div className="max-w-7xl mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-lg text-center">
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">#1 Page</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">SEO Keyword Rankings</div>
-          </div>
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">4.2x</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">Average Paid Ads ROAS</div>
-          </div>
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">-35%</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">Lower Cost Per Lead</div>
-          </div>
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">100%</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">Transparent Attribution</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Marketing Pillars Grid */}
-      <section id="pillars" className="px-margin-desktop max-w-7xl mx-auto mb-24">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="tech-label text-primary font-bold text-xs uppercase block mb-xs">[GROWTH SERVICES]</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-on-background">Digital Marketing Pillars</h2>
-          <p className="text-secondary text-base mt-sm">Comprehensive search engine optimization, paid ad campaigns, and social media strategy.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-lg">
-          {/* Card 1: Search Engine Optimization (SEO) */}
-          <div className="brand-card-gradient border border-indigo-100 p-lg rounded-2xl card-glow-hover flex flex-col justify-between bg-white shadow-sm">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-md">
-                <Search className="w-6 h-6" />
+      {/* ── INTERACTIVE MARKETING CHANNEL TAB ── */}
+      <section className="py-16 bg-[#ECEBF5] border-y border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="bg-white rounded-3xl p-8 border border-[#2D2D82]/20 shadow-xl">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+              <div>
+                <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-1">
+                  // GROWTH STRATEGY MATRIX
+                </span>
+                <h3 className="text-2xl font-extrabold text-[#151137]">How We Scale Your Growth Funnel</h3>
               </div>
-              <h3 className="text-xl font-bold mb-xs text-on-background">Search Engine Optimization (SEO)</h3>
-              <p className="text-secondary text-sm mb-md leading-relaxed">
-                Rank higher on Google and dominate your niche with strategic keyword research, technical audits, and on-page optimization.
-              </p>
-              <ul className="space-y-xs text-xs text-secondary font-medium mb-md">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> In-Depth Keyword Research</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> On-Page & Technical SEO</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Off-Page SEO & Authority Building</li>
-              </ul>
-            </div>
-            <div className="relative h-44 rounded-xl overflow-hidden mt-md border border-indigo-100">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5uZqHR25WX0MiqIh1ecZxGsGqooewURqLdOrPrlWgYMYCtCmOJGGhSPvFTKH92HrRvsPUkztTA1LXadCeOoeLIvH20MFCohsp-NgrouFNVTvZS7fgjJ9KGSKcB2uEp1jKUDxhxsoJFOhFYb1G2_Mjk8pnOFTco0vHg5Ce0odHePY9FzkO0stVJ6pWJ7IEx7vdEH1sPywVEN9Nwzc4m_vYJ2FqVQR7xzQNaeWjVr_ihaKMeqgvfbpAlQ"
-                alt="Search Engine Optimization SEO"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          {/* Card 2: Paid Advertising (PPC) */}
-          <div className="brand-card-gradient border border-indigo-100 p-lg rounded-2xl card-glow-hover flex flex-col justify-between bg-white shadow-sm">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-md">
-                <Megaphone className="w-6 h-6" />
+              <div className="flex flex-wrap gap-2 bg-[#ECEBF5] p-1.5 rounded-xl">
+                {[
+                  { id: 'seo', label: 'Technical SEO' },
+                  { id: 'paid', label: 'Paid Ad Bidding' },
+                  { id: 'social', label: 'Social Content' },
+                  { id: 'email', label: 'Email Automation' },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id as any)}
+                    className={`px-4 py-2 rounded-lg text-xs font-bold font-mono transition-all ${
+                      activeTab === tab.id
+                        ? 'bg-[#2D2D82] text-white shadow-sm'
+                        : 'text-gray-600 hover:text-[#151137]'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
               </div>
-              <h3 className="text-xl font-bold mb-xs text-on-background">Paid Advertising (PPC)</h3>
-              <p className="text-secondary text-sm mb-md leading-relaxed">
-                Reach ready-to-buy customers using targeted Google Ads, Meta (Facebook & Instagram) Ads, LinkedIn Ads, and retargeting campaigns.
-              </p>
-              <ul className="space-y-xs text-xs text-secondary font-medium mb-md">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Google Search & Display Ads</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Meta (Facebook/Instagram) & YouTube Ads</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Campaign Optimization & Retargeting</li>
-              </ul>
             </div>
-            <div className="relative h-44 rounded-xl overflow-hidden mt-md border border-indigo-100">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"
-                alt="Paid Advertising PPC"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
 
-          {/* Card 3: Social Media & Email Marketing */}
-          <div className="brand-card-gradient border border-indigo-100 p-lg rounded-2xl card-glow-hover flex flex-col justify-between bg-white shadow-sm">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-md">
-                <Share2 className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold mb-xs text-on-background">Social Media & Email Marketing</h3>
-              <p className="text-secondary text-sm mb-md leading-relaxed">
-                Engage your community and turn subscribers into loyal customers through automated email marketing and social media management.
-              </p>
-              <ul className="space-y-xs text-xs text-secondary font-medium mb-md">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Social Media Strategy & Content</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Community Management & Organic Growth</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Email Setup, Newsletters & Automation</li>
-              </ul>
-            </div>
-            <div className="relative h-44 rounded-xl overflow-hidden mt-md border border-indigo-100">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXc_rjgB_rTCs0GIqAOSiaOf9kMlc5tLlOeIuaIy60dZM4BRkDBvt44KaL5v4b7_QJP4bdeq-FTovychXRF926keyWiFEDfXleN8XXQGrUD114BLsN7foXCgSEYDhp0-iZBHIPlaOIky0uhhOyenmdjtRflMBYgfx4O_6oDPC13IDhMj6KlqgVFj1NAIYnjyHkOL7URqo_ozsoFjk-dLgni-lcgUXrykptRjJYARQ1wAwAG43BFE-J-w"
-                alt="Social Media and Email Marketing"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
+            <div className="bg-[#151137] text-white p-6 rounded-2xl font-mono text-xs leading-relaxed border border-[#2D2D82]/40">
+              {activeTab === 'seo' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// Organic Search Engineering Execution</p>
+                  <p>1. In-depth technical crawl audit & site speed optimization.</p>
+                  <p>2. High-value commercial keyword targeting & topic cluster mapping.</p>
+                  <p>3. Schema markup injection & backlink authority building.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Long-term compounding organic search revenue without ongoing ad spend.</p>
+                </div>
+              )}
+              {activeTab === 'paid' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// Multi-Channel Paid Campaign Execution</p>
+                  <p>1. High-intent Google Search campaigns paired with targeted Meta/LinkedIn visual ads.</p>
+                  <p>2. Dynamic retargeting pixels capture drop-off visitors across the web.</p>
+                  <p>3. Algorithmic bid adjustments maximize ROAS efficiency.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Immediate 3.4x+ ROAS on ad investment.</p>
+                </div>
+              )}
+              {activeTab === 'social' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// Brand Voice & Organic Social Execution</p>
+                  <p>1. Editorial content calendar strategy aligned with company milestones.</p>
+                  <p>2. Custom visual graphics & short-form video production.</p>
+                  <p>3. Active community monitoring and response handling.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Elevated corporate authority & engaged community following.</p>
+                </div>
+              )}
+              {activeTab === 'email' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// Behavioral Lifecycle Email Execution</p>
+                  <p>1. Automated welcome & onboarding sequences for new leads.</p>
+                  <p>2. Dynamic customer segmentation based on purchase behavior.</p>
+                  <p>3. High-converting newsletter campaigns designed for maximum CTR.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: 18.6% average open-to-click conversion rate.</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Interactive Growth Strategy Selector */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-24">
-        <div className="bg-white border border-indigo-100 rounded-2xl p-lg shadow-sm">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-lg gap-md">
-            <div>
-              <span className="tech-label text-primary font-bold text-xs uppercase block mb-xs">[STRATEGY PREVIEW]</span>
-              <h3 className="text-2xl font-bold">Marketing Channel Overview</h3>
-            </div>
-            <div className="flex gap-xs bg-indigo-50/80 p-1 rounded-xl border border-indigo-100">
-              <button
-                onClick={() => setSelectedCategory('seo')}
-                className={`px-md py-xs rounded-lg text-xs font-bold transition-all ${
-                  selectedCategory === 'seo' ? 'bg-primary text-white shadow-xs' : 'text-secondary hover:text-primary'
-                }`}
-              >
-                Search Engine (SEO)
-              </button>
-              <button
-                onClick={() => setSelectedCategory('ppc')}
-                className={`px-md py-xs rounded-lg text-xs font-bold transition-all ${
-                  selectedCategory === 'ppc' ? 'bg-primary text-white shadow-xs' : 'text-secondary hover:text-primary'
-                }`}
-              >
-                Google & Meta Ads
-              </button>
-              <button
-                onClick={() => setSelectedCategory('social')}
-                className={`px-md py-xs rounded-lg text-xs font-bold transition-all ${
-                  selectedCategory === 'social' ? 'bg-primary text-white shadow-xs' : 'text-secondary hover:text-primary'
-                }`}
-              >
-                Email & Social
-              </button>
-            </div>
-          </div>
-
-          <div className="bg-[#0C0830] text-indigo-100 p-md rounded-xl font-sans text-sm leading-relaxed">
-            {selectedCategory === 'seo' && (
-              <div className="space-y-2">
-                <p className="text-emerald-400 font-bold font-mono text-xs">// Search Engine Optimization (SEO) Strategy</p>
-                <p>1. Targeted keyword research focusing on high-intent commercial buyers.</p>
-                <p>2. Complete site speed and technical SEO audit to resolve core errors.</p>
-                <p>3. High-quality content publishing and high-authority link acquisition.</p>
-                <p className="text-indigo-300 font-medium">&gt; Result: Sustainable, long-term organic revenue growth on Google.</p>
-              </div>
-            )}
-            {selectedCategory === 'ppc' && (
-              <div className="space-y-2">
-                <p className="text-emerald-400 font-bold font-mono text-xs">// Paid Advertising (PPC) Strategy</p>
-                <p>1. Hyper-targeted Google Ads search campaigns matching user purchase intent.</p>
-                <p>2. Engaging Meta (Facebook/Instagram) visual ads for retargeting past visitors.</p>
-                <p>3. Daily bid optimization and A/B testing to ensure maximum ROAS.</p>
-                <p className="text-indigo-300 font-medium">&gt; Result: Immediate inquiries and predictable customer acquisition.</p>
-              </div>
-            )}
-            {selectedCategory === 'social' && (
-              <div className="space-y-2">
-                <p className="text-emerald-400 font-bold font-mono text-xs">// Social Media & Email Automation</p>
-                <p>1. Strategic content calendar design for LinkedIn, Instagram, and Facebook.</p>
-                <p>2. Automated welcome email flows and customer segmentation.</p>
-                <p>3. Consistent brand messaging and monthly performance reports.</p>
-                <p className="text-indigo-300 font-medium">&gt; Result: High customer retention and strong brand awareness.</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Box */}
-      <section className="px-margin-desktop max-w-7xl mx-auto text-center">
-        <div className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white p-xl rounded-2xl border border-indigo-900/60 shadow-2xl">
-          <h3 className="text-3xl font-bold mb-md">Ready to scale your leads with SEO & Paid Ads?</h3>
-          <p className="text-indigo-200 max-w-2xl mx-auto mb-lg text-base">Schedule a free marketing strategy call with our digital growth team.</p>
+      {/* ── TECHNICAL MARKETING CTA BANNER ── */}
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+        <div className="bg-gradient-to-r from-[#151137] via-[#2D2D82] to-[#151137] text-white p-12 sm:p-16 rounded-3xl border border-[#2D2D82]/40 shadow-2xl relative overflow-hidden">
+          <h3
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-3xl sm:text-4xl font-extrabold mb-4"
+          >
+            Ready to Engineer High-ROAS Growth?
+          </h3>
+          <p className="text-indigo-200 max-w-2xl mx-auto mb-8 text-base leading-relaxed">
+            Contact our performance marketing team for a full SEO audit, ad account review, and customized growth forecast.
+          </p>
           <Link
             href="/contact"
-            className="brand-button-gradient text-white px-lg py-md rounded-xl font-bold text-base hover:opacity-95 transition-all shadow-md hover:shadow-indigo-500/25 inline-block"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm text-[#151137] bg-white hover:bg-gray-100 transition-all shadow-lg"
           >
-            Get Free Strategy Audit
+            Request Free Growth Audit
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
+
     </div>
   );
 }

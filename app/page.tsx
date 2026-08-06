@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import SplineScene from '@/components/SplineScene';
+import HeroSection from '@/components/HeroSection';
 
 export default function HomePage() {
   const [activeCapability, setActiveCapability] = useState(0);
@@ -47,48 +48,8 @@ export default function HomePage() {
 
   return (
     <div className="w-full bg-[#FAFAFD]">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-indigo-50/20 to-[#FAFAFD] py-xl lg:py-24 grid-pattern min-h-[700px] flex items-center">
-        <div className="absolute inset-0 ambient-indigo-glow z-[1] pointer-events-none"></div>
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-60 z-[2]"></div>
-        
-        <div className="relative z-10 px-margin-desktop max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
-            <div className="text-left">
-              <div className="inline-block px-xs py-1 border border-primary/20 rounded-md mb-md bg-white/95 backdrop-blur-sm shadow-xs">
-                <span className="tech-label text-primary font-semibold flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  [SYSTEM_STATUS: ACTIVE]
-                </span>
-              </div>
-              <h1 className="font-headline-xl text-headline-xl mb-md leading-tight text-on-background drop-shadow-sm lg:text-left">
-                Precision Marketing <br className="hidden md:block" /> Engineered by AI
-              </h1>
-              <p className="text-secondary font-body-lg text-body-lg max-w-2xl mb-lg">
-                We bridge the gap between complex data science and high-performance marketing. Sbortix delivers enterprise-grade intelligence to modern growth teams.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-sm">
-                <Link
-                  href="/contact"
-                  className="brand-button-gradient text-white px-lg py-md rounded-xl font-label-md text-label-md hover:opacity-95 transition-all shadow-md hover:shadow-indigo-500/25 text-center"
-                >
-                  Start Project
-                </Link>
-                <Link
-                  href="/work"
-                  className="border border-indigo-200 text-on-background px-lg py-md rounded-xl font-label-md text-label-md hover:bg-indigo-50/60 transition-all-200 bg-white/90 backdrop-blur-sm text-center shadow-xs"
-                >
-                  View Capabilities
-                </Link>
-              </div>
-            </div>
-
-            <div className="h-[400px] lg:h-[600px] w-full relative" style={{ background: 'radial-gradient(circle, rgba(55, 48, 163, 0.08) 0%, transparent 70%)' }}>
-              <SplineScene sceneUrl="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section — Layered Robot Depth Effect */}
+      <HeroSection />
 
       {/* Trust Strip */}
       <section className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white py-md border-y border-indigo-900/60 relative shadow-md">
@@ -110,12 +71,12 @@ export default function HomePage() {
       </section>
 
       {/* Company Overview & Value Proposition Section */}
-      <section className="py-24 bg-white border-b border-indigo-100 reveal relative" id="about-overview">
+      <section className="py-24 bg-[#ECEBF5] border-b border-[#2D2D82]/15 reveal relative" id="about-overview">
         <div className="absolute inset-0 grid-pattern opacity-15 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
           <div className="max-w-3xl mb-16 text-left">
-            <span className="tech-label text-primary font-semibold mb-xs block bg-indigo-50/80 px-3 py-1 rounded border border-indigo-100/60 inline-block">
-              [SYSTEM_IDENTITY // WHO_WE_ARE]
+            <span className="text-xs font-semibold text-[#2D2D82] mb-3 inline-block bg-white/90 px-3 py-1 rounded-full border border-[#2D2D82]/20 shadow-xs">
+              About Sbortix
             </span>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-on-background tracking-tight mb-4 leading-tight">
               We Engineer Business Growth <br className="hidden sm:block" /> with AI & Advanced Data Systems
@@ -126,14 +87,11 @@ export default function HomePage() {
           </div>
 
           {/* 3 Core Operational Pillars */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 divide-y lg:divide-y-0 lg:divide-x divide-[#2D2D82]/15">
             {/* Pillar 1 */}
-            <div className="p-8 rounded-2xl brand-card-gradient border border-indigo-100/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4 text-indigo-200/40 group-hover:text-primary/20 transition-colors">
-                <span className="material-symbols-outlined text-6xl">smart_toy</span>
-              </div>
+            <div className="pt-6 lg:pt-0 lg:pr-6 flex flex-col justify-between relative group">
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-primary font-mono font-bold mb-6">
+                <div className="w-10 h-10 rounded-xl bg-[#2D2D82] flex items-center justify-center text-white font-mono font-bold mb-6">
                   01
                 </div>
                 <h3 className="text-xl font-bold text-on-background mb-3">Autonomous AI Agents</h3>
@@ -141,19 +99,16 @@ export default function HomePage() {
                   We deploy custom AI sales assistants, customer support bots, and internal RAG databases that automate manual tasks and operate 24/7 with zero downtime.
                 </p>
               </div>
-              <div className="relative z-10 pt-4 border-t border-indigo-100 flex items-center justify-between text-xs font-mono text-primary font-semibold">
+              <div className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold">
                 <span>AI PIPELINE AUTOMATION</span>
                 <span className="material-symbols-outlined text-sm">check_circle</span>
               </div>
             </div>
 
             {/* Pillar 2 */}
-            <div className="p-8 rounded-2xl brand-card-gradient border border-indigo-100/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4 text-indigo-200/40 group-hover:text-primary/20 transition-colors">
-                <span className="material-symbols-outlined text-6xl">query_stats</span>
-              </div>
+            <div className="pt-6 lg:pt-0 lg:px-6 flex flex-col justify-between relative group">
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-primary font-mono font-bold mb-6">
+                <div className="w-10 h-10 rounded-xl bg-[#2D2D82] flex items-center justify-center text-white font-mono font-bold mb-6">
                   02
                 </div>
                 <h3 className="text-xl font-bold text-on-background mb-3">Algorithmic Marketing</h3>
@@ -161,19 +116,16 @@ export default function HomePage() {
                   We run technical SEO, high-ROAS paid campaigns, and automated email outreach scaled by machine learning algorithms that target your ideal enterprise buyers.
                 </p>
               </div>
-              <div className="relative z-10 pt-4 border-t border-indigo-100 flex items-center justify-between text-xs font-mono text-primary font-semibold">
+              <div className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold">
                 <span>PREDICTIVE LEAD SCORING</span>
                 <span className="material-symbols-outlined text-sm">check_circle</span>
               </div>
             </div>
 
             {/* Pillar 3 */}
-            <div className="p-8 rounded-2xl brand-card-gradient border border-indigo-100/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4 text-indigo-200/40 group-hover:text-primary/20 transition-colors">
-                <span className="material-symbols-outlined text-6xl">web</span>
-              </div>
+            <div className="pt-6 lg:pt-0 lg:pl-6 flex flex-col justify-between relative group">
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-primary font-mono font-bold mb-6">
+                <div className="w-10 h-10 rounded-xl bg-[#2D2D82] flex items-center justify-center text-white font-mono font-bold mb-6">
                   03
                 </div>
                 <h3 className="text-xl font-bold text-on-background mb-3">Web & Brand Engineering</h3>
@@ -181,7 +133,7 @@ export default function HomePage() {
                   We build lightning-fast React/Next.js web applications, client dashboards, and authoritative brand identities designed to turn visitors into loyal clients.
                 </p>
               </div>
-              <div className="relative z-10 pt-4 border-t border-indigo-100 flex items-center justify-between text-xs font-mono text-primary font-semibold">
+              <div className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold">
                 <span>NEXT.JS & REACT SYSTEMS</span>
                 <span className="material-symbols-outlined text-sm">check_circle</span>
               </div>
@@ -224,7 +176,7 @@ export default function HomePage() {
       </section>
 
       {/* Our Services Section */}
-      <section className="bg-[#FAFAFD] py-24 reveal" id="services">
+      <section className="bg-white py-24 reveal border-b border-[#2D2D82]/10" id="services">
         <div className="max-w-7xl mx-auto px-margin-desktop">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-md">
             <div>
@@ -330,7 +282,7 @@ export default function HomePage() {
       </section>
 
       {/* Sbortix Framework */}
-      <section className="py-xl bg-[#EEF1F8] border-y border-indigo-100 overflow-hidden relative reveal">
+      <section className="py-xl bg-[#E8E8F2] border-y border-[#2D2D82]/15 overflow-hidden relative reveal">
         <div className="absolute inset-0 grid-pattern opacity-30"></div>
         <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
           <div className="text-center mb-xl">
@@ -627,7 +579,7 @@ export default function HomePage() {
       </section>
 
       {/* Leadership & Core Team Expertise Section */}
-      <section className="py-24 bg-white reveal" id="about">
+      <section className="py-24 bg-[#ECEBF5] border-b border-[#2D2D82]/15 reveal" id="about">
         <div className="max-w-7xl mx-auto px-margin-desktop">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center mb-16">
             <div className="lg:col-span-6">
@@ -665,72 +617,57 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Team Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Team Members Editorial Flow */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-[#2D2D82]/15">
             {/* Lead 1: Digital Marketing Lead */}
-            <div className="p-8 rounded-2xl bg-white border border-indigo-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4">
-                <span className="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
+            <div className="pt-6 md:pt-0 md:pr-6 flex flex-col justify-between relative group">
+              <div>
+                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 font-mono inline-block mb-4">
                   7+ YRS EXP
                 </span>
-              </div>
-              <div>
-                <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-primary font-bold mb-6 border border-indigo-100">
-                  <span className="material-symbols-outlined text-2xl">trending_up</span>
-                </div>
                 <h3 className="text-2xl font-bold text-on-background mb-1">Bilal</h3>
-                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4">Senior Digital Growth & Marketing Lead</p>
+                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4 font-mono">Senior Digital Growth & Marketing Lead</p>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   Over <strong>7+ years of hands-on experience</strong> leading high-performance SEO, Google & Meta paid ad campaigns, content growth strategy, and conversion optimization for global brands.
                 </p>
               </div>
-              <div className="pt-4 border-t border-indigo-100 text-xs font-semibold text-secondary flex items-center gap-2">
+              <div className="pt-4 border-t border-[#2D2D82]/15 text-xs font-semibold text-secondary flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                 SEO, PPC & Performance Marketing
               </div>
             </div>
 
             {/* Lead 2: AI Systems Engineer */}
-            <div className="p-8 rounded-2xl bg-white border border-indigo-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4">
-                <span className="text-xs font-bold text-primary bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-full">
+            <div className="pt-6 md:pt-0 md:px-6 flex flex-col justify-between relative group">
+              <div>
+                <span className="text-[10px] font-bold text-[#2D2D82] bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200 font-mono inline-block mb-4">
                   EX-JAPAN TECH
                 </span>
-              </div>
-              <div>
-                <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-primary font-bold mb-6 border border-indigo-100">
-                  <span className="material-symbols-outlined text-2xl">psychology</span>
-                </div>
                 <h3 className="text-2xl font-bold text-on-background mb-1">Salman (Salman Tauheed)</h3>
-                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4">Lead AI Systems Engineer</p>
+                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4 font-mono">Lead AI Systems Engineer</p>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   <strong>Former Senior AI Engineer at a top Japanese technology corporation</strong>. Expert in fine-tuning enterprise LLMs, building custom 24/7 AI chatbots, and autonomous workflow engines.
                 </p>
               </div>
-              <div className="pt-4 border-t border-indigo-100 text-xs font-semibold text-secondary flex items-center gap-2">
+              <div className="pt-4 border-t border-[#2D2D82]/15 text-xs font-semibold text-secondary flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                 AI Chatbots, LLMs & Automation
               </div>
             </div>
 
             {/* Lead 3: Chief Data Scientist & Founder */}
-            <div className="p-8 rounded-2xl bg-white border border-indigo-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4">
-                <span className="text-xs font-bold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-full">
+            <div className="pt-6 md:pt-0 md:pl-6 flex flex-col justify-between relative group">
+              <div>
+                <span className="text-[10px] font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200 font-mono inline-block mb-4">
                   SERIAL FOUNDER
                 </span>
-              </div>
-              <div>
-                <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center text-primary font-bold mb-6 border border-indigo-100">
-                  <span className="material-symbols-outlined text-2xl">code</span>
-                </div>
                 <h3 className="text-2xl font-bold text-on-background mb-1">Muhammad Ahmed</h3>
-                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4">Chief Data Scientist & Tech Architect</p>
+                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4 font-mono">Chief Data Scientist & Tech Architect</p>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   <strong>Founder of multiple tech ventures</strong> with extensive background in data science, predictive analytics dashboards, and modern Next.js/React web platforms.
                 </p>
               </div>
-              <div className="pt-4 border-t border-indigo-100 text-xs font-semibold text-secondary flex items-center gap-2">
+              <div className="pt-4 border-t border-[#2D2D82]/15 text-xs font-semibold text-secondary flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                 Data Science & Web Architecture
               </div>

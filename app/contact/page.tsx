@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -53,124 +54,152 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="w-full bg-white py-xl">
+    <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
       {/* Header */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-16">
-        <div className="inline-block px-xs py-1 border hairline-border rounded mb-md bg-white">
-          <span className="tech-label text-primary">[OPEN_TRANSMISSION_CHANNEL]</span>
+      <section
+        className="py-16 lg:py-20 border-b border-[#2D2D82]/15"
+        style={{
+          background: 'linear-gradient(180deg, #FFFFFF 0%, #ECEBF5 100%)',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/25 bg-white shadow-xs mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
+              Get in Touch
+            </span>
+          </div>
+
+          <h1
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight mb-6 max-w-4xl mx-auto leading-tight"
+          >
+            Initiate Project Inquiry & Architecture Discovery
+          </h1>
+
+          <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+            Connect directly with our engineering leadership team. Whether you need a data science audit, custom AI agent build, or growth marketing execution, we respond within 24 hours.
+          </p>
         </div>
-        <h1 className="font-headline-xl text-headline-xl text-on-background mb-md max-w-4xl">
-          Initiate Contact & Technical Inquiry
-        </h1>
-        <p className="text-secondary font-body-lg text-body-lg max-w-3xl">
-          Connect directly with our engineering team. Whether you need a full data architecture audit, custom AI integration, or growth strategy, we respond within 24 hours.
-        </p>
       </section>
 
       {/* Main Grid */}
-      <section className="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xl mb-24">
-        {/* Info Col */}
-        <div className="lg:col-span-5 space-y-lg">
-          <div className="p-lg bg-surface-container-low border border-outline-variant rounded-xl">
-            <h3 className="font-headline-md text-headline-md font-bold mb-md">Direct Comms</h3>
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+        {/* Info Column (Editorial Tint Panel) */}
+        <div className="lg:col-span-5 space-y-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#ECEBF5] space-y-6">
+            <h3
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-2xl font-extrabold text-[#151137]"
+            >
+              Direct Communications
+            </h3>
             
-            <div className="space-y-md">
-              <div className="flex items-start gap-md">
-                <div className="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
-                  <span className="material-symbols-outlined">mail</span>
+            <div className="space-y-6 pt-2">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#2D2D82] flex items-center justify-center flex-shrink-0 text-white">
+                  <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h6 className="font-label-md text-label-md font-bold">Email Address</h6>
-                  <p className="text-secondary font-mono text-sm">hello@sbortix.com</p>
+                  <h6 className="font-bold text-sm text-[#151137]">Email Address</h6>
+                  <p className="text-gray-600 font-mono text-xs mt-0.5">hello@sbortix.com</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-md">
-                <div className="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
-                  <span className="material-symbols-outlined">location_on</span>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#2D2D82] flex items-center justify-center flex-shrink-0 text-white">
+                  <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h6 className="font-label-md text-label-md font-bold">Operational Base</h6>
-                  <p className="text-secondary font-mono text-sm uppercase">NODE_KHI: DHA PHASE 6, KARACHI</p>
+                  <h6 className="font-bold text-sm text-[#151137]">Operational Node Base</h6>
+                  <p className="text-gray-600 font-mono text-xs mt-0.5">NODE_KHI: DHA PHASE 6, KARACHI</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-md">
-                <div className="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
-                  <span className="material-symbols-outlined">schedule</span>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#2D2D82] flex items-center justify-center flex-shrink-0 text-white">
+                  <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h6 className="font-label-md text-label-md font-bold">Response SLA</h6>
-                  <p className="text-secondary font-mono text-sm uppercase">&lt; 24 HOURS GUARANTEED</p>
+                  <h6 className="font-bold text-sm text-[#151137]">Response SLA</h6>
+                  <p className="text-gray-600 font-mono text-xs mt-0.5">&lt; 24 HOURS GUARANTEED</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="p-lg bg-primary-container text-white rounded-xl">
-            <span className="tech-label opacity-70 block mb-xs">[BOOK_CALL_DIRECT]</span>
-            <h4 className="font-headline-md text-headline-md mb-xs">Prefer a Live Video Audit?</h4>
-            <p className="opacity-90 text-label-md mb-md">Book a 30-minute introductory call directly on our team calendar.</p>
+          <div className="p-8 rounded-3xl bg-[#151137] text-white space-y-4">
+            <span className="font-mono text-xs font-bold text-indigo-300 uppercase tracking-widest block">
+              // LIVE VIDEO AUDIT
+            </span>
+            <h4
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-xl font-bold"
+            >
+              Prefer a Direct Video Consultation?
+            </h4>
+            <p className="text-indigo-200 text-xs leading-relaxed">
+              Schedule a 30-minute introductory call directly on our engineering calendar.
+            </p>
             <a
               href="https://cal.com"
               target="_blank"
               rel="noreferrer"
-              className="inline-block bg-white text-primary px-md py-xs rounded-lg font-label-md font-bold hover:bg-surface-container-low transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-xs text-[#151137] bg-white hover:bg-gray-100 transition-all"
             >
               Open Calendar Slot
+              <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>
 
-        {/* Form Col */}
-        <div className="lg:col-span-7 bg-white hairline-border p-lg md:p-xl rounded-xl shadow-xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-xs tech-label text-outline-variant text-[8px]">INPUT_FORM_V2</div>
-          
-          <form onSubmit={handleSubmit} className="space-y-md relative z-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
+        {/* Form Column (Clean Borderless Panel) */}
+        <div className="lg:col-span-7 bg-white p-8 sm:p-12 rounded-3xl border-t border-[#2D2D82]/15 shadow-sm relative overflow-hidden">
+          <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block tech-label text-secondary mb-xs">USER_IDENTITY *</label>
+                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">YOUR NAME *</label>
                 <input
                   type="text"
                   required
                   value={formData.identity}
                   onChange={(e) => setFormData({ ...formData, identity: e.target.value })}
                   placeholder="Full Name"
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block tech-label text-secondary mb-xs">SMTP_CONTACT *</label>
+                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">WORK EMAIL *</label>
                 <input
                   type="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="work@company.com"
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block tech-label text-secondary mb-xs">ORGANIZATION</label>
+                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">ORGANIZATION</label>
                 <input
                   type="text"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   placeholder="Company Name"
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block tech-label text-secondary mb-xs">BUDGET_RANGE</label>
+                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">BUDGET RANGE</label>
                 <select
                   value={formData.budget}
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                  className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 >
                   <option>$5k - $10k</option>
                   <option>$10k - $25k</option>
@@ -181,11 +210,11 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label className="block tech-label text-secondary mb-xs">MODULE_INTEREST *</label>
+              <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">SERVICE MODULE *</label>
               <select
                 value={formData.module}
                 onChange={(e) => setFormData({ ...formData, module: e.target.value })}
-                className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200"
+                className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
               >
                 <option>AI Solutions [SRVC_01]</option>
                 <option>Digital Marketing [SRVC_02]</option>
@@ -195,29 +224,29 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label className="block tech-label text-secondary mb-xs">TRANSMISSION_PAYLOAD *</label>
+              <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">PROJECT DETAILS *</label>
               <textarea
                 rows={5}
                 required
                 value={formData.payload}
                 onChange={(e) => setFormData({ ...formData, payload: e.target.value })}
-                placeholder="Detail your technical requirements or goals..."
-                className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all-200"
+                placeholder="Detail your technical requirements, goals, or timeline..."
+                className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
               ></textarea>
             </div>
 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className={`w-full text-white py-md rounded-lg font-label-md text-label-md transition-all-200 border-b-2 border-primary ${
-                status === 'success' ? 'bg-green-600' : 'bg-primary-container hover:opacity-90'
+              className={`w-full text-white py-4 rounded-xl font-mono text-xs font-bold transition-all shadow-md ${
+                status === 'success' ? 'bg-emerald-600' : 'bg-[#2D2D82] hover:bg-[#2C2A78]'
               }`}
             >
-              {status === 'loading' ? 'TRANSMITTING PAYLOAD...' : status === 'success' ? 'SUCCESS: INQUIRY_LOGGED' : 'Execute Inquiry Submission'}
+              {status === 'loading' ? 'TRANSMITTING PAYLOAD...' : status === 'success' ? 'SUCCESS: INQUIRY_LOGGED' : 'Submit Project Inquiry'}
             </button>
 
             {statusMsg && (
-              <p className={`tech-label text-xs text-center ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+              <p className={`font-mono text-xs text-center ${status === 'success' ? 'text-emerald-600' : 'text-red-600'}`}>
                 {statusMsg}
               </p>
             )}

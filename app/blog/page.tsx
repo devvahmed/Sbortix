@@ -46,60 +46,81 @@ export default function BlogPage() {
   ];
 
   return (
-    <div className="w-full bg-white py-xl">
+    <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
       {/* Header */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-16">
-        <div className="inline-block px-xs py-1 border hairline-border rounded mb-md bg-white">
-          <span className="tech-label text-primary">[SYSTEM_TECHNICAL_LOGS]</span>
+      <section
+        className="py-16 lg:py-20 border-b border-[#2D2D82]/15"
+        style={{
+          background: 'linear-gradient(180deg, #FFFFFF 0%, #ECEBF5 100%)',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/25 bg-white shadow-xs mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
+              Technical Insights & Whitepapers
+            </span>
+          </div>
+
+          <h1
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight mb-6 max-w-4xl mx-auto leading-tight"
+          >
+            Technical Insights & Engineering Papers
+          </h1>
+
+          <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+            Deep dives into artificial intelligence, data pipelines, search engine algorithms, and modern full-stack web architecture.
+          </p>
         </div>
-        <h1 className="font-headline-xl text-headline-xl text-on-background mb-md max-w-4xl">
-          Technical Insights & Engineering Papers
-        </h1>
-        <p className="text-secondary font-body-lg text-body-lg max-w-3xl">
-          Deep dives into artificial intelligence, data pipelines, search engine algorithms, and modern full-stack web architecture.
-        </p>
       </section>
 
-      {/* Featured Article */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-20">
-        <div className="bg-surface-container-low border border-outline-variant rounded-xl p-lg md:p-xl relative overflow-hidden group">
-          <div className="flex items-center gap-md mb-md">
-            <span className="tech-label text-primary font-bold">FEATURED // {posts[0].id}</span>
-            <span className="tech-label text-outline">{posts[0].category}</span>
+      {/* Featured Article (Editorial Tint Panel, No Box Border) */}
+      <section className="py-16 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="bg-[#ECEBF5] rounded-3xl p-8 sm:p-12 relative overflow-hidden group">
+          <div className="flex flex-wrap items-center gap-3 mb-4 font-mono text-xs font-bold">
+            <span className="text-[#2D2D82]">FEATURED // {posts[0].id}</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-gray-600">{posts[0].category}</span>
           </div>
-          <h2 className="font-headline-lg text-headline-lg font-bold mb-md text-on-background group-hover:text-primary transition-colors">
+          <h2
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 text-[#151137] group-hover:text-[#2D2D82] transition-colors"
+          >
             {posts[0].title}
           </h2>
-          <p className="text-secondary font-body-lg text-body-lg mb-lg max-w-3xl leading-relaxed">
+          <p className="text-gray-600 text-base sm:text-lg mb-8 max-w-3xl leading-relaxed">
             {posts[0].excerpt}
           </p>
-          <div className="flex flex-wrap items-center justify-between gap-md border-t border-outline-variant pt-md text-xs font-mono text-secondary">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#2D2D82]/15 pt-4 font-mono text-xs text-gray-600">
             <div>BY {posts[0].author.toUpperCase()} • {posts[0].date}</div>
-            <Link href="/blog" className="text-primary font-bold hover:underline flex items-center gap-xs">
-              Read Full Paper
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            <Link href="/blog" className="text-[#2D2D82] font-bold hover:underline flex items-center gap-1">
+              Read Full Paper &rarr;
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Articles Grid */}
-      <section className="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-lg mb-24">
-        {posts.slice(1).map((post) => (
-          <article key={post.id} className="bg-white border border-outline-variant p-lg rounded-xl flex flex-col justify-between hover:shadow-lg transition-shadow">
+      {/* Articles Grid (Editorial Flow, Divided by Delicate Lines) */}
+      <section className="py-16 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-10 divide-y md:divide-y-0 md:divide-x divide-[#2D2D82]/15 pb-24">
+        {posts.slice(1).map((post, idx) => (
+          <article key={post.id} className={`pt-6 md:pt-0 ${idx === 0 ? '' : 'md:pl-8'} flex flex-col justify-between`}>
             <div>
-              <div className="flex items-center justify-between mb-sm">
-                <span className="tech-label text-primary font-bold">{post.category}</span>
-                <span className="tech-label text-outline">{post.readTime}</span>
+              <div className="flex items-center justify-between mb-3 font-mono text-xs font-bold">
+                <span className="text-[#2D2D82]">{post.category}</span>
+                <span className="text-gray-400">{post.readTime}</span>
               </div>
-              <h3 className="font-headline-md text-headline-md font-bold mb-xs text-on-background hover:text-primary transition-colors cursor-pointer">
+              <h3
+                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="text-xl font-bold mb-3 text-[#151137] hover:text-[#2D2D82] transition-colors cursor-pointer"
+              >
                 {post.title}
               </h3>
-              <p className="text-secondary text-body-md mb-lg leading-relaxed">{post.excerpt}</p>
+              <p className="text-gray-600 text-sm mb-6 leading-relaxed">{post.excerpt}</p>
             </div>
-            <div className="border-t border-outline-variant pt-xs text-xs font-mono text-secondary flex items-center justify-between">
+            <div className="border-t border-[#2D2D82]/15 pt-3 font-mono text-xs text-gray-500 flex items-center justify-between">
               <span>{post.author}</span>
-              <span className="text-outline">{post.date}</span>
+              <span>{post.date}</span>
             </div>
           </article>
         ))}

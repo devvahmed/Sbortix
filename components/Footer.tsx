@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -42,10 +43,16 @@ export default function Footer() {
         {/* Col 1: Brand & Newsletter */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-xs mb-sm">
-            <Link href="/" className="text-headline-md font-headline-md font-bold text-primary">
-              Sbortix
+            <Link href="/" className="bg-white/90 px-3 py-1.5 rounded-lg border border-white/20 inline-block">
+              <Image
+                src="/sbortix-logo.png"
+                alt="Sbortix Logo"
+                width={150}
+                height={40}
+                className="h-8 w-auto object-contain"
+              />
             </Link>
-            <span className="tech-label text-outline">[SYS_CORE]</span>
+            <span className="tech-label text-outline ml-2">[SYS_CORE]</span>
           </div>
           <p className="text-secondary text-label-sm leading-relaxed uppercase tech-label opacity-80 mb-md max-w-sm">
             Enterprise-grade AI, data science, and marketing engineering nodes. Delivering autonomous growth systems.
@@ -83,11 +90,11 @@ export default function Footer() {
         <div>
           <h6 className="text-secondary font-bold text-xs uppercase mb-md tracking-wider">OUR SERVICES</h6>
           <ul className="space-y-xs text-xs">
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/ai-solutions">AI Chatbots & Voice</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/ai-solutions">AI Chatbots &amp; Voice</Link></li>
             <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/ai-solutions">Workflow Automation</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/digital-marketing">SEO & Paid Advertising</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Web Design & WordPress</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Logo Design & Branding</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/digital-marketing">SEO &amp; Paid Advertising</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Web Design &amp; WordPress</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Logo Design &amp; Branding</Link></li>
           </ul>
         </div>
 
@@ -98,7 +105,7 @@ export default function Footer() {
             <li><Link className="text-secondary hover:text-primary transition-colors" href="/">Home</Link></li>
             <li><Link className="text-secondary hover:text-primary transition-colors" href="/about">About Us</Link></li>
             <li><Link className="text-secondary hover:text-primary transition-colors" href="/work">Our Work</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/blog">Blog & Insights</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/blog">Blog &amp; Insights</Link></li>
             <li><Link className="text-secondary hover:text-primary transition-colors" href="/contact">Contact Us</Link></li>
           </ul>
         </div>

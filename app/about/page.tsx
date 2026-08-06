@@ -1,118 +1,273 @@
-import Link from 'next/link';
+'use client';
 
-export const metadata = {
-  title: 'About | Sbortix Enterprise AI & Data Science Agency',
-  description: 'Learn about Sbortix: our mission, methodology, team architecture, leadership, and global operational nodes.',
-};
+import Link from 'next/link';
+import { ArrowRight, ShieldCheck, Target, Eye, Lock, Sparkles, CheckCircle2, Award, Users } from 'lucide-react';
 
 export default function AboutPage() {
-  const teamMembers = [
-    {
-      name: 'Bilal',
-      role: 'SENIOR DIGITAL GROWTH & MARKETING LEAD',
-      bio: '7+ years of hands-on experience scaling performance marketing, SEO keyword rankings, Google & Meta paid ads, and revenue attribution.',
-      icon: 'trending_up',
-      tag: '7+ YEARS GROWTH EXP',
-    },
-    {
-      name: 'Salman (Salman Tauheed)',
-      role: 'LEAD AI SYSTEMS ENGINEER',
-      bio: 'Former Senior AI Engineer at a top Japanese technology corporation. Architect of custom AI chatbots, fine-tuned LLMs, and autonomous workflow engines.',
-      icon: 'psychology',
-      tag: 'EX-JAPAN TECH AI LEAD',
-    },
-    {
-      name: 'Muhammad Ahmed',
-      role: 'CHIEF DATA SCIENTIST & TECH ARCHITECT',
-      bio: 'Founder of multiple tech ventures specializing in enterprise data science, predictive BI analytics dashboards, and modern Next.js/React platforms.',
-      icon: 'code',
-      tag: 'SERIAL TECH FOUNDER',
-    },
-  ];
-
   return (
-    <div className="w-full bg-white py-xl">
-      {/* Header */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-20">
-        <div className="inline-block px-xs py-1 border hairline-border rounded mb-md bg-white">
-          <span className="tech-label text-primary">[SYSTEM_ORIGIN_PROTOCOL]</span>
-        </div>
-        <h1 className="font-headline-xl text-headline-xl text-on-background mb-md max-w-4xl">
-          Engineering Trust and Intelligence for Modern Enterprises
-        </h1>
-        <p className="text-secondary font-body-lg text-body-lg max-w-3xl">
-          Sbortix was founded to eliminate the obscurity of legacy marketing agencies. We operate as a pure engineering firm where data science, AI automation, and full-stack software development power every growth objective.
-        </p>
-      </section>
-
-      {/* Core Principles */}
-      <section className="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-lg mb-24">
-        <div className="p-lg bg-surface-container-low border border-outline-variant rounded-xl">
-          <span className="tech-label text-primary block mb-xs">PRINCIPLE_01</span>
-          <h3 className="font-headline-md text-headline-md mb-xs">Zero Guesswork</h3>
-          <p className="text-secondary text-body-md">
-            Every hypothesis is tested against empirical benchmarks and statistical significance metrics.
-          </p>
-        </div>
-
-        <div className="p-lg bg-surface-container-low border border-outline-variant rounded-xl">
-          <span className="tech-label text-primary block mb-xs">PRINCIPLE_02</span>
-          <h3 className="font-headline-md text-headline-md mb-xs">Full In-House Execution</h3>
-          <p className="text-secondary text-body-md">
-            We never outsource core engineering or strategy. Your project is built directly by senior engineers.
-          </p>
-        </div>
-
-        <div className="p-lg bg-surface-container-low border border-outline-variant rounded-xl">
-          <span className="tech-label text-primary block mb-xs">PRINCIPLE_03</span>
-          <h3 className="font-headline-md text-headline-md mb-xs">Direct Founder Access</h3>
-          <p className="text-secondary text-body-md">
-            We keep our client roster small to ensure every engagement receives direct founder oversight.
-          </p>
-        </div>
-      </section>
-
-      {/* Team Architecture */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-24">
-        <div className="flex items-end justify-between mb-xl">
-          <div>
-            <span className="tech-label text-primary mb-xs block">[HUMAN_CAPITAL_NODES]</span>
-            <h2 className="font-headline-lg text-headline-lg">Leadership & Team Architecture</h2>
+    <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
+      
+      {/* ── HERO HEADER SECTION ── */}
+      <section
+        className="relative py-16 lg:py-24 border-b border-[#2D2D82]/15"
+        style={{
+          background: 'linear-gradient(180deg, #FFFFFF 0%, #ECEBF5 100%)',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/20 bg-white shadow-xs mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
+              About Sbortix
+            </span>
           </div>
-          <div className="hidden md:block tech-label text-outline">LOCATION: DHA PHASE 6, KHI</div>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-lg">
-          {teamMembers.map((member) => (
-            <div key={member.name} className="bg-white border border-outline-variant p-lg rounded-xl flex flex-col justify-between hover:shadow-lg transition-shadow">
-              <div>
-                <div className="flex items-center justify-between mb-md">
-                  <span className="tech-label text-outline text-[9px]">{member.tag}</span>
-                  <div className="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
-                    <span className="material-symbols-outlined">{member.icon}</span>
+          <h1
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              letterSpacing: '-0.03em',
+            }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] leading-[1.08] mb-6 max-w-4xl mx-auto"
+          >
+            Engineering Enterprise Growth Through AI & Data Systems
+          </h1>
+
+          <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+            Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual operational bottlenecks with custom AI agents, predictive data analytics, and high-converting digital platforms.
+          </p>
+        </div>
+      </section>
+
+      {/* ── MISSION & VISION (SIDE-BY-SIDE SIDEBAR) ── */}
+      <section className="py-20 bg-white border-b border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* Mission Box */}
+            <div className="p-8 sm:p-12 rounded-3xl bg-[#ECEBF5] space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#2D2D82] flex items-center justify-center text-white mb-6">
+                <Target className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block">
+                Our Mission
+              </span>
+              <h2
+                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="text-2xl sm:text-3xl font-extrabold text-[#151137]"
+              >
+                Empowering Business Potential with Intelligent Automation
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed">
+                To build reliable, secure, and scalable AI infrastructure that helps businesses automate complex workflows, optimize customer acquisition costs, and make data-backed decisions with complete confidence.
+              </p>
+            </div>
+
+            {/* Vision Box */}
+            <div className="p-8 sm:p-12 rounded-3xl bg-[#151137] text-white space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#2D2D82] flex items-center justify-center text-white mb-6">
+                <Eye className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-bold text-indigo-300 uppercase tracking-wider block">
+                Our Vision
+              </span>
+              <h2
+                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="text-2xl sm:text-3xl font-extrabold text-white"
+              >
+                The Standard for Autonomous Enterprise Operations
+              </h2>
+              <p className="text-indigo-200 text-base leading-relaxed">
+                We envision a future where enterprise organizations run seamlessly on always-on intelligent systems — where human creativity is unlocked while routine operations run autonomously with 99.9% precision.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── CORE VALUES & PILLARS ── */}
+      <section className="py-20 bg-[#ECEBF5]/50 border-b border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-2">
+              Our Core Principles
+            </span>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Built on Trust, Precision, and Performance
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'Data Integrity',
+                desc: 'Every model and strategy is validated against rigorous empirical metrics — zero guesswork or unsubstantiated claims.',
+              },
+              {
+                title: 'Enterprise Security',
+                desc: 'We enforce strict SOC2-aligned data handling, private cloud isolation, and zero third-party data leakage.',
+              },
+              {
+                title: 'Senior Expertise',
+                desc: 'Every engagement is architected directly by senior engineering leads with years of enterprise domain experience.',
+              },
+              {
+                title: 'Measurable ROI',
+                desc: 'We tie every technical implementation directly to verifiable revenue lift, cost reduction, or conversion gain.',
+              },
+            ].map((value, idx) => (
+              <div key={value.title} className="space-y-3 pt-4 border-t border-[#2D2D82]/15">
+                <span className="text-xs font-bold text-[#2D2D82] block">
+                  0{idx + 1}
+                </span>
+                <h3 className="font-bold text-lg text-[#151137]">{value.title}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">{value.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ENTERPRISE TRUST & COMPLIANCE ── */}
+      <section className="py-20 bg-white border-b border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-6">
+              <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block">
+                Enterprise Standards
+              </span>
+              <h2
+                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+              >
+                Why Global Companies Trust Sbortix
+              </h2>
+              <p className="text-gray-600 text-base leading-relaxed">
+                We understand the complexities of deploying modern software and AI into existing enterprise ecosystems. Our systems are built from the ground up for stability, scalability, and seamless compliance.
+              </p>
+
+              <div className="space-y-4 pt-2">
+                {[
+                  'Private Cloud & On-Premises LLM Deployment Options',
+                  'Strict Data Privacy & Encryption at Rest and in Transit',
+                  'Dedicated SLA Guarantees & 24/7 Monitoring Pipelines',
+                  'Transparent Architecture Audits & Clear Code Ownership',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <span className="text-sm font-semibold text-[#151137]">{item}</span>
                   </div>
-                </div>
-                <h3 className="font-headline-md text-headline-md font-bold text-on-background mb-xs">{member.name}</h3>
-                <p className="tech-label text-primary text-[10px] mb-md">{member.role}</p>
-                <p className="text-secondary text-body-md leading-relaxed">{member.bio}</p>
+                ))}
               </div>
             </div>
-          ))}
+
+            {/* Visual Stats Showcase */}
+            <div className="lg:col-span-6">
+              <div className="bg-[#151137] text-white p-8 sm:p-12 rounded-3xl space-y-8 border border-[#2D2D82]/40 shadow-2xl">
+                <div className="grid grid-cols-2 gap-8 text-center border-b border-white/10 pb-8">
+                  <div>
+                    <div className="text-4xl font-extrabold text-white mb-1">50+</div>
+                    <div className="text-indigo-200 text-xs font-semibold uppercase">Systems Deployed</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-extrabold text-white mb-1">99.9%</div>
+                    <div className="text-indigo-200 text-xs font-semibold uppercase">Target Uptime</div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-8 text-center">
+                  <div>
+                    <div className="text-4xl font-extrabold text-white mb-1">70%</div>
+                    <div className="text-indigo-200 text-xs font-semibold uppercase">Avg OPEX Reduction</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-extrabold text-white mb-1">3.8x</div>
+                    <div className="text-indigo-200 text-xs font-semibold uppercase">Avg Growth ROAS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      {/* Global Node Strip */}
-      <section className="bg-primary-container text-white py-xl">
-        <div className="max-w-7xl mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-lg">
-          <div>
-            <span className="tech-label opacity-70 block mb-xs">[GLOBAL_FOOTPRINT]</span>
-            <h3 className="font-headline-lg text-headline-lg">Ready to transform your technical growth operations?</h3>
+      {/* ── 4-STAGE DELIVERY PROCESS ── */}
+      <section className="py-20 bg-[#ECEBF5] border-b border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-2">
+              Our Process
+            </span>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              A Disciplined Engineering Lifecyle
+            </h2>
           </div>
-          <Link href="/contact" className="bg-white text-primary px-lg py-md rounded-lg font-label-md font-bold hover:bg-surface-container-low transition-colors whitespace-nowrap">
-            Schedule Founder Call
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Discovery & Audit',
+                desc: 'We conduct a thorough audit of your existing data pipelines, ad accounts, and operational workflows.',
+              },
+              {
+                step: '02',
+                title: 'Architecture & Design',
+                desc: 'We design custom AI models, web systems, and campaign attribution frameworks tailored to your stack.',
+              },
+              {
+                step: '03',
+                title: 'Deployment & Testing',
+                desc: 'We deploy production-grade code into your environment with full integration testing.',
+              },
+              {
+                step: '04',
+                title: 'Optimization & Scaling',
+                desc: 'We continuously monitor performance, conversion rates, and revenue metrics for long-term growth.',
+              },
+            ].map((st) => (
+              <div key={st.step} className="space-y-3">
+                <div className="w-12 h-12 rounded-2xl bg-[#151137] text-white font-bold text-sm flex items-center justify-center border border-white/20 shadow-sm">
+                  {st.step}
+                </div>
+                <h3 className="font-bold text-lg text-[#151137]">{st.title}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">{st.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA BANNER ── */}
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+        <div className="bg-gradient-to-r from-[#151137] via-[#2D2D82] to-[#151137] text-white p-12 sm:p-16 rounded-3xl border border-[#2D2D82]/40 shadow-2xl relative overflow-hidden">
+          <h3
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-3xl sm:text-4xl font-extrabold mb-4"
+          >
+            Ready to Build Your Next Intelligent System?
+          </h3>
+          <p className="text-indigo-200 max-w-2xl mx-auto mb-8 text-base leading-relaxed">
+            Schedule a consultation with our senior team to discuss your project requirements and explore tailored solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm text-[#151137] bg-white hover:bg-gray-100 transition-all shadow-lg"
+          >
+            Schedule Consultation
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
+
     </div>
   );
 }

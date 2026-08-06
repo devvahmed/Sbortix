@@ -2,282 +2,522 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Layout, Globe, Code, Palette, Sparkles, ArrowRight, CheckCircle2, Monitor, ShieldCheck } from 'lucide-react';
+import {
+  Layout,
+  Globe,
+  Code,
+  Palette,
+  Sparkles,
+  ArrowRight,
+  CheckCircle2,
+  Monitor,
+  ShieldCheck,
+  Figma,
+  Smartphone,
+  Layers,
+  FileCode,
+} from 'lucide-react';
 
 export default function WebBrandingPage() {
-  const [activeTab, setActiveTab] = useState<'website' | 'wordpress' | 'branding'>('website');
+  const [activeTab, setActiveTab] = useState<'design' | 'cro' | 'wordpress' | 'brand'>('design');
 
   return (
-    <div className="w-full bg-[#FAFAFD] py-xl">
-      {/* Hero Header */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-16">
-        <div className="flex items-center gap-xs mb-sm text-xs">
-          <Link href="/services" className="tech-label text-secondary hover:text-primary transition-colors">
-            SERVICES
-          </Link>
-          <span className="text-outline">/</span>
-          <span className="tech-label text-primary font-bold">WEB DESIGN & BRANDING</span>
-        </div>
+    <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
+      
+      {/* ── HERO HEADER SECTION ── */}
+      <section
+        className="relative py-16 lg:py-24 border-b border-[#2D2D82]/15"
+        style={{
+          background: 'linear-gradient(180deg, #FFFFFF 0%, #ECEBF5 100%)',
+        }}
+      >
+        {/* Ambient Grid Pattern */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle, rgba(45, 45, 130, 0.18) 1.2px, transparent 1.2px),
+              linear-gradient(to right, rgba(45, 45, 130, 0.04) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(45, 45, 130, 0.04) 1px, transparent 1px)
+            `,
+            backgroundSize: '24px 24px, 72px 72px, 72px 72px',
+          }}
+        />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
-          <div className="lg:col-span-7">
-            <div className="inline-block px-xs py-1 border border-primary/20 rounded-md mb-md bg-white shadow-xs">
-              <span className="tech-label text-primary font-semibold flex items-center gap-1.5 text-xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Web Design, WordPress & Branding
-              </span>
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+          <div className="flex items-center gap-2 mb-6 text-xs">
+            <Link href="/services" className="font-mono text-[#6B7280] hover:text-[#2D2D82] transition-colors font-semibold uppercase tracking-wider">
+              SERVICES
+            </Link>
+            <span className="text-[#2D2D82]/30">/</span>
+            <span className="font-mono text-[#2D2D82] font-bold uppercase tracking-wider">
+              WEB ENGINEERING & BRAND IDENTITY
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/25 bg-white shadow-sm mb-6">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-wider">
+                  SYSTEM DESIGN & BRAND ARCHITECTURE
+                </span>
+              </div>
+
+              <h1
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  letterSpacing: '-0.03em',
+                }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] leading-[1.08] mb-6"
+              >
+                High-Converting Web Systems, Custom WordPress & Brand Identity
+              </h1>
+
+              <p className="text-gray-600 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
+                We engineer lightning-fast Next.js/React web platforms, high-converting landing pages, custom WordPress builds, and distinctive vector logo identities designed to command market authority.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm text-white transition-all duration-300 shadow-md group"
+                  style={{
+                    backgroundColor: '#2D2D82',
+                    background: 'linear-gradient(135deg, #2D2D82 0%, #2C2A78 100%)',
+                    boxShadow: '0 4px 18px rgba(45, 45, 130, 0.32)',
+                  }}
+                >
+                  Start Web & Brand Project
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <a
+                  href="#pillars"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm text-[#151137] bg-white border border-[#2D2D82]/25 shadow-xs hover:border-[#2D2D82]/60 transition-all"
+                >
+                  View Web Capabilities
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-on-background mb-md leading-tight">
-              Website Design, WordPress & Brand Identity
-            </h1>
-            <p className="text-secondary text-base sm:text-lg max-w-2xl mb-lg leading-relaxed">
-              We design custom high-converting websites, landing pages, custom WordPress builds, and distinctive brand logos that build immediate trust with your audience.
+
+            {/* Performance Widget */}
+            <div className="lg:col-span-5">
+              <div className="bg-[#151137] text-white rounded-2xl p-6 border border-[#2D2D82]/40 shadow-2xl relative overflow-hidden">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-[#2D2D82] flex items-center justify-center text-white">
+                      <Monitor className="w-4 h-4 text-emerald-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-mono text-xs font-bold text-white">WEB_SYSTEMS v4.0</h4>
+                      <p className="text-[10px] text-indigo-200/70 font-mono">LIGHTHOUSE SCORE: 100/100</p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                    VERIFIED
+                  </span>
+                </div>
+
+                <div className="space-y-3 font-mono text-xs">
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 flex justify-between items-center">
+                    <span className="text-indigo-200">First Contentful Paint (FCP):</span>
+                    <span className="text-emerald-400 font-bold">0.4s</span>
+                  </div>
+                  <div className="p-3 rounded-lg bg-[#2D2D82]/40 border border-[#2D2D82]/60 flex justify-between items-center">
+                    <span className="text-indigo-200">Mobile Responsiveness:</span>
+                    <span className="text-emerald-400 font-bold">100% Fluid</span>
+                  </div>
+                  <div className="p-3 rounded-lg bg-white/5 border border-white/10 flex justify-between items-center">
+                    <span className="text-indigo-200">Brand Vector Standards:</span>
+                    <span className="text-indigo-100 font-bold">SVG Identity Lockup</span>
+                  </div>
+                  <div className="flex justify-between items-center pt-2 border-t border-white/10 text-[10px] text-indigo-300">
+                    <span>NEXT.JS + WORDPRESS</span>
+                    <span>CRO OPTIMIZED</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── METRICS STRIP ── */}
+      <section className="bg-[#151137] text-white py-8 border-y border-[#2D2D82]/40 shadow-inner">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">100 / 100</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">Lighthouse Speed Score</div>
+          </div>
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">&lt;0.8s</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">Page Load Latency</div>
+          </div>
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">100%</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">Custom Vector Code</div>
+          </div>
+          <div>
+            <div className="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1">2.8x</div>
+            <div className="text-indigo-200 text-xs font-mono font-semibold uppercase tracking-wider">Conversion Lift via CRO</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DETAILED WEB & BRANDING SERVICES (4 GROUPS) ── */}
+      <section id="pillars" className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 space-y-24">
+        
+        {/* ── GROUP 1: WEBSITE DESIGN & ARCHITECTURE ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 01]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Website Design & Architecture
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              We design modern, responsive web applications built with Next.js, React, and Tailwind CSS. Every layout uses deliberate whitespace, concentric double-bezel containers, and accessible typographic scale to create an expensive, agency-grade digital experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-sm">
-              <Link
-                href="/contact"
-                className="brand-button-gradient text-white px-lg py-md rounded-xl font-bold text-base hover:opacity-95 transition-all shadow-md hover:shadow-indigo-500/25 text-center flex items-center justify-center gap-2"
-              >
-                Start Website Project
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a
-                href="#pillars"
-                className="border border-indigo-200 text-on-background px-lg py-md rounded-xl font-bold text-base hover:bg-indigo-50/60 transition-all bg-white text-center shadow-xs"
-              >
-                Explore Web Services
-              </a>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                DESIGN ARCHITECTURE SERVICES:
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { title: 'Website Design', desc: 'Custom high-converting web layouts designed specifically for your industry vertical.' },
+                  { title: 'Enterprise Web Architecture', desc: 'Clean React/Next.js component trees engineered for sub-second page performance.' },
+                  { title: 'UI/UX System Design', desc: 'Comprehensive Figma design systems with reusable design tokens, typography, and color schemes.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
+                    <Layout className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
+                    <div>
+                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <p className="text-xs text-gray-600">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Performance Widget */}
-          <div className="lg:col-span-5">
-            <div className="bg-[#0C0830] text-white rounded-2xl p-md border border-indigo-900/60 shadow-2xl relative overflow-hidden text-xs">
-              <div className="flex items-center justify-between border-b border-indigo-900/50 pb-xs mb-sm">
-                <div className="flex items-center gap-2">
-                  <Monitor className="w-4 h-4 text-emerald-400" />
-                  <span className="text-indigo-200 text-xs font-semibold">Web Performance & Design</span>
-                </div>
-                <span className="text-emerald-400 text-[10px] bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-bold">100/100 SPEED</span>
-              </div>
+          {/* Abstract SVG Illustration: Precision Layout Grid */}
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                <rect x="30" y="30" width="340" height="240" rx="16" fill="#151137" />
+                {/* Mock UI Frame */}
+                <rect x="50" y="50" width="300" height="20" rx="4" fill="#2D2D82" />
+                <circle cx="65" cy="60" r="4" fill="#EF4444" />
+                <circle cx="77" cy="60" r="4" fill="#F59E0B" />
+                <circle cx="89" cy="60" r="4" fill="#10B981" />
 
-              <div className="space-y-sm my-xs">
-                <div className="flex justify-between items-center bg-indigo-950/80 p-xs rounded border border-indigo-800/40">
-                  <span className="text-indigo-300">Page Load Time:</span>
-                  <span className="text-emerald-400 font-bold text-sm">Under 0.8s</span>
-                </div>
-                <div className="flex justify-between items-center bg-indigo-950/80 p-xs rounded border border-indigo-800/40">
-                  <span className="text-indigo-300">Mobile Responsiveness:</span>
-                  <span className="text-emerald-400 font-bold text-sm">100% Fluid Layout</span>
-                </div>
-                <div className="flex justify-between items-center bg-indigo-950/80 p-xs rounded border border-indigo-800/40">
-                  <span className="text-indigo-300">Brand Identity Assets:</span>
-                  <span className="text-indigo-100 font-bold text-sm">SVG Vector Lockups</span>
-                </div>
-              </div>
+                {/* Wireframe Hero Grid */}
+                <rect x="50" y="85" width="180" height="70" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" />
+                <rect x="245" y="85" width="105" height="150" rx="8" fill="#2D2D82" opacity="0.8" />
+                <rect x="50" y="165" width="180" height="70" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" />
+              </svg>
+            </div>
+          </div>
+        </div>
 
-              <div className="flex justify-between items-center pt-xs text-[10px] text-indigo-400 border-t border-indigo-900/40 font-mono">
-                <span>WORDPRESS + REACT</span>
-                <span>SEO READY</span>
+        {/* ── BOLD PULL-QUOTE PANEL 1 ── */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#ECEBF5] border border-[#2D2D82]/20 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block">
+              // DESIGN INTEGRITY PRINCIPLE
+            </span>
+            <blockquote
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
+            >
+              "A website is not a digital brochure — it is an automated trust machine engineered to convert raw visitor curiosity into closed commercial contracts."
+            </blockquote>
+          </div>
+        </div>
+
+        {/* ── GROUP 2: LANDING PAGE DESIGN & CRO ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Abstract SVG Illustration: Conversion Heatmap & Funnel */}
+          <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                <rect x="40" y="40" width="320" height="220" rx="16" fill="#151137" />
+                {/* Heatmap zones */}
+                <circle cx="120" cy="110" r="40" fill="#EF4444" opacity="0.4" />
+                <circle cx="120" cy="110" r="20" fill="#F59E0B" opacity="0.6" />
+                <circle cx="120" cy="110" r="8" fill="#10B981" />
+
+                <rect x="200" y="80" width="130" height="40" rx="8" fill="#10B981" />
+                <text x="265" y="104" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold" fontFamily="monospace">CTA CONVERT 28%</text>
+
+                <path d="M 60,200 L 340,200" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+                <text x="200" y="225" textAnchor="middle" fill="#10B981" fontSize="10" fontWeight="bold" fontFamily="monospace">A/B TEST OPTIMIZED</text>
+              </svg>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 02]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Landing Page Design & CRO
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Maximize your return on ad spend with high-converting landing page architectures. We apply behavioral psychological triggers, clear CTA hierarchies, and systematic A/B testing to convert paid traffic into customers.
+            </p>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                LANDING PAGE & CRO SERVICES:
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { title: 'Landing Page Design & CRO', desc: 'Custom campaign-specific landing pages engineered for high ad relevance and top conversion rates.' },
+                  { title: 'Conversion Rate Optimization (CRO)', desc: 'UX heatmapping, scroll-depth analytics, and friction point elimination.' },
+                  { title: 'A/B Testing Systems', desc: 'Rigorous headline, copy, and layout variant testing to systematically lift baseline conversion.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
+                    <Globe className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
+                    <div>
+                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <p className="text-xs text-gray-600">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── GROUP 3: WORDPRESS DEVELOPMENT ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 03]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              WordPress Development & Custom CMS
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Custom WordPress development without heavy bloated plugins. We craft bespoke PHP/Gutenberg themes, custom post types, and secure REST API integrations so your content marketing team can publish effortlessly.
+            </p>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                WORDPRESS & CMS SERVICES:
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { title: 'WordPress Development', desc: 'Bespoke lightweight WordPress themes engineered for 100/100 speed performance.' },
+                  { title: 'Custom CMS Architecture', desc: 'Tailored content management workflows, custom fields, and role-based permissions.' },
+                  { title: 'API Gateway & Headless CMS Integration', desc: 'Connecting WordPress to Next.js frontends via GraphQL/REST endpoints.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
+                    <FileCode className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
+                    <div>
+                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <p className="text-xs text-gray-600">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Abstract SVG Illustration: Modular CMS Block Architecture */}
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                <rect x="50" y="50" width="300" height="50" rx="8" fill="#151137" />
+                <text x="200" y="80" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold" fontFamily="monospace">HEADLESS NEXT.JS FRONTEND</text>
+
+                <rect x="50" y="125" width="140" height="120" rx="8" fill="#2D2D82" />
+                <text x="120" y="190" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold" fontFamily="monospace">WP REST API</text>
+
+                <rect x="210" y="125" width="140" height="120" rx="8" fill="#10B981" />
+                <text x="280" y="190" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold" fontFamily="monospace">CUSTOM POSTS</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* ── BOLD PULL-QUOTE PANEL 2 ── */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#E8E8F2] border border-[#2D2D82]/20 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block">
+              // BRAND IDENTITY LAW
+            </span>
+            <blockquote
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
+            >
+              "Your visual brand identity is the shorthand for your company's technical capability. Exceptional brand design allows you to command enterprise pricing from day one."
+            </blockquote>
+          </div>
+        </div>
+
+        {/* ── GROUP 4: LOGO DESIGN, BRAND IDENTITY & MESSAGING ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Abstract SVG Illustration: Vector Brand Grid & Identity */}
+          <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
+            <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
+              <svg viewBox="0 0 400 300" className="w-full h-auto">
+                <rect x="40" y="40" width="320" height="220" rx="16" fill="#151137" />
+                {/* Logo Mark Grid */}
+                <circle cx="200" cy="150" r="50" fill="none" stroke="#2D2D82" strokeWidth="3" />
+                <polygon points="200,100 240,180 160,180" fill="none" stroke="#10B981" strokeWidth="3" />
+                <text x="200" y="225" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold" fontFamily="monospace">VECTOR BRAND LOCKUP</text>
+              </svg>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
+              [PILLAR // 04]
+            </div>
+            <h2
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
+            >
+              Logo Design, Brand Identity & Messaging
+            </h2>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Craft a distinct corporate presence that builds immediate authority. We design memorable vector logos, full brand style guides, color token systems, and compelling brand positioning frameworks.
+            </p>
+
+            <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
+              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                BRANDING SERVICES BREAKDOWN:
+              </h4>
+              <div className="space-y-3">
+                {[
+                  { title: 'Logo Design', desc: 'Distinctive, scalable vector logo mark and wordmark lockups for digital and print.' },
+                  { title: 'Brand Identity & Guidelines', desc: 'Comprehensive brand books defining typography scales, HSL color palettes, and UI rules.' },
+                  { title: 'Brand Messaging & Positioning', desc: 'Value proposition framing, tone-of-voice frameworks, and executive pitch decks.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
+                    <Palette className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
+                    <div>
+                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <p className="text-xs text-gray-600">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Engineering Benchmarks Banner */}
-      <section className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white py-lg border-y border-indigo-900/60 mb-20 shadow-md">
-        <div className="max-w-7xl mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-lg text-center">
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">100%</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">Mobile Responsive</div>
-          </div>
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">&lt;1 Sec</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">Fast Load Speed</div>
-          </div>
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">Custom</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">Logo & Brand Identity</div>
-          </div>
-          <div>
-            <div className="font-mono text-3xl md:text-4xl font-extrabold text-white mb-xs">WordPress</div>
-            <div className="text-indigo-200 text-xs uppercase tracking-wider font-semibold">Easy CMS Management</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Grid Bento Cards */}
-      <section id="pillars" className="px-margin-desktop max-w-7xl mx-auto mb-24">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="tech-label text-primary font-bold text-xs uppercase block mb-xs">[WEB & BRAND SERVICES]</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-on-background">Website & Branding Capabilities</h2>
-          <p className="text-secondary text-base mt-sm">Clean, professional web design and distinct brand systems designed to convert visitors into customers.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-lg">
-          {/* Card 1: Custom Website & Landing Page Design */}
-          <div className="brand-card-gradient border border-indigo-100 p-lg rounded-2xl card-glow-hover flex flex-col justify-between bg-white shadow-sm">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-md">
-                <Globe className="w-6 h-6" />
+      {/* ── INTERACTIVE WEB METHODOLOGY TAB ── */}
+      <section className="py-16 bg-[#ECEBF5] border-y border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="bg-white rounded-3xl p-8 border border-[#2D2D82]/20 shadow-xl">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+              <div>
+                <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-1">
+                  // ENGINEERING WORKFLOW
+                </span>
+                <h3 className="text-2xl font-extrabold text-[#151137]">How We Build Enterprise Websites & Brands</h3>
               </div>
-              <h3 className="text-xl font-bold mb-xs text-on-background">Website & Landing Page Design</h3>
-              <p className="text-secondary text-sm mb-md leading-relaxed">
-                Modern, responsive custom website design and high-converting landing pages tailored to your brand identity.
-              </p>
-              <ul className="space-y-xs text-xs text-secondary font-medium mb-md">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Custom Website Design</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> High-Converting Landing Page Design</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> UX/UI Optimization & Lead Forms</li>
-              </ul>
-            </div>
-            <div className="relative h-44 rounded-xl overflow-hidden mt-md border border-indigo-100">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXc_rjgB_rTCs0GIqAOSiaOf9kMlc5tLlOeIuaIy60dZM4BRkDBvt44KaL5v4b7_QJP4bdeq-FTovychXRF926keyWiFEDfXleN8XXQGrUD114BLsN7foXCgSEYDhp0-iZBHIPlaOIky0uhhOyenmdjtRflMBYgfx4O_6oDPC13IDhMj6KlqgVFj1NAIYnjyHkOL7URqo_ozsoFjk-dLgni-lcgUXrykptRjJYARQ1wAwAG43BFE-J-w"
-                alt="Website and Landing Page Design"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          {/* Card 2: WordPress Development */}
-          <div className="brand-card-gradient border border-indigo-100 p-lg rounded-2xl card-glow-hover flex flex-col justify-between bg-white shadow-sm">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-md">
-                <Code className="w-6 h-6" />
+              <div className="flex flex-wrap gap-2 bg-[#ECEBF5] p-1.5 rounded-xl">
+                {[
+                  { id: 'design', label: 'UI Architecture' },
+                  { id: 'cro', label: 'CRO & Funnels' },
+                  { id: 'wordpress', label: 'Custom WordPress' },
+                  { id: 'brand', label: 'Brand Identity' },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id as any)}
+                    className={`px-4 py-2 rounded-lg text-xs font-bold font-mono transition-all ${
+                      activeTab === tab.id
+                        ? 'bg-[#2D2D82] text-white shadow-sm'
+                        : 'text-gray-600 hover:text-[#151137]'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
               </div>
-              <h3 className="text-xl font-bold mb-xs text-on-background">WordPress Development</h3>
-              <p className="text-secondary text-sm mb-md leading-relaxed">
-                Flexible, easy-to-manage enterprise WordPress websites with custom themes, plugins, and lightning-fast speed.
-              </p>
-              <ul className="space-y-xs text-xs text-secondary font-medium mb-md">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Custom WordPress Theme Development</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Easy Content Management (CMS)</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Security & Performance Optimization</li>
-              </ul>
             </div>
-            <div className="relative h-44 rounded-xl overflow-hidden mt-md border border-indigo-100">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"
-                alt="WordPress Development"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
 
-          {/* Card 3: Logo Design & Branding */}
-          <div className="brand-card-gradient border border-indigo-100 p-lg rounded-2xl card-glow-hover flex flex-col justify-between bg-white shadow-sm">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-md">
-                <Palette className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold mb-xs text-on-background">Branding & Logo Design</h3>
-              <p className="text-secondary text-sm mb-md leading-relaxed">
-                Build a memorable brand presence with custom logo design, complete visual identity guidelines, and strategic brand messaging.
-              </p>
-              <ul className="space-y-xs text-xs text-secondary font-medium mb-md">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Custom Logo Design & Monograms</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Brand Identity & Color Systems</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" /> Brand Messaging & Style Guides</li>
-              </ul>
-            </div>
-            <div className="relative h-44 rounded-xl overflow-hidden mt-md border border-indigo-100">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5uZqHR25WX0MiqIh1ecZxGsGqooewURqLdOrPrlWgYMYCtCmOJGGhSPvFTKH92HrRvsPUkztTA1LXadCeOoeLIvH20MFCohsp-NgrouFNVTvZS7fgjJ9KGSKcB2uEp1jKUDxhxsoJFOhFYb1G2_Mjk8pnOFTco0vHg5Ce0odHePY9FzkO0stVJ6pWJ7IEx7vdEH1sPywVEN9Nwzc4m_vYJ2FqVQR7xzQNaeWjVr_ihaKMeqgvfbpAlQ"
-                alt="Logo Design and Branding"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
+            <div className="bg-[#151137] text-white p-6 rounded-2xl font-mono text-xs leading-relaxed border border-[#2D2D82]/40">
+              {activeTab === 'design' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// UI/UX & Web Systems Workflow</p>
+                  <p>1. Wireframing & interactive Figma prototype design.</p>
+                  <p>2. Next.js component development with Tailwind CSS & micro-animations.</p>
+                  <p>3. Cross-browser testing and Lighthouse 100/100 speed optimization.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Unmatched digital brand presentation & lightning-fast speed.</p>
+                </div>
+              )}
+              {activeTab === 'cro' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// Conversion Rate Optimization Workflow</p>
+                  <p>1. Heatmap & user scroll session audit.</p>
+                  <p>2. High-converting copy alignment and CTA redesign.</p>
+                  <p>3. Split-testing deployment to measure conversion lift.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: 2.8x average conversion rate increase on paid landing pages.</p>
+                </div>
+              )}
+              {activeTab === 'wordpress' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// WordPress & Custom CMS Development</p>
+                  <p>1. Custom lightweight PHP theme development without heavy page builder plugins.</p>
+                  <p>2. Custom Gutenberg blocks & ACF Pro fields for easy client editing.</p>
+                  <p>3. Hardened security setup & SSL CDN caching deployment.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Clean content management system built to scale indefinitely.</p>
+                </div>
+              )}
+              {activeTab === 'brand' && (
+                <div className="space-y-2">
+                  <p className="text-emerald-400 font-bold">// Vector Brand Identity Creation</p>
+                  <p>1. Concept sketching and vector geometry alignment.</p>
+                  <p>2. Color token palette definition and typography scale mapping.</p>
+                  <p>3. Exporting full logo lockup packages (SVG, PNG, EPS) + Brand Guidelines PDF.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Distinctive corporate identity that inspires client confidence.</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Interactive System Inspector */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-24">
-        <div className="bg-white border border-indigo-100 rounded-2xl p-lg shadow-sm">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-lg gap-md">
-            <div>
-              <span className="tech-label text-primary font-bold text-xs uppercase block mb-xs">[DEVELOPMENT PROCESS]</span>
-              <h3 className="text-2xl font-bold">Our Design & Build Standards</h3>
-            </div>
-            <div className="flex gap-xs bg-indigo-50/80 p-1 rounded-xl border border-indigo-100">
-              <button
-                onClick={() => setActiveTab('website')}
-                className={`px-md py-xs rounded-lg text-xs font-bold transition-all ${
-                  activeTab === 'website' ? 'bg-primary text-white shadow-xs' : 'text-secondary hover:text-primary'
-                }`}
-              >
-                Website Design
-              </button>
-              <button
-                onClick={() => setActiveTab('wordpress')}
-                className={`px-md py-xs rounded-lg text-xs font-bold transition-all ${
-                  activeTab === 'wordpress' ? 'bg-primary text-white shadow-xs' : 'text-secondary hover:text-primary'
-                }`}
-              >
-                WordPress CMS
-              </button>
-              <button
-                onClick={() => setActiveTab('branding')}
-                className={`px-md py-xs rounded-lg text-xs font-bold transition-all ${
-                  activeTab === 'branding' ? 'bg-primary text-white shadow-xs' : 'text-secondary hover:text-primary'
-                }`}
-              >
-                Brand Guidelines
-              </button>
-            </div>
-          </div>
-
-          <div className="bg-[#0C0830] text-indigo-100 p-md rounded-xl font-sans text-sm leading-relaxed">
-            {activeTab === 'website' && (
-              <div className="space-y-2">
-                <p className="text-emerald-400 font-bold font-mono text-xs">// Custom Web & Landing Page Process</p>
-                <p>1. User experience (UX) wireframing & high-conversion UI layout design.</p>
-                <p>2. Fast, clean code build optimized for mobile devices and search engine crawlers.</p>
-                <p>3. Integration with lead forms, CRM, and analytics tracking.</p>
-                <p className="text-indigo-300 font-medium">&gt; Result: High-converting digital storefront for your business.</p>
-              </div>
-            )}
-            {activeTab === 'wordpress' && (
-              <div className="space-y-2">
-                <p className="text-emerald-400 font-bold font-mono text-xs">// WordPress Development Standards</p>
-                <p>1. Custom lightweight theme build without slow third-party page bloat.</p>
-                <p>2. Easy admin dashboard so your team can easily update content and blogs.</p>
-                <p>3. Built-in SEO plugin setup and automated daily security backups.</p>
-                <p className="text-indigo-300 font-medium">&gt; Result: Seamless content management with ultra-fast page speeds.</p>
-              </div>
-            )}
-            {activeTab === 'branding' && (
-              <div className="space-y-2">
-                <p className="text-emerald-400 font-bold font-mono text-xs">// Corporate Branding & Logo Identity</p>
-                <p>1. Logo Concepting: Vector SVG logo lockups, monograms, and social icons.</p>
-                <p>2. Brand Style Guide: Curated color palette, typography pairing, and usage rules.</p>
-                <p>3. Brand Messaging: Clear value proposition and tone of voice definition.</p>
-                <p className="text-indigo-300 font-medium">&gt; Result: Premium, authoritative brand identity across all customer touchpoints.</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Box */}
-      <section className="px-margin-desktop max-w-7xl mx-auto text-center">
-        <div className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white p-xl rounded-2xl border border-indigo-900/60 shadow-2xl">
-          <h3 className="text-3xl font-bold mb-md">Ready for a new Website or Brand Redesign?</h3>
-          <p className="text-indigo-200 max-w-2xl mx-auto mb-lg text-base">Let's build a website and brand identity that sets your business apart.</p>
+      {/* ── WEB & BRANDING CTA BANNER ── */}
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+        <div className="bg-gradient-to-r from-[#151137] via-[#2D2D82] to-[#151137] text-white p-12 sm:p-16 rounded-3xl border border-[#2D2D82]/40 shadow-2xl relative overflow-hidden">
+          <h3
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            className="text-3xl sm:text-4xl font-extrabold mb-4"
+          >
+            Ready to Build Your Next Web Platform or Brand?
+          </h3>
+          <p className="text-indigo-200 max-w-2xl mx-auto mb-8 text-base leading-relaxed">
+            Contact our design and web engineering team to discuss your project requirements and receive a detailed proposal.
+          </p>
           <Link
             href="/contact"
-            className="brand-button-gradient text-white px-lg py-md rounded-xl font-bold text-base hover:opacity-95 transition-all shadow-md hover:shadow-indigo-500/25 inline-block"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm text-[#151137] bg-white hover:bg-gray-100 transition-all shadow-lg"
           >
-            Start Your Web Project
+            Start Your Web & Brand Project
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
+
     </div>
   );
 }

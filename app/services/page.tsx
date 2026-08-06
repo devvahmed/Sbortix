@@ -1,323 +1,544 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Bot, Megaphone, Layout, BarChart3, CheckCircle2, MessageSquare, Zap, Target, Sparkles, Code, Globe, Shield } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle2, Lock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Services | Sbortix - AI, Digital Marketing, Web & Branding',
-  description: 'Explore our core services: AI Chatbots, Business Automation, Predictive Data Analytics, SEO, Paid Ads, Web Design, WordPress, and Brand Identity.',
+  title: 'Services — Sbortix | Engineered Intelligence for Growth',
+  description: 'Explore our core services: AI Solutions, Digital Marketing, Web & Branding, and Data Science. Systems engineered for modern growth teams.',
 };
 
 export default function ServicesPage() {
   return (
-    <div className="w-full bg-[#FAFAFD] py-xl">
-      {/* Hero Header */}
-      <section className="px-margin-desktop max-w-7xl mx-auto mb-16 text-center">
-        <div className="inline-block px-md py-1 border border-primary/20 rounded-full mb-md bg-white shadow-xs">
-          <span className="tech-label text-primary font-semibold flex items-center gap-2 text-xs">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            Modern AI & Digital Growth Services
+    <div className="w-full bg-[#FAFAFD] overflow-hidden">
+      
+      {/* ── HERO HEADER SECTION ── */}
+      <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-20 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto text-center border-b border-indigo-100/60 bg-gradient-to-b from-indigo-50/40 via-white to-[#FAFAFD]">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-indigo-200/80 shadow-xs mb-6">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
+            Enterprise Services
           </span>
         </div>
-        <h1 className="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-extrabold text-on-background mb-md max-w-4xl mx-auto leading-tight">
-          Professional AI, Digital Marketing & Web Solutions
+
+        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0F0E1A] tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+          Services Engineered for Business Scale
         </h1>
-        <p className="text-secondary text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-          We help ambitious businesses scale faster using intelligent AI chatbots, data analytics dashboards, high-converting digital marketing campaigns, and agency-grade web engineering.
+
+        <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-normal">
+          We combine AI engineering, predictive data science, and performance marketing into one connected growth system — designed to adapt and scale with your organization.
         </p>
       </section>
 
-      {/* 4 Core Services Grid Overview */}
-      <section className="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-lg mb-24">
-        {/* Service Pillar 1: AI Chatbots & Business Automation */}
-        <div className="brand-card-gradient border border-indigo-100/90 rounded-2xl p-lg flex flex-col justify-between card-glow-hover relative overflow-hidden group bg-white shadow-sm">
-          <div>
-            <div className="flex items-center justify-between mb-md">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                <Bot className="w-6 h-6" />
-              </div>
-              <span className="tech-label text-primary font-bold bg-indigo-50 px-3 py-1 rounded-full text-xs">PILLAR 01</span>
+      {/* ── SECTION 1: AI SOLUTIONS (White Base + Subtle Tonal Tint) ── */}
+      <section className="relative py-20 lg:py-24 bg-white border-b border-indigo-100/80 grid-pattern">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-16">
+            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider block mb-3">
+              Section 01
+            </span>
+            <div className="inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-md text-xs font-bold text-indigo-800 uppercase tracking-wider mb-3">
+              AI SOLUTIONS
             </div>
-            <h2 className="text-2xl font-bold mb-md text-on-background">AI Chatbots & Business Automation</h2>
-            <p className="text-secondary text-body-md mb-lg leading-relaxed">
-              Automate customer support and sales workflows with 24/7 intelligent AI chatbots, voice assistants, and seamless data entry automation.
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F0E1A] tracking-tight mb-4">
+              Systems that don&apos;t sleep.
+            </h2>
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              We design and deploy AI systems that handle real business work — not demos. From customer conversations to internal operations, our AI runs continuously, learns from data, and gets more useful the longer it runs.
             </p>
+          </div>
+
+          {/* 4 Sub-groups Grid with Perfectly Fitted 3D Image Boxes & Interactive Dual UI Overlays */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div className="space-y-sm mb-lg">
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4 text-primary" />
-                  Custom AI Chatbots & Voice Assistants
-                </h3>
-                <p className="text-xs text-secondary">24/7 support agents that handle inquiries, book appointments, and convert leads autonomously.</p>
+            {/* Card 1 */}
+            <div className="bg-gradient-to-b from-indigo-50/60 via-white to-white border border-indigo-100 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_ai_chatbot.png"
+                    alt="AI Chatbots & Conversational AI — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Glassmorphism Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    LIVE AGENT ENGINE
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    LATENCY: 0.18s
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    1. AI Chatbots & Conversational AI
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Custom chatbots, AI customer support agents, and voice assistants that understand context and handle real conversations — not scripted replies.
+                  </p>
+                </div>
               </div>
-
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-primary" />
-                  Workflow & Data Entry Automation
-                </h3>
-                <p className="text-xs text-secondary">Eliminate repetitive manual work with automated business process orchestration and data extraction.</p>
+              <div className="mt-6 pt-4 border-t border-indigo-100/60 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="font-mono text-xs text-[#2D2D82]">24/7 Autonomous Agents</span>
+                <ArrowRight className="w-4 h-4" />
               </div>
             </div>
 
-            <ul className="space-y-xs text-xs font-semibold text-secondary mb-lg">
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Customer Support AI Agents (Multi-Channel)
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                AI Voice Assistants & Call Booking
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Custom API Integration & CRM Sync
-              </li>
-            </ul>
+            {/* Card 2 */}
+            <div className="bg-gradient-to-b from-indigo-50/60 via-white to-white border border-indigo-100 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_ai_analytics.png"
+                    alt="AI-Powered Data & Analytics — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Glassmorphism Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
+                    REALTIME BI PIPELINE
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    ACCURACY: 99.4%
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    2. AI-Powered Data & Analytics
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Predictive forecasting, live BI dashboards, pattern recognition, anomaly detection, and automated reporting that turn raw data into daily decisions.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100/60 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="font-mono text-xs text-[#2D2D82]">Predictive Decision Engine</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-gradient-to-b from-indigo-50/60 via-white to-white border border-indigo-100 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_ai_workflow.png"
+                    alt="AI Automation & Workflow — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Glassmorphism Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
+                    ORCHESTRATED ENGINE
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    SAVED: 40+ HR/WK
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    3. AI Automation & Workflow
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Business process automation, workflow orchestration, and intelligent document processing that remove repetitive manual work from your team&apos;s day.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100/60 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="tech-label">[ORCHESTRATED_WORKFLOWS]</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-gradient-to-b from-indigo-50/60 via-white to-white border border-indigo-100 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_ai_custom_ml.png"
+                    alt="Custom AI Development — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Glassmorphism Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    PROPRIETARY ML CORE
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    CUSTOM WEIGHTS
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    4. Custom AI Development
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Custom machine learning models, computer vision systems, and AI API integrations built around your specific data and use case.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100/60 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="tech-label">[FINE_TUNED_PROPRIETARY_ML]</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
           </div>
-
-          <Link
-            href="/services/ai-solutions"
-            className="inline-flex items-center justify-between w-full px-md py-sm bg-primary/5 hover:bg-primary hover:text-white text-primary font-bold rounded-xl transition-all group-hover:shadow-md"
-          >
-            <span>Explore AI & Automation</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-
-        {/* Service Pillar 2: AI Data & Analytics */}
-        <div className="brand-card-gradient border border-indigo-100/90 rounded-2xl p-lg flex flex-col justify-between card-glow-hover relative overflow-hidden group bg-white shadow-sm">
-          <div>
-            <div className="flex items-center justify-between mb-md">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                <BarChart3 className="w-6 h-6" />
-              </div>
-              <span className="tech-label text-primary font-bold bg-indigo-50 px-3 py-1 rounded-full text-xs">PILLAR 02</span>
-            </div>
-            <h2 className="text-2xl font-bold mb-md text-on-background">AI Data Analytics & BI Dashboards</h2>
-            <p className="text-secondary text-body-md mb-lg leading-relaxed">
-              Transform raw business data into actionable growth insights with AI-driven reporting, predictive forecasting, and interactive dashboards.
-            </p>
-
-            <div className="space-y-sm mb-lg">
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <BarChart3 className="w-4 h-4 text-primary" />
-                  Business Intelligence (BI) Dashboards
-                </h3>
-                <p className="text-xs text-secondary">Real-time custom reporting dashboards with automated visual metrics for leadership decision-making.</p>
-              </div>
-
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-primary" />
-                  Predictive Analytics & Forecasting
-                </h3>
-                <p className="text-xs text-secondary">Machine learning models to forecast revenue trends, customer lifetime value, and market demand.</p>
-              </div>
-            </div>
-
-            <ul className="space-y-xs text-xs font-semibold text-secondary mb-lg">
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Data Mining & Pattern Recognition
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Automated Anomaly Detection Systems
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                AI-Driven Automated Reporting
-              </li>
-            </ul>
-          </div>
-
-          <Link
-            href="/services/ai-solutions#analytics"
-            className="inline-flex items-center justify-between w-full px-md py-sm bg-primary/5 hover:bg-primary hover:text-white text-primary font-bold rounded-xl transition-all group-hover:shadow-md"
-          >
-            <span>Explore Analytics & BI</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-
-        {/* Service Pillar 3: Search & Paid Digital Marketing */}
-        <div className="brand-card-gradient border border-indigo-100/90 rounded-2xl p-lg flex flex-col justify-between card-glow-hover relative overflow-hidden group bg-white shadow-sm">
-          <div>
-            <div className="flex items-center justify-between mb-md">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                <Megaphone className="w-6 h-6" />
-              </div>
-              <span className="tech-label text-primary font-bold bg-indigo-50 px-3 py-1 rounded-full text-xs">PILLAR 03</span>
-            </div>
-            <h2 className="text-2xl font-bold mb-md text-on-background">Search Engine & Digital Marketing (SEO/PPC)</h2>
-            <p className="text-secondary text-body-md mb-lg leading-relaxed">
-              Drive targeted traffic, capture high-intent buyers, and maximize return on ad spend through data-backed SEO, PPC, and social media campaigns.
-            </p>
-
-            <div className="space-y-sm mb-lg">
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <Target className="w-4 h-4 text-primary" />
-                  Search Engine Optimization (SEO)
-                </h3>
-                <p className="text-xs text-secondary">In-depth keyword research, technical SEO, on-page optimization, and high-authority link building.</p>
-              </div>
-
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <Megaphone className="w-4 h-4 text-primary" />
-                  Paid Advertising (PPC) & Social Media
-                </h3>
-                <p className="text-xs text-secondary">High-converting Google Ads, Meta (Facebook/Instagram) Ads, LinkedIn campaigns, and Email automation.</p>
-              </div>
-            </div>
-
-            <ul className="space-y-xs text-xs font-semibold text-secondary mb-lg">
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Technical & On-Page SEO Audits
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Google Ads, Meta Ads & Retargeting
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Social Media Growth & Email Automation
-              </li>
-            </ul>
-          </div>
-
-          <Link
-            href="/services/digital-marketing"
-            className="inline-flex items-center justify-between w-full px-md py-sm bg-primary/5 hover:bg-primary hover:text-white text-primary font-bold rounded-xl transition-all group-hover:shadow-md"
-          >
-            <span>Explore Growth & SEO</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-
-        {/* Service Pillar 4: Website Design & Branding */}
-        <div className="brand-card-gradient border border-indigo-100/90 rounded-2xl p-lg flex flex-col justify-between card-glow-hover relative overflow-hidden group bg-white shadow-sm">
-          <div>
-            <div className="flex items-center justify-between mb-md">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                <Layout className="w-6 h-6" />
-              </div>
-              <span className="tech-label text-primary font-bold bg-indigo-50 px-3 py-1 rounded-full text-xs">PILLAR 04</span>
-            </div>
-            <h2 className="text-2xl font-bold mb-md text-on-background">Website Design, WordPress & Branding</h2>
-            <p className="text-secondary text-body-md mb-lg leading-relaxed">
-              Command market authority with fast, visually stunning websites, landing pages, WordPress builds, and professional brand identity systems.
-            </p>
-
-            <div className="space-y-sm mb-lg">
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-primary" />
-                  Website Design & WordPress Development
-                </h3>
-                <p className="text-xs text-secondary">Modern custom websites, high-converting landing pages, and responsive WordPress development.</p>
-              </div>
-
-              <div className="p-sm bg-indigo-50/50 rounded-xl border border-indigo-100/60">
-                <h3 className="font-bold text-sm text-on-background mb-xs flex items-center gap-2">
-                  <Code className="w-4 h-4 text-primary" />
-                  Logo Design & Brand Identity
-                </h3>
-                <p className="text-xs text-secondary">Distinctive corporate logos, brand messaging, style guides, and complete visual design packages.</p>
-              </div>
-            </div>
-
-            <ul className="space-y-xs text-xs font-semibold text-secondary mb-lg">
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Custom Website & Landing Page Design
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                WordPress Theme & CMS Setup
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                Logo Design, Strategy & Brand Identity
-              </li>
-            </ul>
-          </div>
-
-          <Link
-            href="/services/web-branding"
-            className="inline-flex items-center justify-between w-full px-md py-sm bg-primary/5 hover:bg-primary hover:text-white text-primary font-bold rounded-xl transition-all group-hover:shadow-md"
-          >
-            <span>Explore Web & Branding</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
       </section>
 
-      {/* Why Work With Us / Value Proposition */}
-      <section className="bg-white py-20 border-y border-indigo-100 mb-24">
-        <div className="max-w-7xl mx-auto px-margin-desktop text-center">
-          <span className="tech-label text-primary font-bold mb-xs block text-xs uppercase tracking-wider">[WHY CHOOSE SBORTIX]</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-on-background mb-lg">
-            Simple, Transparent & Professional Execution
+      {/* ── SECTION 2: DIGITAL MARKETING (Pale Indigo Tint Background) ── */}
+      <section className="relative py-20 lg:py-24 bg-[#F8F9FE] border-b border-indigo-100/80 section-brand-tint">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-16">
+            <span className="tech-label text-indigo-700 font-bold block mb-3 text-xs tracking-widest uppercase">
+              // SECTION 02
+            </span>
+            <div className="inline-block px-3 py-1 bg-indigo-100/70 border border-indigo-200 rounded-md text-xs font-bold text-indigo-900 uppercase tracking-wider mb-3">
+              DIGITAL MARKETING
+            </div>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F0E1A] tracking-tight mb-4">
+              Growth you can measure.
+            </h2>
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              We run marketing like an engineering discipline — test, measure, and scale what works across every channel, with full visibility into what&apos;s actually driving results.
+            </p>
+          </div>
+
+          {/* 4 Sub-groups Grid with Fitted Images & Tech Overlay Badges */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            {/* Card 1 */}
+            <div className="bg-gradient-to-b from-indigo-50/70 via-white to-white border border-indigo-200/70 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_seo.png"
+                    alt="Search Engine Optimization — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    ORGANIC RANKING ENGINE
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    SEARCH TRUST: HIGH
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    1. Search Engine Optimization (SEO)
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Keyword research, on-page and off-page SEO, and technical audits that build the trust signals search engines reward.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="tech-label">[ORGANIC_AUTHORITY_BUILDING]</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-gradient-to-b from-indigo-50/70 via-white to-white border border-indigo-200/70 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_social_media.png"
+                    alt="Social Media Marketing — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
+                    DISTRIBUTION PIPELINE
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    ORGANIC REACH: +340%
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    2. Social Media Marketing
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Strategy, content creation, scheduling, and community management focused on real organic growth, not vanity metrics.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="tech-label">[ENGAGED_COMMUNITY_DISTRIBUTION]</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-gradient-to-b from-indigo-50/70 via-white to-white border border-indigo-200/70 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_ppc_ads.png"
+                    alt="Paid Advertising (PPC) — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    CONVERSION TARGETING
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    ROAS OPTIMIZED
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    3. Paid Advertising (PPC)
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Google, Meta, YouTube, LinkedIn, and TikTok ad campaigns optimized continuously, with retargeting systems that recover lost conversions.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="tech-label">[HIGH_INTENT_RETARGETING]</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-gradient-to-b from-indigo-50/70 via-white to-white border border-indigo-200/70 rounded-2xl p-6 sm:p-8 subtle-shadow card-glow-hover flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-indigo-100/90 shadow-sm">
+                  <Image
+                    src="/services/service_email_marketing.png"
+                    alt="Email Marketing & Automation — Sbortix"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
+                  {/* Dual Floating Tech Overlay Badges */}
+                  <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
+                    AUTOMATED WORKFLOW LOOPS
+                  </div>
+                  <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                    OPEN RATE: 42%
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-[#0F0E1A] mb-3">
+                    4. Email Marketing & Automation
+                  </h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                    Automated campaigns, newsletter design, and customer segmentation that turn subscribers into repeat customers.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100 flex items-center justify-between text-xs font-bold text-indigo-700">
+                <span className="tech-label">[SEGMENTED_LTV_AUTOMATION]</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3: WEB & BRANDING (White Base + Blueprint Tint) ── */}
+      <section className="relative py-20 lg:py-24 bg-white border-b border-indigo-100/80 blueprint-pattern">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
+            <div className="max-w-3xl">
+              <span className="tech-label text-indigo-700 font-bold block mb-3 text-xs tracking-widest uppercase">
+                // SECTION 03
+              </span>
+              <div className="inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-md text-xs font-bold text-indigo-800 uppercase tracking-wider mb-3">
+                WEB & BRANDING
+              </div>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F0E1A] tracking-tight mb-4">
+                Your first impression, engineered.
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                A website is your hardest-working salesperson. We design and build sites, landing pages, and brand identities engineered to convert visitors into customers.
+              </p>
+            </div>
+
+            {/* Rich Image Asset Box with Dual Overlay Badges */}
+            <div className="relative w-full lg:w-[420px] h-60 rounded-2xl overflow-hidden border border-indigo-200/80 shadow-md shrink-0">
+              <Image
+                src="/services/service_web_branding.png"
+                alt="Web & Branding Engineering — Sbortix"
+                fill
+                className="object-cover object-center"
+              />
+              <div className="absolute top-3 left-3 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                ENTERPRISE UI SYSTEM
+              </div>
+              <div className="absolute top-3 right-3 z-10 bg-[#0F0E1A]/85 backdrop-blur-md border border-indigo-400/40 px-2.5 py-1 rounded-full text-[9px] font-mono font-semibold text-indigo-200 shadow-xs uppercase tracking-wider">
+                LIGHTHOUSE: 99/100
+              </div>
+            </div>
+          </div>
+
+          {/* 6 Sub-services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {[
+              {
+                title: 'Website Design & Development',
+                desc: 'Custom performant Next.js and web applications engineered for speed, mobile responsiveness, and high conversion.',
+              },
+              {
+                title: 'Landing Page Design & CRO',
+                desc: 'Conversion-rate-optimized landing pages designed to capture leads and turn ad clicks into high-margin sales.',
+              },
+              {
+                title: 'WordPress Development',
+                desc: 'Clean, responsive custom WordPress builds with easy CMS content management for your marketing team.',
+              },
+              {
+                title: 'Logo Design',
+                desc: 'Distinctive, memorable corporate logos and visual brand marks designed to command market authority.',
+              },
+              {
+                title: 'Brand Identity & Guidelines',
+                desc: 'Complete typography systems, curated color palettes, visual assets, and enterprise brand style boards.',
+              },
+              {
+                title: 'Brand Messaging & Positioning',
+                desc: 'Strategic copy frameworks, value propositions, and brand voice guidelines that resonate with buyers.',
+              },
+            ].map((item, idx) => (
+              <div
+                key={item.title}
+                className="bg-gradient-to-b from-indigo-50/50 via-white to-white border border-indigo-100/90 rounded-xl p-6 subtle-shadow card-glow-hover flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="tech-label text-indigo-600 text-[10px] font-bold">
+                      [CAPABILITY_0{idx + 1}]
+                    </span>
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-[#0F0E1A] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── SECTION 4: DATA SCIENCE (Coming Soon - Visually De-Emphasized) ── */}
+      <section className="relative py-20 lg:py-24 bg-[#0F0E1A] text-white overflow-hidden">
+        
+        {/* Subtle Ambient Radial Glow */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-30"
+          style={{
+            backgroundImage: 'radial-gradient(ellipse at 50% 30%, rgba(79, 70, 229, 0.4) 0%, transparent 70%)',
+          }}
+        />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          
+          {/* Section Header */}
+          <div className="max-w-3xl mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-900/60 border border-indigo-500/40 rounded-full text-xs font-bold text-indigo-300 uppercase tracking-widest mb-4">
+              <Lock className="w-3.5 h-3.5 text-indigo-400" />
+              [IN DEVELOPMENT // COMING SOON]
+            </div>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+              Data Science & Advanced ML Intelligence
+            </h2>
+            <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
+              Our engineering team is building next-generation machine learning algorithms and predictive data pipelines to be released for enterprise partners.
+            </p>
+          </div>
+
+          {/* 8 Items Outlined Grid (Lower Opacity De-emphasized Style) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 opacity-85">
+            {[
+              { name: 'Customer Churn Prediction', tag: 'ML_PIPELINE' },
+              { name: 'Recommendation Engines', tag: 'ALGORITHMIC' },
+              { name: 'Fraud Detection', tag: 'ANOMALY_SCAN' },
+              { name: 'Dynamic Pricing Optimization', tag: 'REALTIME_BI' },
+              { name: 'Agentic AI Systems', tag: 'AUTONOMOUS' },
+              { name: 'Generative AI & Synthetic Data', tag: 'LLM_FINE_TUNE' },
+              { name: 'Data Engineering & ETL', tag: 'INFRASTRUCTURE' },
+              { name: 'MLOps & Model Monitoring', tag: 'ENTERPRISE_DEPLOY' },
+            ].map((item) => (
+              <div
+                key={item.name}
+                className="p-5 rounded-xl border border-indigo-500/30 bg-indigo-950/20 backdrop-blur-sm flex flex-col justify-between hover:border-indigo-400/60 transition-colors"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="tech-label text-indigo-400 text-[9px]">
+                    {item.tag}
+                  </span>
+                  <Sparkles className="w-3.5 h-3.5 text-indigo-400 opacity-60" />
+                </div>
+                <h3 className="font-heading text-sm font-semibold text-gray-200">
+                  {item.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── CTA BOTTOM BANNER ── */}
+      <section className="py-16 bg-white border-t border-indigo-100">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#0F0E1A] mb-4">
+            Ready to Engineer Your Business Growth?
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-lg text-left">
-            <div className="p-md rounded-xl bg-[#FAFAFD] border border-indigo-100">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold mb-sm">
-                01
-              </div>
-              <h3 className="font-bold text-lg text-on-background mb-xs">Trending & Proven Technologies</h3>
-              <p className="text-secondary text-sm leading-relaxed">
-                We use industry-standard tools like OpenAI fine-tuning, Next.js, Google Ads API, and custom BI dashboards to ensure top performance.
-              </p>
-            </div>
-
-            <div className="p-md rounded-xl bg-[#FAFAFD] border border-indigo-100">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold mb-sm">
-                02
-              </div>
-              <h3 className="font-bold text-lg text-on-background mb-xs">Clean & Easily Understandable</h3>
-              <p className="text-secondary text-sm leading-relaxed">
-                No confusing buzzwords or hidden steps. Every campaign, chatbot, and design is delivered with clear reporting and measurable ROI.
-              </p>
-            </div>
-
-            <div className="p-md rounded-xl bg-[#FAFAFD] border border-indigo-100">
-              <div className="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-600 flex items-center justify-center font-bold mb-sm">
-                03
-              </div>
-              <h3 className="font-bold text-lg text-on-background mb-xs">End-to-End Enterprise Support</h3>
-              <p className="text-secondary text-sm leading-relaxed">
-                From discovery and strategy to design, deployment, and ongoing optimization, our dedicated team handles every detail.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Box */}
-      <section className="px-margin-desktop max-w-7xl mx-auto">
-        <div className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white p-xl rounded-2xl border border-indigo-900/60 shadow-2xl relative overflow-hidden text-center sm:text-left">
-          <div className="absolute inset-0 grid-pattern opacity-10 pointer-events-none"></div>
-          <div className="relative z-10 max-w-2xl">
-            <span className="tech-label text-indigo-300 font-semibold mb-xs block text-xs uppercase">[READY TO SCALE?]</span>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-md">Ready to upgrade your AI, Marketing & Web strategy?</h2>
-            <p className="text-indigo-200 font-body-lg text-body-lg mb-lg">
-              Book a 30-minute consultation with our specialists to review your goals and receive a custom solution roadmap.
-            </p>
+          <p className="text-gray-600 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+            Schedule a strategic discovery session with our engineering team to review your goals and receive a custom solution roadmap.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
-              className="brand-button-gradient text-white px-lg py-md rounded-xl font-bold text-base hover:opacity-95 transition-all shadow-md hover:shadow-indigo-500/25 inline-block"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm text-white transition-all shadow-md group"
+              style={{
+                background: 'linear-gradient(135deg, #1F108E 0%, #3730A3 100%)',
+              }}
             >
-              Get Started Today
+              <span>Schedule Strategic Consultation</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+            <Link
+              href="/work"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-sm text-[#0F0E1A] bg-white border border-indigo-200 hover:bg-indigo-50/50 transition-colors shadow-xs"
+            >
+              View Client Case Studies
             </Link>
           </div>
         </div>
       </section>
+
     </div>
   );
 }

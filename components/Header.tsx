@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, Sparkles, Megaphone, Layout } from 'lucide-react';
 
@@ -12,8 +13,8 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
+    {
+      name: 'Services',
       href: '/services',
       subLinks: [
         { name: 'AI Chatbots & Automation', href: '/services/ai-solutions', icon: Sparkles, tag: 'AI & CHATBOTS' },
@@ -33,45 +34,51 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-indigo-100/80 backdrop-blur-md bg-white/95 shadow-xs">
-      <div className="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto w-full">
+    <header className="absolute top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 border-none shadow-none pointer-events-auto">
+      <div className="flex justify-between items-center h-24 sm:h-28 px-margin-desktop max-w-7xl mx-auto w-full">
         {/* Brand Logo */}
-        <div className="flex items-center gap-xs">
-          <Link href="/" className="text-headline-md font-headline-md font-extrabold text-primary tracking-tight flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse inline-block"></span>
-            Sbortix
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center py-1">
+            <Image
+              src="/sbortix-logo.png"
+              alt="Sbortix — Innovating Digital Growth"
+              width={650}
+              height={190}
+              className="h-28 sm:h-32 lg:h-36 w-auto object-contain"
+              priority
+            />
           </Link>
-          <span className="tech-label text-primary/70 bg-primary/5 px-2 py-0.5 rounded border border-primary/10 ml-xs hidden lg:block">[VER_2.4.0]</span>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-md">
+        <nav className="hidden md:flex items-center space-x-2">
           {navLinks.map((link) => {
             const active = isActive(link.href);
 
             if (link.subLinks) {
               return (
-                <div 
-                  key={link.name} 
+                <div
+                  key={link.name}
                   className="relative group"
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
                   <Link
                     href={link.href}
-                    className={`flex items-center gap-1 font-label-md text-label-md transition-colors duration-200 py-2 ${
-                      active ? 'text-primary font-bold' : 'text-secondary hover:text-primary'
-                    }`}
+                    className={`flex items-center gap-1 text-sm transition-all duration-200 px-4 py-1.5 rounded-full ${active
+                      ? 'bg-[#2D2D82] text-white font-bold shadow-sm'
+                      : 'text-[#151137]/80 hover:text-[#2D2D82] hover:bg-[#2D2D82]/10 font-medium'
+                      }`}
                   >
                     {link.name}
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 text-primary/70" />
+                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                   </Link>
 
                   {/* Submenu Dropdown */}
                   {servicesOpen && (
-                    <div className="absolute top-full left-0 w-72 bg-white border border-indigo-100 rounded-xl shadow-xl p-xs mt-1 z-50 animate-in fade-in slide-in-from-top-2">
-                      <div className="px-md py-xs border-b border-indigo-50 mb-xs">
-                        <span className="tech-label text-primary text-[9px] font-semibold">[SYSTEM_MODULES]</span>
+                    <div className="absolute top-full left-0 w-72 bg-white/95 backdrop-blur-lg border border-indigo-100/80 rounded-2xl shadow-xl p-2 mt-2 z-50 animate-in fade-in slide-in-from-top-2">
+                      <div className="px-3 py-1.5 border-b border-indigo-50/80 mb-1">
+                        <span className="text-[9px] font-bold text-[#2D2D82] uppercase">Core Services</span>
                       </div>
                       {link.subLinks.map((sub) => {
                         const SubIcon = sub.icon;
@@ -79,13 +86,13 @@ export default function Header() {
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            className="flex items-start gap-md p-xs rounded-lg hover:bg-indigo-50/60 transition-colors group/sub"
+                            className="flex items-start gap-3 p-2 rounded-xl hover:bg-[#2D2D82]/8 transition-colors group/sub"
                           >
-                            <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary group-hover/sub:bg-primary group-hover/sub:text-white transition-colors">
+                            <div className="w-8 h-8 rounded-lg bg-[#2D2D82]/10 flex items-center justify-center flex-shrink-0 text-[#2D2D82] group-hover/sub:bg-[#2D2D82] group-hover/sub:text-white transition-colors">
                               <SubIcon className="w-4 h-4" />
                             </div>
                             <div>
-                              <div className="text-xs font-bold text-on-background group-hover/sub:text-primary transition-colors">
+                              <div className="text-xs font-bold text-[#151137] group-hover/sub:text-[#2D2D82] transition-colors">
                                 {sub.name}
                               </div>
                               <span className="tech-label text-secondary/70 text-[8px]">{sub.tag}</span>
@@ -103,9 +110,10 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`font-label-md text-label-md transition-all duration-200 ${
-                  active ? 'text-primary font-bold bg-primary/10 px-3 py-1.5 rounded-md' : 'text-secondary hover:text-primary px-2 py-1'
-                }`}
+                className={`text-sm transition-all duration-200 px-4 py-1.5 rounded-full ${active
+                  ? 'bg-[#2D2D82] text-white font-bold shadow-sm'
+                  : 'text-[#151137]/80 hover:text-[#2D2D82] hover:bg-[#2D2D82]/10 font-medium'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -115,11 +123,9 @@ export default function Header() {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-sm">
-          <span className="tech-label text-primary/70 bg-primary/5 px-2 py-0.5 rounded border border-primary/10 hidden xl:block">[S_STATUS: OK]</span>
-          
-          <Link 
+          <Link
             href="/contact"
-            className="brand-button-gradient text-white px-md py-xs rounded-lg font-label-md text-label-md hover:opacity-95 transition-all shadow-sm hover:shadow-indigo-500/20 inline-block"
+            className="bg-[#2D2D82] text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-md shadow-[#2D2D82]/25 hover:bg-[#1e1d6e] hover:scale-105 active:scale-95 transition-all inline-block"
           >
             Book a call
           </Link>
@@ -142,9 +148,8 @@ export default function Header() {
               <Link
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-xs font-label-md text-base ${
-                  isActive(link.href) ? 'text-primary font-bold' : 'text-secondary'
-                }`}
+                className={`block py-xs font-label-md text-base ${isActive(link.href) ? 'text-primary font-bold' : 'text-secondary'
+                  }`}
               >
                 {link.name}
               </Link>
