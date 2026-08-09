@@ -15,20 +15,11 @@ export default function AboutPage() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/20 bg-white shadow-xs mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
-              About Sbortix
-            </span>
-          </div>
+          <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
+            About Sbortix
+          </span>
 
-          <h1
-            style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              letterSpacing: '-0.03em',
-            }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] leading-[1.08] mb-6 max-w-4xl mx-auto"
-          >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
             Engineering Enterprise Growth Through AI & Data Systems
           </h1>
 
@@ -89,13 +80,10 @@ export default function AboutPage() {
       <section className="py-20 bg-[#ECEBF5]/50 border-b border-[#2D2D82]/15">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-2">
+            <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
               Our Core Principles
             </span>
-            <h2
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               Built on Trust, Precision, and Performance
             </h2>
           </div>
@@ -137,13 +125,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block">
+              <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
                 Enterprise Standards
               </span>
-              <h2
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
-              >
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
                 Why Global Companies Trust Sbortix
               </h2>
               <p className="text-gray-600 text-base leading-relaxed">
@@ -200,13 +185,10 @@ export default function AboutPage() {
       <section className="py-20 bg-[#ECEBF5] border-b border-[#2D2D82]/15">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-2">
+            <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
               Our Process
             </span>
-            <h2
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               A Disciplined Engineering Lifecyle
             </h2>
           </div>

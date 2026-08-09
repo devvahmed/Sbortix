@@ -75,10 +75,10 @@ export default function HomePage() {
         <div className="absolute inset-0 grid-pattern opacity-15 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
           <div className="max-w-3xl mb-16 text-left">
-            <span className="text-xs font-semibold text-[#2D2D82] mb-3 inline-block bg-white/90 px-3 py-1 rounded-full border border-[#2D2D82]/20 shadow-xs">
+            <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
               About Sbortix
             </span>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-on-background tracking-tight mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">
               We Engineer Business Growth <br className="hidden sm:block" /> with AI & Advanced Data Systems
             </h2>
             <p className="text-secondary text-lg leading-relaxed">
@@ -180,8 +180,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-margin-desktop">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-md">
             <div>
-              <span className="tech-label text-primary font-bold text-xs uppercase mb-xs block bg-indigo-50 px-3 py-1 rounded border border-indigo-100 inline-block">OUR CORE SERVICES</span>
-              <h2 className="text-4xl sm:text-5xl font-extrabold text-on-background">Trending Business Services</h2>
+              <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">OUR CORE SERVICES</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">Trending Business Services</h2>
             </div>
             <Link className="flex items-center gap-xs text-primary font-bold hover:underline group bg-primary/5 px-4 py-2 rounded-lg border border-primary/10 transition-all hover:bg-primary/10" href="/services">
               Discover all services
@@ -193,7 +193,6 @@ export default function HomePage() {
             {/* Card 1: AI Chatbots & Automation */}
             <Link href="/services/ai-solutions" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
               <div className="p-6 pb-4">
-                <div className="tech-label text-primary font-bold mb-3 bg-indigo-50 px-2.5 py-1 rounded inline-block text-xs">PILLAR // 01</div>
                 <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">AI Chatbots & <br />Automation</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">24/7 AI Chatbots, Voice Assistants, and automated business workflow orchestration.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
@@ -215,7 +214,6 @@ export default function HomePage() {
             {/* Card 2: AI Data & Analytics */}
             <Link href="/services/ai-solutions#analytics" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
               <div className="p-6 pb-4">
-                <div className="tech-label text-primary font-bold mb-3 bg-indigo-50 px-2.5 py-1 rounded inline-block text-xs">PILLAR // 02</div>
                 <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">AI Data & <br />Analytics</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">Interactive BI dashboards, predictive forecasting, and automated insights reporting.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
@@ -237,7 +235,6 @@ export default function HomePage() {
             {/* Card 3: SEO & Paid Advertising */}
             <Link href="/services/digital-marketing" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
               <div className="p-6 pb-4">
-                <div className="tech-label text-primary font-bold mb-3 bg-indigo-50 px-2.5 py-1 rounded inline-block text-xs">PILLAR // 03</div>
                 <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">SEO & Paid <br />Advertising</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">High-ranking Search Engine Optimization, Google Ads, Meta Ads, and Email marketing.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
@@ -259,7 +256,6 @@ export default function HomePage() {
             {/* Card 4: Web Design & Branding */}
             <Link href="/services/web-branding" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
               <div className="p-6 pb-4">
-                <div className="tech-label text-primary font-bold mb-3 bg-indigo-50 px-2.5 py-1 rounded inline-block text-xs">PILLAR // 04</div>
                 <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">Web Design & <br />Branding</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">Custom modern websites, landing pages, WordPress builds, and custom logo design.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
@@ -286,8 +282,8 @@ export default function HomePage() {
         <div className="absolute inset-0 grid-pattern opacity-30"></div>
         <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
           <div className="text-center mb-xl">
-            <span className="text-primary font-bold text-xs uppercase bg-white/80 px-3.5 py-1 rounded-full border border-indigo-100 inline-block shadow-xs">OUR METHODOLOGY</span>
-            <h2 className="font-headline-lg text-headline-lg mt-base">The Sbortix Framework</h2>
+            <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">OUR METHODOLOGY</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">The Sbortix Framework</h2>
           </div>
           <div className="relative flex flex-col md:flex-row justify-between items-start gap-lg">
             <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-indigo-200 z-0 border-t border-b border-white"></div>
@@ -339,10 +335,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-md">
             <div>
-              <span className="text-primary font-bold text-xs uppercase tracking-wider mb-xs block bg-indigo-50/80 px-3 py-1 rounded-full border border-indigo-100 inline-block shadow-xs">
+              <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
                 TECHNICAL CAPABILITIES & INFRASTRUCTURE
               </span>
-              <h2 className="text-4xl sm:text-5xl font-extrabold text-on-background tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">
                 Modern Growth Capabilities
               </h2>
             </div>
@@ -361,69 +357,57 @@ export default function HomePage() {
                   title: '24/7 AI Chatbots & Voice',
                   subtitle: 'Conversational Support & Booking',
                   badge: 'AI & CHATBOTS',
-                  icon: 'smart_toy',
                 },
                 {
                   id: 1,
                   title: 'Predictive BI Analytics',
                   subtitle: 'Real-Time Dashboards & Forecasting',
                   badge: 'BI & ANALYTICS',
-                  icon: 'bar_chart',
                 },
                 {
                   id: 2,
                   title: 'Algorithmic SEO & Paid Ads',
                   subtitle: 'Google Ads, Meta Ads & Search SEO',
                   badge: 'SEO & PPC',
-                  icon: 'trending_up',
                 },
                 {
                   id: 3,
                   title: 'Custom Web & Branding',
                   subtitle: 'Next.js, WordPress & Logo Identity',
                   badge: 'WEB & BRANDING',
-                  icon: 'palette',
                 },
-              ].map((tab) => {
+              ].map((tab, idx) => {
                 const isActive = activeCapability === tab.id;
                 return (
                   <button
                     key={tab.id}
                     onClick={() => setActiveCapability(tab.id)}
-                    className={`w-full text-left p-6 rounded-2xl transition-all duration-300 flex items-center justify-between border ${
+                    className={`w-full text-left pl-5 pr-5 py-5 rounded-2xl transition-all duration-300 flex items-center justify-between border-l-[3px] border-t border-r border-b ${
                       isActive
-                        ? 'bg-white border-primary/40 shadow-xl shadow-indigo-500/10 ring-2 ring-primary/10 translate-x-1'
-                        : 'bg-white/70 hover:bg-white border-indigo-100/80 shadow-xs hover:shadow-md'
+                        ? 'bg-indigo-50/60 border-l-primary border-t-indigo-100/80 border-r-indigo-100/80 border-b-indigo-100/80 shadow-sm'
+                        : 'bg-white/70 hover:bg-white/90 border-l-transparent border-t-indigo-100/60 border-r-indigo-100/60 border-b-indigo-100/60 hover:border-l-indigo-200'
                     }`}
                   >
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center font-bold transition-colors ${
-                          isActive
-                            ? 'bg-primary text-white shadow-md'
-                            : 'bg-indigo-50 text-primary border border-indigo-100'
-                        }`}
-                      >
-                        <span className="material-symbols-outlined text-xl">{tab.icon}</span>
-                      </div>
+                    <div className="flex items-start gap-4">
+                      <span className={`font-mono text-xs tabular-nums mt-0.5 select-none ${
+                        isActive ? 'text-primary font-bold' : 'text-secondary/50'
+                      }`}>
+                        {String(idx + 1).padStart(2, '0')}
+                      </span>
                       <div>
                         <span className="text-[11px] font-bold text-primary uppercase tracking-wider block mb-0.5">
                           {tab.badge}
                         </span>
                         <h4 className="text-lg font-bold text-on-background leading-snug">{tab.title}</h4>
-                        <p className="text-xs text-secondary">{tab.subtitle}</p>
+                        <p className="text-xs text-secondary mt-0.5">{tab.subtitle}</p>
                       </div>
                     </div>
 
-                    <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                        isActive ? 'bg-primary/10 text-primary' : 'text-secondary/40'
-                      }`}
-                    >
-                      <span className="material-symbols-outlined text-sm">
-                        {isActive ? 'arrow_forward' : 'chevron_right'}
-                      </span>
-                    </div>
+                    <span className={`text-base leading-none ml-3 flex-shrink-0 transition-all ${
+                      isActive ? 'text-primary' : 'text-secondary/30'
+                    }`}>
+                      →
+                    </span>
                   </button>
                 );
               })}
@@ -517,7 +501,7 @@ export default function HomePage() {
                   return (
                     <div key={content.id} className="space-y-6 animate-in fade-in duration-300">
                       <div>
-                        <span className="text-xs font-bold text-primary bg-indigo-50 border border-indigo-200/60 px-3 py-1 rounded-full inline-block mb-3">
+                        <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-3">
                           {content.badge}
                         </span>
                         <h3 className="text-2xl sm:text-3xl font-extrabold text-on-background leading-tight mb-3">
@@ -528,16 +512,14 @@ export default function HomePage() {
                         </p>
                       </div>
 
-                      {/* Glass Feature Chips */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {/* Feature List */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         {content.highlights.map((item, idx) => (
                           <div
                             key={idx}
-                            className="flex items-center gap-2.5 p-3 rounded-xl bg-white/80 border border-indigo-100/80 shadow-xs text-xs font-semibold text-on-background"
+                            className="flex items-center gap-3 px-3.5 py-2.5 rounded-lg bg-white border border-slate-100 text-xs font-semibold text-on-background tracking-wide"
                           >
-                            <span className="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xs font-bold">
-                              ✓
-                            </span>
+                            <span className="text-primary font-bold text-sm leading-none flex-shrink-0" aria-hidden="true">—</span>
                             <span>{item}</span>
                           </div>
                         ))}
@@ -564,9 +546,7 @@ export default function HomePage() {
                           className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-md hover:shadow-indigo-500/25 transition-all group"
                         >
                           <span>Explore This Capability</span>
-                          <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
-                            arrow_forward
-                          </span>
+                          <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">→</span>
                         </Link>
                       </div>
                     </div>
@@ -583,10 +563,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-margin-desktop">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center mb-16">
             <div className="lg:col-span-6">
-              <span className="tech-label text-primary font-bold text-xs uppercase bg-primary/10 px-3 py-1 rounded-md mb-sm inline-block border border-primary/20">
+              <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
                 PROVEN TEAM CREDIBILITY
               </span>
-              <h2 className="text-4xl sm:text-5xl font-extrabold text-on-background leading-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">
                 Led by World-Class AI Engineers & Senior Growth Experts
               </h2>
               <p className="text-secondary text-base sm:text-lg leading-relaxed">
@@ -601,7 +581,7 @@ export default function HomePage() {
               </div>
 
               <div className="p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center">
-                <div className="text-3xl font-extrabold text-primary font-mono mb-1">Japan Corp</div>
+                <div className="text-3xl font-extrabold text-primary font-mono mb-1">Multinational Company</div>
                 <div className="text-xs font-semibold text-secondary uppercase">Ex-AI Systems Lead</div>
               </div>
 
@@ -622,54 +602,48 @@ export default function HomePage() {
             {/* Lead 1: Digital Marketing Lead */}
             <div className="pt-6 md:pt-0 md:pr-6 flex flex-col justify-between relative group">
               <div>
-                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 font-mono inline-block mb-4">
-                  7+ YRS EXP
-                </span>
-                <h3 className="text-2xl font-bold text-on-background mb-1">Bilal</h3>
-                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4 font-mono">Senior Digital Growth & Marketing Lead</p>
+                <h3 className="text-xl font-bold text-on-background mb-3 leading-snug">
+                  Senior Digital Growth &amp; Marketing Lead
+                </h3>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
-                  Over <strong>7+ years of hands-on experience</strong> leading high-performance SEO, Google & Meta paid ad campaigns, content growth strategy, and conversion optimization for global brands.
+                  Over <strong>7+ years of hands-on experience</strong> leading high-performance SEO, Google &amp; Meta paid ad campaigns, content growth strategy, and conversion optimization for global brands.
                 </p>
               </div>
-              <div className="pt-4 border-t border-[#2D2D82]/15 text-xs font-semibold text-secondary flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                SEO, PPC & Performance Marketing
+              <div className="pt-4 border-t border-[#2D2D82]/15 text-[11px] font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+                <span className="w-0.5 h-3.5 bg-primary shrink-0" aria-hidden="true" />
+                <span>SEO, PPC &amp; Performance Marketing</span>
               </div>
             </div>
 
             {/* Lead 2: AI Systems Engineer */}
             <div className="pt-6 md:pt-0 md:px-6 flex flex-col justify-between relative group">
               <div>
-                <span className="text-[10px] font-bold text-[#2D2D82] bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200 font-mono inline-block mb-4">
-                  EX-JAPAN TECH
-                </span>
-                <h3 className="text-2xl font-bold text-on-background mb-1">Salman (Salman Tauheed)</h3>
-                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4 font-mono">Lead AI Systems Engineer</p>
+                <h3 className="text-xl font-bold text-on-background mb-3 leading-snug">
+                  Lead AI Systems Engineer
+                </h3>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   <strong>Former Senior AI Engineer at a top Japanese technology corporation</strong>. Expert in fine-tuning enterprise LLMs, building custom 24/7 AI chatbots, and autonomous workflow engines.
                 </p>
               </div>
-              <div className="pt-4 border-t border-[#2D2D82]/15 text-xs font-semibold text-secondary flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                AI Chatbots, LLMs & Automation
+              <div className="pt-4 border-t border-[#2D2D82]/15 text-[11px] font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+                <span className="w-0.5 h-3.5 bg-primary shrink-0" aria-hidden="true" />
+                <span>AI Chatbots, LLMs &amp; Automation</span>
               </div>
             </div>
 
             {/* Lead 3: Chief Data Scientist & Founder */}
             <div className="pt-6 md:pt-0 md:pl-6 flex flex-col justify-between relative group">
               <div>
-                <span className="text-[10px] font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200 font-mono inline-block mb-4">
-                  SERIAL FOUNDER
-                </span>
-                <h3 className="text-2xl font-bold text-on-background mb-1">Muhammad Ahmed</h3>
-                <p className="text-xs font-bold text-primary uppercase tracking-wider mb-4 font-mono">Chief Data Scientist & Tech Architect</p>
+                <h3 className="text-xl font-bold text-on-background mb-3 leading-snug">
+                  Chief Data Scientist &amp; Tech Architect
+                </h3>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   <strong>Founder of multiple tech ventures</strong> with extensive background in data science, predictive analytics dashboards, and modern Next.js/React web platforms.
                 </p>
               </div>
-              <div className="pt-4 border-t border-[#2D2D82]/15 text-xs font-semibold text-secondary flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                Data Science & Web Architecture
+              <div className="pt-4 border-t border-[#2D2D82]/15 text-[11px] font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+                <span className="w-0.5 h-3.5 bg-primary shrink-0" aria-hidden="true" />
+                <span>Data Science &amp; Web Architecture</span>
               </div>
             </div>
           </div>
@@ -681,8 +655,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-margin-desktop">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl">
             <div>
-              <span className="text-primary font-bold text-xs uppercase tracking-wider mb-xs block bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100 inline-block">GET IN TOUCH</span>
-              <h2 className="font-headline-lg text-headline-lg mb-md mt-base">Let's build your growth engine.</h2>
+              <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">GET IN TOUCH</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">Let's build your growth engine.</h2>
               <p className="text-secondary font-body-md text-body-md mb-lg">Ready to transform your marketing, web presence, or AI workflows? Contact us to schedule a free technical audit and discovery session.</p>
               
               <div className="space-y-md">

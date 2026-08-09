@@ -11,7 +11,7 @@ export default function BlogPage() {
       id: 'LOG_001',
       title: 'Why Most Enterprise AI Projects Fail at the Data Pipeline Layer',
       date: '2026-07-15',
-      author: 'Muhammad Ahmed',
+      author: 'Sbortix Data Architecture Team',
       category: 'DATA ENGINEERING',
       readTime: '6 MIN READ',
       excerpt: 'Fine-tuning LLMs is only 10% of the battle. Learn why robust ETL pipelines and vector indexing determine real-world AI accuracy.',
@@ -20,7 +20,7 @@ export default function BlogPage() {
       id: 'LOG_002',
       title: 'Building Autonomous Sales Agents Without Hallucination Risk',
       date: '2026-07-02',
-      author: 'Salman (Salman Tauheed)',
+      author: 'Sbortix AI Engineering Lead',
       category: 'AI ARCHITECTURE',
       readTime: '9 MIN READ',
       excerpt: 'A technical breakdown of deterministic fallback loops, structured JSON function calling, and RAG validation strategies for sales agents.',
@@ -29,7 +29,7 @@ export default function BlogPage() {
       id: 'LOG_003',
       title: 'Algorithmic Marketing Attribution in a Cookieless Ecosystem',
       date: '2026-06-20',
-      author: 'Bilal',
+      author: 'Sbortix Digital Growth Lead',
       category: 'DIGITAL GROWTH',
       readTime: '7 MIN READ',
       excerpt: 'How multi-touch attribution models combined with first-party server-side tracking solve CAC inflation for B2B growth teams.',
@@ -38,7 +38,7 @@ export default function BlogPage() {
       id: 'LOG_004',
       title: 'Next.js App Router Performance Benchmarks for Enterprise Web Apps',
       date: '2026-06-05',
-      author: 'Muhammad Ahmed',
+      author: 'Sbortix Web Systems Architect',
       category: 'WEB ENGINEERING',
       readTime: '5 MIN READ',
       excerpt: 'Optimizing React Server Components, dynamic imports, and streaming SSR to achieve sub-200ms Core Web Vitals at scale.',
@@ -55,17 +55,11 @@ export default function BlogPage() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/25 bg-white shadow-xs mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
-              Technical Insights & Whitepapers
-            </span>
-          </div>
+          <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
+            Technical Insights &amp; Whitepapers
+          </span>
 
-          <h1
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight mb-6 max-w-4xl mx-auto leading-tight"
-          >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
             Technical Insights & Engineering Papers
           </h1>
 

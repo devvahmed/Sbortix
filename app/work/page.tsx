@@ -142,17 +142,11 @@ export default function WorkPage() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/20 bg-white shadow-xs mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
-              Case Studies & Client Impact
-            </span>
-          </div>
+          <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
+            Case Studies & Client Impact
+          </span>
 
-          <h1
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight mb-6 max-w-4xl mx-auto leading-tight"
-          >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
             Engineered Work & Proven Enterprise Outcomes
           </h1>
 
@@ -327,10 +321,10 @@ export default function WorkPage() {
       {/* ── METHODOLOGY: HOW WE BUILD ── */}
       <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 border-t border-[#2D2D82]/15">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-2">
+          <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
             Our Engineering Methodology
           </span>
-          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif" }} className="text-3xl sm:text-4xl font-extrabold text-[#151137]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
             How We Build & Deploy Enterprise Systems
           </h2>
           <p className="text-gray-600 text-sm sm:text-base mt-2">

@@ -63,17 +63,11 @@ export default function ContactPage() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/25 bg-white shadow-xs mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-wider">
-              Get in Touch
-            </span>
-          </div>
+          <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
+            Get in Touch
+          </span>
 
-          <h1
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight mb-6 max-w-4xl mx-auto leading-tight"
-          >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
             Initiate Project Inquiry & Architecture Discovery
           </h1>
 

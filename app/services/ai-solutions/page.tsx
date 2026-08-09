@@ -59,20 +59,11 @@ export default function AISolutionsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#2D2D82]/25 bg-white shadow-sm mb-6">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-wider">
-                  ENTERPRISE AI ARCHITECTURE
-                </span>
-              </div>
+              <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
+                ENTERPRISE AI ARCHITECTURE
+              </span>
 
-              <h1
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  letterSpacing: '-0.03em',
-                }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] leading-[1.08] mb-6"
-              >
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6">
                 Intelligent AI Agents, Predictive Analytics & Autonomous Workflows
               </h1>
 
@@ -180,13 +171,7 @@ export default function AISolutionsPage() {
         {/* ── GROUP 1: AI CHATBOTS & CONVERSATIONAL AI ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
-              [PILLAR // 01]
-            </div>
-            <h2
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               AI Chatbots & Conversational AI
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
@@ -301,13 +286,7 @@ export default function AISolutionsPage() {
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
-              [PILLAR // 02]
-            </div>
-            <h2
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               AI-Powered Data & Analytics
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
@@ -339,13 +318,7 @@ export default function AISolutionsPage() {
         {/* ── GROUP 3: AI AUTOMATION & WORKFLOW ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
-              [PILLAR // 03]
-            </div>
-            <h2
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               AI Automation & Workflow
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
@@ -451,13 +424,7 @@ export default function AISolutionsPage() {
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#2D2D82]/10 border border-[#2D2D82]/20 text-[#2D2D82] text-xs font-mono font-bold uppercase">
-              [PILLAR // 04]
-            </div>
-            <h2
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              className="text-3xl sm:text-4xl font-extrabold text-[#151137]"
-            >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               Custom AI Development
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
