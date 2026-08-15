@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -10,6 +10,18 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const timeoutRef = useRef<any>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+    }, 200);
+  };
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -60,8 +72,8 @@ export default function Header() {
                 <div
                   key={link.name}
                   className="relative group"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <Link
                     href={link.href}
@@ -76,7 +88,13 @@ export default function Header() {
 
                   {/* Submenu Dropdown */}
                   {servicesOpen && (
-                    <div className="absolute top-full left-0 w-72 bg-white/95 backdrop-blur-lg border border-indigo-100/80 rounded-2xl shadow-xl p-2 mt-2 z-50 animate-in fade-in slide-in-from-top-2">
+                    <div className="absolute top-full left-0 w-72 bg-white/95 backdrop-blur-lg border border-indigo-100/80 rounded-2xl shadow-xl p-2 mt-2 z-50 animate-in fade-in slide-in-from-top-2"
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      {/* Invisible hover bridge */}
+                      <div className="absolute top-[-12px] left-0 right-0 h-[12px] bg-transparent" />
+                      
                       <div className="px-3 py-1.5 border-b border-indigo-50/80 mb-1">
                         <span className="text-[9px] font-bold text-[#2D2D82] uppercase">Core Services</span>
                       </div>
