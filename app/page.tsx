@@ -575,24 +575,24 @@ export default function HomePage() {
             </div>
 
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-              <div className="p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center">
-                <div className="text-3xl font-extrabold text-primary font-mono mb-1">7+ Years</div>
-                <div className="text-xs font-semibold text-secondary uppercase">Growth & Paid Ads Expertise</div>
+              <div className="p-4 sm:p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center flex flex-col justify-center">
+                <div className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-primary font-mono mb-1">7+ Years</div>
+                <div className="text-[10px] sm:text-xs font-semibold text-secondary uppercase">Growth & Paid Ads Expertise</div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center">
-                <div className="text-3xl font-extrabold text-primary font-mono mb-1">Multinational Company</div>
-                <div className="text-xs font-semibold text-secondary uppercase">Ex-AI Systems Lead</div>
+              <div className="p-4 sm:p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center flex flex-col justify-center">
+                <div className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-primary font-mono mb-1 leading-tight">Multinational Company</div>
+                <div className="text-[10px] sm:text-xs font-semibold text-secondary uppercase">Ex-AI Systems Lead</div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center">
-                <div className="text-3xl font-extrabold text-primary font-mono mb-1">Multi-Founder</div>
-                <div className="text-xs font-semibold text-secondary uppercase">Tech & Data Science Lead</div>
+              <div className="p-4 sm:p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center flex flex-col justify-center">
+                <div className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-primary font-mono mb-1 leading-tight">Multi-Founder</div>
+                <div className="text-[10px] sm:text-xs font-semibold text-secondary uppercase">Tech & Data Science Lead</div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center">
-                <div className="text-3xl font-extrabold text-primary font-mono mb-1">100%</div>
-                <div className="text-xs font-semibold text-secondary uppercase">In-House Execution</div>
+              <div className="p-4 sm:p-6 rounded-2xl bg-indigo-50/60 border border-indigo-100 text-center flex flex-col justify-center">
+                <div className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-primary font-mono mb-1">100%</div>
+                <div className="text-[10px] sm:text-xs font-semibold text-secondary uppercase">In-House Execution</div>
               </div>
             </div>
           </div>
