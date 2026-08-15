@@ -23,13 +23,12 @@ export default function HeroSection() {
         }}
       />
 
-      {/* ── MAIN LAYOUT: Absolute positioned elements matching reference ── */}
-      <div className="relative w-full h-[560px] min-h-[560px]">
+      {/* ── MAIN LAYOUT: Responsive container ── */}
+      <div className="relative w-full lg:h-[560px] lg:min-h-[560px] flex flex-col lg:block pt-24 sm:pt-28 lg:pt-0 px-margin-mobile md:px-margin-desktop lg:px-0 gap-8 lg:gap-0 pb-12 lg:pb-0">
 
         {/* ── TOP-LEFT: MASSIVE HEADLINE ── */}
         <div
-          className="absolute top-28 left-6 sm:top-32 sm:left-10 lg:top-32 lg:left-14"
-          style={{ zIndex: 10, maxWidth: '55%' }}
+          className="relative lg:absolute lg:top-32 lg:left-14 z-10 w-full lg:max-w-[55%] text-left order-1 lg:order-none"
         >
           <h1
             style={{
@@ -62,8 +61,7 @@ export default function HeroSection() {
 
         {/* ── TOP-RIGHT: Compact info block ── */}
         <div
-          className="absolute top-28 right-6 sm:top-32 sm:right-10 lg:top-32 lg:right-14"
-          style={{ zIndex: 20, width: 'clamp(200px, 28vw, 320px)' }}
+          className="relative lg:absolute lg:top-32 lg:right-14 z-20 w-full max-w-md lg:max-w-none lg:w-[clamp(200px,28vw,320px)] order-3 lg:order-none"
         >
           <div
             className="border-l-2 pl-4 space-y-2"
@@ -109,14 +107,7 @@ export default function HeroSection() {
 
         {/* ── CENTER: Robot Image ── */}
         <div
-          className="absolute"
-          style={{
-            top: '18%',
-            left: '54%',
-            transform: 'translateX(-50%)',
-            zIndex: 15,
-            width: 'clamp(260px, 35vw, 440px)',
-          }}
+          className="relative lg:absolute lg:top-[18%] lg:left-[54%] lg:-translate-x-1/2 z-15 w-[260px] sm:w-[320px] lg:w-[clamp(260px,35vw,440px)] mx-auto lg:mx-0 my-4 lg:my-0 order-2 lg:order-none"
         >
           <Image
             src="/ai-robot-hero.png"
@@ -135,8 +126,7 @@ export default function HeroSection() {
 
         {/* ── BOTTOM-LEFT: Built with purpose block + social proof ── */}
         <div
-          className="absolute bottom-2 left-6 sm:bottom-4 sm:left-10 lg:bottom-4 lg:left-14"
-          style={{ zIndex: 20, maxWidth: 'clamp(220px, 32vw, 360px)' }}
+          className="relative lg:absolute lg:bottom-4 lg:left-14 z-20 w-full max-w-md lg:max-w-[clamp(220px,32vw,360px)] order-4 lg:order-none"
         >
           <h3
             style={{
@@ -211,8 +201,7 @@ export default function HeroSection() {
 
         {/* ── BOTTOM-RIGHT: Preview/Stats Card ── */}
         <div
-          className="absolute bottom-2 right-6 sm:bottom-4 sm:right-10 lg:bottom-4 lg:right-14"
-          style={{ zIndex: 20, width: 'clamp(160px, 22vw, 260px)' }}
+          className="relative lg:absolute lg:bottom-4 lg:right-14 z-20 w-full max-w-[260px] lg:w-[clamp(160px,22vw,260px)] mx-auto lg:mx-0 order-5 lg:order-none"
         >
           <div
             className="rounded-2xl overflow-hidden"

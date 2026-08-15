@@ -39,7 +39,7 @@ export default function Footer() {
     <footer className="bg-surface-container-lowest border-t border-outline-variant relative">
       <div className="absolute inset-0 grid-pattern opacity-10 pointer-events-none"></div>
       
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto w-full relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-lg px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto w-full relative z-10">
         {/* Col 1: Brand & Newsletter */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-xs mb-sm">
@@ -122,7 +122,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-margin-desktop pb-lg flex flex-col md:flex-row justify-between items-center border-t border-outline-variant pt-md relative z-10">
+      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pb-lg flex flex-col md:flex-row justify-between items-center border-t border-outline-variant pt-md relative z-10">
         <p className="text-secondary tech-label text-[10px]">© 2026 SBORTIX_CORE. ALL_RIGHTS_RESERVED.</p>
         <div className="flex gap-md mt-md md:mt-0">
           <a className="text-secondary hover:text-primary transition-colors" href="https://linkedin.com" target="_blank" rel="noreferrer">

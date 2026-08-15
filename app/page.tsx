@@ -54,7 +54,7 @@ export default function HomePage() {
       {/* Trust Strip */}
       <section className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white py-md border-y border-indigo-900/60 relative shadow-md">
         <div className="absolute inset-0 grid-pattern opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center text-center gap-md relative z-10">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center text-center gap-md relative z-10">
           <div className="flex items-center gap-xs">
             <span className="material-symbols-outlined text-indigo-300">database</span>
             <span className="font-mono text-label-sm text-indigo-100 uppercase tracking-tight font-semibold">Data Science Engineered</span>
@@ -73,7 +73,7 @@ export default function HomePage() {
       {/* Company Overview & Value Proposition Section */}
       <section className="py-24 bg-[#ECEBF5] border-b border-[#2D2D82]/15 reveal relative" id="about-overview">
         <div className="absolute inset-0 grid-pattern opacity-15 pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
           <div className="max-w-3xl mb-16 text-left">
             <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
               About Sbortix
@@ -177,7 +177,7 @@ export default function HomePage() {
 
       {/* Our Services Section */}
       <section className="bg-white py-24 reveal border-b border-[#2D2D82]/10" id="services">
-        <div className="max-w-7xl mx-auto px-margin-desktop">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-md">
             <div>
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">OUR CORE SERVICES</span>
@@ -280,7 +280,7 @@ export default function HomePage() {
       {/* Sbortix Framework */}
       <section className="py-xl bg-[#E8E8F2] border-y border-[#2D2D82]/15 overflow-hidden relative reveal">
         <div className="absolute inset-0 grid-pattern opacity-30"></div>
-        <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
           <div className="text-center mb-xl">
             <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">OUR METHODOLOGY</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">The Sbortix Framework</h2>
@@ -332,7 +332,7 @@ export default function HomePage() {
         {/* Soft Ambient Radial Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-margin-desktop relative z-10">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-md">
             <div>
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
@@ -560,7 +560,7 @@ export default function HomePage() {
 
       {/* Leadership & Core Team Expertise Section */}
       <section className="py-24 bg-[#ECEBF5] border-b border-[#2D2D82]/15 reveal" id="about">
-        <div className="max-w-7xl mx-auto px-margin-desktop">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center mb-16">
             <div className="lg:col-span-6">
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
@@ -652,7 +652,7 @@ export default function HomePage() {
 
       {/* Interactive Contact Form Section */}
       <section className="py-xl bg-[#FAFAFD] blueprint-pattern reveal" id="contact">
-        <div className="max-w-7xl mx-auto px-margin-desktop">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl">
             <div>
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">GET IN TOUCH</span>
