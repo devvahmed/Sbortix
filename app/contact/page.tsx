@@ -57,7 +57,7 @@ export default function ContactPage() {
     <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
       {/* Header */}
       <section
-        className="py-16 lg:py-20 border-b border-[#2D2D82]/15"
+        className="relative pt-40 pb-16 lg:pt-52 lg:pb-20 border-b border-[#2D2D82]/15"
         style={{
           background: 'linear-gradient(180deg, #FFFFFF 0%, #ECEBF5 100%)',
         }}

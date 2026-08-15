@@ -13,7 +13,7 @@ export default function ServicesPage() {
     <div className="w-full bg-[#FAFAFD] overflow-hidden">
       
       {/* ── HERO HEADER SECTION ── */}
-      <section className="relative pt-12 pb-16 lg:pt-16 lg:pb-20 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto text-center border-b border-indigo-100/60 bg-gradient-to-b from-indigo-50/40 via-white to-[#FAFAFD]">
+      <section className="relative pt-36 pb-16 sm:pt-44 lg:pt-48 lg:pb-20 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto text-center border-b border-indigo-100/60 bg-gradient-to-b from-indigo-50/40 via-white to-[#FAFAFD]">
         <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
           Enterprise Services
         </span>
