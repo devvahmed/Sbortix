@@ -44,7 +44,7 @@ export default function Header() {
               alt="Sbortix — Innovating Digital Growth"
               width={650}
               height={190}
-              className="h-14 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
+              className="h-20 xs:h-22 sm:h-24 md:h-26 lg:h-28 w-auto object-contain"
               priority
             />
           </Link>
@@ -122,17 +122,17 @@ export default function Header() {
         </nav>
 
         {/* CTA & Mobile Toggle */}
-        <div className="flex items-center gap-sm">
+        <div className="flex items-center gap-1.5 sm:gap-sm">
           <Link
             href="/contact"
-            className="bg-[#2D2D82] text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-md shadow-[#2D2D82]/25 hover:bg-[#1e1d6e] hover:scale-105 active:scale-95 transition-all inline-block"
+            className="bg-[#2D2D82] text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-md shadow-[#2D2D82]/25 hover:bg-[#1e1d6e] hover:scale-105 active:scale-95 transition-all inline-block"
           >
             Book a call
           </Link>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-xs text-secondary hover:text-primary focus:outline-none"
+            className="md:hidden p-1 sm:p-xs text-secondary hover:text-primary focus:outline-none"
             aria-label="Toggle navigation"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

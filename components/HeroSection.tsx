@@ -28,7 +28,7 @@ export default function HeroSection() {
 
         {/* ── TOP-LEFT: MASSIVE HEADLINE ── */}
         <div
-          className="relative lg:absolute lg:top-32 lg:left-14 z-10 w-full lg:max-w-[55%] text-left order-1 lg:order-none"
+          className="relative lg:absolute lg:top-32 lg:left-14 z-10 w-full lg:max-w-[55%] text-left order-2 lg:order-none"
         >
           <h1
             style={{
@@ -107,7 +107,7 @@ export default function HeroSection() {
 
         {/* ── CENTER: Robot Image ── */}
         <div
-          className="relative lg:absolute lg:top-[18%] lg:left-[54%] lg:-translate-x-1/2 z-15 w-[260px] sm:w-[320px] lg:w-[clamp(260px,35vw,440px)] mx-auto lg:mx-0 my-4 lg:my-0 order-2 lg:order-none"
+          className="relative lg:absolute lg:top-[18%] lg:left-[54%] lg:-translate-x-1/2 z-15 w-[260px] sm:w-[320px] lg:w-[clamp(260px,35vw,440px)] mx-auto lg:mx-0 my-4 lg:my-0 order-1 lg:order-none"
         >
           <Image
             src="/ai-robot-hero.png"
