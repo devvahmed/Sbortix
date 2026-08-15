@@ -37,14 +37,14 @@ export default function Header() {
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 border-none shadow-none pointer-events-auto">
       <div className="flex justify-between items-center h-24 sm:h-28 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full">
         {/* Brand Logo */}
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center py-1">
+        <div className="flex items-center h-full">
+          <Link href="/" className="flex items-center h-full">
             <Image
               src="/sbortix-logo.png"
               alt="Sbortix — Innovating Digital Growth"
               width={650}
               height={190}
-              className="h-20 xs:h-22 sm:h-24 md:h-26 lg:h-28 w-auto object-contain"
+              className="h-24 sm:h-28 w-auto max-w-[220px] sm:max-w-none object-contain"
               priority
             />
           </Link>
