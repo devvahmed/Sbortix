@@ -32,6 +32,10 @@ body {
   background-color: #FAFAFD;
   color: #12131A;
   overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .ambient-indigo-glow {
