@@ -88,7 +88,7 @@ export default function ContactPage() {
             >
               Direct Communications
             </h3>
-            
+
             <div className="space-y-6 pt-2">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-[#2D2D82] flex items-center justify-center flex-shrink-0 text-white">
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h6 className="font-bold text-sm text-[#151137]">Operational Node Base</h6>
-                  <p className="text-gray-600 font-mono text-xs mt-0.5">NODE_KHI: DHA PHASE 6, KARACHI</p>
+                  <p className="text-gray-600 font-mono text-xs mt-0.5">NODE_KHI: KARACHI, PAKISTAN </p>
                 </div>
               </div>
 
@@ -232,9 +232,8 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className={`w-full text-white py-4 rounded-xl font-mono text-xs font-bold transition-all shadow-md ${
-                status === 'success' ? 'bg-emerald-600' : 'bg-[#2D2D82] hover:bg-[#2C2A78]'
-              }`}
+              className={`w-full text-white py-4 rounded-xl font-mono text-xs font-bold transition-all shadow-md ${status === 'success' ? 'bg-emerald-600' : 'bg-[#2D2D82] hover:bg-[#2C2A78]'
+                }`}
             >
               {status === 'loading' ? 'TRANSMITTING PAYLOAD...' : status === 'success' ? 'SUCCESS: INQUIRY_LOGGED' : 'Submit Project Inquiry'}
             </button>

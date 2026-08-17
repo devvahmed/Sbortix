@@ -287,7 +287,7 @@ export default function HomePage() {
           </div>
           <div className="relative flex flex-col md:flex-row justify-between items-start gap-lg">
             <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-indigo-200 z-0 border-t border-b border-white"></div>
-            
+
             <div className="relative z-10 flex flex-col items-center text-center w-full md:w-1/4">
               <div className="w-16 h-16 rounded-full bg-white border-2 border-primary flex items-center justify-center mb-md subtle-shadow">
                 <span className="font-mono font-bold text-primary text-lg">01</span>
@@ -382,16 +382,14 @@ export default function HomePage() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveCapability(tab.id)}
-                    className={`w-full text-left pl-5 pr-5 py-5 rounded-2xl transition-all duration-300 flex items-center justify-between border-l-[3px] border-t border-r border-b ${
-                      isActive
+                    className={`w-full text-left pl-5 pr-5 py-5 rounded-2xl transition-all duration-300 flex items-center justify-between border-l-[3px] border-t border-r border-b ${isActive
                         ? 'bg-indigo-50/60 border-l-primary border-t-indigo-100/80 border-r-indigo-100/80 border-b-indigo-100/80 shadow-sm'
                         : 'bg-white/70 hover:bg-white/90 border-l-transparent border-t-indigo-100/60 border-r-indigo-100/60 border-b-indigo-100/60 hover:border-l-indigo-200'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-start gap-4">
-                      <span className={`font-mono text-xs tabular-nums mt-0.5 select-none ${
-                        isActive ? 'text-primary font-bold' : 'text-secondary/50'
-                      }`}>
+                      <span className={`font-mono text-xs tabular-nums mt-0.5 select-none ${isActive ? 'text-primary font-bold' : 'text-secondary/50'
+                        }`}>
                         {String(idx + 1).padStart(2, '0')}
                       </span>
                       <div>
@@ -403,9 +401,8 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <span className={`text-base leading-none ml-3 flex-shrink-0 transition-all ${
-                      isActive ? 'text-primary' : 'text-secondary/30'
-                    }`}>
+                    <span className={`text-base leading-none ml-3 flex-shrink-0 transition-all ${isActive ? 'text-primary' : 'text-secondary/30'
+                      }`}>
                       →
                     </span>
                   </button>
@@ -658,7 +655,7 @@ export default function HomePage() {
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">GET IN TOUCH</span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">Let's build your growth engine.</h2>
               <p className="text-secondary font-body-md text-body-md mb-lg">Ready to transform your marketing, web presence, or AI workflows? Contact us to schedule a free technical audit and discovery session.</p>
-              
+
               <div className="space-y-md">
                 <div className="flex items-start gap-md group">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
@@ -675,7 +672,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h6 className="font-label-md text-label-md font-bold">Office Location</h6>
-                    <p className="text-secondary text-sm">DHA Phase 6, Karachi, Pakistan</p>
+                    <p className="text-secondary text-sm">Karachi, Pakistan</p>
                   </div>
                 </div>
               </div>
@@ -736,9 +733,8 @@ export default function HomePage() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className={`w-full text-white py-md rounded-xl font-label-md text-label-md transition-all-200 shadow-md ${
-                    status === 'success' ? 'bg-emerald-600' : 'brand-button-gradient hover:opacity-95 hover:shadow-indigo-500/25'
-                  }`}
+                  className={`w-full text-white py-md rounded-xl font-label-md text-label-md transition-all-200 shadow-md ${status === 'success' ? 'bg-emerald-600' : 'brand-button-gradient hover:opacity-95 hover:shadow-indigo-500/25'
+                    }`}
                 >
                   {status === 'loading' ? 'TRANSMITTING...' : status === 'success' ? 'SUCCESS: DATA_RECEIVED' : 'Execute Inquiry Submission'}
                 </button>
