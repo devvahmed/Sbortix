@@ -15,7 +15,7 @@ export default function HeroSection() {
     >
       {/* Dot grid background */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none animate-grid"
         style={{
           backgroundImage: 'radial-gradient(circle, rgba(45, 45, 130, 0.15) 1px, transparent 1px)',
           backgroundSize: '22px 22px',
@@ -110,6 +110,17 @@ export default function HeroSection() {
           className="group relative lg:absolute lg:top-[18%] lg:left-[54%] lg:-translate-x-1/2 z-15 w-[260px] sm:w-[320px] lg:w-[clamp(260px,35vw,440px)] mx-auto lg:mx-0 my-4 lg:my-0 order-1 lg:order-none"
         >
           <style dangerouslySetInnerHTML={{ __html: `
+            @keyframes moveGrid {
+              0% {
+                background-position: 0 0;
+              }
+              100% {
+                background-position: 22px 22px;
+              }
+            }
+            .animate-grid {
+              animation: moveGrid 32s linear infinite;
+            }
             @keyframes popIn {
               0% {
                 opacity: 0;
@@ -191,7 +202,7 @@ export default function HeroSection() {
           </div>
 
           {/* Left Element: AI Optimization Active */}
-          <div className="pop-in-left absolute left-[-45px] sm:left-[-60px] md:left-[-72px] lg:left-[-64px] top-[15%] w-[115px] sm:w-[130px] lg:w-[150px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
+          <div className="pop-in-left absolute left-[-45px] sm:left-[-60px] md:left-[-72px] lg:left-[-64px] top-[10%] lg:top-[16%] w-[115px] sm:w-[130px] lg:w-[150px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
             <div className="float-anim-left transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_32px_rgba(45,45,130,0.18)] hover:border-indigo-300/40 p-2 sm:p-3 rounded-2xl bg-white/85 backdrop-blur-md border border-indigo-100/60 shadow-[0_8px_24px_rgba(45,45,130,0.08)] flex flex-col items-center text-center cursor-pointer">
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-1 sm:mb-1.5">
                 <svg className="absolute w-full h-full animate-[spin_8s_linear_infinite]" viewBox="0 0 100 100">
@@ -214,7 +225,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Element: Neural Processing */}
-          <div className="pop-in-right absolute right-[-45px] sm:right-[-65px] md:right-[-78px] lg:right-[-84px] top-[26%] w-[130px] sm:w-[155px] lg:w-[185px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
+          <div className="pop-in-right absolute right-[-45px] sm:right-[-65px] md:right-[-78px] lg:right-[-84px] top-[18%] lg:top-[28%] w-[130px] sm:w-[155px] lg:w-[185px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
             <div className="float-anim-right transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_32px_rgba(45,45,130,0.18)] hover:border-indigo-300/40 p-2 sm:p-3 rounded-2xl bg-white/85 backdrop-blur-md border border-indigo-100/60 shadow-[0_8px_24px_rgba(45,45,130,0.08)] cursor-pointer">
               <div className="flex justify-between items-center mb-1 sm:mb-1.5 pb-0.5 border-b border-indigo-50/50">
                 <span className="text-[7px] sm:text-[8px] font-bold text-[#666] tracking-wider uppercase font-mono">Neural Proc</span>
@@ -270,7 +281,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom-Left Element: Real-time Metrics */}
-          <div className="pop-in-left-bottom absolute left-[-50px] sm:left-[-68px] md:left-[-80px] lg:left-[-72px] bottom-[18%] w-[110px] sm:w-[125px] lg:w-[140px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
+          <div className="pop-in-left-bottom absolute left-[-50px] sm:left-[-68px] md:left-[-80px] lg:left-[-72px] bottom-[8%] lg:bottom-[15%] w-[110px] sm:w-[125px] lg:w-[140px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
             <div className="float-anim-left-bottom transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_32px_rgba(45,45,130,0.18)] hover:border-indigo-300/40 p-2 sm:p-3 rounded-2xl bg-white/85 backdrop-blur-md border border-indigo-100/60 shadow-[0_8px_24px_rgba(45,45,130,0.08)] cursor-pointer">
               <div className="flex justify-between items-center mb-1 sm:mb-1.5 pb-0.5 border-b border-indigo-50/50">
                 <span className="text-[7px] sm:text-[8px] font-bold text-[#666] tracking-wider uppercase font-mono">System Load</span>
@@ -291,7 +302,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom-Right Element: Automated Insights */}
-          <div className="pop-in-right-bottom absolute right-[-40px] sm:right-[-60px] md:right-[-72px] lg:right-[-64px] bottom-[28%] w-[115px] sm:w-[130px] lg:w-[145px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
+          <div className="pop-in-right-bottom absolute right-[-40px] sm:right-[-60px] md:right-[-72px] lg:right-[-64px] bottom-[10%] lg:bottom-[24%] w-[115px] sm:w-[130px] lg:w-[145px] z-20 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] lg:opacity-0 lg:scale-75 lg:pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:pointer-events-auto">
             <div className="float-anim-right-bottom transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_32px_rgba(45,45,130,0.18)] hover:border-indigo-300/40 p-2 sm:p-3 rounded-2xl bg-white/85 backdrop-blur-md border border-indigo-100/60 shadow-[0_8px_24px_rgba(45,45,130,0.08)] cursor-pointer">
               <div className="flex items-center gap-1 mb-1 sm:mb-1.5 pb-0.5 border-b border-indigo-50/50">
                 <svg className="w-2.5 h-2.5 text-indigo-500 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
