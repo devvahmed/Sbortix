@@ -383,8 +383,8 @@ export default function HomePage() {
                     key={tab.id}
                     onClick={() => setActiveCapability(tab.id)}
                     className={`w-full text-left pl-5 pr-5 py-5 rounded-2xl transition-all duration-300 flex items-center justify-between border-l-[3px] border-t border-r border-b ${isActive
-                        ? 'bg-indigo-50/60 border-l-primary border-t-indigo-100/80 border-r-indigo-100/80 border-b-indigo-100/80 shadow-sm'
-                        : 'bg-white/70 hover:bg-white/90 border-l-transparent border-t-indigo-100/60 border-r-indigo-100/60 border-b-indigo-100/60 hover:border-l-indigo-200'
+                      ? 'bg-indigo-50/60 border-l-primary border-t-indigo-100/80 border-r-indigo-100/80 border-b-indigo-100/80 shadow-sm'
+                      : 'bg-white/70 hover:bg-white/90 border-l-transparent border-t-indigo-100/60 border-r-indigo-100/60 border-b-indigo-100/60 hover:border-l-indigo-200'
                       }`}
                   >
                     <div className="flex items-start gap-4">
@@ -663,7 +663,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h6 className="font-label-md text-label-md font-bold">Email Us</h6>
-                    <p className="text-secondary text-sm">hello@sbortix.com</p>
+                    <p className="text-secondary text-sm">contact@sbortix.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-md group">

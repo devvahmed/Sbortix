@@ -96,7 +96,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h6 className="font-bold text-sm text-[#151137]">Email Address</h6>
-                  <p className="text-gray-600 font-mono text-xs mt-0.5">hello@sbortix.com</p>
+                  <p className="text-gray-600 font-mono text-xs mt-0.5">contact@sbortix.com</p>
                 </div>
               </div>
 
