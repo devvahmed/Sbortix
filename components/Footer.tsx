@@ -47,9 +47,9 @@ export default function Footer() {
               <Image
                 src="/sbortix-logo.png"
                 alt="Sbortix Logo"
-                width={200}
-                height={50}
-                className="h-11 w-auto object-contain"
+                width={260}
+                height={80}
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </Link>
             <span className="tech-label text-outline ml-2">[SYS_CORE]</span>
