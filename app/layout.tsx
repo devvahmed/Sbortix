@@ -7,6 +7,9 @@ import SmoothScroll from '@/components/SmoothScroll';
 export const metadata: Metadata = {
   title: 'Sbortix — Engineered Intelligence for Growth',
   description: 'Sbortix bridges the gap between complex data science and high-performance marketing. Enterprise intelligence engineered for modern growth teams.',
+  verification: {
+    google: 'jtIJi8jc4K9UhS-lTwQx04gXrtCb8G6x7zpEh4gMZFE',
+  },
 };
 
 export default function RootLayout({
@@ -17,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light scroll-smooth">
       <head>
+        <meta name="google-site-verification" content="jtIJi8jc4K9UhS-lTwQx04gXrtCb8G6x7zpEh4gMZFE" />
         <link rel="icon" href="/sbortix-logo.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"

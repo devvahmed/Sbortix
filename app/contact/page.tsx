@@ -9,7 +9,7 @@ export default function ContactPage() {
     identity: '',
     email: '',
     company: '',
-    module: 'AI Solutions [SRVC_01]',
+    module: 'AI Solutions',
     budget: '$10k - $25k',
     payload: '',
   });
@@ -39,17 +39,17 @@ export default function ContactPage() {
           identity: '',
           email: '',
           company: '',
-          module: 'AI Solutions [SRVC_01]',
+          module: 'AI Solutions',
           budget: '$10k - $25k',
           payload: '',
         });
       } else {
         setStatus('error');
-        setStatusMsg(data.message || 'TRANSMISSION_FAILED');
+        setStatusMsg(data.message || 'Submission failed. Please try again.');
       }
     } catch {
       setStatus('error');
-      setStatusMsg('NETWORK_ERROR: Connection failed.');
+      setStatusMsg('Network error. Please try again.');
     }
   };
 
@@ -105,8 +105,8 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h6 className="font-bold text-sm text-[#151137]">Operational Node Base</h6>
-                  <p className="text-gray-600 font-mono text-xs mt-0.5">NODE_KHI: KARACHI, PAKISTAN </p>
+                  <h6 className="font-bold text-sm text-[#151137]">Our Office</h6>
+                  <p className="text-gray-600 text-sm mt-0.5">Karachi, Pakistan</p>
                 </div>
               </div>
 
@@ -115,16 +115,16 @@ export default function ContactPage() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h6 className="font-bold text-sm text-[#151137]">Response SLA</h6>
-                  <p className="text-gray-600 font-mono text-xs mt-0.5">&lt; 24 HOURS GUARANTEED</p>
+                  <h6 className="font-bold text-sm text-[#151137]">Response Time</h6>
+                  <p className="text-gray-600 text-sm mt-0.5">Within 24 hours, guaranteed</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="p-8 rounded-3xl bg-[#151137] text-white space-y-4">
-            <span className="font-mono text-xs font-bold text-indigo-300 uppercase tracking-widest block">
-              // LIVE VIDEO AUDIT
+            <span className="text-xs font-semibold text-indigo-300 uppercase tracking-widest block">
+              Free Consultation
             </span>
             <h4
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
@@ -152,48 +152,48 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">YOUR NAME *</label>
+                <label className="block text-sm font-semibold text-[#151137] mb-2">Your Name *</label>
                 <input
                   type="text"
                   required
                   value={formData.identity}
                   onChange={(e) => setFormData({ ...formData, identity: e.target.value })}
                   placeholder="Full Name"
-                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">WORK EMAIL *</label>
+                <label className="block text-sm font-semibold text-[#151137] mb-2">Work Email *</label>
                 <input
                   type="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="work@company.com"
-                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">ORGANIZATION</label>
+                <label className="block text-sm font-semibold text-[#151137] mb-2">Organization</label>
                 <input
                   type="text"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   placeholder="Company Name"
-                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">BUDGET RANGE</label>
+                <label className="block text-sm font-semibold text-[#151137] mb-2">Budget Range</label>
                 <select
                   value={formData.budget}
                   onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
+                  className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
                 >
                   <option>$5k - $10k</option>
                   <option>$10k - $25k</option>
@@ -204,42 +204,42 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">SERVICE MODULE *</label>
+              <label className="block text-sm font-semibold text-[#151137] mb-2">Service Required *</label>
               <select
                 value={formData.module}
                 onChange={(e) => setFormData({ ...formData, module: e.target.value })}
-                className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
+                className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
               >
-                <option>AI Solutions [SRVC_01]</option>
-                <option>Digital Marketing [SRVC_02]</option>
-                <option>Web & Branding [SRVC_03]</option>
-                <option>Full Technical Audit [SRVC_00]</option>
+                <option>AI Solutions</option>
+                <option>Digital Marketing</option>
+                <option>Web & Branding</option>
+                <option>Full Technical Audit</option>
               </select>
             </div>
 
             <div>
-              <label className="block font-mono text-xs font-bold text-[#151137] mb-2 uppercase">PROJECT DETAILS *</label>
+              <label className="block text-sm font-semibold text-[#151137] mb-2">Project Details *</label>
               <textarea
                 rows={5}
                 required
                 value={formData.payload}
                 onChange={(e) => setFormData({ ...formData, payload: e.target.value })}
-                placeholder="Detail your technical requirements, goals, or timeline..."
-                className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 font-mono text-xs focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
+                placeholder="Tell us about your project, goals, and timeline..."
+                className="w-full bg-[#FAFAFD] border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2D2D82]/20 focus:border-[#2D2D82] outline-none transition-all"
               ></textarea>
             </div>
 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className={`w-full text-white py-4 rounded-xl font-mono text-xs font-bold transition-all shadow-md ${status === 'success' ? 'bg-emerald-600' : 'bg-[#2D2D82] hover:bg-[#2C2A78]'
+              className={`w-full text-white py-4 rounded-xl text-sm font-semibold transition-all shadow-md ${status === 'success' ? 'bg-emerald-600' : 'bg-[#2D2D82] hover:bg-[#2C2A78]'
                 }`}
             >
-              {status === 'loading' ? 'TRANSMITTING PAYLOAD...' : status === 'success' ? 'SUCCESS: INQUIRY_LOGGED' : 'Submit Project Inquiry'}
+              {status === 'loading' ? 'Sending...' : status === 'success' ? '✓ Inquiry Submitted Successfully' : 'Submit Project Inquiry'}
             </button>
 
             {statusMsg && (
-              <p className={`font-mono text-xs text-center ${status === 'success' ? 'text-emerald-600' : 'text-red-600'}`}>
+              <p className={`text-sm text-center ${status === 'success' ? 'text-emerald-600' : 'text-red-600'}`}>
                 {statusMsg}
               </p>
             )}

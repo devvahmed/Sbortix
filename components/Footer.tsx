@@ -43,43 +43,42 @@ export default function Footer() {
         {/* Col 1: Brand & Newsletter */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-xs mb-sm">
-            <Link href="/" className="bg-white/90 px-3 py-1.5 rounded-lg border border-white/20 inline-block">
+            <Link href="/" className="bg-white/90 px-5 py-3 rounded-xl border border-white/20 inline-block">
               <Image
                 src="/sbortix-logo.png"
                 alt="Sbortix Logo"
-                width={150}
-                height={40}
-                className="h-8 w-auto object-contain"
+                width={400}
+                height={128}
+                className="h-32 w-auto object-contain"
               />
             </Link>
-            <span className="tech-label text-outline ml-2">[SYS_CORE]</span>
           </div>
-          <p className="text-secondary text-label-sm leading-relaxed uppercase tech-label opacity-80 mb-md max-w-sm">
-            Enterprise-grade AI, data science, and marketing engineering nodes. Delivering autonomous growth systems.
+          <p className="text-secondary text-sm leading-relaxed mb-md max-w-sm">
+            Enterprise-grade AI, data science, and digital marketing solutions. Delivering autonomous growth systems for modern businesses.
           </p>
 
           {/* Newsletter Input */}
           <form onSubmit={handleSubscribe} className="space-y-xs max-w-sm">
-            <span className="tech-label text-primary block">[SUBSCRIBE_UPDATES]</span>
+            <span className="text-xs font-semibold text-primary block mb-1">Stay Updated</span>
             <div className="flex gap-xs">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="developer@enterprise.com"
+                placeholder="your@email.com"
                 required
-                className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs font-mono text-xs focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
+                className="w-full bg-surface border border-outline-variant rounded-lg px-md py-xs text-sm focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none"
               />
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="bg-primary-container text-white px-md py-xs rounded-lg font-label-md text-xs hover:opacity-90 transition-opacity whitespace-nowrap border-b-2 border-primary"
+                className="bg-primary-container text-white px-md py-xs rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap border-b-2 border-primary"
               >
-                {status === 'loading' ? 'JOINING...' : 'SUBSCRIBE'}
+                {status === 'loading' ? 'Joining...' : 'Subscribe'}
               </button>
             </div>
             {message && (
-              <p className={`tech-label text-[10px] ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+              <p className={`text-xs ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}>
                 {message}
               </p>
             )}
@@ -123,7 +122,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pb-lg flex flex-col md:flex-row justify-between items-center border-t border-outline-variant pt-md relative z-10">
-        <p className="text-secondary tech-label text-[10px]">© 2026 SBORTIX_CORE. ALL_RIGHTS_RESERVED.</p>
+        <p className="text-secondary text-xs">© 2026 Sbortix. All rights reserved.</p>
         <div className="flex gap-md mt-md md:mt-0">
           {/* LinkedIn */}
           <a className="text-secondary hover:text-primary transition-colors" href="https://www.linkedin.com/company/sbortix-global" target="_blank" rel="noreferrer">
