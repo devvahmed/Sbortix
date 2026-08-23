@@ -43,13 +43,13 @@ export default function Footer() {
         {/* Col 1: Brand & Newsletter */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-xs mb-sm">
-            <Link href="/" className="bg-white/90 px-5 py-3 rounded-xl border border-white/20 inline-block">
+            <Link href="/" className="bg-white/90 px-4 py-2 rounded-lg border border-white/20 inline-block">
               <Image
                 src="/sbortix-logo.png"
                 alt="Sbortix Logo"
-                width={400}
-                height={128}
-                className="h-32 w-auto object-contain"
+                width={260}
+                height={80}
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </Link>
           </div>

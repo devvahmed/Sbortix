@@ -56,7 +56,7 @@ export default function Header() {
               alt="Sbortix — Innovating Digital Growth"
               width={650}
               height={190}
-              className="h-24 sm:h-28 w-auto max-w-[220px] sm:max-w-none object-contain"
+              className="h-28 sm:h-32 w-auto max-w-[260px] sm:max-w-none object-contain scale-110 origin-left"
               priority
             />
           </Link>
