@@ -1,11 +1,35 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Target, Eye, Lock, Sparkles, CheckCircle2, Award, Users } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'About Us | Enterprise AI & Data Systems',
+  description: 'Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual bottlenecks with custom AI agents and predictive analytics.',
+  alternates: {
+    canonical: 'https://www.sbortix.com/about',
+  },
+};
+
 export default function AboutPage() {
+  const aboutJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': 'https://www.sbortix.com/about/#webpage',
+    'url': 'https://www.sbortix.com/about',
+    'name': 'About Sbortix | Enterprise AI & Data Systems',
+    'description': 'Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual bottlenecks.',
+    'isPartOf': {
+      '@id': 'https://www.sbortix.com/#website'
+    }
+  };
+
   return (
-    <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
+      <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
       
       {/* ── HERO HEADER SECTION ── */}
       <section
@@ -250,6 +274,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-    </div>
+      </div>
+    </>
   );
 }
