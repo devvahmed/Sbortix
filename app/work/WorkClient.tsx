@@ -156,7 +156,7 @@ export default function WorkClient() {
 
   return (
     <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
-      
+
       {/* ── HEADER ── */}
       <section
         className="relative pt-40 pb-16 lg:pt-52 lg:pb-20 border-b border-[#2D2D82]/15"
@@ -211,11 +211,10 @@ export default function WorkClient() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
-                filter === cat
+              className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${filter === cat
                   ? 'bg-[#2D2D82] text-white shadow-sm'
                   : 'bg-white border border-gray-200 text-gray-600 hover:text-[#151137] hover:border-gray-300'
-              }`}
+                }`}
             >
               {cat === 'ALL' ? 'All Case Studies' : `${cat} Solutions`}
             </button>
@@ -231,15 +230,13 @@ export default function WorkClient() {
           return (
             <section
               key={project.id}
-              className={`py-12 sm:py-16 border-y border-[#2D2D82]/10 transition-colors ${
-                isEven ? 'bg-white' : 'bg-[#ECEBF5]/60'
-              }`}
+              className={`py-12 sm:py-16 border-y border-[#2D2D82]/10 transition-colors ${isEven ? 'bg-white' : 'bg-[#ECEBF5]/60'
+                }`}
             >
               <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
                 <div
-                  className={`flex flex-col gap-10 lg:gap-16 items-center ${
-                    isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  }`}
+                  className={`flex flex-col gap-10 lg:gap-16 items-center ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    }`}
                 >
                   {/* IMAGE SIDE */}
                   <div className="w-full lg:w-1/2">
@@ -248,13 +245,11 @@ export default function WorkClient() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`block w-full relative rounded-2xl overflow-hidden border border-gray-200/90 shadow-xl ${
-                          project.imageBg || 'bg-gray-900'
-                        } group ${
-                          project.imageFit === 'contain'
+                        className={`block w-full relative rounded-2xl overflow-hidden border border-gray-200/90 shadow-xl ${project.imageBg || 'bg-gray-900'
+                          } group ${project.imageFit === 'contain'
                             ? 'aspect-[16/10] flex flex-col justify-between'
                             : 'min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] flex items-center justify-center'
-                        } cursor-pointer`}
+                          } cursor-pointer`}
                         title={`Open live platform: ${project.title}`}
                       >
                         {/* Browser Chrome Topbar when in contain/software preview mode */}
@@ -282,11 +277,10 @@ export default function WorkClient() {
                             alt={project.imageAlt}
                             fill
                             quality={95}
-                            className={`${
-                              project.imageFit === 'contain'
+                            className={`${project.imageFit === 'contain'
                                 ? 'object-contain p-1 sm:p-2 group-hover:scale-[1.02]'
                                 : 'object-cover object-center group-hover:scale-105'
-                            } transition-transform duration-500`}
+                              } transition-transform duration-500`}
                             sizes="(max-width: 1024px) 100vw, 50vw"
                           />
                         </div>
