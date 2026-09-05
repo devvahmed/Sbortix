@@ -19,6 +19,9 @@ interface Project {
   imageUrl: string;
   imageAlt: string;
   statusTag: string;
+  liveUrl?: string;
+  imageFit?: 'contain' | 'cover' | 'top';
+  imageBg?: string;
 }
 
 export default function WorkClient() {
@@ -27,6 +30,26 @@ export default function WorkClient() {
   const projects: Project[] = [
     {
       id: '01',
+      eyebrow: 'AI Operations & Analytics',
+      title: 'Pulsely — AI Platform Operations & Velocity Analytics',
+      category: 'AI',
+      client: 'Platform Engineering • Built by Sbortix',
+      metrics: '58% Faster Incident Detection',
+      overview:
+        'AI-powered operations dashboard delivering real-time platform health monitoring, automated anomaly detection, and engineering velocity analytics for distributed teams.',
+      problem: 'Engineering teams lacked real-time visibility into platform health and deployment velocity, relying on manual log reviews and delayed incident escalation.',
+      solution: 'Built an AI-powered monitoring pipeline with automated anomaly detection, real-time alerting, and a velocity analytics engine surfacing engineering metrics in a live dashboard.',
+      result: '58% faster incident detection and 99.95% monitoring uptime across connected platform environments.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'Platform Monitoring & Analytics'],
+      imageUrl: '/pulsely.png',
+      imageAlt: 'Pulsely AI Platform Operations & Velocity Analytics Dashboard',
+      statusTag: 'Live Production • 99.95% Uptime',
+      liveUrl: 'https://pulselyy.netlify.app',
+      imageFit: 'contain',
+      imageBg: 'bg-[#0B0D1B]',
+    },
+    {
+      id: '02',
       eyebrow: 'Machine Learning',
       title: 'Agentic Sales Assistant & Lead Qualifier',
       category: 'AI',
@@ -43,7 +66,7 @@ export default function WorkClient() {
       statusTag: 'Live System • 0.38s Latency',
     },
     {
-      id: '02',
+      id: '03',
       eyebrow: 'Predictive Data',
       title: 'Predictive Lead Scoring Engine',
       category: 'AI',
@@ -60,7 +83,7 @@ export default function WorkClient() {
       statusTag: 'Production • 99.4% Accuracy',
     },
     {
-      id: '03',
+      id: '04',
       eyebrow: 'Growth Marketing',
       title: 'Full-Funnel Growth & Attribution Engine',
       category: 'MARKETING',
@@ -77,7 +100,7 @@ export default function WorkClient() {
       statusTag: 'Deployed • 4.2x ROAS',
     },
     {
-      id: '04',
+      id: '05',
       eyebrow: 'Document Intelligence',
       title: 'AI Document Intelligence Platform',
       category: 'AI',
@@ -94,7 +117,7 @@ export default function WorkClient() {
       statusTag: 'System Active • 99.8% Accuracy',
     },
     {
-      id: '05',
+      id: '06',
       eyebrow: 'FinTech Web',
       title: 'Enterprise FinTech Core Platform',
       category: 'WEB',
@@ -111,7 +134,7 @@ export default function WorkClient() {
       statusTag: 'Production • 0.6s Load Speed',
     },
     {
-      id: '06',
+      id: '07',
       eyebrow: 'Performance PPC',
       title: 'Algorithmic Paid Acquisition Engine',
       category: 'MARKETING',
@@ -220,28 +243,105 @@ export default function WorkClient() {
                 >
                   {/* IMAGE SIDE */}
                   <div className="w-full lg:w-1/2">
-                    <div className="w-full relative rounded-2xl overflow-hidden border border-gray-200/90 shadow-xl bg-gray-900 group min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] flex items-center justify-center">
-                      <Image
-                        src={project.imageUrl}
-                        alt={project.imageAlt}
-                        fill
-                        quality={90}
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                      {/* Dark gradient overlay for text readability */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#151137]/60 via-transparent to-transparent opacity-60" />
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`block w-full relative rounded-2xl overflow-hidden border border-gray-200/90 shadow-xl ${
+                          project.imageBg || 'bg-gray-900'
+                        } group ${
+                          project.imageFit === 'contain'
+                            ? 'aspect-[16/10] flex flex-col justify-between'
+                            : 'min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] flex items-center justify-center'
+                        } cursor-pointer`}
+                        title={`Open live platform: ${project.title}`}
+                      >
+                        {/* Browser Chrome Topbar when in contain/software preview mode */}
+                        {project.imageFit === 'contain' && (
+                          <div className="w-full px-4 py-2.5 bg-[#151828]/90 backdrop-blur-md border-b border-white/10 flex items-center justify-between z-20">
+                            <div className="flex items-center gap-1.5">
+                              <span className="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block" />
+                              <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block" />
+                              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
+                            </div>
+                            <div className="px-3 py-0.5 rounded-md bg-white/10 text-[10px] font-mono text-indigo-200 border border-white/10 truncate max-w-[200px]">
+                              {project.liveUrl.replace('https://', '')}
+                            </div>
+                            <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-400">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                              <span>LIVE</span>
+                            </div>
+                          </div>
+                        )}
 
-                      {/* Brand Indigo Corner Tag */}
-                      <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full bg-[#151137]/90 backdrop-blur-md border border-[#2D2D82]/60 shadow-md">
-                        <span className="text-[11px] font-semibold text-white tracking-wider">
-                          {project.statusTag}
-                        </span>
+                        {/* Image Canvas */}
+                        <div className={`relative w-full ${project.imageFit === 'contain' ? 'flex-1 p-2 sm:p-3 flex items-center justify-center' : 'h-full min-h-[280px] sm:min-h-[360px] lg:min-h-[420px]'}`}>
+                          <Image
+                            src={project.imageUrl}
+                            alt={project.imageAlt}
+                            fill
+                            quality={95}
+                            className={`${
+                              project.imageFit === 'contain'
+                                ? 'object-contain p-1 sm:p-2 group-hover:scale-[1.02]'
+                                : 'object-cover object-center group-hover:scale-105'
+                            } transition-transform duration-500`}
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                          />
+                        </div>
+
+                        {/* Dark gradient overlay only for full-bleed cover photos */}
+                        {project.imageFit !== 'contain' && (
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#151137]/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                        )}
+
+                        {/* Status tag (if not contain mode, keep top left) */}
+                        {project.imageFit !== 'contain' && (
+                          <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full bg-[#151137]/90 backdrop-blur-md border border-[#2D2D82]/60 shadow-md">
+                            <span className="text-[11px] font-semibold text-white tracking-wider">
+                              {project.statusTag}
+                            </span>
+                          </div>
+                        )}
+
+                        {/* Top-Right Live Demo Floating Pill for non-contain */}
+                        {project.imageFit !== 'contain' && (
+                          <div className="absolute top-4 right-4 z-10 px-3 py-1.5 rounded-full bg-[#2D2D82] text-white shadow-lg text-[11px] font-bold flex items-center gap-1.5 group-hover:bg-[#151137] transition-colors">
+                            <span>Live Platform</span>
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </div>
+                        )}
+
+                        {/* Brand Accent Bottom Hairline */}
+                        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#2D2D82] via-[#2C2A78] to-transparent" />
+                      </a>
+                    ) : (
+                      <div className="w-full relative rounded-2xl overflow-hidden border border-gray-200/90 shadow-xl bg-gray-900 group min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] flex items-center justify-center">
+                        <Image
+                          src={project.imageUrl}
+                          alt={project.imageAlt}
+                          fill
+                          quality={90}
+                          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                        {/* Dark gradient overlay for text readability */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#151137]/60 via-transparent to-transparent opacity-60" />
+
+                        {/* Brand Indigo Corner Tag */}
+                        <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full bg-[#151137]/90 backdrop-blur-md border border-[#2D2D82]/60 shadow-md">
+                          <span className="text-[11px] font-semibold text-white tracking-wider">
+                            {project.statusTag}
+                          </span>
+                        </div>
+
+                        {/* Brand Accent Bottom Hairline */}
+                        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#2D2D82] via-[#2C2A78] to-transparent" />
                       </div>
-
-                      {/* Brand Accent Bottom Hairline */}
-                      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#2D2D82] via-[#2C2A78] to-transparent" />
-                    </div>
+                    )}
                   </div>
 
                   {/* TEXT SIDE */}
@@ -303,12 +403,28 @@ export default function WorkClient() {
                         ))}
                       </div>
 
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-1 font-bold text-xs text-[#2D2D82] hover:text-[#151137] transition-colors"
-                      >
-                        Request Case Study Audit &rarr;
-                      </Link>
+                      <div className="flex items-center gap-3">
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs text-white bg-[#2D2D82] hover:bg-[#151137] transition-all shadow-sm"
+                          >
+                            <span>Live Demo</span>
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        )}
+
+                        <Link
+                          href="/contact"
+                          className="inline-flex items-center gap-1 font-bold text-xs text-[#2D2D82] hover:text-[#151137] transition-colors"
+                        >
+                          Request Case Study Audit &rarr;
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
