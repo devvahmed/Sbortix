@@ -18,7 +18,7 @@ export default function WorkPage() {
     'name': 'Sbortix Case Studies',
     'description': 'Software implementations and AI deployments delivered by Sbortix.',
     'url': 'https://www.sbortix.com/work',
-    'numberOfItems': 7,
+    'numberOfItems': 8,
     'itemListElement': [
       {
         '@type': 'ListItem',
@@ -29,20 +29,20 @@ export default function WorkPage() {
       {
         '@type': 'ListItem',
         'position': 2,
+        'name': 'Novara Chronométrie — Luxury Horology & E-Commerce Experience',
+        'description': 'Bespoke digital flagship and luxury e-commerce experience for high-end horology with interactive timepiece vault catalog.'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
         'name': 'Agentic Sales Assistant & Lead Qualifier',
         'description': 'Autonomous 24/7 AI sales agent qualifying target accounts and booking CRM meetings.'
       },
       {
         '@type': 'ListItem',
-        'position': 3,
+        'position': 4,
         'name': 'Predictive Lead Scoring Engine',
         'description': 'Real-time XGBoost scoring pipeline integrated into Snowflake and BigQuery.'
-      },
-      {
-        '@type': 'ListItem',
-        'position': 4,
-        'name': 'Full-Funnel Growth & Attribution Engine',
-        'description': 'B2B logistics platform programmatic SEO architecture generating 1200+ landing pages.'
       }
     ]
   };

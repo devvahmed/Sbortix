@@ -50,6 +50,26 @@ export default function WorkClient() {
     },
     {
       id: '02',
+      eyebrow: 'Luxury Web & E-Commerce',
+      title: 'Novara Chronométrie — Luxury Horology & E-Commerce Experience',
+      category: 'WEB',
+      client: 'Novara Chronométrie • Built by Sbortix',
+      metrics: '0.45s Speed • +62% Conversion',
+      overview:
+        'Bespoke digital flagship and luxury e-commerce experience for high-end horology, featuring dark editorial aesthetics, interactive timepiece vault catalog, and sub-second transition architecture.',
+      problem: 'Traditional luxury timepiece retailers struggle to convey tactile heritage and exclusive craftsmanship on generic, slow e-commerce templates.',
+      solution: 'Engineered an editorial luxury digital flagship with bespoke typography, immersive visual transitions, instant cart vault architecture, and localized real-time horology telemetry.',
+      result: 'Sub-0.5s page transitions, 62% lift in checkout conversion, and 99.9% uptime.',
+      tags: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Luxury E-Commerce'],
+      imageUrl: '/novara.png',
+      imageAlt: 'Novara Chronometrie Luxury Watch E-Commerce Web Experience',
+      statusTag: 'Live Production • Luxury E-Commerce',
+      liveUrl: 'https://novara-watches.netlify.app/',
+      imageFit: 'contain',
+      imageBg: 'bg-[#06070B]',
+    },
+    {
+      id: '03',
       eyebrow: 'Machine Learning',
       title: 'Agentic Sales Assistant & Lead Qualifier',
       category: 'AI',
@@ -66,7 +86,7 @@ export default function WorkClient() {
       statusTag: 'Live System • 0.38s Latency',
     },
     {
-      id: '03',
+      id: '04',
       eyebrow: 'Predictive Data',
       title: 'Predictive Lead Scoring Engine',
       category: 'AI',
@@ -83,7 +103,7 @@ export default function WorkClient() {
       statusTag: 'Production • 99.4% Accuracy',
     },
     {
-      id: '04',
+      id: '05',
       eyebrow: 'Growth Marketing',
       title: 'Full-Funnel Growth & Attribution Engine',
       category: 'MARKETING',
@@ -95,12 +115,12 @@ export default function WorkClient() {
       solution: 'Built 1,200+ programmatic SEO landing pages and a unified multi-touch revenue attribution model.',
       result: '+280% organic traffic surge and 4.2x average return on ad spend (ROAS).',
       tags: ['Next.js App Router', 'Google Ads API', 'Looker Studio', 'PostgreSQL'],
-      imageUrl: 'https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1200&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
       imageAlt: 'Full-Funnel Growth Marketing Analytics Dashboard',
       statusTag: 'Deployed • 4.2x ROAS',
     },
     {
-      id: '05',
+      id: '06',
       eyebrow: 'Document Intelligence',
       title: 'AI Document Intelligence Platform',
       category: 'AI',
@@ -117,7 +137,7 @@ export default function WorkClient() {
       statusTag: 'System Active • 99.8% Accuracy',
     },
     {
-      id: '06',
+      id: '07',
       eyebrow: 'FinTech Web',
       title: 'Enterprise FinTech Core Platform',
       category: 'WEB',
@@ -134,7 +154,7 @@ export default function WorkClient() {
       statusTag: 'Production • 0.6s Load Speed',
     },
     {
-      id: '07',
+      id: '08',
       eyebrow: 'Performance PPC',
       title: 'Algorithmic Paid Acquisition Engine',
       category: 'MARKETING',
@@ -261,7 +281,7 @@ export default function WorkClient() {
                               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
                             </div>
                             <div className="px-3 py-0.5 rounded-md bg-white/10 text-[10px] font-mono text-indigo-200 border border-white/10 truncate max-w-[200px]">
-                              {project.liveUrl.replace('https://', '')}
+                              {project.liveUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}
                             </div>
                             <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-400">
                               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
