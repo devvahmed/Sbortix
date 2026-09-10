@@ -10,7 +10,7 @@ export default function BlogPage() {
     {
       id: 'LOG_001',
       title: 'Why Most Enterprise AI Projects Fail at the Data Pipeline Layer',
-      date: '2026-07-15',
+      date: '2024-07-15',
       author: 'Sbortix Data Architecture Team',
       category: 'DATA ENGINEERING',
       readTime: '6 MIN READ',
@@ -19,7 +19,7 @@ export default function BlogPage() {
     {
       id: 'LOG_002',
       title: 'Building Autonomous Sales Agents Without Hallucination Risk',
-      date: '2026-07-02',
+      date: '2024-07-02',
       author: 'Sbortix AI Engineering Lead',
       category: 'AI ARCHITECTURE',
       readTime: '9 MIN READ',
@@ -28,7 +28,7 @@ export default function BlogPage() {
     {
       id: 'LOG_003',
       title: 'Algorithmic Marketing Attribution in a Cookieless Ecosystem',
-      date: '2026-06-20',
+      date: '2024-06-20',
       author: 'Sbortix Digital Growth Lead',
       category: 'DIGITAL GROWTH',
       readTime: '7 MIN READ',
@@ -37,7 +37,7 @@ export default function BlogPage() {
     {
       id: 'LOG_004',
       title: 'Next.js App Router Performance Benchmarks for Enterprise Web Apps',
-      date: '2026-06-05',
+      date: '2024-06-05',
       author: 'Sbortix Web Systems Architect',
       category: 'WEB ENGINEERING',
       readTime: '5 MIN READ',
