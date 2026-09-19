@@ -6,6 +6,9 @@ import { ArrowRight, Sparkles, CheckCircle2, Lock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Services — Sbortix | Engineered Intelligence for Growth',
   description: 'Explore our core services: AI Solutions, Digital Marketing, Web & Branding, and Data Science. Systems engineered for modern growth teams.',
+  alternates: {
+    canonical: 'https://www.sbortix.com/services',
+  },
 };
 
 export default function ServicesPage() {

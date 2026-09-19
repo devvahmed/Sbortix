@@ -3,6 +3,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Blog & Technical Resources | Sbortix',
   description: 'Insights, architectural whitepapers, and guides on enterprise AI deployment, marketing attribution, and data engineering.',
+  alternates: {
+    canonical: 'https://www.sbortix.com/blog',
+  },
 };
 
 export default function BlogPage() {
