@@ -54,7 +54,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="text-secondary text-sm leading-relaxed mb-md max-w-sm">
-            Enterprise-grade AI, data science, and digital marketing solutions. Delivering autonomous growth systems for modern businesses.
+            Founded in 2024, Sbortix delivers enterprise-grade AI, data science, and digital marketing solutions. Delivering autonomous growth systems for modern businesses.
           </p>
 
           {/* Newsletter Input */}
@@ -122,7 +122,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pb-lg flex flex-col md:flex-row justify-between items-center border-t border-outline-variant pt-md relative z-10">
-        <p className="text-secondary text-xs">© 2024 Sbortix. All rights reserved.</p>
+        <p className="text-secondary text-xs">Founded in 2024 • © 2024 Sbortix. All rights reserved.</p>
         <div className="flex gap-md mt-md md:mt-0">
           {/* LinkedIn */}
           <a className="text-secondary hover:text-primary transition-colors" href="https://www.linkedin.com/company/sbortix-global" target="_blank" rel="noreferrer">

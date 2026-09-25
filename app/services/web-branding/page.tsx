@@ -2,10 +2,34 @@ import type { Metadata } from 'next';
 import WebBrandingClient from './WebBrandingClient';
 
 export const metadata: Metadata = {
-  title: 'Web Design & Brand Engineering | Sbortix',
-  description: 'Command market authority with sub-second page rendering, custom design token systems, WordPress themes, conversion rate optimization (CRO), and logo identity systems.',
+  title: 'Web Design & Brand Engineering Services | Sbortix',
+  description:
+    'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
   alternates: {
     canonical: 'https://www.sbortix.com/services/web-branding',
+  },
+  openGraph: {
+    title: 'Web Design & Brand Engineering Services | Sbortix',
+    description:
+      'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
+    url: 'https://www.sbortix.com/services/web-branding',
+    siteName: 'Sbortix',
+    type: 'website',
+    images: [
+      {
+        url: '/services/service_web_branding.png',
+        width: 1200,
+        height: 630,
+        alt: 'Web Design & Brand Engineering - Sbortix',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design & Brand Engineering Services | Sbortix',
+    description:
+      'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
+    images: ['/services/service_web_branding.png'],
   },
 };
 
@@ -14,13 +38,15 @@ export default function WebBrandingPage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': 'https://www.sbortix.com/services/web-branding/#service',
-    'name': 'Web Design & Brand Engineering',
+    'name': 'Web Design & Brand Engineering Services',
+    'url': 'https://www.sbortix.com/services/web-branding',
     'provider': {
-      '@id': 'https://www.sbortix.com/#organization'
+      '@id': 'https://www.sbortix.com/#organization',
     },
-    'description': 'High-performance custom web development using Next.js App Router, responsive design token systems, WordPress setups, and visual vector brand identities.',
+    'description':
+      'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
     'serviceType': 'Web Engineering & Branding',
-    'areaServed': 'Global'
+    'areaServed': 'Global',
   };
 
   return (

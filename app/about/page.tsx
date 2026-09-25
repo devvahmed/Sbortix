@@ -20,6 +20,11 @@ export default function AboutPage() {
     'description': 'Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual bottlenecks.',
     'isPartOf': {
       '@id': 'https://www.sbortix.com/#website'
+    },
+    'about': {
+      '@type': 'Organization',
+      'name': 'Sbortix',
+      'foundingDate': '2024'
     }
   };
 
@@ -40,7 +45,7 @@ export default function AboutPage() {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
-            About Sbortix
+            About Sbortix • Founded in 2024
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
@@ -48,7 +53,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-            Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual operational bottlenecks with custom AI agents, predictive data analytics, and high-converting digital platforms.
+            Founded in 2024, Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual operational bottlenecks with custom AI agents, predictive data analytics, and high-converting digital platforms.
           </p>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request: Request) {
   try {
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     let emailSent = false;
     let emailError = '';
     
-    if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 're_your_api_key_here') {
+    if (resend && process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== 're_your_api_key_here') {
       try {
         const { data, error } = await resend.emails.send({
           from: 'Sbortix Portal <inquiry@sbortix.com>',

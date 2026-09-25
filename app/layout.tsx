@@ -29,10 +29,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sbortix.com'),
   title: {
-    default: 'Sbortix — Engineered Intelligence for Growth',
-    template: '%s | Sbortix',
+    default: 'Sbortix | Enterprise AI Agency & Digital Growth Systems',
+    template: '%s',
   },
-  description: 'Sbortix bridges the gap between complex data science and high-performance marketing. Enterprise intelligence engineered for modern growth teams.',
+  description: 'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
   keywords: [
     'AI Chatbots',
     'Conversational AI',
@@ -62,10 +62,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.sbortix.com',
+    url: 'https://www.sbortix.com/',
     siteName: 'Sbortix',
-    title: 'Sbortix — Engineered Intelligence for Growth',
-    description: 'Enterprise intelligence engineered for modern growth teams. We build custom AI agents, predictive scoring, and high-performance web systems.',
+    title: 'Sbortix | Enterprise AI Agency & Digital Growth Systems',
+    description: 'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
     images: [
       {
         url: '/sbortix-logo.png',
@@ -77,8 +77,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sbortix — Engineered Intelligence for Growth',
-    description: 'Enterprise intelligence engineered for modern growth teams. We build custom AI agents, predictive scoring, and high-performance web systems.',
+    title: 'Sbortix | Enterprise AI Agency & Digital Growth Systems',
+    description: 'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
     images: ['/sbortix-logo.png'],
   },
   verification: {
@@ -100,7 +100,8 @@ export default function RootLayout({
     'url': 'https://www.sbortix.com',
     'logo': 'https://www.sbortix.com/sbortix-logo.png',
     'image': 'https://www.sbortix.com/sbortix-logo.png',
-    'description': 'Enterprise AI engineering, data science, and digital marketing firm.',
+    'description': 'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
+    'foundingDate': '2024',
     'sameAs': [
       'https://www.linkedin.com/company/sbortix',
       'https://x.com/sbortix',
