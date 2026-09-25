@@ -62,7 +62,7 @@ export default function DigitalMarketingClient() {
               </span>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6">
-                Precision Technical SEO, High-ROAS Ads & Lifecycle Automation
+                Technical SEO &amp; High-ROAS Paid Acquisition
               </h1>
 
               <p className="text-gray-600 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
@@ -162,7 +162,7 @@ export default function DigitalMarketingClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Search Engine Optimization (SEO)
+              Technical Search Engine Optimization
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               Dominate high-intent organic search queries with a rigorous technical foundation. We optimize site architecture, Core Web Vitals, schema markup, and authoritative backlink profiles to earn sustainable #1 rankings.
@@ -261,9 +261,9 @@ export default function DigitalMarketingClient() {
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               Social Media Marketing
-            </h2>
+            </h3>
             <p className="text-gray-600 text-base leading-relaxed">
               Build a commanding brand voice across professional social platforms. We handle end-to-end social operations — strategic positioning, high-converting visual design, automated scheduling, and active audience engagement.
             </p>
@@ -296,7 +296,7 @@ export default function DigitalMarketingClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Paid Advertising & Performance Marketing
+              Multi-Channel Paid Ads (Google, Meta, LinkedIn)
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               Scale revenue with high-ROAS paid campaigns across Google Search, Meta, LinkedIn B2B, YouTube, and TikTok. We continuously optimize ad copy, bidding strategies, and retargeting funnels for maximum return on ad spend.
@@ -382,7 +382,7 @@ export default function DigitalMarketingClient() {
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Email Marketing & Lifecycle Automation
+              Lifecycle Email Automation
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               Turn subscriber lists into predictable repeat revenue. We design high-converting email newsletters, build automated customer onboarding sequences, and implement behavioral segmentation.

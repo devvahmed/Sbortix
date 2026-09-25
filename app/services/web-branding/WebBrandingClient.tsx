@@ -62,7 +62,7 @@ export default function WebBrandingClient() {
               </span>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6">
-                High-Converting Web Systems, Custom WordPress & Brand Identity
+                Enterprise Web Design &amp; Brand Engineering Services
               </h1>
 
               <p className="text-gray-600 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
@@ -162,7 +162,7 @@ export default function WebBrandingClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Website Design & Architecture
+              Modern Web Application Architecture
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               We design modern, responsive web applications built with Next.js, React, and Tailwind CSS. Every layout uses deliberate whitespace, concentric double-bezel containers, and accessible typographic scale to create an expensive, agency-grade digital experience.
@@ -247,9 +247,9 @@ export default function WebBrandingClient() {
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Landing Page Design & CRO
-            </h2>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+              Landing Page Design &amp; CRO
+            </h3>
             <p className="text-gray-600 text-base leading-relaxed">
               Maximize your return on ad spend with high-converting landing page architectures. We apply behavioral psychological triggers, clear CTA hierarchies, and systematic A/B testing to convert paid traffic into customers.
             </p>
@@ -280,9 +280,9 @@ export default function WebBrandingClient() {
         {/* ── GROUP 3: WORDPRESS DEVELOPMENT ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              WordPress Development & Custom CMS
-            </h2>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+              WordPress Development &amp; Custom CMS
+            </h3>
             <p className="text-gray-600 text-base leading-relaxed">
               Custom WordPress development without heavy bloated plugins. We craft bespoke PHP/Gutenberg themes, custom post types, and secure REST API integrations so your content marketing team can publish effortlessly.
             </p>
@@ -358,7 +358,7 @@ export default function WebBrandingClient() {
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Logo Design, Brand Identity & Messaging
+              Complete Brand Identity &amp; Design Systems
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               Craft a distinct corporate presence that builds immediate authority. We design memorable vector logos, full brand style guides, color token systems, and compelling brand positioning frameworks.

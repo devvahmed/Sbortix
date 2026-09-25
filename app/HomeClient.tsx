@@ -78,7 +78,7 @@ export default function HomeClient() {
               About Sbortix
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">
-              We Engineer Business Growth <br className="hidden sm:block" /> with AI & Advanced Data Systems
+              Autonomous AI Agents &amp; Workflow Automation
             </h2>
             <p className="text-secondary text-lg leading-relaxed">
               <strong className="text-on-background font-semibold">Sbortix</strong> is a hybrid Enterprise AI & Digital Marketing agency. We replace manual guesswork with autonomous AI agents, predictive lead scoring, high-converting web applications, and algorithmic marketing campaigns.
@@ -180,7 +180,7 @@ export default function HomeClient() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-md">
             <div>
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">OUR CORE SERVICES</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">Trending Business Services</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">Data-Driven Digital Growth &amp; Performance Marketing</h2>
             </div>
             <Link className="flex items-center gap-xs text-primary font-bold hover:underline group bg-primary/5 px-4 py-2 rounded-lg border border-primary/10 transition-all hover:bg-primary/10" href="/services">
               Discover all services
@@ -282,7 +282,7 @@ export default function HomeClient() {
         <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
           <div className="text-center mb-xl">
             <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">OUR METHODOLOGY</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">The Sbortix Framework</h2>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">The Sbortix Framework</h3>
           </div>
           <div className="relative flex flex-col md:flex-row justify-between items-start gap-lg">
             <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-indigo-200 z-0 border-t border-b border-white"></div>
@@ -338,7 +338,7 @@ export default function HomeClient() {
                 TECHNICAL CAPABILITIES & INFRASTRUCTURE
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight">
-                Modern Growth Capabilities
+                Enterprise Solutions Tailored for Scalability
               </h2>
             </div>
             <p className="text-secondary text-sm sm:text-base max-w-md">
@@ -562,9 +562,9 @@ export default function HomeClient() {
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
                 PROVEN TEAM CREDIBILITY
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">
-                Led by World-Class AI Engineers & Senior Growth Experts
-              </h2>
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">
+                Led by World-Class AI Engineers &amp; Senior Growth Experts
+              </h3>
               <p className="text-secondary text-base sm:text-lg leading-relaxed">
                 Sbortix is powered by proven industry veterans. We combine international enterprise AI experience with over 7+ years of performance marketing expertise to guarantee real business results.
               </p>
@@ -598,9 +598,9 @@ export default function HomeClient() {
             {/* Lead 1: Digital Marketing Lead */}
             <div className="pt-6 md:pt-0 md:pr-6 flex flex-col justify-between relative group">
               <div>
-                <h3 className="text-xl font-bold text-on-background mb-3 leading-snug">
+                <h4 className="text-xl font-bold text-on-background mb-3 leading-snug">
                   Senior Digital Growth &amp; Marketing Lead
-                </h3>
+                </h4>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   Over <strong>7+ years of hands-on experience</strong> leading high-performance SEO, Google &amp; Meta paid ad campaigns, content growth strategy, and conversion optimization for global brands.
                 </p>
@@ -614,9 +614,9 @@ export default function HomeClient() {
             {/* Lead 2: AI Systems Engineer */}
             <div className="pt-6 md:pt-0 md:px-6 flex flex-col justify-between relative group">
               <div>
-                <h3 className="text-xl font-bold text-on-background mb-3 leading-snug">
+                <h4 className="text-xl font-bold text-on-background mb-3 leading-snug">
                   Lead AI Systems Engineer
-                </h3>
+                </h4>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   <strong>Former Senior AI Engineer at a top Japanese technology corporation</strong>. Expert in fine-tuning enterprise LLMs, building custom 24/7 AI chatbots, and autonomous workflow engines.
                 </p>
@@ -630,9 +630,9 @@ export default function HomeClient() {
             {/* Lead 3: Chief Data Scientist & Founder */}
             <div className="pt-6 md:pt-0 md:pl-6 flex flex-col justify-between relative group">
               <div>
-                <h3 className="text-xl font-bold text-on-background mb-3 leading-snug">
+                <h4 className="text-xl font-bold text-on-background mb-3 leading-snug">
                   Chief Data Scientist &amp; Tech Architect
-                </h3>
+                </h4>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
                   <strong>Founder of multiple tech ventures</strong> with extensive background in data science, predictive analytics dashboards, and modern Next.js/React web platforms.
                 </p>
@@ -652,7 +652,7 @@ export default function HomeClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl">
             <div>
               <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">GET IN TOUCH</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">Let's build your growth engine.</h2>
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-background tracking-tight leading-tight mb-4">Let's build your growth engine.</h3>
               <p className="text-secondary font-body-md text-body-md mb-lg">Ready to transform your marketing, web presence, or AI workflows? Contact us to schedule a free technical audit and discovery session.</p>
 
               <div className="space-y-md">

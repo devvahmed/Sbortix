@@ -64,7 +64,7 @@ export default function AISolutionsClient() {
               </span>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6">
-                Intelligent AI Agents, Predictive Analytics & Autonomous Workflows
+                Enterprise AI Solutions &amp; Workflow Automation
               </h1>
 
               <p className="text-gray-600 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
@@ -172,7 +172,7 @@ export default function AISolutionsClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              AI Chatbots & Conversational AI
+              Production-Ready AI Agents &amp; Conversational Bots
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               We engineer intelligent 24/7 conversational agents powered by custom RAG (Retrieval-Augmented Generation) architectures. Your AI assistants understand complex domain questions, qualify leads instantly, and integrate directly with your CRM and calendar nodes.
@@ -287,7 +287,7 @@ export default function AISolutionsClient() {
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              AI-Powered Data & Analytics
+              Automated Business Systems &amp; Predictive Analytics
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
               Transform raw database logs into actionable executive foresight. Our predictive machine learning models detect subtle anomalies, forecast sales demand with high precision, and generate automated intelligence summaries.
@@ -318,9 +318,9 @@ export default function AISolutionsClient() {
         {/* ── GROUP 3: AI AUTOMATION & WORKFLOW ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              AI Automation & Workflow
-            </h2>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+              AI Automation &amp; Workflow
+            </h3>
             <p className="text-gray-600 text-base leading-relaxed">
               Eliminate costly manual bottlenecking across sales operations, document parsing, and database synchronization. We build resilient end-to-end automation pipelines that execute work 24 hours a day without human error.
             </p>
@@ -424,9 +424,9 @@ export default function AISolutionsClient() {
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
               Custom AI Development
-            </h2>
+            </h3>
             <p className="text-gray-600 text-base leading-relaxed">
               When off-the-shelf APIs fall short, we build custom machine learning models, computer vision systems, and proprietary AI microservices fine-tuned specifically on your operational datasets.
             </p>

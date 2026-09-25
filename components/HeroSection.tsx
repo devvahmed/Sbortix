@@ -35,17 +35,16 @@ export default function HeroSection() {
               fontFamily: "'Space Grotesk', 'Inter', sans-serif",
               fontWeight: 900,
               letterSpacing: '-0.02em',
-              lineHeight: 0.95,
+              lineHeight: 1.05,
               color: '#0E0E1A',
-              fontSize: 'clamp(28px, 5vw, 68px)',
+              fontSize: 'clamp(26px, 4.4vw, 58px)',
               textTransform: 'uppercase',
             }}
           >
-            Growth,<br />
-            Engineered<br />
-            by{' '}
+            Enterprise AI Agency<br />
+            &amp; Digital Growth<br />
             <span className="relative inline-block" style={{ color: '#2D2D82' }}>
-              Intelligence
+              Systems
               <span
                 className="absolute left-0 w-full pointer-events-none"
                 style={{
@@ -67,7 +66,7 @@ export default function HeroSection() {
             className="border-l-2 pl-4 space-y-2"
             style={{ borderColor: '#2D2D82' }}
           >
-            <h2
+            <p
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 fontSize: 'clamp(15px, 1.6vw, 22px)',
@@ -77,7 +76,7 @@ export default function HeroSection() {
               }}
             >
               Revolutionizing Growth with Intelligence
-            </h2>
+            </p>
             <p
               style={{
                 fontSize: 'clamp(11px, 1vw, 14px)',
