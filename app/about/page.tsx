@@ -1,15 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Target, Eye, Lock, Sparkles, CheckCircle2, Award, Users } from 'lucide-react';
-import { absoluteUrl } from '@/lib/seo';
+import { absoluteUrl, buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'About Us | Enterprise AI & Data Systems',
-  description: 'Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual bottlenecks with custom AI agents and predictive analytics.',
-  alternates: {
-    canonical: absoluteUrl('/about'),
-  },
-};
+export const metadata: Metadata = buildMetadata({ path: '/about' });
 
 export default function AboutPage() {
   const aboutJsonLd = {

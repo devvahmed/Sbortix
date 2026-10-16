@@ -1,14 +1,8 @@
 import type { Metadata } from 'next';
 import WorkClient from './WorkClient';
-import { absoluteUrl } from '@/lib/seo';
+import { absoluteUrl, buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Our Work & Case Studies | Proven Growth Metrics',
-  description: 'Explore technical case studies and enterprise outcomes delivered by Sbortix across artificial intelligence, digital growth marketing, and web software engineering.',
-  alternates: {
-    canonical: absoluteUrl('/work'),
-  },
-};
+export const metadata: Metadata = buildMetadata({ path: '/work' });
 
 export default function WorkPage() {
   // ItemList schema representing Case Studies

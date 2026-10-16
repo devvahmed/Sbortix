@@ -1,13 +1,8 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { absoluteUrl } from '@/lib/seo';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Blog & Technical Resources | Sbortix',
-  description: 'Insights, architectural whitepapers, and guides on enterprise AI deployment, marketing attribution, and data engineering.',
-  alternates: {
-    canonical: absoluteUrl('/blog'),
-  },
-};
+export const metadata: Metadata = buildMetadata({ path: '/blog' });
 
 export default function BlogPage() {
   const posts = [

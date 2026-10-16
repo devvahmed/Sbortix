@@ -1,38 +1,8 @@
 import type { Metadata } from 'next';
 import WebBrandingClient from './WebBrandingClient';
-import { absoluteUrl } from '@/lib/seo';
+import { absoluteUrl, buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Web Design & Brand Engineering Services | Sbortix',
-  description:
-    'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
-  alternates: {
-    canonical: absoluteUrl('/services/web-branding'),
-  },
-  openGraph: {
-    title: 'Web Design & Brand Engineering Services | Sbortix',
-    description:
-      'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
-    url: absoluteUrl('/services/web-branding'),
-    siteName: 'Sbortix',
-    type: 'website',
-    images: [
-      {
-        url: '/services/service_web_branding.png',
-        width: 1200,
-        height: 630,
-        alt: 'Web Design & Brand Engineering - Sbortix',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Web Design & Brand Engineering Services | Sbortix',
-    description:
-      'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
-    images: ['/services/service_web_branding.png'],
-  },
-};
+export const metadata: Metadata = buildMetadata({ path: '/services/web-branding' });
 
 export default function WebBrandingPage() {
   const serviceJsonLd = {

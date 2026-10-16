@@ -1,9 +1,27 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Home } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Page Not Found | Sbortix',
+  description: 'The requested page could not be found.',
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+};
+
 export default function NotFound() {
   return (
-    <div className="min-h-[70vh] flex items-center justify-center bg-[#FAFAFD] px-6 py-24 text-center">
+    <>
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
+      <div className="min-h-[70vh] flex items-center justify-center bg-[#FAFAFD] px-6 py-24 text-center">
       <div className="max-w-md mx-auto space-y-6">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#2D2D82]/10 text-[#2D2D82] font-mono text-xl font-bold mb-2">
           404
@@ -35,5 +53,6 @@ export default function NotFound() {
         </div>
       </div>
     </div>
+    </>
   );
 }
