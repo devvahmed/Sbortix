@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import WorkClient from './WorkClient';
+import { absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Our Work & Case Studies | Proven Growth Metrics',
   description: 'Explore technical case studies and enterprise outcomes delivered by Sbortix across artificial intelligence, digital growth marketing, and web software engineering.',
   alternates: {
-    canonical: 'https://www.sbortix.com/work',
+    canonical: absoluteUrl('/work'),
   },
 };
 
@@ -14,10 +15,10 @@ export default function WorkPage() {
   const workSchemaJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    '@id': 'https://www.sbortix.com/work/#itemList',
+    '@id': `${absoluteUrl('/work')}#itemList`,
     'name': 'Sbortix Case Studies',
     'description': 'Software implementations and AI deployments delivered by Sbortix.',
-    'url': 'https://www.sbortix.com/work',
+    'url': absoluteUrl('/work'),
     'numberOfItems': 8,
     'itemListElement': [
       {

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
 // Configure Google Fonts through Next.js optimized font loader
 const inter = Inter({
@@ -27,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.sbortix.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Sbortix | Enterprise AI Agency & Digital Growth Systems',
     template: '%s',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     'ETL Pipelines',
     'Data Science Agency',
   ],
-  authors: [{ name: 'Sbortix Team', url: 'https://www.sbortix.com' }],
+  authors: [{ name: 'Sbortix Team', url: absoluteUrl('/') }],
   creator: 'Sbortix',
   publisher: 'Sbortix',
   robots: {
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.sbortix.com/',
+    url: absoluteUrl('/'),
     siteName: 'Sbortix',
     title: 'Sbortix | Enterprise AI Agency & Digital Growth Systems',
     description: 'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
@@ -95,11 +96,11 @@ export default function RootLayout({
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://www.sbortix.com/#organization',
+    '@id': `${absoluteUrl('/')}#organization`,
     'name': 'Sbortix',
-    'url': 'https://www.sbortix.com',
-    'logo': 'https://www.sbortix.com/sbortix-logo.png',
-    'image': 'https://www.sbortix.com/sbortix-logo.png',
+    'url': absoluteUrl('/'),
+    'logo': absoluteUrl('/sbortix-logo.png'),
+    'image': absoluteUrl('/sbortix-logo.png'),
     'description': 'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
     'foundingDate': '2024',
     'sameAs': [

@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Target, Eye, Lock, Sparkles, CheckCircle2, Award, Users } from 'lucide-react';
+import { absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'About Us | Enterprise AI & Data Systems',
   description: 'Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual bottlenecks with custom AI agents and predictive analytics.',
   alternates: {
-    canonical: 'https://www.sbortix.com/about',
+    canonical: absoluteUrl('/about'),
   },
 };
 
@@ -14,12 +15,12 @@ export default function AboutPage() {
   const aboutJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    '@id': 'https://www.sbortix.com/about/#webpage',
-    'url': 'https://www.sbortix.com/about',
+    '@id': `${absoluteUrl('/about')}#webpage`,
+    'url': absoluteUrl('/about'),
     'name': 'About Sbortix | Enterprise AI & Data Systems',
     'description': 'Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual bottlenecks.',
     'isPartOf': {
-      '@id': 'https://www.sbortix.com/#website'
+      '@id': `${absoluteUrl('/')}#website`,
     },
     'about': {
       '@type': 'Organization',

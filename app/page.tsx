@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import HomeClient from './HomeClient';
+import { absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Sbortix | Enterprise AI Agency & Digital Growth Systems',
   description:
     'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
   alternates: {
-    canonical: 'https://www.sbortix.com/',
+    canonical: absoluteUrl('/'),
   },
   openGraph: {
     title: 'Sbortix | Enterprise AI Agency & Digital Growth Systems',
     description:
       'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
-    url: 'https://www.sbortix.com/',
+    url: absoluteUrl('/'),
     siteName: 'Sbortix',
     type: 'website',
     images: [
@@ -38,13 +39,13 @@ export default function HomePage() {
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://www.sbortix.com/#website',
+    '@id': `${absoluteUrl('/')}#website`,
     'name': 'Sbortix',
-    'url': 'https://www.sbortix.com/',
+    'url': absoluteUrl('/'),
     'description':
       'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
     'publisher': {
-      '@id': 'https://www.sbortix.com/#organization',
+      '@id': `${absoluteUrl('/')}#organization`,
     },
   };
 

@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import DigitalMarketingClient from './DigitalMarketingClient';
+import { absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Technical SEO & High-ROAS Paid Ads Agency | Sbortix',
   description:
     'Combine deep technical search optimization, high-ROAS multi-channel paid ads (Google, Meta, LinkedIn), and automated lifecycle email marketing with Sbortix.',
   alternates: {
-    canonical: 'https://www.sbortix.com/services/digital-marketing',
+    canonical: absoluteUrl('/services/digital-marketing'),
   },
   openGraph: {
     title: 'Technical SEO & High-ROAS Paid Ads Agency | Sbortix',
     description:
       'Combine deep technical search optimization, high-ROAS multi-channel paid ads (Google, Meta, LinkedIn), and automated lifecycle email marketing with Sbortix.',
-    url: 'https://www.sbortix.com/services/digital-marketing',
+    url: absoluteUrl('/services/digital-marketing'),
     siteName: 'Sbortix',
     type: 'website',
     images: [
@@ -37,11 +38,11 @@ export default function DigitalMarketingPage() {
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://www.sbortix.com/services/digital-marketing/#service',
+    '@id': `${absoluteUrl('/services/digital-marketing')}#service`,
     'name': 'Technical SEO & High-ROAS Paid Ads Agency',
-    'url': 'https://www.sbortix.com/services/digital-marketing',
+    'url': absoluteUrl('/services/digital-marketing'),
     'provider': {
-      '@id': 'https://www.sbortix.com/#organization',
+      '@id': `${absoluteUrl('/')}#organization`,
     },
     'description':
       'Combine deep technical search optimization, high-ROAS multi-channel paid ads (Google, Meta, LinkedIn), and automated lifecycle email marketing with Sbortix.',

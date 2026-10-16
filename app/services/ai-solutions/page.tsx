@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import AISolutionsClient from './AISolutionsClient';
+import { absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Enterprise AI Solutions & Workflow Automation | Sbortix',
   description:
     'Engineer production-ready AI systems, 24/7 conversational support bots, and automated business workflows to scale your enterprise operations.',
   alternates: {
-    canonical: 'https://www.sbortix.com/services/ai-solutions',
+    canonical: absoluteUrl('/services/ai-solutions'),
   },
   openGraph: {
     title: 'Enterprise AI Solutions & Workflow Automation | Sbortix',
     description:
       'Engineer production-ready AI systems, 24/7 conversational support bots, and automated business workflows to scale your enterprise operations.',
-    url: 'https://www.sbortix.com/services/ai-solutions',
+    url: absoluteUrl('/services/ai-solutions'),
     siteName: 'Sbortix',
     type: 'website',
     images: [
@@ -37,11 +38,11 @@ export default function AISolutionsPage() {
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://www.sbortix.com/services/ai-solutions/#service',
+    '@id': `${absoluteUrl('/services/ai-solutions')}#service`,
     'name': 'Enterprise AI Solutions & Workflow Automation',
-    'url': 'https://www.sbortix.com/services/ai-solutions',
+    'url': absoluteUrl('/services/ai-solutions'),
     'provider': {
-      '@id': 'https://www.sbortix.com/#organization',
+      '@id': `${absoluteUrl('/')}#organization`,
     },
     'description':
       'Engineer production-ready AI systems, 24/7 conversational support bots, and automated business workflows to scale your enterprise operations.',

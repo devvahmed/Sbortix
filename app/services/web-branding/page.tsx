@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import WebBrandingClient from './WebBrandingClient';
+import { absoluteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Web Design & Brand Engineering Services | Sbortix',
   description:
     'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
   alternates: {
-    canonical: 'https://www.sbortix.com/services/web-branding',
+    canonical: absoluteUrl('/services/web-branding'),
   },
   openGraph: {
     title: 'Web Design & Brand Engineering Services | Sbortix',
     description:
       'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
-    url: 'https://www.sbortix.com/services/web-branding',
+    url: absoluteUrl('/services/web-branding'),
     siteName: 'Sbortix',
     type: 'website',
     images: [
@@ -37,11 +38,11 @@ export default function WebBrandingPage() {
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://www.sbortix.com/services/web-branding/#service',
+    '@id': `${absoluteUrl('/services/web-branding')}#service`,
     'name': 'Web Design & Brand Engineering Services',
-    'url': 'https://www.sbortix.com/services/web-branding',
+    'url': absoluteUrl('/services/web-branding'),
     'provider': {
-      '@id': 'https://www.sbortix.com/#organization',
+      '@id': `${absoluteUrl('/')}#organization`,
     },
     'description':
       'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',

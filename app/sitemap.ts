@@ -1,59 +1,58 @@
 import { MetadataRoute } from 'next';
+import { absoluteUrl } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.sbortix.com';
-
   return [
     {
-      url: `${baseUrl}`,
+      url: absoluteUrl('/'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/services`,
+      url: absoluteUrl('/services'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/ai-solutions`,
+      url: absoluteUrl('/services/ai-solutions'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/digital-marketing`,
+      url: absoluteUrl('/services/digital-marketing'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/web-branding`,
+      url: absoluteUrl('/services/web-branding'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work`,
+      url: absoluteUrl('/work'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/about`,
+      url: absoluteUrl('/about'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: absoluteUrl('/blog'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: absoluteUrl('/contact'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

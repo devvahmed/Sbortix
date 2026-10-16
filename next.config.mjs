@@ -17,6 +17,21 @@ const nextConfig = {
     workerThreads: false,
     cpus: 1,
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'sbortix.com',
+          },
+        ],
+        destination: 'https://www.sbortix.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

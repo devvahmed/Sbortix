@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import { absoluteUrl } from '@/lib/seo';
 
 export const metadata = {
   title: 'Blog & Technical Resources | Sbortix',
   description: 'Insights, architectural whitepapers, and guides on enterprise AI deployment, marketing attribution, and data engineering.',
   alternates: {
-    canonical: 'https://www.sbortix.com/blog',
+    canonical: absoluteUrl('/blog'),
   },
 };
 
