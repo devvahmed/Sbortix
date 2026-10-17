@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/seo';
+import { getPublishedBlogPosts } from '@/lib/blog-data';
+import { getCaseStudiesWithDetail } from '@/lib/work-data';
 
 /**
  * Static lastModified dates derived from actual content revision and publication milestones.
@@ -18,7 +20,7 @@ const PAGE_LAST_MODIFIED: Record<string, string> = {
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes: Array<{
+  const staticRoutes: Array<{
     path: string;
     priority: number;
     changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
@@ -34,10 +36,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },
   ];
 
-  return routes.map((r) => ({
+  const primaryEntries: MetadataRoute.Sitemap = staticRoutes.map((r) => ({
     url: absoluteUrl(r.path),
     lastModified: new Date(PAGE_LAST_MODIFIED[r.path]),
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));
+
+  // Append published blog post detail pages
+  const blogEntries: MetadataRoute.Sitemap = getPublishedBlogPosts().map((post) => ({
+    url: absoluteUrl(`/blog/${post.slug}`),
+    lastModified: new Date(post.updated || post.date),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  // Append case studies that have full detail pages
+  const workEntries: MetadataRoute.Sitemap = getCaseStudiesWithDetail().map((study) => ({
+    url: absoluteUrl(`/work/${study.slug}`),
+    lastModified: new Date('2024-10-17'),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...primaryEntries, ...blogEntries, ...workEntries];
 }
