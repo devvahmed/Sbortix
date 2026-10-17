@@ -32,10 +32,6 @@ body {
   background-color: #FAFAFD;
   color: #12131A;
   overflow-x: hidden;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 .ambient-indigo-glow {
@@ -202,10 +198,6 @@ p {
 
 .transition-all-200 {
   transition: all 0.2s ease-in-out;
-}
-
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 .grid-pattern {

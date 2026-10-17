@@ -128,9 +128,9 @@ export default function RootLayout({
         {/* Google Analytics 4 (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FBDLTHZYJQ"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -140,13 +140,9 @@ export default function RootLayout({
           `}
         </Script>
         <link rel="icon" href="/sbortix-logo.png" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
         <JsonLd data={organizationJsonLd} />
       </head>
-      <body className="selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col antialiased">
+      <body className="selection:bg-primary-container selection:text-on-primary-container min-h-[100dvh] flex flex-col antialiased">
         <SmoothScroll>
           <Header />
           <main className="flex-grow">{children}</main>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroSection from '@/components/HeroSection';
 import HomeClient from './HomeClient';
 import JsonLd from '@/components/JsonLd';
 import { absoluteUrl, buildMetadata } from '@/lib/seo';
@@ -23,6 +24,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={websiteJsonLd} />
+      <HeroSection />
       <HomeClient />
     </>
   );

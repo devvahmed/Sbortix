@@ -116,9 +116,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_ai_chatbot.png"
+                    src="/services/service_ai_chatbot.webp"
                     alt="AI Chatbots & Conversational AI — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -181,9 +182,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_ai_analytics.png"
+                    src="/services/service_ai_analytics.webp"
                     alt="AI-Powered Data & Analytics — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -202,9 +204,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_ai_workflow.png"
+                    src="/services/service_ai_workflow.webp"
                     alt="AI Automation & Workflow — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -267,9 +270,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_ai_custom_ml.png"
+                    src="/services/service_ai_custom_ml.webp"
                     alt="Custom AI Development — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -312,9 +316,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_seo.png"
+                    src="/services/service_seo.webp"
                     alt="Search Engine Optimization — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -377,9 +382,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_social_media.png"
+                    src="/services/service_social_media.webp"
                     alt="Social Media Marketing — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -398,9 +404,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_ppc_ads.png"
+                    src="/services/service_ppc_ads.webp"
                     alt="Paid Advertising (PPC) — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -463,9 +470,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_email_marketing.png"
+                    src="/services/service_email_marketing.webp"
                     alt="Email Marketing & Automation — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -495,9 +503,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_web_branding.png"
+                    src="/services/service_web_branding.webp"
                     alt="Website Design & Architecture — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -560,9 +569,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_web_branding.png"
+                    src="/services/service_web_branding.webp"
                     alt="Landing Page Design & CRO — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -581,9 +591,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_web_branding.png"
+                    src="/services/service_web_branding.webp"
                     alt="WordPress Development — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">
@@ -646,9 +657,10 @@ export default function ServicesPage() {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="relative w-full h-64 sm:h-80 lg:h-84 rounded-2xl overflow-hidden border border-indigo-100/90 shadow-sm">
                   <Image
-                    src="/services/service_web_branding.png"
+                    src="/services/service_web_branding.webp"
                     alt="Logo Design & Brand Identity — Sbortix"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md border border-indigo-100/90 px-3 py-1 rounded-full text-[10px] font-bold text-indigo-900 shadow-xs uppercase tracking-wider flex items-center gap-1.5">

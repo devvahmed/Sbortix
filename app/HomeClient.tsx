@@ -3,67 +3,29 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import HeroSection from '@/components/HeroSection';
+import HomeContactForm from '@/components/HomeContactForm';
+import { Database, Bot, Globe, ArrowRight, Zap, TrendingUp, Shield, Mail, MapPin } from 'lucide-react';
 
 export default function HomeClient() {
   const [activeCapability, setActiveCapability] = useState(0);
-  const [formData, setFormData] = useState({
-    identity: '',
-    email: '',
-    module: 'AI Solutions [SRVC_01]',
-    payload: '',
-  });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [statusMsg, setStatusMsg] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('loading');
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.identity,
-          email: formData.email,
-          service: formData.module,
-          payload: formData.payload,
-        }),
-      });
-      const data = await res.json();
-      if (res.ok && data.success) {
-        setStatus('success');
-        setStatusMsg(data.message);
-        setFormData({ identity: '', email: '', module: 'AI Solutions [SRVC_01]', payload: '' });
-      } else {
-        setStatus('error');
-        setStatusMsg(data.message || 'TRANSMISSION_FAILED');
-      }
-    } catch {
-      setStatus('error');
-      setStatusMsg('NETWORK_ERROR: Connection failed.');
-    }
-  };
 
   return (
     <div className="w-full bg-[#FAFAFD]">
-      {/* Hero Section — Layered Robot Depth Effect */}
-      <HeroSection />
 
       {/* Trust Strip */}
       <section className="bg-gradient-to-r from-[#0C0830] via-[#1F108E] to-[#0C0830] text-white py-md border-y border-indigo-900/60 relative shadow-md">
         <div className="absolute inset-0 grid-pattern opacity-20"></div>
         <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center text-center gap-md relative z-10">
           <div className="flex items-center gap-xs">
-            <span className="material-symbols-outlined text-indigo-300">database</span>
+            <Database className="w-5 h-5 text-indigo-300 shrink-0" />
             <span className="font-mono text-label-sm text-indigo-100 uppercase tracking-tight font-semibold">Data Science Engineered</span>
           </div>
           <div className="flex items-center gap-xs">
-            <span className="material-symbols-outlined text-indigo-300">smart_toy</span>
+            <Bot className="w-5 h-5 text-indigo-300 shrink-0" />
             <span className="font-mono text-label-sm text-indigo-100 uppercase tracking-tight font-semibold">AI + Marketing Systems</span>
           </div>
           <div className="flex items-center gap-xs">
-            <span className="material-symbols-outlined text-indigo-300">public</span>
+            <Globe className="w-5 h-5 text-indigo-300 shrink-0" />
             <span className="font-mono text-label-sm text-indigo-100 uppercase tracking-tight font-semibold">Global Service Node: KHI-PAK</span>
           </div>
         </div>
@@ -103,7 +65,7 @@ export default function HomeClient() {
                 className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold hover:underline group/p"
               >
                 <span>AI PIPELINE AUTOMATION</span>
-                <span className="material-symbols-outlined text-sm group-hover/p:translate-x-1 transition-transform">arrow_forward</span>
+                <ArrowRight className="w-4 h-4 group-hover/p:translate-x-1 transition-transform shrink-0" />
               </Link>
             </div>
 
@@ -123,7 +85,7 @@ export default function HomeClient() {
                 className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold hover:underline group/p"
               >
                 <span>PREDICTIVE LEAD SCORING</span>
-                <span className="material-symbols-outlined text-sm group-hover/p:translate-x-1 transition-transform">arrow_forward</span>
+                <ArrowRight className="w-4 h-4 group-hover/p:translate-x-1 transition-transform shrink-0" />
               </Link>
             </div>
 
@@ -143,7 +105,7 @@ export default function HomeClient() {
                 className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold hover:underline group/p"
               >
                 <span>NEXT.JS & REACT SYSTEMS</span>
-                <span className="material-symbols-outlined text-sm group-hover/p:translate-x-1 transition-transform">arrow_forward</span>
+                <ArrowRight className="w-4 h-4 group-hover/p:translate-x-1 transition-transform shrink-0" />
               </Link>
             </div>
           </div>
@@ -152,7 +114,7 @@ export default function HomeClient() {
           <div className="bg-[#0C0830] text-white rounded-2xl p-8 border border-indigo-900/60 shadow-xl grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-indigo-900/60 border border-indigo-700/50 flex items-center justify-center flex-shrink-0 text-indigo-300">
-                <span className="material-symbols-outlined">bolt</span>
+                <Zap className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="font-mono text-lg font-bold text-white">70% Overhead Cut</h4>
@@ -162,7 +124,7 @@ export default function HomeClient() {
 
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-indigo-900/60 border border-indigo-700/50 flex items-center justify-center flex-shrink-0 text-indigo-300">
-                <span className="material-symbols-outlined">trending_up</span>
+                <TrendingUp className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="font-mono text-lg font-bold text-white">3.4x Higher ROAS</h4>
@@ -172,7 +134,7 @@ export default function HomeClient() {
 
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-indigo-900/60 border border-indigo-700/50 flex items-center justify-center flex-shrink-0 text-indigo-300">
-                <span className="material-symbols-outlined">security</span>
+                <Shield className="w-6 h-6" />
               </div>
               <div>
                 <h4 className="font-mono text-lg font-bold text-white">100% Code Ownership</h4>
@@ -193,7 +155,7 @@ export default function HomeClient() {
             </div>
             <Link className="flex items-center gap-xs text-primary font-bold hover:underline group bg-primary/5 px-4 py-2 rounded-lg border border-primary/10 transition-all hover:bg-primary/10" href="/services">
               Discover all services
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
@@ -209,7 +171,7 @@ export default function HomeClient() {
                 <p className="text-secondary text-sm mb-4 line-clamp-3">24/7 AI Chatbots, Voice Assistants, and automated business workflow orchestration.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
                   <span>AI solutions and workflow automation</span>
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" aria-hidden="true" />
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
@@ -217,6 +179,7 @@ export default function HomeClient() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"
                   alt="AI Chatbots and Workflow Automation"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#F6F8FD] via-transparent to-transparent"></div>
@@ -234,7 +197,7 @@ export default function HomeClient() {
                 <p className="text-secondary text-sm mb-4 line-clamp-3">Interactive BI dashboards, predictive forecasting, and automated insights reporting.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
                   <span>Predictive AI and data analytics</span>
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" aria-hidden="true" />
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
@@ -242,6 +205,7 @@ export default function HomeClient() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5uZqHR25WX0MiqIh1ecZxGsGqooewURqLdOrPrlWgYMYCtCmOJGGhSPvFTKH92HrRvsPUkztTA1LXadCeOoeLIvH20MFCohsp-NgrouFNVTvZS7fgjJ9KGSKcB2uEp1jKUDxhxsoJFOhFYb1G2_Mjk8pnOFTco0vHg5Ce0odHePY9FzkO0stVJ6pWJ7IEx7vdEH1sPywVEN9Nwzc4m_vYJ2FqVQR7xzQNaeWjVr_ihaKMeqgvfbpAlQ"
                   alt="AI Data Analytics and Predictive Insights"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#F6F8FD] via-transparent to-transparent"></div>
@@ -259,7 +223,7 @@ export default function HomeClient() {
                 <p className="text-secondary text-sm mb-4 line-clamp-3">High-ranking Search Engine Optimization, Google Ads, Meta Ads, and Email marketing.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
                   <span>Technical SEO and paid marketing</span>
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" aria-hidden="true" />
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
@@ -267,6 +231,7 @@ export default function HomeClient() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXc_rjgB_rTCs0GIqAOSiaOf9kMlc5tLlOeIuaIy60dZM4BRkDBvt44KaL5v4b7_QJP4bdeq-FTovychXRF926keyWiFEDfXleN8XXQGrUD114BLsN7foXCgSEYDhp0-iZBHIPlaOIky0uhhOyenmdjtRflMBYgfx4O_6oDPC13IDhMj6KlqgVFj1NAIYnjyHkOL7URqo_ozsoFjk-dLgni-lcgUXrykptRjJYARQ1wAwAG43BFE-J-w"
                   alt="SEO and PPC Digital Marketing Systems"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#F6F8FD] via-transparent to-transparent"></div>
@@ -284,7 +249,7 @@ export default function HomeClient() {
                 <p className="text-secondary text-sm mb-4 line-clamp-3">Custom modern websites, landing pages, WordPress builds, and custom logo design.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
                   <span>Web design, WordPress and branding</span>
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" aria-hidden="true" />
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
@@ -292,6 +257,7 @@ export default function HomeClient() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"
                   alt="Web Design and Brand Engineering"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#F6F8FD] via-transparent to-transparent"></div>
@@ -684,7 +650,7 @@ export default function HomeClient() {
               <div className="space-y-md">
                 <div className="flex items-start gap-md group">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                    <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors">mail</span>
+                    <Mail className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <h6 className="font-label-md text-label-md font-bold">Email Us</h6>
@@ -693,7 +659,7 @@ export default function HomeClient() {
                 </div>
                 <div className="flex items-start gap-md group">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                    <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors">location_on</span>
+                    <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <h6 className="font-label-md text-label-md font-bold">Office Location</h6>
@@ -703,74 +669,7 @@ export default function HomeClient() {
               </div>
             </div>
 
-            <div className="bg-white border border-indigo-100 p-md rounded-2xl shadow-xl relative overflow-hidden">
-              <form onSubmit={handleSubmit} className="space-y-md relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
-                  <div>
-                    <label className="block text-secondary mb-xs font-semibold text-xs uppercase tracking-wider">Your Full Name</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.identity}
-                      onChange={(e) => setFormData({ ...formData, identity: e.target.value })}
-                      placeholder="John Doe"
-                      className="w-full bg-[#FAFAFD] border border-indigo-100 rounded-xl px-md py-xs text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-secondary mb-xs font-semibold text-xs uppercase tracking-wider">Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="john@company.com"
-                      className="w-full bg-[#FAFAFD] border border-indigo-100 rounded-xl px-md py-xs text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-secondary mb-xs font-semibold text-xs uppercase tracking-wider">Service of Interest</label>
-                  <select
-                    value={formData.module}
-                    onChange={(e) => setFormData({ ...formData, module: e.target.value })}
-                    className="w-full bg-[#FAFAFD] border border-indigo-100 rounded-xl px-md py-xs text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
-                  >
-                    <option>AI Chatbots & Automation</option>
-                    <option>AI Data & Predictive Analytics</option>
-                    <option>SEO & Paid Advertising (Google & Meta Ads)</option>
-                    <option>Web Design, WordPress & Branding</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-secondary mb-xs font-semibold text-xs uppercase tracking-wider">Project Details</label>
-                  <textarea
-                    rows={4}
-                    value={formData.payload}
-                    onChange={(e) => setFormData({ ...formData, payload: e.target.value })}
-                    placeholder="Tell us about your business goals and requirements..."
-                    className="w-full bg-[#FAFAFD] border border-indigo-100 rounded-xl px-md py-xs text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className={`w-full text-white py-md rounded-xl font-label-md text-label-md transition-all-200 shadow-md ${status === 'success' ? 'bg-emerald-600' : 'brand-button-gradient hover:opacity-95 hover:shadow-indigo-500/25'
-                    }`}
-                >
-                  {status === 'loading' ? 'TRANSMITTING...' : status === 'success' ? 'SUCCESS: DATA_RECEIVED' : 'Execute Inquiry Submission'}
-                </button>
-
-                {statusMsg && (
-                  <p className={`tech-label text-xs text-center ${status === 'success' ? 'text-emerald-600' : 'text-red-600'}`}>
-                    {statusMsg}
-                  </p>
-                )}
-              </form>
-            </div>
+            <HomeContactForm />
           </div>
         </div>
       </section>

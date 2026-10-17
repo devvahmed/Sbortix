@@ -57,7 +57,6 @@ export default function Header() {
               width={650}
               height={190}
               className="h-28 sm:h-32 w-auto max-w-[260px] sm:max-w-none object-contain scale-110 origin-left"
-              priority
             />
           </Link>
         </div>
@@ -146,14 +145,14 @@ export default function Header() {
         <div className="flex items-center gap-1.5 sm:gap-sm">
           <Link
             href="/contact"
-            className="bg-[#2D2D82] text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-md shadow-[#2D2D82]/25 hover:bg-[#1e1d6e] hover:scale-105 active:scale-95 transition-all inline-block"
+            className="bg-[#2D2D82] text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-md shadow-[#2D2D82]/25 hover:bg-[#1e1d6e] hover:scale-105 active:scale-95 transition-all inline-flex items-center justify-center min-h-[44px]"
           >
             Book a call
           </Link>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-1 sm:p-xs text-secondary hover:text-primary focus:outline-none"
+            className="md:hidden p-2 text-secondary hover:text-primary focus:outline-none min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg"
             aria-label="Toggle navigation"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -169,7 +168,7 @@ export default function Header() {
               <Link
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-xs font-label-md text-base ${isActive(link.href) ? 'text-primary font-bold' : 'text-secondary'
+                className={`py-2 px-1 font-label-md text-base min-h-[44px] flex items-center ${isActive(link.href) ? 'text-primary font-bold' : 'text-secondary'
                   }`}
               >
                 {link.name}
@@ -181,7 +180,7 @@ export default function Header() {
                       key={sub.name}
                       href={sub.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block py-xs text-sm text-secondary hover:text-primary"
+                      className="py-2 px-1 text-sm text-secondary hover:text-primary min-h-[44px] flex items-center"
                     >
                       • {sub.name}
                     </Link>

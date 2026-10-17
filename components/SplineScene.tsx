@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Rotate3d } from 'lucide-react';
 
 export default function SplineScene({ sceneUrl }: { sceneUrl: string }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,7 +37,7 @@ export default function SplineScene({ sceneUrl }: { sceneUrl: string }) {
       )}
       
       <div className="absolute bottom-4 right-6 bg-white/80 backdrop-blur-sm border hairline-border px-xs py-1 rounded flex items-center gap-xs z-20 pointer-events-none">
-        <span className="material-symbols-outlined text-primary text-sm">3d_rotation</span>
+        <Rotate3d className="w-3.5 h-3.5 text-primary" />
         <span className="tech-label text-primary text-[9px]">Interactive 3D Node</span>
       </div>
     </div>

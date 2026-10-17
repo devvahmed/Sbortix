@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -319,11 +317,12 @@ export default function HeroSection() {
           </div>
 
           <Image
-            src="/ai-robot-hero.png"
+            src="/ai-robot-hero.webp"
             alt="Sbortix AI Robot Interface"
             width={420}
             height={520}
             priority
+            unoptimized
             className="object-contain object-bottom w-full"
             style={{
               filter: 'drop-shadow(0 20px 40px rgba(45,45,130,0.18))',
@@ -368,17 +367,23 @@ export default function HeroSection() {
             {/* Avatars */}
             <div className="flex -space-x-2">
               {[
-                'https://api.dicebear.com/8.x/avataaars/svg?seed=alex',
-                'https://api.dicebear.com/8.x/avataaars/svg?seed=sam',
-                'https://api.dicebear.com/8.x/avataaars/svg?seed=jordan',
-              ].map((src, i) => (
+                { src: '/avatars/avatar-1.svg', alt: 'Enterprise Client Alex' },
+                { src: '/avatars/avatar-2.svg', alt: 'Enterprise Client Sam' },
+                { src: '/avatars/avatar-3.svg', alt: 'Enterprise Client Jordan' },
+              ].map((avatar, i) => (
                 <div
                   key={i}
-                  className="w-8 h-8 rounded-full border-2 border-white bg-indigo-100 overflow-hidden"
+                  className="w-8 h-8 rounded-full border-2 border-white bg-indigo-100 overflow-hidden relative"
                   style={{ boxShadow: '0 1px 4px rgba(0,0,0,0.12)' }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={src} alt="client" className="w-full h-full object-cover" />
+                  <Image
+                    src={avatar.src}
+                    alt={avatar.alt}
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-cover"
+                    unoptimized
+                  />
                 </div>
               ))}
             </div>
