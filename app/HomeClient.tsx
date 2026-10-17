@@ -654,7 +654,12 @@ export default function HomeClient() {
                   </div>
                   <div>
                     <h6 className="font-label-md text-label-md font-bold">Email Us</h6>
-                    <p className="text-secondary text-sm">contact@sbortix.com</p>
+                    <a
+                      href="mailto:contact@sbortix.com"
+                      className="text-secondary text-sm hover:text-primary transition-colors inline-block"
+                    >
+                      contact@sbortix.com
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-md group">

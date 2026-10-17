@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google';
@@ -6,8 +7,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 import JsonLd from '@/components/JsonLd';
+import AnalyticsPageView from '@/components/AnalyticsPageView';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
+import { GA_TRACKING_ID } from '@/lib/analytics';
 
 // Configure Google Fonts through Next.js optimized font loader
 const inter = Inter({
@@ -127,7 +130,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="jtIJi8jc4K9UhS-lTwQx04gXrtCb8G6x7zpEh4gMZFE" />
         {/* Google Analytics 4 (GA4) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FBDLTHZYJQ"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           strategy="lazyOnload"
         />
         <Script id="google-analytics" strategy="lazyOnload">
@@ -136,7 +139,9 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-FBDLTHZYJQ');
+            gtag('config', '${GA_TRACKING_ID}', {
+              send_page_view: false
+            });
           `}
         </Script>
         <link rel="icon" href="/sbortix-logo.png" />
@@ -148,6 +153,9 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </SmoothScroll>
+        <Suspense fallback={null}>
+          <AnalyticsPageView />
+        </Suspense>
         <SpeedInsights />
       </body>
     </html>

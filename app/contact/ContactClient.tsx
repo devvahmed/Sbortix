@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
@@ -33,6 +34,10 @@ export default function ContactClient() {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        trackEvent('form_submit', {
+          form_name: 'contact_page',
+          page_path: typeof window !== 'undefined' ? window.location.pathname : '/contact',
+        });
         setStatus('success');
         setStatusMsg(data.message);
         setFormData({
@@ -96,7 +101,12 @@ export default function ContactClient() {
                 </div>
                 <div>
                   <h6 className="font-bold text-sm text-[#151137]">Email Address</h6>
-                  <p className="text-gray-600 font-mono text-xs mt-0.5">contact@sbortix.com</p>
+                  <a
+                    href="mailto:contact@sbortix.com"
+                    className="text-gray-600 font-mono text-xs mt-0.5 hover:text-primary transition-colors inline-block"
+                  >
+                    contact@sbortix.com
+                  </a>
                 </div>
               </div>
 
@@ -135,6 +145,7 @@ export default function ContactClient() {
             <p className="text-indigo-200 text-xs leading-relaxed">
               Schedule a 30-minute introductory call directly on our engineering calendar.
             </p>
+            {/* TODO: Replace generic cal.com link with team's dedicated Cal.com booking link */}
             <a
               href="https://cal.com"
               target="_blank"
@@ -144,6 +155,47 @@ export default function ContactClient() {
               Open Calendar Slot
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
+          </div>
+
+          <div className="p-8 rounded-3xl bg-white border border-[#2D2D82]/15 space-y-4">
+            <span className="text-xs font-semibold text-[#2D2D82] uppercase tracking-widest block font-mono">
+              // Core Capabilities
+            </span>
+            <h4
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              className="text-lg font-bold text-[#151137]"
+            >
+              Explore Specialized Services
+            </h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link
+                  href="/services/ai-solutions"
+                  className="text-[#2D2D82] font-semibold hover:underline flex items-center justify-between group"
+                >
+                  <span>Enterprise AI &amp; Automation</span>
+                  <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/web-branding"
+                  className="text-[#2D2D82] font-semibold hover:underline flex items-center justify-between group"
+                >
+                  <span>Web Engineering &amp; Brand Design</span>
+                  <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/digital-marketing"
+                  className="text-[#2D2D82] font-semibold hover:underline flex items-center justify-between group"
+                >
+                  <span>Technical SEO &amp; Performance Ads</span>
+                  <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

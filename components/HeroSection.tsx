@@ -88,6 +88,7 @@ export default function HeroSection() {
             </p>
             <Link
               href="/contact"
+              data-cta="hero-get-started"
               className="inline-flex items-center gap-1.5 font-semibold text-white rounded-full transition-all duration-300 hover:opacity-90 active:scale-95"
               style={{
                 fontSize: 'clamp(11px, 1vw, 14px)',

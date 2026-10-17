@@ -145,6 +145,7 @@ export default function Header() {
         <div className="flex items-center gap-1.5 sm:gap-sm">
           <Link
             href="/contact"
+            data-cta="header-book-a-call"
             className="bg-[#2D2D82] text-white px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-md shadow-[#2D2D82]/25 hover:bg-[#1e1d6e] hover:scale-105 active:scale-95 transition-all inline-flex items-center justify-center min-h-[44px]"
           >
             Book a call

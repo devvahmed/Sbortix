@@ -53,8 +53,13 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <p className="text-secondary text-sm leading-relaxed mb-md max-w-sm">
+          <p className="text-secondary text-sm leading-relaxed mb-2 max-w-sm">
             Founded in 2024, Sbortix delivers enterprise-grade AI, data science, and digital marketing solutions. Delivering autonomous growth systems for modern businesses.
+          </p>
+          <p className="text-secondary text-xs mb-md font-mono">
+            <a href="mailto:contact@sbortix.com" className="hover:text-primary transition-colors">
+              contact@sbortix.com
+            </a>
           </p>
 
           {/* Newsletter Input */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 export default function HomeContactForm() {
   const [formData, setFormData] = useState({
@@ -28,6 +29,10 @@ export default function HomeContactForm() {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        trackEvent('form_submit', {
+          form_name: 'home_inquiry',
+          page_path: typeof window !== 'undefined' ? window.location.pathname : '/',
+        });
         setStatus('success');
         setStatusMsg(data.message);
         setFormData({ identity: '', email: '', module: 'AI Solutions [SRVC_01]', payload: '' });

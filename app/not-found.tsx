@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Home } from 'lucide-react';
+import NotFoundTracker from '@/components/NotFoundTracker';
 
 export const metadata: Metadata = {
   title: 'Page Not Found | Sbortix',
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
+      <NotFoundTracker />
       <head>
         <meta name="robots" content="noindex, nofollow" />
       </head>
