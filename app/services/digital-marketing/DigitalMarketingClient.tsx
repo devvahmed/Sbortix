@@ -4,19 +4,22 @@ import { useState } from 'react';
 import Link from 'next/link';
 import {
   Search,
-  Megaphone,
   Share2,
   Mail,
   ArrowRight,
-  CheckCircle2,
   TrendingUp,
   Target,
   BarChart3,
   Globe,
   Users,
-  Repeat,
-  Send,
+  CheckCircle2,
+  ShieldCheck,
+  Workflow,
+  Sparkles,
 } from 'lucide-react';
+import ServiceFaqSection from '@/components/ServiceFaqSection';
+import RelatedServicesBlock from '@/components/RelatedServicesBlock';
+import { SERVICES_FAQS } from '@/lib/services-faq';
 
 export default function DigitalMarketingClient() {
   const [activeTab, setActiveTab] = useState<'seo' | 'social' | 'paid' | 'email'>('seo');
@@ -62,16 +65,17 @@ export default function DigitalMarketingClient() {
               </span>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6">
-                Technical SEO &amp; High-ROAS Paid Acquisition
+                Technical SEO &amp; High-ROAS Digital Marketing
               </h1>
 
               <p className="text-gray-600 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
-                We combine deep technical search optimization, multi-channel paid acquisition algorithms (Google, Meta, LinkedIn, TikTok), and lifecycle email automation to capture high-intent enterprise buyers.
+                We combine deep technical search optimization, multi-channel paid acquisition algorithms across Google, LinkedIn, and Meta, and automated lifecycle email workflows to capture high-intent enterprise buyers and drive measurable pipeline revenue.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
+                  data-cta="service-digital-marketing-primary"
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm text-white transition-all duration-300 shadow-md group"
                   style={{
                     backgroundColor: '#2D2D82',
@@ -100,7 +104,7 @@ export default function DigitalMarketingClient() {
                       <TrendingUp className="w-4 h-4 text-emerald-400" />
                     </div>
                     <div>
-                      <h4 className="font-mono text-xs font-bold text-white">GROWTH_ENGINE v3.8</h4>
+                      <p className="font-mono text-xs font-bold text-white">GROWTH_ENGINE v3.8</p>
                       <p className="text-[10px] text-indigo-200/70 font-mono">ATTRIBUTION: OMNI_CHANNEL</p>
                     </div>
                   </div>
@@ -162,16 +166,16 @@ export default function DigitalMarketingClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Technical Search Engine Optimization
+              Technical Search Engine Optimization &amp; Site Architecture
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              Dominate high-intent organic search queries with a rigorous technical foundation. We optimize site architecture, Core Web Vitals, schema markup, and authoritative backlink profiles to earn sustainable #1 rankings.
+              Dominate high-intent organic search queries with a rigorous technical foundation. We optimize site architecture, Core Web Vitals, server-side rendering, schema markup, and authoritative backlink profiles to earn sustainable top rankings that generate compounding inbound organic pipeline.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
                 COMPLETE SEO BREAKDOWN:
-              </h4>
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { title: 'Keyword Research', desc: 'Commercial intent mapping & high-value keyword opportunity discovery.' },
@@ -194,14 +198,12 @@ export default function DigitalMarketingClient() {
           {/* Abstract SVG Illustration: Search Index Crawl Graph */}
           <div className="lg:col-span-6 flex justify-center">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract illustration of search engine index crawl hierarchy and keyword rankings" role="img">
                 <rect x="30" y="40" width="340" height="220" rx="16" fill="#151137" />
-                {/* Search Bar Graphic */}
                 <rect x="60" y="70" width="280" height="36" rx="8" fill="#2D2D82" stroke="rgba(255,255,255,0.2)" />
                 <text x="80" y="92" fill="#FFFFFF" fontSize="11" fontFamily="monospace">sbortix.com/enterprise-ai</text>
                 <circle cx="315" cy="88" r="8" fill="#10B981" />
                 
-                {/* Ranking Position Bars */}
                 <rect x="60" y="130" width="280" height="24" rx="4" fill="rgba(255,255,255,0.08)" />
                 <rect x="60" y="130" width="240" height="24" rx="4" fill="#10B981" opacity="0.8" />
                 <text x="70" y="146" fill="#FFFFFF" fontSize="9" fontWeight="bold" fontFamily="monospace">#1 RANKING: HIGH-INTENT KEYWORD</text>
@@ -228,23 +230,21 @@ export default function DigitalMarketingClient() {
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
             >
-              "Technical SEO is not about tricks; it is about building clean web infrastructure that search algorithms trust and high-value decision makers love to read."
+              &ldquo;Technical SEO is not about tricks; it is about building clean web infrastructure that search algorithms trust and high-value decision makers love to read.&rdquo;
             </blockquote>
           </div>
         </div>
 
         {/* ── GROUP 2: SOCIAL MEDIA MARKETING ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Abstract SVG Illustration: Social Engagement Orbit */}
           <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract illustration of multi-channel social media marketing orbit" role="img">
                 <circle cx="200" cy="150" r="100" fill="none" stroke="#2D2D82" strokeWidth="1.5" strokeDasharray="4 4" />
                 <circle cx="200" cy="150" r="60" fill="none" stroke="#151137" strokeWidth="2" />
                 <circle cx="200" cy="150" r="30" fill="#2D2D82" />
                 <text x="200" y="154" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold">BRAND</text>
 
-                {/* Orbit Nodes */}
                 <circle cx="200" cy="50" r="16" fill="#151137" />
                 <text x="200" y="54" textAnchor="middle" fill="#FFFFFF" fontSize="8" fontWeight="bold">STRATEGY</text>
 
@@ -261,17 +261,17 @@ export default function DigitalMarketingClient() {
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Social Media Marketing
-            </h3>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+              Social Media Marketing &amp; Brand Authority
+            </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              Build a commanding brand voice across professional social platforms. We handle end-to-end social operations — strategic positioning, high-converting visual design, automated scheduling, and active audience engagement.
+              Build a commanding brand voice across professional social platforms. We handle end-to-end social operations — strategic positioning, high-converting visual design, automated scheduling, and active audience engagement designed to foster authentic commercial conversations.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
                 ALL 7 SOCIAL MEDIA SERVICES:
-              </h4>
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-[#151137]">
                 {[
                   '1. Strategy & Positioning',
@@ -296,16 +296,16 @@ export default function DigitalMarketingClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Multi-Channel Paid Ads (Google, Meta, LinkedIn)
+              High-ROAS Paid Ads Across Google, Meta, &amp; LinkedIn
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              Scale revenue with high-ROAS paid campaigns across Google Search, Meta, LinkedIn B2B, YouTube, and TikTok. We continuously optimize ad copy, bidding strategies, and retargeting funnels for maximum return on ad spend.
+              Scale customer acquisition with high-ROAS paid campaigns across Google Search, Meta, LinkedIn B2B, YouTube, and TikTok. We continuously optimize ad copy, bidding strategies, and retargeting funnels to capture active intent without wasted ad budget.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
                 PAID AD CHANNELS & OPTIMIZATION:
-              </h4>
+              </p>
               <div className="space-y-3">
                 {[
                   { title: 'Google Ads & Search PPC', desc: 'Capture active buying intent with precision keyword bidding and responsive search ads.' },
@@ -317,7 +317,7 @@ export default function DigitalMarketingClient() {
                   <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
                     <Target className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-bold text-sm text-[#151137]">{st.title}</h5>
+                      <h3 className="font-bold text-sm text-[#151137]">{st.title}</h3>
                       <p className="text-xs text-gray-600">{st.desc}</p>
                     </div>
                   </div>
@@ -329,8 +329,7 @@ export default function DigitalMarketingClient() {
           {/* Abstract SVG Illustration: Multi-Channel Bidding Funnel */}
           <div className="lg:col-span-6 flex justify-center">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
-                {/* Funnel Layers */}
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract illustration of multi-channel advertising funnel and conversion attribution" role="img">
                 <polygon points="50,40 350,40 300,110 100,110" fill="#151137" />
                 <text x="200" y="80" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold" fontFamily="monospace">GOOGLE + META + LINKEDIN ADS</text>
 
@@ -354,17 +353,16 @@ export default function DigitalMarketingClient() {
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
             >
-              "We track every ad dollar directly to CRM pipeline revenue — zero vanity metrics, zero hidden fees, and complete attribution transparency."
+              &ldquo;We track every ad dollar directly to CRM pipeline revenue — zero vanity metrics, zero hidden fees, and complete attribution transparency.&rdquo;
             </blockquote>
           </div>
         </div>
 
         {/* ── GROUP 4: EMAIL MARKETING & AUTOMATION ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Abstract SVG Illustration: Automated Email Lifecycle Sequence */}
           <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract illustration of automated email nurture lifecycle workflow" role="img">
                 <rect x="40" y="50" width="100" height="60" rx="8" fill="#151137" />
                 <text x="90" y="85" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="bold">WELCOME FLOW</text>
 
@@ -382,16 +380,16 @@ export default function DigitalMarketingClient() {
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Lifecycle Email Automation
+              Lifecycle Email Marketing &amp; Automation
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              Turn subscriber lists into predictable repeat revenue. We design high-converting email newsletters, build automated customer onboarding sequences, and implement behavioral segmentation.
+              Turn subscriber lists into predictable repeat revenue. We design high-converting email newsletters, build automated customer onboarding sequences, and implement behavioral segmentation that nurtures enterprise prospects toward contract signature.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
                 EMAIL AUTOMATION SERVICES:
-              </h4>
+              </p>
               <div className="space-y-3">
                 {[
                   { title: 'Campaign Setup & Automation', desc: 'Automated welcome series, abandoned cart recovery, and re-engagement workflows.' },
@@ -402,7 +400,7 @@ export default function DigitalMarketingClient() {
                   <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
                     <Mail className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-bold text-sm text-[#151137]">{st.title}</h5>
+                      <h3 className="font-bold text-sm text-[#151137]">{st.title}</h3>
                       <p className="text-xs text-gray-600">{st.desc}</p>
                     </div>
                   </div>
@@ -422,7 +420,7 @@ export default function DigitalMarketingClient() {
                 <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-1">
                   // GROWTH STRATEGY MATRIX
                 </span>
-                <h3 className="text-2xl font-extrabold text-[#151137]">How We Scale Your Growth Funnel</h3>
+                <h2 className="text-2xl font-extrabold text-[#151137]">How We Scale Your Growth Funnel</h2>
               </div>
               <div className="flex flex-wrap gap-2 bg-[#ECEBF5] p-1.5 rounded-xl">
                 {[
@@ -488,20 +486,209 @@ export default function DigitalMarketingClient() {
         </div>
       </section>
 
+      {/* ── 5-STEP GROWTH ENGINEERING METHODOLOGY ── */}
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block mb-2">
+            // OUR SYSTEMATIC PROCESS
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#151137] tracking-tight">
+            Our 5-Step Growth Engineering Methodology
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
+            We follow a structured engineering framework that moves from baseline technical diagnostics to multi-channel execution and continuous revenue optimization.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {[
+            {
+              step: '01',
+              title: 'Technical & Attribution Audit',
+              description:
+                'We audit crawl errors, Core Web Vitals, conversion tracking tags, and analytics pipelines to build a solid measurement foundation.',
+            },
+            {
+              step: '02',
+              title: 'Intent Mapping & Architecture',
+              description:
+                'We map high-intent commercial keywords, define precision target audience tiers, and structure conversion landing page journeys.',
+            },
+            {
+              step: '03',
+              title: 'Channel & Creative Deployment',
+              description:
+                'We launch coordinated search and paid campaigns, server-side tracking, and automated lifecycle sequences with verified tracking tags.',
+            },
+            {
+              step: '04',
+              title: 'Attribution & Conversion Tuning',
+              description:
+                'We analyze CRM deal flow, prune non-performing keywords, iterate on ad creative variations, and lift baseline conversion rates.',
+            },
+            {
+              step: '05',
+              title: 'Predictable Scaling & Compounding',
+              description:
+                'We reallocate budget to top-ROAS channels, expand high-converting keyword silos, and build compounding organic authority.',
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-6 border border-[#2D2D82]/15 shadow-xs flex flex-col justify-between"
+            >
+              <div>
+                <span className="font-mono text-2xl font-extrabold text-[#2D2D82] block mb-3">
+                  {item.step}
+                </span>
+                <h3 className="text-base font-bold text-[#151137] mb-2 leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── WHO THIS SERVICE IS FOR ── */}
+      <section className="py-20 bg-[#ECEBF5]/50 border-y border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block mb-2">
+              // AUDIENCE FIT
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#151137] tracking-tight">
+              Who Our Performance Marketing Service Is Built For
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
+              Our marketing engineering engagements are designed specifically for organizations that prioritize revenue attribution over surface metrics.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'B2B Software & Enterprise SaaS',
+                desc: 'Companies with considered sales cycles and high contract values requiring multi-touch attribution, LinkedIn account-based targeting, and high-intent organic search authority.',
+              },
+              {
+                title: 'High-Growth Technology & Mid-Market Firms',
+                desc: 'Organizations scaling revenue past initial founder sales that require structured acquisition funnels, predictable customer acquisition costs (CAC), and robust CRM sync.',
+              },
+              {
+                title: 'Teams Replacing Fragmented Vendors',
+                desc: 'Enterprises seeking a single technical partner that understands web architecture, conversion mechanics, and performance analytics under unified engineering standards.',
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-8 border border-[#2D2D82]/15 shadow-xs flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#ECEBF5] text-[#2D2D82] flex items-center justify-center font-mono font-bold text-sm mb-4">
+                    {`0${i + 1}`}
+                  </div>
+                  <h3 className="text-xl font-bold text-[#151137] mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY SBORTIX ── */}
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block mb-2">
+            // COMPETITIVE ADVANTAGE
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#151137] tracking-tight">
+            Why Enterprise Teams Choose Sbortix
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
+            We operate at the intersection of technical software engineering and performance marketing, delivering measurable pipeline growth.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              title: 'Engineering-First Execution',
+              desc: 'We resolve deep technical crawl bottlenecks, optimize server-side rendering, and write custom tracking scripts rather than superficial marketing checklists.',
+              icon: Workflow,
+            },
+            {
+              title: 'Direct CRM Pipeline Sync',
+              desc: 'We connect Google Ads and Meta conversion APIs directly into your CRM, tracking qualified sales opportunities rather than hollow impressions.',
+              icon: Target,
+            },
+            {
+              title: 'Complete Client Asset Ownership',
+              desc: 'You maintain 100% ownership of your ad accounts, pixel configurations, analytics properties, and creative collateral with zero agency hostage clauses.',
+              icon: ShieldCheck,
+            },
+            {
+              title: 'Integrated System Thinking',
+              desc: 'Our digital marketing campaigns directly leverage our custom web engineering and AI automation stacks for superior landing page speeds and conversion rates.',
+              icon: Sparkles,
+            },
+          ].map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 border border-[#2D2D82]/15 shadow-xs flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#ECEBF5] text-[#2D2D82] flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#151137] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── FREQUENTLY ASKED QUESTIONS ── */}
+      <ServiceFaqSection
+        faqs={SERVICES_FAQS['digital-marketing']}
+        title="Frequently Asked Questions: Digital Marketing"
+        subtitle="// CLARITY & ATTRIBUTION"
+      />
+
+      {/* ── RELATED SERVICES ── */}
+      <RelatedServicesBlock currentSlug="digital-marketing" />
+
       {/* ── TECHNICAL MARKETING CTA BANNER ── */}
       <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
         <div className="bg-gradient-to-r from-[#151137] via-[#2D2D82] to-[#151137] text-white p-12 sm:p-16 rounded-3xl border border-[#2D2D82]/40 shadow-2xl relative overflow-hidden">
-          <h3
+          <h2
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             className="text-3xl sm:text-4xl font-extrabold mb-4"
           >
             Ready to Engineer High-ROAS Growth?
-          </h3>
+          </h2>
           <p className="text-indigo-200 max-w-2xl mx-auto mb-8 text-base leading-relaxed">
-            Contact our performance marketing team for a full SEO audit, ad account review, and customized growth forecast.
+            Contact our performance marketing team for a full SEO audit, ad account review, and customized growth forecast tailored to your pipeline goals.
           </p>
           <Link
             href="/contact"
+            data-cta="service-digital-marketing-primary"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm text-[#151137] bg-white hover:bg-gray-100 transition-all shadow-lg"
           >
             Request Free Growth Audit

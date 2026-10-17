@@ -9,14 +9,19 @@ import {
   Palette,
   Sparkles,
   ArrowRight,
-  CheckCircle2,
   Monitor,
   ShieldCheck,
   Figma,
   Smartphone,
   Layers,
   FileCode,
+  CheckCircle2,
+  Workflow,
+  Zap,
 } from 'lucide-react';
+import ServiceFaqSection from '@/components/ServiceFaqSection';
+import RelatedServicesBlock from '@/components/RelatedServicesBlock';
+import { SERVICES_FAQS } from '@/lib/services-faq';
 
 export default function WebBrandingClient() {
   const [activeTab, setActiveTab] = useState<'design' | 'cro' | 'wordpress' | 'brand'>('design');
@@ -51,14 +56,14 @@ export default function WebBrandingClient() {
             </Link>
             <span className="text-[#2D2D82]/30">/</span>
             <span className="font-mono text-[#2D2D82] font-bold uppercase tracking-wider">
-              WEB ENGINEERING & BRAND IDENTITY
+              WEB ENGINEERING &amp; BRAND IDENTITY
             </span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <span className="text-xs sm:text-sm font-bold text-[#2D2D82] uppercase tracking-widest block mb-3">
-                SYSTEM DESIGN & BRAND ARCHITECTURE
+                SYSTEM DESIGN &amp; BRAND ARCHITECTURE
               </span>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#151137] tracking-tight leading-tight mb-6">
@@ -66,12 +71,13 @@ export default function WebBrandingClient() {
               </h1>
 
               <p className="text-gray-600 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
-                We engineer lightning-fast Next.js/React web platforms, high-converting landing pages, custom WordPress builds, and distinctive vector logo identities designed to command market authority.
+                We engineer lightning-fast Next.js/React web platforms, high-converting landing pages, custom WordPress builds, and distinctive vector logo identities designed to command market authority and convert qualified enterprise buyers.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
+                  data-cta="service-web-branding-primary"
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm text-white transition-all duration-300 shadow-md group"
                   style={{
                     backgroundColor: '#2D2D82',
@@ -79,7 +85,7 @@ export default function WebBrandingClient() {
                     boxShadow: '0 4px 18px rgba(45, 45, 130, 0.32)',
                   }}
                 >
-                  Start Web & Brand Project
+                  Start Web &amp; Brand Project
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
@@ -100,7 +106,7 @@ export default function WebBrandingClient() {
                       <Monitor className="w-4 h-4 text-emerald-400" />
                     </div>
                     <div>
-                      <h4 className="font-mono text-xs font-bold text-white">WEB_SYSTEMS v4.0</h4>
+                      <p className="font-mono text-xs font-bold text-white">WEB_SYSTEMS v4.0</p>
                       <p className="text-[10px] text-indigo-200/70 font-mono">LIGHTHOUSE SCORE: 100/100</p>
                     </div>
                   </div>
@@ -162,16 +168,16 @@ export default function WebBrandingClient() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Modern Web Application Architecture
+              Modern Web Application Architecture &amp; System Design
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              We design modern, responsive web applications built with Next.js, React, and Tailwind CSS. Every layout uses deliberate whitespace, concentric double-bezel containers, and accessible typographic scale to create an expensive, agency-grade digital experience.
+              We design modern, responsive web applications built with Next.js, React, and Tailwind CSS. Every layout uses deliberate whitespace, concentric double-bezel containers, and accessible typographic scale to create an expensive, agency-grade digital experience that loads instantly on all devices.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
                 DESIGN ARCHITECTURE SERVICES:
-              </h4>
+              </p>
               <div className="space-y-3">
                 {[
                   { title: 'Website Design', desc: 'Custom high-converting web layouts designed specifically for your industry vertical.' },
@@ -181,7 +187,7 @@ export default function WebBrandingClient() {
                   <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
                     <Layout className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <h3 className="font-bold text-sm text-[#151137]">{item.title}</h3>
                       <p className="text-xs text-gray-600">{item.desc}</p>
                     </div>
                   </div>
@@ -193,15 +199,13 @@ export default function WebBrandingClient() {
           {/* Abstract SVG Illustration: Precision Layout Grid */}
           <div className="lg:col-span-6 flex justify-center">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract illustration of web interface wireframe layout grid" role="img">
                 <rect x="30" y="30" width="340" height="240" rx="16" fill="#151137" />
-                {/* Mock UI Frame */}
                 <rect x="50" y="50" width="300" height="20" rx="4" fill="#2D2D82" />
                 <circle cx="65" cy="60" r="4" fill="#EF4444" />
                 <circle cx="77" cy="60" r="4" fill="#F59E0B" />
                 <circle cx="89" cy="60" r="4" fill="#10B981" />
 
-                {/* Wireframe Hero Grid */}
                 <rect x="50" y="85" width="180" height="70" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" />
                 <rect x="245" y="85" width="105" height="150" rx="8" fill="#2D2D82" opacity="0.8" />
                 <rect x="50" y="165" width="180" height="70" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" />
@@ -220,19 +224,17 @@ export default function WebBrandingClient() {
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
             >
-              "A website is not a digital brochure — it is an automated trust machine engineered to convert raw visitor curiosity into closed commercial contracts."
+              &ldquo;A website is not a digital brochure — it is an automated trust machine engineered to convert raw visitor curiosity into closed commercial contracts.&rdquo;
             </blockquote>
           </div>
         </div>
 
         {/* ── GROUP 2: LANDING PAGE DESIGN & CRO ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Abstract SVG Illustration: Conversion Heatmap & Funnel */}
           <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract diagram of conversion rate optimization heatmap zones" role="img">
                 <rect x="40" y="40" width="320" height="220" rx="16" fill="#151137" />
-                {/* Heatmap zones */}
                 <circle cx="120" cy="110" r="40" fill="#EF4444" opacity="0.4" />
                 <circle cx="120" cy="110" r="20" fill="#F59E0B" opacity="0.6" />
                 <circle cx="120" cy="110" r="8" fill="#10B981" />
@@ -247,17 +249,17 @@ export default function WebBrandingClient() {
           </div>
 
           <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              Landing Page Design &amp; CRO
-            </h3>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+              Landing Page Design &amp; Conversion Rate Optimization (CRO)
+            </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              Maximize your return on ad spend with high-converting landing page architectures. We apply behavioral psychological triggers, clear CTA hierarchies, and systematic A/B testing to convert paid traffic into customers.
+              Maximize your return on ad spend with high-converting landing page architectures. We apply behavioral psychological triggers, clear CTA hierarchies, sub-second load speeds, and systematic A/B split testing to convert paid traffic into qualified sales inquiries.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
-                LANDING PAGE & CRO SERVICES:
-              </h4>
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                LANDING PAGE &amp; CRO SERVICES:
+              </p>
               <div className="space-y-3">
                 {[
                   { title: 'Landing Page Design & CRO', desc: 'Custom campaign-specific landing pages engineered for high ad relevance and top conversion rates.' },
@@ -267,7 +269,7 @@ export default function WebBrandingClient() {
                   <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
                     <Globe className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <h3 className="font-bold text-sm text-[#151137]">{item.title}</h3>
                       <p className="text-xs text-gray-600">{item.desc}</p>
                     </div>
                   </div>
@@ -280,17 +282,17 @@ export default function WebBrandingClient() {
         {/* ── GROUP 3: WORDPRESS DEVELOPMENT ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
-              WordPress Development &amp; Custom CMS
-            </h3>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+              WordPress Development &amp; Custom CMS Architecture
+            </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              Custom WordPress development without heavy bloated plugins. We craft bespoke PHP/Gutenberg themes, custom post types, and secure REST API integrations so your content marketing team can publish effortlessly.
+              Custom WordPress development without heavy bloated plugins or sluggish page builders. We craft bespoke PHP/Gutenberg themes, custom post types, and secure REST API integrations so your editorial and marketing team can publish effortlessly with 100/100 performance scores.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
-                WORDPRESS & CMS SERVICES:
-              </h4>
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+                WORDPRESS &amp; CMS SERVICES:
+              </p>
               <div className="space-y-3">
                 {[
                   { title: 'WordPress Development', desc: 'Bespoke lightweight WordPress themes engineered for 100/100 speed performance.' },
@@ -300,7 +302,7 @@ export default function WebBrandingClient() {
                   <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
                     <FileCode className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <h3 className="font-bold text-sm text-[#151137]">{item.title}</h3>
                       <p className="text-xs text-gray-600">{item.desc}</p>
                     </div>
                   </div>
@@ -312,7 +314,7 @@ export default function WebBrandingClient() {
           {/* Abstract SVG Illustration: Modular CMS Block Architecture */}
           <div className="lg:col-span-6 flex justify-center">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-[#ECEBF5] to-white border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract diagram showing headless WordPress and Next.js CMS architecture" role="img">
                 <rect x="50" y="50" width="300" height="50" rx="8" fill="#151137" />
                 <text x="200" y="80" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold" fontFamily="monospace">HEADLESS NEXT.JS FRONTEND</text>
 
@@ -336,19 +338,17 @@ export default function WebBrandingClient() {
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               className="text-2xl sm:text-3xl font-extrabold text-[#151137] leading-snug"
             >
-              "Your visual brand identity is the shorthand for your company's technical capability. Exceptional brand design allows you to command enterprise pricing from day one."
+              &ldquo;Your visual brand identity is the shorthand for your company&apos;s technical capability. Exceptional brand design allows you to command enterprise pricing from day one.&rdquo;
             </blockquote>
           </div>
         </div>
 
         {/* ── GROUP 4: LOGO DESIGN, BRAND IDENTITY & MESSAGING ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Abstract SVG Illustration: Vector Brand Grid & Identity */}
           <div className="lg:col-span-6 flex justify-center order-2 lg:order-1">
             <div className="w-full max-w-lg p-8 rounded-3xl bg-gradient-to-br from-white to-[#ECEBF5] border border-[#2D2D82]/20 shadow-xl relative overflow-hidden">
-              <svg viewBox="0 0 400 300" className="w-full h-auto">
+              <svg viewBox="0 0 400 300" className="w-full h-auto" aria-label="Abstract diagram of vector geometry brand identity mark" role="img">
                 <rect x="40" y="40" width="320" height="220" rx="16" fill="#151137" />
-                {/* Logo Mark Grid */}
                 <circle cx="200" cy="150" r="50" fill="none" stroke="#2D2D82" strokeWidth="3" />
                 <polygon points="200,100 240,180 160,180" fill="none" stroke="#10B981" strokeWidth="3" />
                 <text x="200" y="225" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="bold" fontFamily="monospace">VECTOR BRAND LOCKUP</text>
@@ -361,13 +361,13 @@ export default function WebBrandingClient() {
               Complete Brand Identity &amp; Design Systems
             </h2>
             <p className="text-gray-600 text-base leading-relaxed">
-              Craft a distinct corporate presence that builds immediate authority. We design memorable vector logos, full brand style guides, color token systems, and compelling brand positioning frameworks.
+              Craft a distinct corporate presence that builds immediate authority. We design memorable vector logos, full brand style guides, color token systems, and compelling brand positioning frameworks that align your product aesthetics with your enterprise value proposition.
             </p>
 
             <div className="pt-4 border-t border-[#2D2D82]/15 space-y-3">
-              <h4 className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
+              <p className="font-mono text-xs font-bold text-[#151137] uppercase tracking-wider">
                 BRANDING SERVICES BREAKDOWN:
-              </h4>
+              </p>
               <div className="space-y-3">
                 {[
                   { title: 'Logo Design', desc: 'Distinctive, scalable vector logo mark and wordmark lockups for digital and print.' },
@@ -377,7 +377,7 @@ export default function WebBrandingClient() {
                   <div key={i} className="p-3.5 rounded-xl bg-white border border-[#2D2D82]/15 shadow-xs flex items-start gap-3">
                     <Palette className="w-5 h-5 text-[#2D2D82] shrink-0 mt-0.5" />
                     <div>
-                      <h5 className="font-bold text-sm text-[#151137]">{item.title}</h5>
+                      <h3 className="font-bold text-sm text-[#151137]">{item.title}</h3>
                       <p className="text-xs text-gray-600">{item.desc}</p>
                     </div>
                   </div>
@@ -397,7 +397,7 @@ export default function WebBrandingClient() {
                 <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-wider block mb-1">
                   // ENGINEERING WORKFLOW
                 </span>
-                <h3 className="text-2xl font-extrabold text-[#151137]">How We Build Enterprise Websites & Brands</h3>
+                <h2 className="text-2xl font-extrabold text-[#151137]">How We Build Enterprise Websites &amp; Brands</h2>
               </div>
               <div className="flex flex-wrap gap-2 bg-[#ECEBF5] p-1.5 rounded-xl">
                 {[
@@ -424,17 +424,17 @@ export default function WebBrandingClient() {
             <div className="bg-[#151137] text-white p-6 rounded-2xl font-mono text-xs leading-relaxed border border-[#2D2D82]/40">
               {activeTab === 'design' && (
                 <div className="space-y-2">
-                  <p className="text-emerald-400 font-bold">// UI/UX & Web Systems Workflow</p>
-                  <p>1. Wireframing & interactive Figma prototype design.</p>
-                  <p>2. Next.js component development with Tailwind CSS & micro-animations.</p>
+                  <p className="text-emerald-400 font-bold">// UI/UX &amp; Web Systems Workflow</p>
+                  <p>1. Wireframing &amp; interactive Figma prototype design.</p>
+                  <p>2. Next.js component development with Tailwind CSS &amp; micro-animations.</p>
                   <p>3. Cross-browser testing and Lighthouse 100/100 speed optimization.</p>
-                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Unmatched digital brand presentation & lightning-fast speed.</p>
+                  <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Unmatched digital brand presentation &amp; lightning-fast speed.</p>
                 </div>
               )}
               {activeTab === 'cro' && (
                 <div className="space-y-2">
                   <p className="text-emerald-400 font-bold">// Conversion Rate Optimization Workflow</p>
-                  <p>1. Heatmap & user scroll session audit.</p>
+                  <p>1. Heatmap &amp; user scroll session audit.</p>
                   <p>2. High-converting copy alignment and CTA redesign.</p>
                   <p>3. Split-testing deployment to measure conversion lift.</p>
                   <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: 2.8x average conversion rate increase on paid landing pages.</p>
@@ -442,10 +442,10 @@ export default function WebBrandingClient() {
               )}
               {activeTab === 'wordpress' && (
                 <div className="space-y-2">
-                  <p className="text-emerald-400 font-bold">// WordPress & Custom CMS Development</p>
+                  <p className="text-emerald-400 font-bold">// WordPress &amp; Custom CMS Development</p>
                   <p>1. Custom lightweight PHP theme development without heavy page builder plugins.</p>
-                  <p>2. Custom Gutenberg blocks & ACF Pro fields for easy client editing.</p>
-                  <p>3. Hardened security setup & SSL CDN caching deployment.</p>
+                  <p>2. Custom Gutenberg blocks &amp; ACF Pro fields for easy client editing.</p>
+                  <p>3. Hardened security setup &amp; SSL CDN caching deployment.</p>
                   <p className="text-indigo-300 font-semibold pt-2">&gt; RESULT: Clean content management system built to scale indefinitely.</p>
                 </div>
               )}
@@ -463,23 +463,212 @@ export default function WebBrandingClient() {
         </div>
       </section>
 
+      {/* ── 5-STEP WEB & BRAND ENGINEERING METHODOLOGY ── */}
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block mb-2">
+            // OUR ENGINEERING WORKFLOW
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#151137] tracking-tight">
+            Our 5-Step Web &amp; Brand Engineering Methodology
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
+            We follow a rigorous, milestone-driven development process from strategic discovery through high-fidelity design, clean frontend coding, and launch.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {[
+            {
+              step: '01',
+              title: 'Discovery & Brand Positioning',
+              description:
+                'We analyze your market landscape, competitive differentiators, technical requirements, and core customer conversion paths.',
+            },
+            {
+              step: '02',
+              title: 'Information Architecture & UX',
+              description:
+                'We structure clear page hierarchies, low-fidelity wireframes, and conversion flows designed to eliminate friction.',
+            },
+            {
+              step: '03',
+              title: 'Design System & UI Prototyping',
+              description:
+                'We craft high-fidelity Figma components, vector logo lockups, typography scales, and tokenized design systems.',
+            },
+            {
+              step: '04',
+              title: 'Frontend & CMS Engineering',
+              description:
+                'We write clean, semantic Next.js or WordPress code with responsive Tailwind layouts and smooth micro-animations.',
+            },
+            {
+              step: '05',
+              title: 'Performance QA & Production Launch',
+              description:
+                'We run multi-device cross-browser testing, Core Web Vitals optimization, SEO verification, and CDN caching setup.',
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-6 border border-[#2D2D82]/15 shadow-xs flex flex-col justify-between"
+            >
+              <div>
+                <span className="font-mono text-2xl font-extrabold text-[#2D2D82] block mb-3">
+                  {item.step}
+                </span>
+                <h3 className="text-base font-bold text-[#151137] mb-2 leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── WHO THIS SERVICE IS FOR ── */}
+      <section className="py-20 bg-[#ECEBF5]/50 border-y border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block mb-2">
+              // AUDIENCE FIT
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#151137] tracking-tight">
+              Who Our Web &amp; Brand Engineering Service Is Built For
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
+              Our web design and brand engineering services are tailored for organizations where digital presentation directly affects market credibility.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Enterprise Technology & B2B SaaS',
+                desc: 'Companies whose software requires a clean, modern web presence with fast-loading documentation, product tours, and high-converting trial funnels.',
+              },
+              {
+                title: 'High-Growth Brands Undergoing Rebranding',
+                desc: 'Businesses scaling into higher market segments that need a cohesive vector brand system, corporate guidelines, and an upgraded digital flagship.',
+              },
+              {
+                title: 'Organizations Escaping Slow Legacy Sites',
+                desc: 'Companies burdened by bloated templates, slow WordPress plugins, or outdated code looking for sub-second Next.js speed and effortless CMS editing.',
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-8 border border-[#2D2D82]/15 shadow-xs flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#ECEBF5] text-[#2D2D82] flex items-center justify-center font-mono font-bold text-sm mb-4">
+                    {`0${i + 1}`}
+                  </div>
+                  <h3 className="text-xl font-bold text-[#151137] mb-3">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY SBORTIX ── */}
+      <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="font-mono text-xs font-bold text-[#2D2D82] uppercase tracking-widest block mb-2">
+            // ENGINEERING ADVANTAGE
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#151137] tracking-tight">
+            Why Enterprise Teams Choose Sbortix for Web &amp; Branding
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
+            We merge agency-grade visual design standards with clean, scalable frontend engineering.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              title: 'Sub-Second Speed Standards',
+              desc: 'We optimize every script, image asset, and font file to deliver near-perfect Google Lighthouse scores and instant mobile load times.',
+              icon: Zap,
+            },
+            {
+              title: 'Clean Handcrafted Code',
+              desc: 'Zero generic templates or heavy page builder plugins; every component is engineered with modern TypeScript, React, and Tailwind CSS.',
+              icon: Code,
+            },
+            {
+              title: 'Complete IP & Code Ownership',
+              desc: 'You receive 100% of the repository code, Figma design system source files, and vector logo assets upon project handover.',
+              icon: ShieldCheck,
+            },
+            {
+              title: 'Full Brand Cohesion',
+              desc: 'From typography scales to custom vector icon sets, we ensure every digital touchpoint conveys institutional trust and technical authority.',
+              icon: Sparkles,
+            },
+          ].map((item, idx) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 border border-[#2D2D82]/15 shadow-xs flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-[#ECEBF5] text-[#2D2D82] flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#151137] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── FREQUENTLY ASKED QUESTIONS ── */}
+      <ServiceFaqSection
+        faqs={SERVICES_FAQS['web-branding']}
+        title="Frequently Asked Questions: Web & Brand Design"
+        subtitle="// CLARITY & SPECIFICATIONS"
+      />
+
+      {/* ── RELATED SERVICES ── */}
+      <RelatedServicesBlock currentSlug="web-branding" />
+
       {/* ── WEB & BRANDING CTA BANNER ── */}
       <section className="py-20 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
         <div className="bg-gradient-to-r from-[#151137] via-[#2D2D82] to-[#151137] text-white p-12 sm:p-16 rounded-3xl border border-[#2D2D82]/40 shadow-2xl relative overflow-hidden">
-          <h3
+          <h2
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             className="text-3xl sm:text-4xl font-extrabold mb-4"
           >
             Ready to Build Your Next Web Platform or Brand?
-          </h3>
+          </h2>
           <p className="text-indigo-200 max-w-2xl mx-auto mb-8 text-base leading-relaxed">
-            Contact our design and web engineering team to discuss your project requirements and receive a detailed proposal.
+            Contact our design and web engineering team to discuss your project requirements and receive a detailed, transparent proposal.
           </p>
           <Link
             href="/contact"
+            data-cta="service-web-branding-primary"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-sm text-[#151137] bg-white hover:bg-gray-100 transition-all shadow-lg"
           >
-            Start Your Web & Brand Project
+            Start Your Web &amp; Brand Project
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
