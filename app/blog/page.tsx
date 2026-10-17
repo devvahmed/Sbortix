@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { buildMetadata } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({ path: '/blog' });
 
@@ -44,8 +45,41 @@ export default function BlogPage() {
     },
   ];
 
+  const blogJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${absoluteUrl('/blog')}#blog`,
+    'url': absoluteUrl('/blog'),
+    'name': 'Sbortix Technical Insights & Whitepapers',
+    'description':
+      'Insights, architectural whitepapers, and technical guides on enterprise AI deployment, marketing attribution, and data engineering.',
+    'publisher': {
+      '@id': `${absoluteUrl('/')}#organization`,
+    },
+    'blogPost': posts.map((post) => ({
+      '@type': 'BlogPosting',
+      'headline': post.title,
+      'description': post.excerpt,
+      'datePublished': post.date,
+      'author': {
+        '@type': 'Organization',
+        'name': post.author,
+      },
+      'publisher': {
+        '@id': `${absoluteUrl('/')}#organization`,
+      },
+    })),
+  };
+
+  const breadcrumbJsonLd = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog' },
+  ]);
+
   return (
-    <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
+    <>
+      <JsonLd data={[blogJsonLd, breadcrumbJsonLd]} />
+      <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
       {/* Header */}
       <section
         className="relative pt-40 pb-16 lg:pt-52 lg:pb-20 border-b border-[#2D2D82]/15"
@@ -65,6 +99,28 @@ export default function BlogPage() {
           <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
             Deep dives into artificial intelligence, data pipelines, search engine algorithms, and modern full-stack web architecture.
           </p>
+
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-3 text-xs font-mono">
+            <span className="text-gray-500 py-1.5">EXPLORE BY PRACTICE:</span>
+            <Link
+              href="/services/ai-solutions"
+              className="px-3 py-1.5 rounded-full bg-white border border-[#2D2D82]/20 text-[#2D2D82] font-bold hover:bg-[#2D2D82] hover:text-white transition-colors"
+            >
+              AI Solutions &amp; Automation
+            </Link>
+            <Link
+              href="/services/digital-marketing"
+              className="px-3 py-1.5 rounded-full bg-white border border-[#2D2D82]/20 text-[#2D2D82] font-bold hover:bg-[#2D2D82] hover:text-white transition-colors"
+            >
+              SEO &amp; Performance Marketing
+            </Link>
+            <Link
+              href="/services/web-branding"
+              className="px-3 py-1.5 rounded-full bg-white border border-[#2D2D82]/20 text-[#2D2D82] font-bold hover:bg-[#2D2D82] hover:text-white transition-colors"
+            >
+              Web Design &amp; Brand Systems
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -87,8 +143,8 @@ export default function BlogPage() {
           </p>
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#2D2D82]/15 pt-4 font-mono text-xs text-gray-600">
             <div>BY {posts[0].author.toUpperCase()} • {posts[0].date}</div>
-            <Link href="/blog" className="text-[#2D2D82] font-bold hover:underline flex items-center gap-1">
-              Read Full Paper &rarr;
+            <Link href="/services/ai-solutions" className="text-[#2D2D82] font-bold hover:underline flex items-center gap-1">
+              Related Service: Enterprise AI Solutions &rarr;
             </Link>
           </div>
         </div>
@@ -96,28 +152,43 @@ export default function BlogPage() {
 
       {/* Articles Grid (Editorial Flow, Divided by Delicate Lines) */}
       <section className="py-16 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-10 divide-y md:divide-y-0 md:divide-x divide-[#2D2D82]/15 pb-24">
-        {posts.slice(1).map((post, idx) => (
-          <article key={post.id} className={`pt-6 md:pt-0 ${idx === 0 ? '' : 'md:pl-8'} flex flex-col justify-between`}>
-            <div>
-              <div className="flex items-center justify-between mb-3 font-mono text-xs font-bold">
-                <span className="text-[#2D2D82]">{post.category}</span>
-                <span className="text-gray-400">{post.readTime}</span>
+        {posts.slice(1).map((post, idx) => {
+          const serviceLink =
+            post.category === 'AI ARCHITECTURE'
+              ? { href: '/services/ai-solutions', label: 'Explore AI Solutions Service &rarr;' }
+              : post.category === 'DIGITAL GROWTH'
+              ? { href: '/services/digital-marketing', label: 'Explore Digital Marketing Service &rarr;' }
+              : { href: '/services/web-branding', label: 'Explore Web Engineering Service &rarr;' };
+
+          return (
+            <article key={post.id} className={`pt-6 md:pt-0 ${idx === 0 ? '' : 'md:pl-8'} flex flex-col justify-between`}>
+              <div>
+                <div className="flex items-center justify-between mb-3 font-mono text-xs font-bold">
+                  <span className="text-[#2D2D82]">{post.category}</span>
+                  <span className="text-gray-400">{post.readTime}</span>
+                </div>
+                <h3
+                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  className="text-xl font-bold mb-3 text-[#151137] hover:text-[#2D2D82] transition-colors"
+                >
+                  {post.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{post.excerpt}</p>
+                <div className="mb-6">
+                  <Link href={serviceLink.href} className="text-xs font-bold text-[#2D2D82] hover:underline inline-flex items-center gap-1">
+                    {serviceLink.label}
+                  </Link>
+                </div>
               </div>
-              <h3
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                className="text-xl font-bold mb-3 text-[#151137] hover:text-[#2D2D82] transition-colors cursor-pointer"
-              >
-                {post.title}
-              </h3>
-              <p className="text-gray-600 text-sm mb-6 leading-relaxed">{post.excerpt}</p>
-            </div>
-            <div className="border-t border-[#2D2D82]/15 pt-3 font-mono text-xs text-gray-500 flex items-center justify-between">
-              <span>{post.author}</span>
-              <span>{post.date}</span>
-            </div>
-          </article>
-        ))}
+              <div className="border-t border-[#2D2D82]/15 pt-3 font-mono text-xs text-gray-500 flex items-center justify-between">
+                <span>{post.author}</span>
+                <span>{post.date}</span>
+              </div>
+            </article>
+          );
+        })}
       </section>
-    </div>
+      </div>
+    </>
   );
 }

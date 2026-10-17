@@ -90,3 +90,27 @@ export const SERVICES_FAQS: Record<ServiceSlug, ServiceFaq[]> = {
     },
   ],
 };
+
+/**
+ * Builds Schema.org FAQPage JSON-LD object using the exact FAQ text rendered on the page.
+ */
+export function buildFaqSchema(slug: ServiceSlug, path: string) {
+  const faqs = SERVICES_FAQS[slug];
+  const baseUrl = 'https://www.sbortix.com';
+  const canonicalUrl = path === '/' ? `${baseUrl}/` : `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`.replace(/\/+$/, '');
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${canonicalUrl}#faq`,
+    'mainEntity': faqs.map((faq) => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer,
+      },
+    })),
+  };
+}
+

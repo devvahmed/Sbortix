@@ -176,3 +176,28 @@ export function buildMetadata(options: BuildMetadataOptions): Metadata {
 
   return metadata;
 }
+
+export interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
+/**
+ * Builds Schema.org BreadcrumbList JSON-LD object with stable @id.
+ */
+export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
+  const currentItem = items[items.length - 1];
+  const canonicalUrl = absoluteUrl(currentItem?.path || '/');
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': `${canonicalUrl}#breadcrumb`,
+    'itemListElement': items.map((item, index) => ({
+      '@type': 'ListItem',
+      'position': index + 1,
+      'name': item.name,
+      'item': absoluteUrl(item.path),
+    })),
+  };
+}

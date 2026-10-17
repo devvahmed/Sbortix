@@ -98,10 +98,13 @@ export default function HomeClient() {
                   We deploy custom AI sales assistants, customer support bots, and internal RAG databases that automate manual tasks and operate 24/7 with zero downtime.
                 </p>
               </div>
-              <div className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold">
+              <Link
+                href="/services/ai-solutions"
+                className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold hover:underline group/p"
+              >
                 <span>AI PIPELINE AUTOMATION</span>
-                <span className="material-symbols-outlined text-sm">check_circle</span>
-              </div>
+                <span className="material-symbols-outlined text-sm group-hover/p:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
             </div>
 
             {/* Pillar 2 */}
@@ -115,10 +118,13 @@ export default function HomeClient() {
                   We run technical SEO, high-ROAS paid campaigns, and automated email outreach scaled by machine learning algorithms that target your ideal enterprise buyers.
                 </p>
               </div>
-              <div className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold">
+              <Link
+                href="/services/digital-marketing"
+                className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold hover:underline group/p"
+              >
                 <span>PREDICTIVE LEAD SCORING</span>
-                <span className="material-symbols-outlined text-sm">check_circle</span>
-              </div>
+                <span className="material-symbols-outlined text-sm group-hover/p:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
             </div>
 
             {/* Pillar 3 */}
@@ -132,10 +138,13 @@ export default function HomeClient() {
                   We build lightning-fast React/Next.js web applications, client dashboards, and authoritative brand identities designed to turn visitors into loyal clients.
                 </p>
               </div>
-              <div className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold">
+              <Link
+                href="/services/web-branding"
+                className="relative z-10 pt-4 border-t border-[#2D2D82]/15 flex items-center justify-between text-xs font-mono text-primary font-semibold hover:underline group/p"
+              >
                 <span>NEXT.JS & REACT SYSTEMS</span>
-                <span className="material-symbols-outlined text-sm">check_circle</span>
-              </div>
+                <span className="material-symbols-outlined text-sm group-hover/p:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
             </div>
           </div>
 
@@ -190,19 +199,23 @@ export default function HomeClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1: AI Chatbots & Automation */}
-            <Link href="/services/ai-solutions" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
+            <Link
+              href="/services/ai-solutions"
+              aria-label="AI solutions and workflow automation"
+              className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white"
+            >
               <div className="p-6 pb-4">
-                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">AI Chatbots & <br />Automation</h3>
+                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">AI Chatbots &amp; <br />Automation</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">24/7 AI Chatbots, Voice Assistants, and automated business workflow orchestration.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
-                  Learn More
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <span>AI solutions and workflow automation</span>
+                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"
-                  alt="AI Chatbots Visual"
+                  alt="AI Chatbots and Workflow Automation"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -211,19 +224,23 @@ export default function HomeClient() {
             </Link>
 
             {/* Card 2: AI Data & Analytics */}
-            <Link href="/services/ai-solutions#analytics" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
+            <Link
+              href="/services/ai-solutions"
+              aria-label="Predictive AI data and analytics solutions"
+              className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white"
+            >
               <div className="p-6 pb-4">
-                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">AI Data & <br />Analytics</h3>
+                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">AI Data &amp; <br />Analytics</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">Interactive BI dashboards, predictive forecasting, and automated insights reporting.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
-                  Learn More
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <span>Predictive AI and data analytics</span>
+                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5uZqHR25WX0MiqIh1ecZxGsGqooewURqLdOrPrlWgYMYCtCmOJGGhSPvFTKH92HrRvsPUkztTA1LXadCeOoeLIvH20MFCohsp-NgrouFNVTvZS7fgjJ9KGSKcB2uEp1jKUDxhxsoJFOhFYb1G2_Mjk8pnOFTco0vHg5Ce0odHePY9FzkO0stVJ6pWJ7IEx7vdEH1sPywVEN9Nwzc4m_vYJ2FqVQR7xzQNaeWjVr_ihaKMeqgvfbpAlQ"
-                  alt="AI Data Analytics Visual"
+                  alt="AI Data Analytics and Predictive Insights"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -232,19 +249,23 @@ export default function HomeClient() {
             </Link>
 
             {/* Card 3: SEO & Paid Advertising */}
-            <Link href="/services/digital-marketing" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
+            <Link
+              href="/services/digital-marketing"
+              aria-label="Technical SEO and paid digital marketing"
+              className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white"
+            >
               <div className="p-6 pb-4">
-                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">SEO & Paid <br />Advertising</h3>
+                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">SEO &amp; Paid <br />Advertising</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">High-ranking Search Engine Optimization, Google Ads, Meta Ads, and Email marketing.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
-                  Learn More
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <span>Technical SEO and paid marketing</span>
+                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXc_rjgB_rTCs0GIqAOSiaOf9kMlc5tLlOeIuaIy60dZM4BRkDBvt44KaL5v4b7_QJP4bdeq-FTovychXRF926keyWiFEDfXleN8XXQGrUD114BLsN7foXCgSEYDhp0-iZBHIPlaOIky0uhhOyenmdjtRflMBYgfx4O_6oDPC13IDhMj6KlqgVFj1NAIYnjyHkOL7URqo_ozsoFjk-dLgni-lcgUXrykptRjJYARQ1wAwAG43BFE-J-w"
-                  alt="SEO and PPC Marketing Visual"
+                  alt="SEO and PPC Digital Marketing Systems"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -253,19 +274,23 @@ export default function HomeClient() {
             </Link>
 
             {/* Card 4: Web Design & Branding */}
-            <Link href="/services/web-branding" className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white">
+            <Link
+              href="/services/web-branding"
+              aria-label="Web design, WordPress and brand engineering"
+              className="group brand-card-gradient border border-indigo-100 rounded-2xl overflow-hidden flex flex-col card-glow-hover bg-white"
+            >
               <div className="p-6 pb-4">
-                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">Web Design & <br />Branding</h3>
+                <h3 className="text-xl font-bold text-on-background mb-3 leading-tight">Web Design &amp; <br />Branding</h3>
                 <p className="text-secondary text-sm mb-4 line-clamp-3">Custom modern websites, landing pages, WordPress builds, and custom logo design.</p>
                 <div className="flex items-center gap-xs text-primary font-bold text-sm">
-                  Learn More
-                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <span>Web design, WordPress and branding</span>
+                  <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
                 </div>
               </div>
               <div className="flex-grow mt-auto relative h-40 overflow-hidden">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbukTQU6eETda6Jd2ysUG5tJFYq9nQm3yCNMJkBCWmCQHxTFE6xkOYdQcgHvwPlA0z8SOCEI868S1x-O1tqp_a9cO1udoaryJCTc1qYRmbaXl5Am6HqO5D1dGJocb5pDb5h2qgP17N4RTmd9C9HpetFWPqxcSPpzMPu7opDWbNdWNRV7A7x770OxIcGanMNvL6n2SfupwP3SHyP1t1E0pIsr-1sj7eyilcerd_j1QTjCRxRg68qkFihw"
-                  alt="Web Design and Branding Visual"
+                  alt="Web Design and Brand Engineering"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -452,7 +477,7 @@ export default function HomeClient() {
                       { label: 'Forecast Accuracy', value: '98.4%' },
                       { label: 'Executive Insights', value: 'Automated' },
                     ],
-                    link: '/services/ai-solutions#analytics',
+                    link: '/services/ai-solutions',
                   },
                   {
                     id: 2,
@@ -539,10 +564,11 @@ export default function HomeClient() {
                       <div className="pt-2">
                         <Link
                           href={content.link}
+                          aria-label={`Explore ${content.badge} services`}
                           className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-md hover:shadow-indigo-500/25 transition-all group"
                         >
-                          <span>Explore This Capability</span>
-                          <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">→</span>
+                          <span>Explore {content.badge}</span>
+                          <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                         </Link>
                       </div>
                     </div>

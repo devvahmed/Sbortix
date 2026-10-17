@@ -2,16 +2,83 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Sparkles, CheckCircle2, Lock } from 'lucide-react';
-import { buildMetadata } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({ path: '/services' });
 
 export default function ServicesPage() {
+  const breadcrumbJsonLd = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+  ]);
+
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${absoluteUrl('/services')}#collectionPage`,
+    'url': absoluteUrl('/services'),
+    'name': 'Engineered Intelligence & Growth Services | Sbortix',
+    'description':
+      'Explore our core services: AI Solutions, Digital Marketing, Web & Branding, and Data Science. Systems engineered for modern growth teams.',
+    'isPartOf': {
+      '@id': `${absoluteUrl('/')}#website`,
+    },
+    'mainEntity': {
+      '@type': 'ItemList',
+      '@id': `${absoluteUrl('/services')}#itemList`,
+      'name': 'Sbortix Core Services',
+      'numberOfItems': 3,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Enterprise AI Solutions & Workflow Automation',
+          'url': absoluteUrl('/services/ai-solutions'),
+          'description':
+            'Engineer production-ready AI systems, 24/7 conversational support bots, and automated business workflows to scale your enterprise operations.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Technical SEO & High-ROAS Paid Ads Agency',
+          'url': absoluteUrl('/services/digital-marketing'),
+          'description':
+            'Combine deep technical search optimization, high-ROAS multi-channel paid ads (Google, Meta, LinkedIn), and automated lifecycle email marketing.',
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': 'Web Design & Brand Engineering Services',
+          'url': absoluteUrl('/services/web-branding'),
+          'description':
+            'Build modern, high-converting, responsive web applications and full brand design systems tailored for modern enterprise growth with Sbortix.',
+        },
+      ],
+    },
+  };
+
   return (
-    <div className="w-full bg-[#FAFAFD] overflow-hidden">
+    <>
+      <JsonLd data={[breadcrumbJsonLd, collectionJsonLd]} />
+      <div className="w-full bg-[#FAFAFD] overflow-hidden">
       
       {/* ── HERO HEADER SECTION ── */}
       <section className="relative pt-36 pb-16 sm:pt-44 lg:pt-48 lg:pb-20 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto text-center border-b border-indigo-100/60 bg-gradient-to-b from-indigo-50/40 via-white to-[#FAFAFD]">
+        <nav aria-label="Breadcrumb" className="mb-4 flex justify-center">
+          <ol className="flex items-center gap-2 text-xs font-mono font-semibold">
+            <li>
+              <Link href="/" className="text-[#6B7280] hover:text-primary transition-colors uppercase tracking-wider">
+                Home
+              </Link>
+            </li>
+            <li className="text-primary/40" aria-hidden="true">&gt;</li>
+            <li aria-current="page" className="text-primary font-bold uppercase tracking-wider">
+              Services
+            </li>
+          </ol>
+        </nav>
+
         <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
           Enterprise Services
         </span>
@@ -77,9 +144,10 @@ export default function ServicesPage() {
                 <div className="pt-2">
                   <Link
                     href="/services/ai-solutions"
+                    aria-label="Explore AI Chatbots and Conversational AI service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore AI Chatbots &amp; Conversational AI</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -100,10 +168,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/ai-solutions#analytics"
+                    href="/services/ai-solutions"
+                    aria-label="Explore AI Data and Predictive Analytics service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore AI Data &amp; Analytics</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -160,10 +229,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/ai-solutions#automation"
+                    href="/services/ai-solutions"
+                    aria-label="Explore AI Automation and Workflow orchestration service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore AI Automation &amp; Workflows</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -184,10 +254,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/ai-solutions#custom"
+                    href="/services/ai-solutions"
+                    aria-label="Explore Custom AI Development and fine-tuned models service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Custom AI Development</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -269,9 +340,10 @@ export default function ServicesPage() {
                 <div className="pt-2">
                   <Link
                     href="/services/digital-marketing"
+                    aria-label="Explore Search Engine Optimization service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Search Engine Optimization</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -292,10 +364,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/digital-marketing#social"
+                    href="/services/digital-marketing"
+                    aria-label="Explore Social Media Marketing service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Social Media Marketing</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -352,10 +425,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/digital-marketing#ppc"
+                    href="/services/digital-marketing"
+                    aria-label="Explore Paid Advertising and PPC service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Paid Advertising &amp; PPC</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -376,10 +450,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/digital-marketing#email"
+                    href="/services/digital-marketing"
+                    aria-label="Explore Email Marketing and Lifecycle Automation service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Email Marketing &amp; Automation</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -448,9 +523,10 @@ export default function ServicesPage() {
                 <div className="pt-2">
                   <Link
                     href="/services/web-branding"
+                    aria-label="Explore Website Design and Development service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Website Design &amp; Development</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -471,10 +547,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/web-branding#cro"
+                    href="/services/web-branding"
+                    aria-label="Explore Landing Page Design and CRO service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Landing Page Design &amp; CRO</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -531,10 +608,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/web-branding#wordpress"
+                    href="/services/web-branding"
+                    aria-label="Explore WordPress CMS Development service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore WordPress CMS Development</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -555,10 +633,11 @@ export default function ServicesPage() {
                 </p>
                 <div className="pt-2">
                   <Link
-                    href="/services/web-branding#branding"
+                    href="/services/web-branding"
+                    aria-label="Explore Logo Design and Brand Identity service"
                     className="brand-button-gradient text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2 shadow-sm hover:opacity-95 transition-all group"
                   >
-                    <span>Read More</span>
+                    <span>Explore Logo Design &amp; Brand Identity</span>
                     <span className="group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">&rarr;</span>
                   </Link>
                 </div>
@@ -676,6 +755,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-    </div>
+      </div>
+    </>
   );
 }

@@ -221,24 +221,41 @@ export default function WorkClient() {
         </div>
       </section>
 
-      {/* ── FILTER TABS ── */}
+      {/* ── FILTER TABS & SERVICE DIRECT LINKS ── */}
       <section className="py-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="flex flex-wrap items-center gap-3 border-b border-gray-200 pb-6">
-          <span className="text-xs font-bold text-gray-500 uppercase tracking-wider mr-2">
-            Filter by Category:
-          </span>
-          {(['ALL', 'AI', 'MARKETING', 'WEB'] as const).map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${filter === cat
-                  ? 'bg-[#2D2D82] text-white shadow-sm'
-                  : 'bg-white border border-gray-200 text-gray-600 hover:text-[#151137] hover:border-gray-300'
-                }`}
-            >
-              {cat === 'ALL' ? 'All Case Studies' : `${cat} Solutions`}
-            </button>
-          ))}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200 pb-6">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-wider mr-2">
+              Filter by Category:
+            </span>
+            {(['ALL', 'AI', 'MARKETING', 'WEB'] as const).map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${filter === cat
+                    ? 'bg-[#2D2D82] text-white shadow-sm'
+                    : 'bg-white border border-gray-200 text-gray-600 hover:text-[#151137] hover:border-gray-300'
+                  }`}
+              >
+                {cat === 'ALL' ? 'All Case Studies' : `${cat} Solutions`}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-[#2D2D82]">
+            <span className="text-gray-400">SERVICES:</span>
+            <Link href="/services/ai-solutions" className="font-bold hover:underline">
+              AI Solutions
+            </Link>
+            <span className="text-gray-300">•</span>
+            <Link href="/services/digital-marketing" className="font-bold hover:underline">
+              SEO &amp; PPC
+            </Link>
+            <span className="text-gray-300">•</span>
+            <Link href="/services/web-branding" className="font-bold hover:underline">
+              Web &amp; Branding
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -417,7 +434,7 @@ export default function WorkClient() {
                         ))}
                       </div>
 
-                      <div className="flex items-center gap-3">
+                      <div className="flex flex-wrap items-center gap-3">
                         {project.liveUrl && (
                           <a
                             href={project.liveUrl}
@@ -433,8 +450,25 @@ export default function WorkClient() {
                         )}
 
                         <Link
-                          href="/contact"
+                          href={
+                            project.category === 'AI'
+                              ? '/services/ai-solutions'
+                              : project.category === 'MARKETING'
+                              ? '/services/digital-marketing'
+                              : '/services/web-branding'
+                          }
                           className="inline-flex items-center gap-1 font-bold text-xs text-[#2D2D82] hover:text-[#151137] transition-colors"
+                        >
+                          {project.category === 'AI'
+                            ? 'Related Service: AI Solutions & Automation \u2192'
+                            : project.category === 'MARKETING'
+                            ? 'Related Service: SEO & Digital Marketing \u2192'
+                            : 'Related Service: Web Design & Branding \u2192'}
+                        </Link>
+
+                        <Link
+                          href="/contact"
+                          className="inline-flex items-center gap-1 font-semibold text-xs text-gray-500 hover:text-[#2D2D82] transition-colors"
                         >
                           Request Case Study Audit &rarr;
                         </Link>

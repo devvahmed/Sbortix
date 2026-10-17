@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import AISolutionsClient from './AISolutionsClient';
-import { absoluteUrl, buildMetadata } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from '@/lib/seo';
+import { buildFaqSchema } from '@/lib/services-faq';
 
 export const metadata: Metadata = buildMetadata({ path: '/services/ai-solutions' });
 
@@ -20,12 +22,17 @@ export default function AISolutionsPage() {
     'areaServed': 'Global',
   };
 
+  const faqJsonLd = buildFaqSchema('ai-solutions', '/services/ai-solutions');
+
+  const breadcrumbJsonLd = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'AI Solutions', path: '/services/ai-solutions' },
+  ]);
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-      />
+      <JsonLd data={[serviceJsonLd, faqJsonLd, breadcrumbJsonLd]} />
       <AISolutionsClient />
     </>
   );

@@ -50,15 +50,25 @@ export default function WebBrandingClient() {
         />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
-          <div className="flex items-center gap-2 mb-6 text-xs">
-            <Link href="/services" className="font-mono text-[#6B7280] hover:text-[#2D2D82] transition-colors font-semibold uppercase tracking-wider">
-              SERVICES
-            </Link>
-            <span className="text-[#2D2D82]/30">/</span>
-            <span className="font-mono text-[#2D2D82] font-bold uppercase tracking-wider">
-              WEB ENGINEERING &amp; BRAND IDENTITY
-            </span>
-          </div>
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-2 text-xs font-mono font-semibold">
+              <li>
+                <Link href="/" className="text-[#6B7280] hover:text-[#2D2D82] transition-colors uppercase tracking-wider">
+                  Home
+                </Link>
+              </li>
+              <li className="text-[#2D2D82]/30" aria-hidden="true">&gt;</li>
+              <li>
+                <Link href="/services" className="text-[#6B7280] hover:text-[#2D2D82] transition-colors uppercase tracking-wider">
+                  Services
+                </Link>
+              </li>
+              <li className="text-[#2D2D82]/30" aria-hidden="true">&gt;</li>
+              <li aria-current="page" className="text-[#2D2D82] font-bold uppercase tracking-wider">
+                Web Engineering &amp; Brand Identity
+              </li>
+            </ol>
+          </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">

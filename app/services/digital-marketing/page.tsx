@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import DigitalMarketingClient from './DigitalMarketingClient';
-import { absoluteUrl, buildMetadata } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from '@/lib/seo';
+import { buildFaqSchema } from '@/lib/services-faq';
 
 export const metadata: Metadata = buildMetadata({ path: '/services/digital-marketing' });
 
@@ -20,12 +22,17 @@ export default function DigitalMarketingPage() {
     'areaServed': 'Global',
   };
 
+  const faqJsonLd = buildFaqSchema('digital-marketing', '/services/digital-marketing');
+
+  const breadcrumbJsonLd = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'Digital Marketing', path: '/services/digital-marketing' },
+  ]);
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-      />
+      <JsonLd data={[serviceJsonLd, faqJsonLd, breadcrumbJsonLd]} />
       <DigitalMarketingClient />
     </>
   );

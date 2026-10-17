@@ -5,6 +5,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
+import JsonLd from '@/components/JsonLd';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 
@@ -101,22 +102,18 @@ export default function RootLayout({
     'url': absoluteUrl('/'),
     'logo': absoluteUrl('/sbortix-logo.png'),
     'image': absoluteUrl('/sbortix-logo.png'),
-    'description': 'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
+    'description':
+      'Sbortix is an Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
     'foundingDate': '2024',
     'sameAs': [
-      'https://www.linkedin.com/company/sbortix',
-      'https://x.com/sbortix',
+      'https://www.linkedin.com/company/sbortix-global',
+      'https://www.instagram.com/sbor_tix/',
+      'https://www.facebook.com/sbortix',
     ],
-    'address': {
-      '@type': 'PostalAddress',
-      'addressLocality': 'Karachi',
-      'addressCountry': 'PK',
-    },
     'contactPoint': {
       '@type': 'ContactPoint',
       'email': 'contact@sbortix.com',
       'contactType': 'customer support',
-      'availableLanguage': ['en', 'ur'],
     },
   };
 
@@ -147,10 +144,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
+        <JsonLd data={organizationJsonLd} />
       </head>
       <body className="selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col antialiased">
         <SmoothScroll>

@@ -89,11 +89,10 @@ export default function Footer() {
         <div>
           <h6 className="text-secondary font-bold text-xs uppercase mb-md tracking-wider">OUR SERVICES</h6>
           <ul className="space-y-xs text-xs">
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/ai-solutions">AI Chatbots &amp; Voice</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/ai-solutions">Workflow Automation</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/digital-marketing">SEO &amp; Paid Advertising</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Web Design &amp; WordPress</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Logo Design &amp; Branding</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services">Services Overview</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/ai-solutions">AI Solutions &amp; Automation</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/digital-marketing">SEO &amp; Performance Marketing</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Web Design &amp; Brand Engineering</Link></li>
           </ul>
         </div>
 
@@ -109,13 +108,15 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Col 4: Legal */}
+        {/* Col 4: Solutions & Discovery */}
         <div>
-          <h6 className="text-secondary font-bold text-xs uppercase mb-md tracking-wider">LEGAL</h6>
+          <h6 className="text-secondary font-bold text-xs uppercase mb-md tracking-wider">SOLUTIONS</h6>
           <ul className="space-y-xs text-xs">
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/privacy">Privacy Policy</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/terms">Terms of Service</Link></li>
-            <li><Link className="text-secondary hover:text-primary transition-colors" href="/cookies">Cookie Policy</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/ai-solutions">Autonomous AI Agents</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/digital-marketing">Paid Ads &amp; Conversion</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/services/web-branding">Custom Next.js Platforms</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/work">Case Studies &amp; Audits</Link></li>
+            <li><Link className="text-secondary hover:text-primary transition-colors" href="/contact">Schedule Discovery</Link></li>
           </ul>
         </div>
       </div>

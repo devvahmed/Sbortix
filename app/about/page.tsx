@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Target, Eye, Lock, Sparkles, CheckCircle2, Award, Users } from 'lucide-react';
-import { absoluteUrl, buildMetadata } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({ path: '/about' });
 
@@ -11,24 +12,25 @@ export default function AboutPage() {
     '@type': 'AboutPage',
     '@id': `${absoluteUrl('/about')}#webpage`,
     'url': absoluteUrl('/about'),
-    'name': 'About Sbortix | Enterprise AI & Data Systems',
-    'description': 'Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual bottlenecks.',
+    'name': 'About Us: Enterprise AI & Data Systems | Sbortix',
+    'description':
+      'Sbortix is an enterprise AI engineering firm partnering with forward-thinking teams to replace manual bottlenecks with custom AI agents and analytics.',
     'isPartOf': {
       '@id': `${absoluteUrl('/')}#website`,
     },
     'about': {
-      '@type': 'Organization',
-      'name': 'Sbortix',
-      'foundingDate': '2024'
-    }
+      '@id': `${absoluteUrl('/')}#organization`,
+    },
   };
+
+  const breadcrumbJsonLd = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+  ]);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
-      />
+      <JsonLd data={[aboutJsonLd, breadcrumbJsonLd]} />
       <div className="w-full bg-[#FAFAFD] text-[#12131A] overflow-x-hidden">
       
       {/* ── HERO HEADER SECTION ── */}
@@ -48,7 +50,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-            Founded in 2024, Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual operational bottlenecks with custom AI agents, predictive data analytics, and high-converting digital platforms.
+            Founded in 2024, Sbortix is an enterprise AI engineering and digital growth firm. We partner with forward-thinking organizations to replace manual operational bottlenecks with custom <Link href="/services/ai-solutions" className="text-[#2D2D82] font-semibold underline decoration-[#2D2D82]/30 hover:decoration-[#2D2D82]">AI solutions &amp; automated workflows</Link>, predictive data systems, high-converting <Link href="/services/web-branding" className="text-[#2D2D82] font-semibold underline decoration-[#2D2D82]/30 hover:decoration-[#2D2D82]">web platforms &amp; brand engineering</Link>, and scalable <Link href="/services/digital-marketing" className="text-[#2D2D82] font-semibold underline decoration-[#2D2D82]/30 hover:decoration-[#2D2D82]">digital marketing campaigns</Link>.
           </p>
         </div>
       </section>
@@ -227,7 +229,7 @@ export default function AboutPage() {
               {
                 step: '02',
                 title: 'Architecture & Design',
-                desc: 'We design custom AI models, web systems, and campaign attribution frameworks tailored to your stack.',
+                desc: 'We design custom AI models, Next.js web applications, and campaign attribution frameworks tailored to your stack.',
               },
               {
                 step: '03',
@@ -248,6 +250,76 @@ export default function AboutPage() {
                 <p className="text-xs text-gray-600 leading-relaxed">{st.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SPECIALIZED PRACTICES CONTEXTUAL LINKS ── */}
+      <section className="py-20 bg-white border-b border-[#2D2D82]/15">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-widest block mb-3">
+              Specialized Engineering Practices
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#151137] tracking-tight leading-tight mb-4">
+              Explore Our Core Service Capabilities
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base">
+              Every client partnership is backed by three interconnected technical practices:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-[#ECEBF5]/70 border border-[#2D2D82]/10 flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-mono font-bold text-[#2D2D82] block mb-2">01 // AUTOMATION</span>
+                <h3 className="text-xl font-bold text-[#151137] mb-3">Enterprise AI Solutions</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                  Autonomous 24/7 conversational agents, automated workflow pipelines, and private LLM integrations.
+                </p>
+              </div>
+              <Link
+                href="/services/ai-solutions"
+                className="inline-flex items-center gap-2 font-bold text-sm text-[#2D2D82] hover:underline"
+              >
+                <span>AI solutions and workflow automation</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-[#ECEBF5]/70 border border-[#2D2D82]/10 flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-mono font-bold text-[#2D2D82] block mb-2">02 // GROWTH</span>
+                <h3 className="text-xl font-bold text-[#151137] mb-3">SEO &amp; Digital Marketing</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                  Algorithmic technical SEO, multi-channel paid acquisition, and unified revenue attribution.
+                </p>
+              </div>
+              <Link
+                href="/services/digital-marketing"
+                className="inline-flex items-center gap-2 font-bold text-sm text-[#2D2D82] hover:underline"
+              >
+                <span>Technical SEO &amp; performance marketing</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-[#ECEBF5]/70 border border-[#2D2D82]/10 flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-mono font-bold text-[#2D2D82] block mb-2">03 // PLATFORMS</span>
+                <h3 className="text-xl font-bold text-[#151137] mb-3">Web Design &amp; Branding</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                  High-performance Next.js web applications, custom WordPress platforms, and brand design systems.
+                </p>
+              </div>
+              <Link
+                href="/services/web-branding"
+                className="inline-flex items-center gap-2 font-bold text-sm text-[#2D2D82] hover:underline"
+              >
+                <span>Web design &amp; brand engineering</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

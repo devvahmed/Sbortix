@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import HomeClient from './HomeClient';
+import JsonLd from '@/components/JsonLd';
 import { absoluteUrl, buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({ path: '/' });
@@ -13,7 +14,7 @@ export default function HomePage() {
     'name': 'Sbortix',
     'url': absoluteUrl('/'),
     'description':
-      'Sbortix is a leading hybrid Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
+      'Sbortix is an Enterprise AI and digital marketing agency. We engineer autonomous AI agents, predictive lead scoring, and high-converting growth systems.',
     'publisher': {
       '@id': `${absoluteUrl('/')}#organization`,
     },
@@ -21,10 +22,7 @@ export default function HomePage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
+      <JsonLd data={websiteJsonLd} />
       <HomeClient />
     </>
   );

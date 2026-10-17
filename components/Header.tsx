@@ -86,40 +86,43 @@ export default function Header() {
                     <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                   </Link>
 
-                  {/* Submenu Dropdown */}
-                  {servicesOpen && (
-                    <div className="absolute top-full left-0 w-72 bg-white/95 backdrop-blur-lg border border-indigo-100/80 rounded-2xl shadow-xl p-2 mt-2 z-50 animate-in fade-in slide-in-from-top-2"
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      {/* Invisible hover bridge */}
-                      <div className="absolute top-[-12px] left-0 right-0 h-[12px] bg-transparent" />
-                      
-                      <div className="px-3 py-1.5 border-b border-indigo-50/80 mb-1">
-                        <span className="text-[9px] font-bold text-[#2D2D82] uppercase">Core Services</span>
-                      </div>
-                      {link.subLinks.map((sub) => {
-                        const SubIcon = sub.icon;
-                        return (
-                          <Link
-                            key={sub.name}
-                            href={sub.href}
-                            className="flex items-start gap-3 p-2 rounded-xl hover:bg-[#2D2D82]/8 transition-colors group/sub"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-[#2D2D82]/10 flex items-center justify-center flex-shrink-0 text-[#2D2D82] group-hover/sub:bg-[#2D2D82] group-hover/sub:text-white transition-colors">
-                              <SubIcon className="w-4 h-4" />
-                            </div>
-                            <div>
-                              <div className="text-xs font-bold text-[#151137] group-hover/sub:text-[#2D2D82] transition-colors">
-                                {sub.name}
-                              </div>
-                              <span className="tech-label text-secondary/70 text-[8px]">{sub.tag}</span>
-                            </div>
-                          </Link>
-                        );
-                      })}
+                  {/* Submenu Dropdown — always present in DOM for crawler crawlability */}
+                  <div
+                    className={`absolute top-full left-0 w-72 bg-white/95 backdrop-blur-lg border border-indigo-100/80 rounded-2xl shadow-xl p-2 mt-2 z-50 transition-all duration-200 ${
+                      servicesOpen
+                        ? 'opacity-100 visible translate-y-0 pointer-events-auto'
+                        : 'opacity-0 invisible -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto'
+                    }`}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {/* Invisible hover bridge */}
+                    <div className="absolute top-[-12px] left-0 right-0 h-[12px] bg-transparent" />
+                    
+                    <div className="px-3 py-1.5 border-b border-indigo-50/80 mb-1">
+                      <span className="text-[9px] font-bold text-[#2D2D82] uppercase">Core Services</span>
                     </div>
-                  )}
+                    {link.subLinks.map((sub) => {
+                      const SubIcon = sub.icon;
+                      return (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          className="flex items-start gap-3 p-2 rounded-xl hover:bg-[#2D2D82]/8 transition-colors group/sub"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-[#2D2D82]/10 flex items-center justify-center flex-shrink-0 text-[#2D2D82] group-hover/sub:bg-[#2D2D82] group-hover/sub:text-white transition-colors">
+                            <SubIcon className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-[#151137] group-hover/sub:text-[#2D2D82] transition-colors">
+                              {sub.name}
+                            </div>
+                            <span className="tech-label text-secondary/70 text-[8px]">{sub.tag}</span>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
               );
             }

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import WebBrandingClient from './WebBrandingClient';
-import { absoluteUrl, buildMetadata } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+import { absoluteUrl, buildBreadcrumbSchema, buildMetadata } from '@/lib/seo';
+import { buildFaqSchema } from '@/lib/services-faq';
 
 export const metadata: Metadata = buildMetadata({ path: '/services/web-branding' });
 
@@ -20,12 +22,17 @@ export default function WebBrandingPage() {
     'areaServed': 'Global',
   };
 
+  const faqJsonLd = buildFaqSchema('web-branding', '/services/web-branding');
+
+  const breadcrumbJsonLd = buildBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'Web & Branding', path: '/services/web-branding' },
+  ]);
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-      />
+      <JsonLd data={[serviceJsonLd, faqJsonLd, breadcrumbJsonLd]} />
       <WebBrandingClient />
     </>
   );
