@@ -6,9 +6,11 @@
     "dev": "cross-env NODE_OPTIONS=\"--max-old-space-size=1536\" next dev",
     "build": "cross-env NODE_OPTIONS=\"--max-old-space-size=3072\" next build",
     "start": "next start",
-    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
     "seo:check": "node scripts/check-seo.mjs",
-    "schema:check": "node scripts/check-schema.mjs"
+    "schema:check": "node scripts/check-schema.mjs",
+    "audit:pages": "node scripts/audit-pages.mjs"
   },
   "dependencies": {
     "@vercel/speed-insights": "^2.0.0",

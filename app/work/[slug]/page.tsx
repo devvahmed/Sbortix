@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
 
   return buildMetadata({
     path: `/work/${study.slug}`,
-    title: `${study.title} | Sbortix`,
-    description: study.overview,
+    title: study.seoTitle || `${study.title} | Sbortix`,
+    description: study.seoDescription || study.overview,
     image: study.imageUrl,
   });
 }

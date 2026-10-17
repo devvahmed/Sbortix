@@ -32,6 +32,8 @@ export interface CaseStudy {
     title: string;
     href: string;
   };
+  seoTitle?: string;
+  seoDescription?: string;
   hasDetail: boolean;
   detail?: CaseStudyDetail;
 }
@@ -68,6 +70,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       title: 'Enterprise AI Solutions & Workflow Automation',
       href: '/services/ai-solutions',
     },
+    seoTitle: 'Pulsely: AI Platform Operations & Analytics | Sbortix',
+    seoDescription:
+      'AI operations platform engineered by Sbortix with real-time health monitoring, automated anomaly detection, and velocity analytics.',
     hasDetail: true,
     detail: {
       challengeDeepDive:
@@ -117,6 +122,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       title: 'Web Design & Brand Engineering Services',
       href: '/services/web-branding',
     },
+    seoTitle: 'Novara Chronométrie: Luxury Horology Web | Sbortix',
+    seoDescription:
+      'Editorial luxury horology e-commerce flagship engineered by Sbortix with dark aesthetic architecture and sub-second transition velocity.',
     hasDetail: true,
     detail: {
       challengeDeepDive:
