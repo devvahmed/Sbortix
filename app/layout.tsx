@@ -127,11 +127,18 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} light scroll-smooth`}
     >
       <head>
+
         <meta name="google-site-verification" content="jtIJi8jc4K9UhS-lTwQx04gXrtCb8G6x7zpEh4gMZFE" />
         {/* Google Analytics 4 (GA4) */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           strategy="lazyOnload"
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8913292731989750"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="lazyOnload">
           {`
